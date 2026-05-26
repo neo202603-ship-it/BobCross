@@ -308,32 +308,32 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showPrivacyPolicy() }
         page.addView(breadcrumb("홈", "설정", "개인정보처리방침"))
         page.addView(topBar("개인정보처리방침"))
-        page.addView(statusCard("한 줄 요약", "밥크로스는 서버가 없습니다. 그래서 가져갈 개인정보도 없습니다. 밥공기는 입이 무겁습니다."))
+        page.addView(statusCard("한 줄 요약", "밥크로스는 사용자의 개인정보를 소중하게 생각하며, 서버에 정보를 저장하지 않고 기기 내에서만 처리합니다."))
         page.addView(privacyPolicySection(
-            "1. 수집하는 개인정보",
-            "없습니다.\n회원가입, 전화번호, 이메일, 위치 기록, 연락처, 광고 ID, 사용 분석 데이터를 수집하지 않습니다."
+            "1. 수집 항목 및 방법",
+            "본 앱은 서비스 제공을 위해 최소한의 정보만을 사용하며, 서버에 사용자의 개인정보를 저장하지 않습니다.\n- 수집 항목: 밥닉네임, 아바타 설정 정보\n- 수집 방법: 사용자 직접 입력\n- 기기 권한: Bluetooth, Wi-Fi, 위치 정보"
         ))
         page.addView(privacyPolicySection(
-            "2. 기기 안에 저장되는 정보",
-            "밥닉네임, 아바타, 밥판 템플릿, 선택 영수증, 지난 결과가 내 기기 안에 저장될 수 있습니다.\n이 정보는 앱 사용을 위한 로컬 저장이며 밥크로스 서버로 올라가지 않습니다. 애초에 서버가 없습니다."
+            "2. 수집 및 이용 목적",
+            "Nearby Connections 기술을 사용하여 주변 사용자들과 메뉴 투표를 진행하고 참여자들을 서로 식별하기 위한 목적으로만 사용됩니다."
         ))
         page.addView(privacyPolicySection(
-            "3. 주변 기기와 공유되는 정보",
-            "밥판을 열거나 참여하면 밥닉네임, 아바타, 메뉴 후보, 선택 내용, 결과가 Nearby Connections로 가까운 참여 기기에 전달될 수 있습니다.\n즉, 인터넷 방송은 아니고 옆자리 밥친구에게만 들리는 밥 신호입니다."
+            "3. 보유 및 이용 기간",
+            "별도의 서버를 운영하지 않으며 모든 정보는 사용자의 기기 내부에만 저장됩니다. 앱 삭제 시 즉시 파기됩니다."
         ))
         page.addView(privacyPolicySection(
-            "4. 권한 사용",
-            "주변 기기 연결을 위해 Bluetooth, Wi-Fi, Nearby 기기, 위치 관련 권한을 요청할 수 있습니다.\n이 권한은 근처 밥친구를 찾기 위한 것이며, 위치 기록을 수집하거나 저장하지 않습니다."
+            "4. 제3자 제공",
+            "사용자의 개인정보를 외부에 제공하거나 공유하지 않습니다. 다만, Nearby Connections 기술 구현을 위해 Google 서비스를 이용합니다."
         ))
         page.addView(privacyPolicySection(
-            "5. 제3자 제공과 광고",
-            "제3자 제공, 광고 추적, 분석 SDK는 사용하지 않습니다.\n밥공기가 몰래 장부를 쓰는 일은 없습니다."
+            "5. 권리 및 행사 방법",
+            "사용자는 언제든지 앱 내 설정을 통해 자신의 정보를 수정하거나 앱 삭제를 통해 데이터 수집을 중단할 수 있습니다."
         ))
         page.addView(privacyPolicySection(
-            "6. 삭제",
-            "앱 데이터를 삭제하거나 앱을 제거하면 기기 안에 저장된 밥크로스 데이터도 삭제됩니다.\n단, 이미 주변 기기에 공유된 결과는 해당 기기에서 따로 삭제해야 합니다."
+            "6. 보호책임자 및 문의처",
+            "이메일: neo202603@gmail.com"
         ))
-        page.addView(bodyText("시행일: 2026-05-26"))
+        page.addView(bodyText("시행 일자: 2024년 5월 22일"))
     }
 
     private fun showCompose(template: PollTemplate? = null) {
