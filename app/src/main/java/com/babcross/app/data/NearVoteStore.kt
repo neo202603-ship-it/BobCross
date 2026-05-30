@@ -66,6 +66,23 @@ class NearVoteStore(context: Context) {
         return receipts.optJSONObject(pollId)?.let { VoteReceipt.fromJson(it) }
     }
 
+    fun loadResultCardRarity(pollId: String): String? {
+        val raw = prefs.getString(KEY_RESULT_CARD_RARITIES, "{}").orEmpty().ifBlank { "{}" }
+        return JSONObject(raw).optString(pollId).takeIf { it.isNotBlank() }
+    }
+
+    fun saveResultCardRarity(pollId: String, rarityKey: String) {
+        val rarities = JSONObject(prefs.getString(KEY_RESULT_CARD_RARITIES, "{}").orEmpty().ifBlank { "{}" })
+        rarities.put(pollId, rarityKey)
+        prefs.edit().putString(KEY_RESULT_CARD_RARITIES, rarities.toString()).apply()
+    }
+
+    fun nextResultCardRevealIndex(): Int {
+        val nextIndex = prefs.getInt(KEY_RESULT_CARD_REVEAL_COUNT, 0)
+        prefs.edit().putInt(KEY_RESULT_CARD_REVEAL_COUNT, nextIndex + 1).apply()
+        return nextIndex
+    }
+
     fun saveResult(result: SharedResult) {
         val existing = loadResultHistory()
             .filterNot { it.pollId == result.pollId }
@@ -128,6 +145,8 @@ class NearVoteStore(context: Context) {
         private const val KEY_SESSION_STATE = "session_state"
         private const val KEY_RECEIPTS = "receipts"
         private const val KEY_RESULTS = "results"
+        private const val KEY_RESULT_CARD_RARITIES = "result_card_rarities"
+        private const val KEY_RESULT_CARD_REVEAL_COUNT = "result_card_reveal_count"
         private const val KEY_TEMPLATES = "templates"
         private const val MAX_HISTORY_COUNT = 20
 
@@ -155,6 +174,97 @@ class NearVoteStore(context: Context) {
                 options = listOf("아메리카노", "라떼", "아이스티", "패스"),
                 durationMinutes = 5,
                 builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_chinese",
+                title = "짜장파 vs 짬뽕파",
+                question = "오늘 중식 우주는 어느 그릇으로 기울까?",
+                options = listOf("짜장면", "짬뽕", "탕수육", "마파두부"),
+                durationMinutes = 5,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_japanese",
+                title = "일식 원정대",
+                question = "오늘 젓가락은 어느 섬에 상륙할까?",
+                options = listOf("초밥", "라멘", "돈카츠", "우동"),
+                durationMinutes = 5,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_team_lead_card",
+                title = "팀장님 카드 찬스",
+                question = "팀장님 카드가 열린다면 어디까지 갈까?",
+                options = listOf("소고기", "초밥", "파스타", "평양냉면"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_rainy_soup",
+                title = "비 오는 날 국물전",
+                question = "비 오는데 뜨끈한 국물은 뭐로 할까?",
+                options = listOf("칼국수", "순댓국", "쌀국수", "부대찌개"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_fake_diet",
+                title = "다이어트 하는 척",
+                question = "가볍게 먹는 척하면서 만족할 메뉴는?",
+                options = listOf("포케", "샐러드", "샤브샤브", "월남쌈"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_five_minutes",
+                title = "5분 안에 정해야 함",
+                question = "5분 안에 정해야 하는 오늘의 밥상은?",
+                options = listOf("김밥", "덮밥", "버거", "라면"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_no_afterparty",
+                title = "회식 2차 안 가는 메뉴",
+                question = "2차 없이 깔끔하게 끝낼 회식 메뉴는?",
+                options = listOf("삼겹살", "족발", "찜닭", "이탈리안"),
+                durationMinutes = 10,
+                durationSeconds = 600,
+                builtIn = true,
+                revealSelections = false
+            ),
+            PollTemplate(
+                id = "builtin_no_repeat",
+                title = "어제 먹은 거 금지",
+                question = "어제 먹은 메뉴 빼고 오늘은 뭐 먹지?",
+                options = listOf("제육", "카레", "돈까스", "비빔밥"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true,
+                allowParticipantOptions = true
+            ),
+            PollTemplate(
+                id = "builtin_spicy_safe_zone",
+                title = "맵찔이 보호 구역",
+                question = "맵찔이도 웃으면서 먹을 메뉴는?",
+                options = listOf("설렁탕", "돈까스", "오므라이스", "쌀국수"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true
+            ),
+            PollTemplate(
+                id = "builtin_delivery_saver",
+                title = "배달비 아끼는 밥판",
+                question = "걸어서 바로 해결할 절약 메뉴는?",
+                options = listOf("편의점 도시락", "김밥천국", "분식", "구내식당"),
+                durationMinutes = 5,
+                durationSeconds = 300,
+                builtIn = true,
+                allowParticipantOptions = true
             )
         )
     }

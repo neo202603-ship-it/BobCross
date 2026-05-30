@@ -7,7 +7,9 @@ local.properties
 .DS_Store
 *.iml
 *.log
+*.jks
+*.keystore
+keystore.properties
 captures/
 .externalNativeBuild/
 .cxx/
-
