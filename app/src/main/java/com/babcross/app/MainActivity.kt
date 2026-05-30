@@ -425,7 +425,51 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showCompose(template) }
         page.addView(breadcrumb("홈", "밥판", "밥판 열기"))
         page.addView(topBar("밥판 열기"))
-        page.addView(bodyText("오늘의 질문과 메뉴 후보를 입력하고 주변 밥친구에게 밥신호를 보냅니다."))
+        var composeMode = if (connectedCount == 0) ComposeMode.SOLO else ComposeMode.TOGETHER
+        val modeText = bodyText("")
+        lateinit var soloModeSegment: TextView
+        lateinit var togetherModeSegment: TextView
+        var publishButton: Button? = null
+
+        fun updateComposeModeUi() {
+            val soloSelected = composeMode == ComposeMode.SOLO
+            modeText.text = if (soloSelected) {
+                "후보를 정리하고 내 선택으로 오늘의 밥결정을 만듭니다. 결과 카드는 바로 공유할 수 있어요."
+            } else {
+                "주변 밥친구에게 밥신호를 보내고, 선택이 모이면 함께 오늘의 밥결정을 만듭니다."
+            }
+            listOf(soloModeSegment to soloSelected, togetherModeSegment to !soloSelected).forEach { (segment, selected) ->
+                segment.setTextColor(if (selected) 0xFFFFFFFF.toInt() else 0xFFD73B24.toInt())
+                segment.background = if (selected) {
+                    rounded(0xFFD73B24.toInt(), 12)
+                } else {
+                    rounded(0x00FFFFFF, 0)
+                }
+            }
+            publishButton?.text = if (soloSelected) "오늘의 밥판 만들기" else "밥신호 보내기"
+        }
+
+        soloModeSegment = composeModeSegment("혼자 먼저 정리") {
+            composeMode = ComposeMode.SOLO
+            updateComposeModeUi()
+        }
+        togetherModeSegment = composeModeSegment("같이 고르기") {
+            composeMode = ComposeMode.TOGETHER
+            updateComposeModeUi()
+        }
+        page.addView(LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER
+            background = rounded(0xFFFFF1E8.toInt(), 14, 0xFFE0B49E.toInt(), 1)
+            layoutParams = blockParams()
+            addView(soloModeSegment, LinearLayout.LayoutParams(0, dp(48), 1f))
+            addView(View(context).apply {
+                background = rounded(0xFFE0B49E.toInt(), 0)
+            }, LinearLayout.LayoutParams(dp(1), ViewGroup.LayoutParams.MATCH_PARENT))
+            addView(togetherModeSegment, LinearLayout.LayoutParams(0, dp(48), 1f))
+        })
+        page.addView(modeText)
+        updateComposeModeUi()
 
         val selectedTemplate = template ?: emptyComposeDraft()
         val questionInput = inputBox("오늘의 질문", selectedTemplate.question)
@@ -531,7 +575,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     revealSelectionsInput.isChecked
                 )
             }
-            if (connectedCount == 0) {
+            if (composeMode == ComposeMode.TOGETHER && connectedCount == 0) {
                 confirmPublishingWithoutPeers(publish)
             } else {
                 publish()
@@ -543,7 +587,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             Toast.makeText(this, "밥판 템플릿 저장 완료", Toast.LENGTH_SHORT).show()
         }
         page.addView(saveTemplateButton)
-        setStickyBottomAction(stickyPrimaryActionButton("밥신호 보내기", publishAction))
+        publishButton = stickyPrimaryActionButton(if (composeMode == ComposeMode.SOLO) "오늘의 밥판 만들기" else "밥신호 보내기", publishAction)
+        setStickyBottomAction(publishButton!!)
 
         val suggestionToken = ++composeSuggestionToken
         handler.postDelayed({
@@ -4681,6 +4726,18 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
+    private fun composeModeSegment(label: String, onClick: () -> Unit): TextView {
+        return TextView(this).apply {
+            text = label
+            textSize = 14f
+            gravity = Gravity.CENTER
+            setTypeface(typeface, Typeface.BOLD)
+            isClickable = true
+            isFocusable = true
+            setOnClickListener { onClick() }
+        }
+    }
+
     private fun highlightDurationChoice(choices: List<Pair<TextView, Int?>>, selectedSeconds: Int?) {
         choices.forEach { (button, seconds) ->
             val selected = seconds == selectedSeconds
@@ -6422,6 +6479,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         CREATE,
         VOTE,
         RESULT
+    }
+
+    private enum class ComposeMode {
+        SOLO,
+        TOGETHER
     }
 
     private data class WeeklyMenuReport(
