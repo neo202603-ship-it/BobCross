@@ -2,11 +2,13 @@ package com.babcross.app
 
 import android.Manifest
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Matrix
 import android.graphics.Paint
@@ -17,6 +19,7 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.SweepGradient
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
@@ -49,6 +52,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.babcross.app.data.MenuCalorieCatalog
 import com.babcross.app.data.NearVoteStore
 import com.babcross.app.data.NearbyPoll
 import com.babcross.app.data.PollTemplate
@@ -210,24 +214,23 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         page.addView(sectionTitle("지금 밥판"))
         visibleActivePolls().forEach { poll ->
             hasActiveSession = true
-            val receivedVotes = votesFor(poll.id)
-            val subtitle = if (poll.hasEnded()) {
-                "밥판 종료 · 밥친구 ${receivedVotes.size}명"
+            val status = if (poll.hasEnded()) {
+                "밥판 종료"
             } else {
-                "${poll.remainingText()} · 밥친구 ${receivedVotes.size}명 · 연결 ${connectedCount}대"
+                "밥신호 발신 중"
             }
-            page.addView(pollActionCard(poll.question, subtitle, poll) { showPublishedPoll(poll) })
+            page.addView(pollActionCard(poll.question, status, poll) { showPublishedPoll(poll) })
         }
         visibleIncomingPolls().forEach { poll ->
             hasActiveSession = true
             val submitted = submittedVotes[poll.id]
             val accepted = acceptedPollIds.contains(poll.id)
-            val subtitle = when {
+            val status = when {
                 submitted != null -> "내 선택: $submitted"
-                accepted -> "${poll.proposerName}의 밥신호 · ${poll.remainingText()}"
-                else -> "${poll.proposerName}님의 밥판 초대 · 수락 후 메뉴 선택"
+                accepted -> "참여 중"
+                else -> "${poll.proposerName}님의 밥판 초대"
             }
-            page.addView(pollActionCard(poll.question, subtitle, poll) {
+            page.addView(pollActionCard(poll.question, status, poll) {
                 if (accepted || submitted != null) {
                     showVotePoll(poll)
                 } else {
@@ -822,7 +825,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showPublishedPoll(poll) }
         page.addView(breadcrumb("홈", "밥판", "내가 연 밥판"))
         page.addView(topBar("내가 연 밥판"))
-        page.addView(avatarInfoCard(if (ended) "밥판 종료" else "밥신호 발신 중", poll.question, publishedPollSummary(poll, receivedVotes.size), selfAvatarId))
+        page.addView(avatarInfoCard(if (ended) "밥판 종료" else "밥신호 발신 중", poll.question, "", selfAvatarId))
         page.addView(statusCard(if (ended) "진행 상태" else "메뉴 고르는 중", babStatusText(poll)))
         page.addView(countdownCard(poll))
         participationStatusText(poll)?.let { summary ->
@@ -857,16 +860,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
         if (!sharedResultPollIds.contains(poll.id)) {
             page.addView(primaryButton("메뉴 결정") { endPollAndShareResult(poll) })
-        }
-    }
-
-    private fun publishedPollSummary(poll: NearbyPoll, voteCount: Int): String {
-        val optionText = "후보 ${poll.options.size}개"
-        val voteText = "선택 ${voteCount}명"
-        return if (poll.hasEnded()) {
-            "$optionText · $voteText"
-        } else {
-            "$optionText · $voteText · ${poll.remainingText()}"
         }
     }
 
@@ -2184,6 +2177,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val total = result.counts.values.sum().coerceAtLeast(1)
         val winPercent = if (winningCount > 0) winningCount * 100 / total else 0
         val rarity = if (hasVotes) assignedCardRarity(result) else pendingCardRarity()
+        val singleWinningMenu = singleWinningMenu(result)
+        val winningCalorieText = singleWinningMenu?.let { calorieTextFor(it) }
         return ShinyCardFrameLayout(rarity).apply {
             setPadding(dp(7), dp(7), dp(7), dp(7))
             layoutParams = LinearLayout.LayoutParams(
@@ -2289,6 +2284,23 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                                 ViewGroup.LayoutParams.WRAP_CONTENT
                             )
                         })
+                        winningCalorieText?.let { calorieText ->
+                            addView(TextView(context).apply {
+                                text = calorieText
+                                textSize = 14f
+                                setTextColor(0xFF6F5A4D.toInt())
+                                setTypeface(typeface, Typeface.BOLD)
+                                gravity = Gravity.CENTER
+                                setPadding(dp(12), dp(5), dp(12), dp(5))
+                                background = rounded(0xCCFFFFFF.toInt(), 15, 0x66E7B59D, 1)
+                                layoutParams = LinearLayout.LayoutParams(
+                                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                                    ViewGroup.LayoutParams.WRAP_CONTENT
+                                ).apply {
+                                    topMargin = dp(10)
+                                }
+                            })
+                        }
                     })
                     if (!hasVotes) {
                         addView(TextView(context).apply {
@@ -2322,7 +2334,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         }
                     })
                 })
-                singleWinningMenu(result)?.let { winningMenu ->
+                singleWinningMenu?.let { winningMenu ->
                     addView(resultIconButton("지도에서 $winningMenu 찾기", ResultAction.MAP, 0xFF3D8B67.toInt()) {
                         openMapSearch(winningMenu)
                     }.apply {
@@ -2550,12 +2562,23 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         rightMargin = dp(8)
                     }
                 })
-                addView(TextView(context).apply {
-                    text = option
-                    textSize = 12f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
                     layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                    addView(TextView(context).apply {
+                        text = option
+                        textSize = 12f
+                        setTextColor(0xFF10251D.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                    })
+                    calorieTextFor(option)?.let { calorieText ->
+                        addView(TextView(context).apply {
+                            text = calorieText
+                            textSize = 10f
+                            setTextColor(0xFF8B5C45.toInt())
+                            setPadding(0, dp(2), 0, 0)
+                        })
+                    }
                 })
                 addView(TextView(context).apply {
                     text = "${count}표 · ${percent}%"
@@ -2612,50 +2635,62 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun pollActionCard(title: String, subtitle: String, poll: NearbyPoll, onClick: () -> Unit): LinearLayout {
-        return LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding(0, 0, dp(16), 0)
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt())
+    private fun pollActionCard(title: String, status: String, poll: NearbyPoll, onClick: () -> Unit): FrameLayout {
+        return FrameLayout(this).apply {
+            background = rounded(0xFFFFFFFF.toInt(), 16)
             setOnClickListener { onClick() }
-            layoutParams = blockParams()
-            addView(View(context).apply {
-                background = rounded(0xFFD73B24.toInt(), 16)
-                layoutParams = LinearLayout.LayoutParams(dp(6), ViewGroup.LayoutParams.MATCH_PARENT)
-            })
-            addView(AvatarTileView(resolvedAvatarId(poll.proposerId, poll.proposerAvatarId)).apply {
-                layoutParams = LinearLayout.LayoutParams(dp(AVATAR_CARD_SIZE), dp(AVATAR_CARD_SIZE)).apply {
-                    leftMargin = dp(12)
-                    rightMargin = dp(2)
-                }
-            })
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                dp(78)
+            ).apply {
+                bottomMargin = dp(12)
+            }
+            addView(resultCardAvatarPane(resolvedAvatarId(poll.proposerId, poll.proposerAvatarId)))
             addView(LinearLayout(context).apply {
-                orientation = LinearLayout.VERTICAL
-                setPadding(dp(16), dp(16), dp(10), dp(16))
-                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                addView(TextView(context).apply {
-                    text = title
-                    textSize = 18f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                setPadding(dp(78), dp(10), dp(14), dp(10))
+                layoutParams = FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    Gravity.CENTER_VERTICAL
+                )
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
+                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply {
+                        rightMargin = dp(10)
+                    }
+                    addView(TextView(context).apply {
+                        text = status
+                        textSize = 12f
+                        setTextColor(0xFF647268.toInt())
+                    })
+                    addView(TextView(context).apply {
+                        text = title
+                        textSize = 16f
+                        setTextColor(0xFF10251D.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                        setPadding(0, dp(4), 0, 0)
+                        maxLines = 2
+                    })
+                })
+                addView(CountdownRingView(poll, compact = true).apply {
+                    layoutParams = LinearLayout.LayoutParams(dp(54), dp(54)).apply {
+                        rightMargin = dp(10)
+                    }
                 })
                 addView(TextView(context).apply {
-                    text = subtitle
-                    textSize = 14f
-                    setTextColor(0xFF526158.toInt())
-                    setPadding(0, dp(5), 0, 0)
+                    text = "›"
+                    textSize = 28f
+                    setTextColor(0xFF8AA093.toInt())
                 })
             })
-            addView(CountdownRingView(poll, compact = true).apply {
-                layoutParams = LinearLayout.LayoutParams(dp(58), dp(58)).apply {
-                    rightMargin = dp(10)
-                }
-            })
-            addView(TextView(context).apply {
-                text = "›"
-                textSize = 28f
-                setTextColor(0xFF8AA093.toInt())
+            addView(View(context).apply {
+                background = rounded(0x00FFFFFF, 16, 0xBFD73B24.toInt(), 2)
+                layoutParams = FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT
+                )
             })
         }
     }
@@ -2813,11 +2848,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     setTypeface(typeface, Typeface.BOLD)
                     setPadding(0, dp(3), 0, dp(3))
                 })
-                addView(TextView(context).apply {
-                    text = caption
-                    textSize = 13f
-                    setTextColor(0xFF526158.toInt())
-                })
+                if (caption.isNotBlank()) {
+                    addView(TextView(context).apply {
+                        text = caption
+                        textSize = 13f
+                        setTextColor(0xFF526158.toInt())
+                    })
+                }
             })
         }
     }
@@ -2964,12 +3001,23 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
-                addView(TextView(context).apply {
-                    text = option
-                    textSize = 17f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
                     layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                    addView(TextView(context).apply {
+                        text = option
+                        textSize = 17f
+                        setTextColor(0xFF10251D.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                    })
+                    calorieTextFor(option)?.let { calorieText ->
+                        addView(TextView(context).apply {
+                            text = calorieText
+                            textSize = 12f
+                            setTextColor(0xFF8B5C45.toInt())
+                            setPadding(0, dp(3), 0, 0)
+                        })
+                    }
                 })
                 addView(TextView(context).apply {
                     text = "${count}명 · $percent%"
@@ -3197,15 +3245,38 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun choicePill(text: String, onClick: (() -> Unit)? = null): TextView {
-        return TextView(this).apply {
-            this.text = text
-            textSize = 16f
-            setTypeface(typeface, Typeface.BOLD)
+    private fun choicePill(text: String, onClick: (() -> Unit)? = null): LinearLayout {
+        val calorieText = calorieTextFor(text)
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER
-            setTextColor(0xFF123126.toInt())
             setPadding(dp(18), dp(12), dp(18), dp(12))
             background = rounded(0xFFFFF1E8.toInt(), 24, 0xFFE7B59D.toInt())
+            addView(TextView(context).apply {
+                this.text = text
+                textSize = 16f
+                setTypeface(typeface, Typeface.BOLD)
+                setTextColor(0xFF123126.toInt())
+                gravity = Gravity.CENTER_VERTICAL
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+            })
+            calorieText?.let {
+                addView(TextView(context).apply {
+                    this.text = it
+                    textSize = 12f
+                    setTypeface(typeface, Typeface.BOLD)
+                    setTextColor(0xFF8B5C45.toInt())
+                    gravity = Gravity.CENTER
+                    setPadding(dp(9), dp(4), dp(9), dp(4))
+                    background = rounded(0xFFFFFFFF.toInt(), 14, 0xFFE7B59D.toInt(), 1)
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        leftMargin = dp(10)
+                    }
+                })
+            }
             if (onClick != null) {
                 setOnClickListener {
                     performSelectionHaptic()
@@ -3870,6 +3941,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return singleWinningMenu(result) ?: "선택된 메뉴 없음"
     }
 
+    private fun calorieTextFor(menu: String): String? {
+        return MenuCalorieCatalog.estimateFor(menu)?.let { hint -> "약 ${hint.kcal} kcal" }
+    }
+
     private fun openMapSearch(menu: String) {
         val query = Uri.encode("$menu 맛집")
         val geoIntent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=$query"))
@@ -3899,59 +3974,145 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun showBabDecisionDialog(result: SharedResult) {
         val winningMenu = singleWinningMenu(result) ?: return
-        val dialogContent = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            setPadding(dp(20), dp(8), dp(20), 0)
-            addView(TextView(context).apply {
-                text = "선택된 메뉴"
-                textSize = 13f
-                setTextColor(0xFF6D5A51.toInt())
-                setTypeface(typeface, Typeface.BOLD)
+        var fireworks: DecisionFireworksView? = null
+        var autoDismiss: Runnable? = null
+        Dialog(this).apply {
+            window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            setContentView(decisionCutSceneView(winningMenu).apply {
+                isClickable = true
+                setOnClickListener {
+                    if (isShowing) dismiss()
+                }
+            })
+            setCanceledOnTouchOutside(true)
+            setOnShowListener {
+                fireworks = showDecisionFireworks()
+                val dismissAction = Runnable {
+                    if (isShowing) dismiss()
+                }
+                autoDismiss = dismissAction
+                Handler(Looper.getMainLooper()).postDelayed(dismissAction, DECISION_CUTSCENE_MS)
+            }
+            setOnDismissListener {
+                autoDismiss?.let { Handler(Looper.getMainLooper()).removeCallbacks(it) }
+                autoDismiss = null
+                fireworks?.removeFromParent()
+                fireworks = null
+            }
+            show()
+            window?.setLayout(
+                (resources.displayMetrics.widthPixels * 0.88f).roundToInt(),
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+    }
+
+    private fun decisionCutSceneView(winningMenu: String): FrameLayout {
+        return FrameLayout(this).apply {
+            background = rounded(0xFFFFFBF5.toInt(), 24, 0xFFD73B24.toInt(), 2)
+            setPadding(dp(12), dp(12), dp(12), dp(12))
+            addView(LinearLayout(context).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                background = rounded(0xFFFFF1E8.toInt(), 18, 0xFFE7B59D.toInt(), 1)
+                setPadding(dp(14), dp(14), dp(14), dp(14))
+                layoutParams = FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                addView(FrameLayout(context).apply {
+                    background = rounded(0xFFFFD9C6.toInt(), 18, 0xFFD73B24.toInt(), 1)
+                    clipToOutline = true
+                    layoutParams = LinearLayout.LayoutParams(dp(108), dp(136)).apply {
+                        rightMargin = dp(14)
+                    }
+                    addView(ImageView(context).apply {
+                        setImageResource(R.drawable.bab_cross_launcher)
+                        scaleType = ImageView.ScaleType.CENTER_CROP
+                        alpha = 0.96f
+                        contentDescription = "밥크로스 결정 컷"
+                        layoutParams = FrameLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.MATCH_PARENT
+                        )
+                    })
+                    addView(View(context).apply {
+                        background = rounded(0x1AFFFFFF, 18)
+                        layoutParams = FrameLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.MATCH_PARENT
+                        )
+                    })
+                })
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.VERTICAL
+                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                    addView(TextView(context).apply {
+                        text = "밥크로스의 한마디"
+                        textSize = 12f
+                        setTextColor(0xFF8B5C45.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                    })
+                    addView(TextView(context).apply {
+                        text = "오늘의 밥은"
+                        textSize = 17f
+                        setTextColor(0xFF10251D.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                        setPadding(0, dp(6), 0, 0)
+                    })
+                    addView(TextView(context).apply {
+                        text = winningMenu
+                        textSize = 27f
+                        setTextColor(0xFFFFFFFF.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                        gravity = Gravity.CENTER
+                        maxLines = 2
+                        setPadding(dp(14), dp(9), dp(14), dp(10))
+                        background = rounded(0xFFD73B24.toInt(), 20)
+                        layoutParams = LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        ).apply {
+                            topMargin = dp(8)
+                        }
+                    })
+                    calorieTextFor(winningMenu)?.let { calorieText ->
+                        addView(TextView(context).apply {
+                            text = calorieText
+                            textSize = 12f
+                            setTextColor(0xFF6F5A4D.toInt())
+                            setTypeface(typeface, Typeface.BOLD)
+                            setPadding(0, dp(6), 0, 0)
+                        })
+                    }
+                    addView(TextView(context).apply {
+                        text = "참 쉽죠? 이제 맛있게 먹으면 됩니다."
+                        textSize = 14f
+                        setTextColor(0xFF526158.toInt())
+                        setPadding(0, dp(10), 0, 0)
+                    })
+                    addView(View(context).apply {
+                        background = rounded(0xFFD73B24.toInt(), 2)
+                        alpha = 0.75f
+                        layoutParams = LinearLayout.LayoutParams(dp(64), dp(3)).apply {
+                            topMargin = dp(13)
+                        }
+                    })
+                })
             })
             addView(TextView(context).apply {
-                text = winningMenu
-                textSize = 24f
+                text = "결정!"
+                textSize = 11f
                 setTextColor(0xFFFFFFFF.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
-                setPadding(dp(18), dp(12), dp(18), dp(12))
-                background = rounded(0xFFD73B24.toInt(), 22)
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    topMargin = dp(8)
-                    bottomMargin = dp(18)
+                background = rounded(0xFF3D8B67.toInt(), 13, 0xFFFFFFFF.toInt(), 1)
+                layoutParams = FrameLayout.LayoutParams(dp(58), dp(26), Gravity.TOP or Gravity.RIGHT).apply {
+                    topMargin = dp(5)
+                    rightMargin = dp(5)
                 }
-            })
-            addView(TextView(context).apply {
-                text = "어때요, 메뉴 고르기 참 쉽죠?"
-                textSize = 17f
-                setTextColor(0xFF10251D.toInt())
-                setTypeface(typeface, Typeface.BOLD)
-                gravity = Gravity.CENTER
             })
         }
-        var fireworks: DecisionFireworksView? = null
-        AlertDialog.Builder(this)
-            .setTitle("오늘의 메뉴 결정!")
-            .setIcon(R.drawable.bab_cross_launcher)
-            .setView(dialogContent)
-            .setPositiveButton("결과 보기", null)
-            .setNegativeButton("다시 고르기") { _, _ ->
-                showCompose(resultAsTemplate(result, "draft-result-${System.currentTimeMillis()}"))
-            }
-            .create()
-            .apply {
-                setOnShowListener {
-                    fireworks = showDecisionFireworks()
-                }
-                setOnDismissListener {
-                    fireworks?.removeFromParent()
-                    fireworks = null
-                }
-                show()
-            }
     }
 
     private fun showDecisionFireworks(): DecisionFireworksView? {
@@ -5456,6 +5617,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         private const val FIREWORKS_DURATION_MS = 2_200L
         private const val FIREWORKS_PARTICLE_LIFETIME_MS = 1_200L
         private const val FIREWORKS_PARTICLES_PER_BURST = 30
+        private const val DECISION_CUTSCENE_MS = 10_000L
         private const val SHINE_ROTATION_MS = 3_600L
         private const val SHINE_FRAME_MS = 33L
         private const val HOLOGRAM_SWEEP_MS = 4_800L
