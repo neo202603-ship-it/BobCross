@@ -46,6 +46,30 @@ class NearVoteStore(context: Context) {
         prefs.edit().putBoolean(KEY_AUTO_CONNECT, enabled).apply()
     }
 
+    fun loadPollDefaults(): PollDefaults {
+        return PollDefaults(
+            durationSeconds = prefs.getInt(KEY_DEFAULT_DURATION_SECONDS, 300),
+            allowParticipantOptions = prefs.getBoolean(KEY_DEFAULT_ALLOW_PARTICIPANT_OPTIONS, false),
+            revealSelections = prefs.getBoolean(KEY_DEFAULT_REVEAL_SELECTIONS, true)
+        )
+    }
+
+    fun savePollDefaults(defaults: PollDefaults) {
+        prefs.edit()
+            .putInt(KEY_DEFAULT_DURATION_SECONDS, defaults.durationSeconds)
+            .putBoolean(KEY_DEFAULT_ALLOW_PARTICIPANT_OPTIONS, defaults.allowParticipantOptions)
+            .putBoolean(KEY_DEFAULT_REVEAL_SELECTIONS, defaults.revealSelections)
+            .apply()
+    }
+
+    fun hasCompletedOnboarding(): Boolean {
+        return prefs.getBoolean(KEY_ONBOARDING_DONE, false)
+    }
+
+    fun saveOnboardingCompleted() {
+        prefs.edit().putBoolean(KEY_ONBOARDING_DONE, true).apply()
+    }
+
     fun saveSessionState(stateJson: String) {
         prefs.edit().putString(KEY_SESSION_STATE, stateJson).apply()
     }
@@ -142,6 +166,10 @@ class NearVoteStore(context: Context) {
         private const val KEY_AVATAR_ID = "avatar_id"
         private const val KEY_USER_ID = "user_id"
         private const val KEY_AUTO_CONNECT = "auto_connect"
+        private const val KEY_DEFAULT_DURATION_SECONDS = "default_duration_seconds"
+        private const val KEY_DEFAULT_ALLOW_PARTICIPANT_OPTIONS = "default_allow_participant_options"
+        private const val KEY_DEFAULT_REVEAL_SELECTIONS = "default_reveal_selections"
+        private const val KEY_ONBOARDING_DONE = "onboarding_done"
         private const val KEY_SESSION_STATE = "session_state"
         private const val KEY_RECEIPTS = "receipts"
         private const val KEY_RESULTS = "results"
@@ -269,3 +297,9 @@ class NearVoteStore(context: Context) {
         )
     }
 }
+
+data class PollDefaults(
+    val durationSeconds: Int = 300,
+    val allowParticipantOptions: Boolean = false,
+    val revealSelections: Boolean = true
+)

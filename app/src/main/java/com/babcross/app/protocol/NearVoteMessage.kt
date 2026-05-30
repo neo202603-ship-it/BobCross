@@ -19,8 +19,11 @@ data class NearVoteMessage(
     val payloadJson: String
 ) {
     fun toJson(): String {
-        val escapedPayload = payloadJson.replace("\\", "\\\\").replace("\"", "\\\"")
-        return """{"type":"$type","senderId":"$senderId","payloadJson":"$escapedPayload"}"""
+        return JSONObject()
+            .put("type", type.name)
+            .put("senderId", senderId)
+            .put("payloadJson", payloadJson)
+            .toString()
     }
 
     companion object {

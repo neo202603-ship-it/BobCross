@@ -126,6 +126,10 @@ class NearbyVoteConnectionManager(
     private val payloadCallback = object : PayloadCallback() {
         override fun onPayloadReceived(endpointId: String, payload: Payload) {
             val bytes = payload.asBytes() ?: return
+            if (bytes.size > MAX_PAYLOAD_BYTES) {
+                listener.onLog("너무 큰 주변 메시지 무시: ${bytes.size} bytes")
+                return
+            }
             listener.onMessage(endpointId, String(bytes, StandardCharsets.UTF_8))
         }
 
@@ -333,5 +337,6 @@ class NearbyVoteConnectionManager(
 
     companion object {
         const val MAX_CONNECTIONS = 19
+        private const val MAX_PAYLOAD_BYTES = 64 * 1024
     }
 }
