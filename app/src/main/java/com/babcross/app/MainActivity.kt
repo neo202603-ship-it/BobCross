@@ -2222,7 +2222,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     })
                 })
                 addView(FrameLayout(context).apply {
-                    setPadding(dp(12), dp(20), dp(12), dp(20))
+                    setPadding(dp(12), dp(18), dp(12), dp(18))
                     background = rounded(rarity.artColor, 10, rarity.strokeColor, 1)
                     layoutParams = LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
@@ -2240,19 +2240,55 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         }
                         layoutParams = FrameLayout.LayoutParams(dp(206), dp(206), Gravity.CENTER)
                     })
+                    hologramAlphaFor(rarity.key).takeIf { alpha -> alpha > 0 }?.let { alpha ->
+                        addView(HologramOverlayView(rarity, alpha).apply {
+                            layoutParams = FrameLayout.LayoutParams(
+                                dp(54),
+                                dp(54),
+                                Gravity.BOTTOM or Gravity.RIGHT
+                            ).apply {
+                                bottomMargin = dp(12)
+                                rightMargin = dp(12)
+                            }
+                        })
+                    }
                     addView(TextView(context).apply {
-                        text = winningText
-                        textSize = if (hasVotes) 56f else 39f
-                        setTextColor(rarity.accentColor)
-                        setTypeface(typeface, Typeface.BOLD)
+                        text = result.question
+                        textSize = 13f
+                        setTextColor(0xFF6F5A4D.toInt())
                         gravity = Gravity.CENTER
-                        includeFontPadding = false
+                        setTypeface(typeface, Typeface.BOLD)
                         maxLines = 2
+                        setPadding(dp(12), 0, dp(12), 0)
+                        layoutParams = FrameLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            Gravity.TOP or Gravity.CENTER_HORIZONTAL
+                        ).apply {
+                            topMargin = dp(20)
+                        }
+                    })
+                    addView(LinearLayout(context).apply {
+                        orientation = LinearLayout.VERTICAL
+                        gravity = Gravity.CENTER
                         layoutParams = FrameLayout.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT,
                             Gravity.CENTER
                         )
+                        addView(TextView(context).apply {
+                            text = winningText
+                            textSize = if (hasVotes) 56f else 39f
+                            setTextColor(rarity.accentColor)
+                            setTypeface(typeface, Typeface.BOLD)
+                            gravity = Gravity.CENTER
+                            includeFontPadding = false
+                            maxLines = 2
+                            layoutParams = LinearLayout.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.WRAP_CONTENT
+                            )
+                        })
                     })
                     if (!hasVotes) {
                         addView(TextView(context).apply {
@@ -2270,12 +2306,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                             }
                         })
                     }
-                })
-                addView(TextView(context).apply {
-                    text = result.question
-                    textSize = 12f
-                    setTextColor(0xFF6F5A4D.toInt())
-                    setPadding(dp(4), dp(9), dp(4), 0)
                 })
                 addView(LinearLayout(context).apply {
                     orientation = LinearLayout.HORIZONTAL
@@ -2370,6 +2400,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             imageResId = R.drawable.card_art_common,
             imageTintColor = 0x55FFFFFF
         )
+    }
+
+    private fun hologramAlphaFor(rarityKey: String): Int {
+        return when (rarityKey) {
+            CARD_RARITY_LEGENDARY -> 92
+            CARD_RARITY_RARE -> 72
+            else -> 0
+        }
     }
 
     private fun rarityStars(rarityKey: String): String {
@@ -4760,10 +4798,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     0xEEFFFFFF.toInt(),
                     withAlpha(rarity.shineColor, 120),
                     0x00FFFFFF,
-                    withAlpha(rarity.shineColor, 45),
+                    withAlpha(rarity.shineColor, 70),
+                    0xCCFFFFFF.toInt(),
+                    withAlpha(rarity.shineColor, 105),
                     0x00FFFFFF
                 ),
-                floatArrayOf(0f, 0.10f, 0.16f, 0.23f, 0.34f, 0.58f, 1f)
+                floatArrayOf(0f, 0.10f, 0.16f, 0.23f, 0.35f, 0.60f, 0.66f, 0.73f, 1f)
             )
             shineMatrix.reset()
             shineMatrix.setRotate(progress * 360f, cx, cy)
@@ -4792,6 +4832,77 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 postInvalidateDelayed(SHINE_FRAME_MS)
             }
             super.onDraw(canvas)
+        }
+    }
+
+    private inner class HologramOverlayView(
+        private val rarity: CardRarity,
+        private val maxAlpha: Int
+    ) : View(this) {
+        private val holoPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.FILL
+        }
+        private val linePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.STROKE
+            strokeWidth = dp(1).toFloat()
+        }
+        private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.STROKE
+            strokeWidth = dp(1).toFloat()
+        }
+        private val bounds = RectF()
+        private val stickerPath = Path()
+
+        init {
+            setWillNotDraw(false)
+            importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_NO
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            super.onDraw(canvas)
+            bounds.set(0f, 0f, width.toFloat(), height.toFloat())
+            val inset = dp(4).toFloat()
+            bounds.inset(inset, inset)
+            val cornerRadius = dp(12).toFloat()
+            stickerPath.reset()
+            stickerPath.addRoundRect(bounds, cornerRadius, cornerRadius, Path.Direction.CW)
+
+            val saved = canvas.save()
+            canvas.clipPath(stickerPath)
+            val progress = (System.currentTimeMillis() % HOLOGRAM_SWEEP_MS).toFloat() / HOLOGRAM_SWEEP_MS
+            val offset = width * (progress * 1.4f - 0.2f)
+            holoPaint.shader = LinearGradient(
+                offset - width * 0.55f,
+                0f,
+                offset + width * 0.35f,
+                height.toFloat(),
+                intArrayOf(
+                    0x00FFFFFF,
+                    withAlpha(0xFFFF7AC8.toInt(), maxAlpha / 2),
+                    withAlpha(0xFF6BE8FF.toInt(), maxAlpha),
+                    withAlpha(rarity.shineColor, maxAlpha),
+                    0x00FFFFFF
+                ),
+                floatArrayOf(0f, 0.28f, 0.48f, 0.68f, 1f),
+                Shader.TileMode.CLAMP
+            )
+            canvas.drawRect(bounds, holoPaint)
+            holoPaint.shader = null
+
+            linePaint.color = withAlpha(0xFFFFFFFF.toInt(), (maxAlpha * 1.15f).toInt())
+            var x = -height.toFloat() + (progress * dp(28))
+            while (x < width + height) {
+                canvas.drawLine(x, height.toFloat(), x + height * 0.78f, 0f, linePaint)
+                x += dp(28)
+            }
+            canvas.restoreToCount(saved)
+
+            borderPaint.color = withAlpha(rarity.strokeColor, 210)
+            canvas.drawRoundRect(bounds, cornerRadius, cornerRadius, borderPaint)
+
+            if (isAttachedToWindow) {
+                postInvalidateDelayed(SHINE_FRAME_MS)
+            }
         }
     }
 
@@ -5345,8 +5456,9 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         private const val FIREWORKS_DURATION_MS = 2_200L
         private const val FIREWORKS_PARTICLE_LIFETIME_MS = 1_200L
         private const val FIREWORKS_PARTICLES_PER_BURST = 30
-        private const val SHINE_ROTATION_MS = 2_800L
+        private const val SHINE_ROTATION_MS = 3_600L
         private const val SHINE_FRAME_MS = 33L
+        private const val HOLOGRAM_SWEEP_MS = 4_800L
         private const val RESULT_DECK_COMMIT_RATIO = 0.24f
         private const val AVATAR_COLUMN_COUNT = 5
         private const val AVATAR_ROW_COUNT = 4
