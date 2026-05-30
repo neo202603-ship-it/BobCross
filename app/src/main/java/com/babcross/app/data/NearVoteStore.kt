@@ -190,7 +190,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_dinner",
                 title = "회식 밥신호",
-                question = "오늘 회식 어디로 교차할까?",
+                question = "오늘 회식 뭐 먹을까?",
                 options = listOf("삼겹살", "치킨", "이자카야", "곱창"),
                 durationMinutes = 10,
                 builtIn = true
@@ -206,7 +206,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_chinese",
                 title = "짜장파 vs 짬뽕파",
-                question = "오늘 중식 우주는 어느 그릇으로 기울까?",
+                question = "오늘 중식은 뭐로 할까?",
                 options = listOf("짜장면", "짬뽕", "탕수육", "마파두부"),
                 durationMinutes = 5,
                 builtIn = true
@@ -214,7 +214,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_japanese",
                 title = "일식 원정대",
-                question = "오늘 젓가락은 어느 섬에 상륙할까?",
+                question = "오늘 일식은 뭐 먹을까?",
                 options = listOf("초밥", "라멘", "돈카츠", "우동"),
                 durationMinutes = 5,
                 builtIn = true
@@ -222,7 +222,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_team_lead_card",
                 title = "팀장님 카드 찬스",
-                question = "팀장님 카드가 열린다면 어디까지 갈까?",
+                question = "팀장님 카드라면 뭐 먹을까?",
                 options = listOf("소고기", "초밥", "파스타", "평양냉면"),
                 durationMinutes = 5,
                 durationSeconds = 300,
@@ -249,7 +249,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_five_minutes",
                 title = "5분 안에 정해야 함",
-                question = "5분 안에 정해야 하는 오늘의 밥상은?",
+                question = "5분 안에 정해야 하면 뭐 먹을까?",
                 options = listOf("김밥", "덮밥", "버거", "라면"),
                 durationMinutes = 5,
                 durationSeconds = 300,
@@ -287,7 +287,7 @@ class NearVoteStore(context: Context) {
             PollTemplate(
                 id = "builtin_delivery_saver",
                 title = "배달비 아끼는 밥판",
-                question = "걸어서 바로 해결할 절약 메뉴는?",
+                question = "걸어서 바로 먹을 수 있는 메뉴는?",
                 options = listOf("편의점 도시락", "김밥천국", "분식", "구내식당"),
                 durationMinutes = 5,
                 durationSeconds = 300,

@@ -931,15 +931,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         page.addView(topBar("밥판 초대"))
         page.addView(avatarInfoCard("새 밥신호 도착", poll.question, "보낸 밥친구: ${poll.proposerName} · ${poll.remainingText()}", resolvedAvatarId(poll.proposerId, poll.proposerAvatarId)))
         page.addView(countdownCard(poll))
+        page.addView(pollRulesCard(poll))
         page.addView(label("메뉴 후보 미리보기"))
         page.addView(statusCard("메뉴 후보", poll.options.joinToString(" / ")))
-        if (poll.allowParticipantOptions) {
-            page.addView(bodyText("참여 후 새 메뉴 후보를 입력해 바로 고를 수 있습니다."))
-        }
-        if (!poll.revealSelections) {
-            page.addView(bodyText("결과에는 메뉴별 득표수만 공개됩니다."))
-        }
-        page.addView(bodyText("참여하기를 누르면 메뉴 선택 화면으로 이동합니다. 거절하면 이 밥판은 홈에서 숨겨집니다."))
+        page.addView(bodyText("참여하기를 누르면 메뉴 선택 화면으로 이동합니다. 한 번 고르면 이 밥판에서는 바꿀 수 없어요."))
         page.addView(buttonRow(
             compactButton("밥판 참여", BUTTON_PRIMARY) {
                 acceptedPollIds += poll.id
@@ -956,6 +951,89 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 showHome()
             }
         ))
+    }
+
+    private fun pollRulesCard(poll: NearbyPoll): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16), dp(14), dp(16), dp(14))
+            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt(), 1)
+            layoutParams = blockParams()
+            addView(TextView(context).apply {
+                text = "이 밥판 규칙"
+                textSize = 17f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+            })
+            addView(TextView(context).apply {
+                text = "참여 전에 내 선택이 어떻게 보이는지 확인하세요."
+                textSize = 13f
+                setTextColor(0xFF526158.toInt())
+                setPadding(0, dp(5), 0, dp(8))
+            })
+            addView(ruleBadgeRow("내 선택 공개", if (poll.revealSelections) "공개" else "득표수만 공개", poll.revealSelections))
+            addView(ruleBadgeRow("후보 추가", if (poll.allowParticipantOptions) "가능" else "불가", poll.allowParticipantOptions))
+            val remainingBadge = ruleBadgeText(poll.remainingText(), true)
+            addView(ruleBadgeRow("남은 시간", remainingBadge))
+            startRuleRemainingTicker(poll, remainingBadge)
+            addView(TextView(context).apply {
+                text = "한 번 고르면 바꿀 수 없어요."
+                textSize = 12f
+                setTextColor(0xFFD73B24.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+                setPadding(0, dp(8), 0, 0)
+            })
+        }
+    }
+
+    private fun ruleBadgeRow(label: String, value: String, positive: Boolean): LinearLayout {
+        return ruleBadgeRow(label, ruleBadgeText(value, positive))
+    }
+
+    private fun ruleBadgeRow(label: String, valueView: TextView): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(0, dp(5), 0, dp(5))
+            addView(TextView(context).apply {
+                text = label
+                textSize = 14f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+            })
+            addView(valueView)
+        }
+    }
+
+    private fun ruleBadgeText(value: String, positive: Boolean): TextView {
+        return TextView(this).apply {
+            text = value
+            textSize = 12f
+            setTextColor(if (positive) 0xFF245341.toInt() else 0xFF8B5C45.toInt())
+            setTypeface(typeface, Typeface.BOLD)
+            gravity = Gravity.CENTER
+            setPadding(dp(12), dp(6), dp(12), dp(6))
+            background = rounded(
+                if (positive) 0xFFEAF6EF.toInt() else 0xFFFFF1E8.toInt(),
+                18,
+                if (positive) 0xFF94C6A8.toInt() else 0xFFE0B49E.toInt(),
+                1
+            )
+        }
+    }
+
+    private fun startRuleRemainingTicker(poll: NearbyPoll, target: TextView) {
+        val ticker = object : Runnable {
+            override fun run() {
+                if (!target.isAttachedToWindow) return
+                target.text = poll.remainingText()
+                if (!poll.hasEnded()) {
+                    handler.postDelayed(this, 1_000L)
+                }
+            }
+        }
+        handler.post(ticker)
     }
 
     private fun showPublishedPoll(poll: NearbyPoll) {
