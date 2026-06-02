@@ -39,6 +39,14 @@ JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradle
 app/build/outputs/apk/debug/BabCross.apk
 ```
 
+## 개인정보처리방침
+
+GitHub Pages 공개 URL:
+
+```text
+https://neo202603-ship-it.github.io/BobCross/privacy-policy.html
+```
+
 ## 두 기기 테스트
 
 1. 두 Android 기기에 같은 APK를 설치합니다.
