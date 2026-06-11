@@ -21,8 +21,8 @@ android {
         applicationId = "com.babcross.app"
         minSdk = 26
         targetSdk = 35
-        versionCode = 33
-        versionName = "0.1.32"
+        versionCode = 106
+        versionName = "0.1.105"
     }
 
     compileOptions {
@@ -43,6 +43,12 @@ android {
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             if (keystorePropertiesFile.exists()) {
                 signingConfig = signingConfigs.getByName("release")
             }

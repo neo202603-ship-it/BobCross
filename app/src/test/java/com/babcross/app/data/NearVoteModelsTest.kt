@@ -15,6 +15,29 @@ class NearVoteModelsTest {
     }
 
     @Test
+    fun resultHashNormalizesWhitespaceAndUnicode() {
+        val compactHash = SharedResult.computeHash(
+            pollId = "poll-test",
+            question = "점심메뉴는?",
+            options = listOf("카페", "분식"),
+            counts = mapOf("카페" to 1, "분식" to 1),
+            participantIds = listOf("one", "two"),
+            participantSelections = mapOf("one" to "카페", "two" to "분식")
+        )
+        val decomposedCafe = "카페"
+        val looseHash = SharedResult.computeHash(
+            pollId = " poll-test ",
+            question = "점심메뉴는?\n",
+            options = listOf(" $decomposedCafe ", "분식"),
+            counts = mapOf(decomposedCafe to 1, "분식" to 1),
+            participantIds = listOf("two", "one"),
+            participantSelections = mapOf("one" to " $decomposedCafe ", "two" to "분식")
+        )
+
+        assertEquals(compactHash, looseHash)
+    }
+
+    @Test
     fun privateResultDoesNotExposeParticipantSelections() {
         val result = sampleResult().copy(
             participantSelections = emptyMap(),
@@ -46,13 +69,15 @@ class NearVoteModelsTest {
             durationMinutes = 1,
             durationSeconds = 30,
             endAtMillis = 1234L,
-            revealSelections = false
+            revealSelections = false,
+            inviteCode = "3842"
         )
 
         val restored = NearbyPoll.fromPayload("proposer", poll.toPayloadJson())
 
         assertEquals(false, restored.revealSelections)
         assertEquals(30, restored.durationSeconds)
+        assertEquals("3842", restored.inviteCode)
     }
 
     private fun sampleResult(): SharedResult {

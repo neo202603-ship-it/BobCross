@@ -3,6 +3,7 @@ package com.babcross.app.data
 import org.json.JSONArray
 import org.json.JSONObject
 import java.security.MessageDigest
+import java.text.Normalizer
 
 data class VoteReceipt(
     val pollId: String,
@@ -113,23 +114,41 @@ data class SharedResult(
             participantIds: List<String>,
             participantSelections: Map<String, String> = emptyMap()
         ): String {
+            val canonicalOptions = options.map { canonicalHashText(it) }
+            val canonicalCountMap = counts.entries.associate { (option, count) ->
+                canonicalHashText(option) to count
+            }
+            val canonicalCounts = options.map { option ->
+                val canonicalOption = canonicalHashText(option)
+                val count = counts[option] ?: canonicalCountMap[canonicalOption] ?: 0
+                canonicalOption to count
+            }
+            val canonicalSelections = participantSelections.mapValues { (_, selection) ->
+                canonicalHashText(selection)
+            }
             val canonical = buildString {
-                append(pollId)
+                append(canonicalHashText(pollId))
                 append("|")
-                append(question)
+                append(canonicalHashText(question))
                 append("|")
-                append(options.joinToString(","))
+                append(canonicalOptions.joinToString(","))
                 append("|")
-                append(options.joinToString(",") { "${it}:${counts[it] ?: 0}" })
+                append(canonicalCounts.joinToString(",") { (option, count) -> "$option:$count" })
                 append("|")
-                append(participantIds.sorted().joinToString(","))
-                if (participantSelections.isNotEmpty()) {
+                append(participantIds.map { canonicalHashText(it) }.sorted().joinToString(","))
+                if (canonicalSelections.isNotEmpty()) {
                     append("|")
-                    append(participantIds.sorted().joinToString(",") { id -> "$id:${participantSelections[id].orEmpty()}" })
+                    append(participantIds.sorted().joinToString(",") { id ->
+                        "${canonicalHashText(id)}:${canonicalSelections[id].orEmpty()}"
+                    })
                 }
             }
             val digest = MessageDigest.getInstance("SHA-256").digest(canonical.toByteArray())
             return digest.joinToString("") { "%02x".format(it) }
+        }
+
+        private fun canonicalHashText(value: String): String {
+            return Normalizer.normalize(value.trim().replace(Regex("\\s+"), " "), Normalizer.Form.NFC)
         }
 
         fun fromPayload(proposerId: String, payloadJson: String): SharedResult {
@@ -206,7 +225,8 @@ data class NearbyPoll(
     val durationSeconds: Int,
     val endAtMillis: Long,
     val allowParticipantOptions: Boolean = false,
-    val revealSelections: Boolean = true
+    val revealSelections: Boolean = true,
+    val inviteCode: String = ""
 ) {
     fun toPayloadJson(): String {
         return JSONObject()
@@ -220,6 +240,7 @@ data class NearbyPoll(
             .put("endAtMillis", endAtMillis)
             .put("allowParticipantOptions", allowParticipantOptions)
             .put("revealSelections", revealSelections)
+            .put("inviteCode", inviteCode)
             .toString()
     }
 
@@ -264,7 +285,8 @@ data class NearbyPoll(
                     ) * 1_000L
                 ),
                 allowParticipantOptions = payload.optBoolean("allowParticipantOptions", false),
-                revealSelections = payload.optBoolean("revealSelections", true)
+                revealSelections = payload.optBoolean("revealSelections", true),
+                inviteCode = payload.optString("inviteCode")
             )
         }
     }
@@ -279,7 +301,8 @@ data class PollTemplate(
     val durationSeconds: Int = durationMinutes * 60,
     val builtIn: Boolean = false,
     val allowParticipantOptions: Boolean = false,
-    val revealSelections: Boolean = true
+    val revealSelections: Boolean = true,
+    val categoryKey: String? = null
 ) {
     fun toJson(): JSONObject {
         return JSONObject()
@@ -292,6 +315,7 @@ data class PollTemplate(
             .put("builtIn", builtIn)
             .put("allowParticipantOptions", allowParticipantOptions)
             .put("revealSelections", revealSelections)
+            .put("categoryKey", categoryKey ?: "")
     }
 
     companion object {
@@ -308,7 +332,8 @@ data class PollTemplate(
                 durationSeconds = json.optInt("durationSeconds", durationMinutes * 60),
                 builtIn = json.optBoolean("builtIn", false),
                 allowParticipantOptions = json.optBoolean("allowParticipantOptions", false),
-                revealSelections = json.optBoolean("revealSelections", true)
+                revealSelections = json.optBoolean("revealSelections", true),
+                categoryKey = json.optString("categoryKey").takeIf { it.isNotBlank() }
             )
         }
     }
