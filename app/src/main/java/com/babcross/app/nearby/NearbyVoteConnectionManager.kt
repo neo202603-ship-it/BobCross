@@ -40,6 +40,7 @@ class NearbyVoteConnectionManager(
     private val peerDisplayNames = mutableMapOf<String, String>()
     private var isAdvertising = false
     private var isDiscovering = false
+    private var keepDiscoveryWhileConnected = false
 
     private val lifecycleCallback = object : ConnectionLifecycleCallback() {
         override fun onConnectionInitiated(endpointId: String, connectionInfo: ConnectionInfo) {
@@ -176,14 +177,37 @@ class NearbyVoteConnectionManager(
         startNearbyMode()
     }
 
-    fun maintainNearbyMode() {
-        if (!isAdvertising) {
+    fun maintainNearbyMode(
+        keepDiscoveryOpen: Boolean = false,
+        acceptIncomingOnly: Boolean = false,
+        suppressAdvertising: Boolean = false
+    ) {
+        keepDiscoveryWhileConnected = keepDiscoveryOpen && !acceptIncomingOnly
+        if (suppressAdvertising) {
+            stopAdvertisingOnly()
+        } else if (!isAdvertising) {
             startAdvertising()
         }
-        if (!isDiscovering && activeEndpoints().isEmpty()) {
+        if (acceptIncomingOnly) {
+            stopDiscoveryOnly("밥판장이 늦은 참여자를 직접 받도록 탐색 중지")
+        } else if (!isDiscovering && shouldDiscover()) {
             startDiscovery()
         }
+        stopDiscoveryIfConnected()
         notifyConnectionCount()
+    }
+
+    fun setContinuousDiscoveryEnabled(enabled: Boolean) {
+        keepDiscoveryWhileConnected = enabled
+        if (enabled && !isDiscovering && shouldDiscover()) {
+            startDiscovery()
+        } else {
+            stopDiscoveryIfConnected()
+        }
+    }
+
+    fun acceptIncomingConnectionsOnly() {
+        maintainNearbyMode(keepDiscoveryOpen = false, acceptIncomingOnly = true)
     }
 
     fun connectedPeerNames(): List<String> {
@@ -254,15 +278,35 @@ class NearbyVoteConnectionManager(
         peerDisplayNames.clear()
         isAdvertising = false
         isDiscovering = false
+        keepDiscoveryWhileConnected = false
         listener.onConnectionCountChanged(0)
     }
 
-    private fun stopDiscoveryIfConnected() {
-        if (activeEndpoints().isNotEmpty() && isDiscovering) {
+    private fun stopAdvertisingOnly() {
+        if (isAdvertising) {
+            client.stopAdvertising()
+            isAdvertising = false
+            listener.onLog("참가자끼리 새 연결을 만들지 않도록 광고 중지")
+        }
+    }
+
+    private fun stopDiscoveryOnly(message: String) {
+        if (isDiscovering) {
             client.stopDiscovery()
             isDiscovering = false
-            listener.onLog("연결 안정화를 위해 탐색 일시 중지")
+            listener.onLog(message)
         }
+    }
+
+    private fun stopDiscoveryIfConnected() {
+        if (activeEndpoints().isNotEmpty() && isDiscovering && !shouldDiscover()) {
+            stopDiscoveryOnly("연결 안정화를 위해 탐색 일시 중지")
+        }
+    }
+
+    private fun shouldDiscover(): Boolean {
+        return activeEndpoints().isEmpty() ||
+            (keepDiscoveryWhileConnected && connectionSlotsUsed() < MAX_CONNECTIONS)
     }
 
     private fun activeEndpoints(): List<String> {
@@ -270,14 +314,7 @@ class NearbyVoteConnectionManager(
     }
 
     private fun displayEndpoints(): List<String> {
-        val verified = verifiedEndpoints()
-        return verified.ifEmpty { activeEndpoints() }
-    }
-
-    private fun verifiedEndpoints(): List<String> {
-        return connectedEndpoints
-            .filter { endpointId -> peerIds.containsKey(endpointId) }
-            .distinctBy { endpointId -> peerIds.getValue(endpointId) }
+        return activeEndpoints()
     }
 
     private fun connectionSlotsUsed(): Int {

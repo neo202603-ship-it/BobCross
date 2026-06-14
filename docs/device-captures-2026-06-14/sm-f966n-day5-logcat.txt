@@ -1,0 +1,502 @@
+--------- beginning of main
+06-14 16:12:17.744  4736  5259 W bt_btif_storage: system/btif/src/btif_storage.cc:1136 btif_storage_get_remote_version: btif_storage_get_remote_version : failed to retrieve data
+06-14 16:12:17.745  4736  5259 E btm_acl : system/stack/acl/btm_acl.cc:467 btm_brcm_enable_disable_dbfwpluslinkloss: [BTCORE][DBFW+]btm_brcm_enable_disable_dbfwpluslinkloss: handle: 19 : enabled: 1
+06-14 16:12:17.745  4736  5259 I btm_acl : system/stack/acl/btm_acl.cc:1576 change_connection_packet_types: Unable to include remote supported packet types as read feature incomplete
+06-14 16:12:17.745  4736  5259 I btm_acl : system/stack/acl/btm_acl.cc:1579 change_connection_packet_types: TIP: Maybe wait until read feature complete beforehand
+06-14 16:12:17.746  4736  5265 I bluetooth: system/gd/hci/remote_name_request.cc:64 StartRemoteNameRequest: Enqueuing remote name request to xx:xx:xx:xx:a8:5e
+06-14 16:12:17.746  4736  5265 W bluetooth: system/gd/hci/acl_manager/acl_scheduler.cc:254 try_name_dequeue_next_operation: Pending name req is not empty; so sending next connection
+06-14 16:12:17.746  4736  5265 I bluetooth: system/gd/hci/remote_name_request.cc:122 actually_start_remote_name_request: Starting remote name request to xx:xx:xx:xx:a8:5e
+06-14 16:12:17.746  4736  5259 W l2c_link: system/stack/l2cap/l2c_link.cc:689 l2c_link_adjust_allocation: link_xmit_data_q is null
+06-14 16:12:17.746  4736  5259 W btm_acl : system/stack/acl/btm_acl.cc:1210 BTM_SetLinkSuperTout: Role is peripheral so unable to set supervision timeout:80.00ms bd_addr:xx:xx:xx:xx:a8:5e
+06-14 16:12:17.746  4736  5259 W bt_bta_dm: system/bta/dm/bta_dm_act.cc:873 bta_dm_acl_up: Acl connected peer:xx:xx:xx:xx:a8:5e transport:BT_TRANSPORT_BR_EDR handle:19
+06-14 16:12:17.746  4736  5259 W btm_acl : system/stack/acl/btm_acl.cc:2700 acl_peer_supports_sniff_subrating: Checking remote features but remote feature read is incomplete
+06-14 16:12:17.746  4736  5259 W btm_acl : system/stack/acl/btm_acl.cc:1695 BTM_ReadRemoteVersion: Remote version information is invalid
+06-14 16:12:17.746  4736  5259 I bt_btif_dm: system/btif/src/btif_dm.cc:780 btif_update_remote_version_property: Remote version info valid:false [xx:xx:xx:xx:a8:5e]:0x0,0x0,0x0
+06-14 16:12:17.747  4736  5259 I bt_btif_dm: system/btif/src/btif_dm.cc:2894 btif_dm_acl_evt: BTA_DM_LINK_UP_EVT. update CoD to 0x5a020c for xx:xx:xx:xx:a8:5e
+06-14 16:12:17.747  4736  5259 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:761 handle_role_change: Role change callback peer:xx:xx:xx:xx:a8:5e info:0x00:none new_role:central dev count:2 hci_status:HCI_SUCCESS
+06-14 16:12:17.747  4736  5259 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1040 bta_dm_check_av: av_count:1
+06-14 16:12:17.747  4736  5259 W bt_bta_dm: system/bta/dm/bta_dm_act.cc:1043 bta_dm_check_av: [0]: info:0x10:use_ssr, pending removal:true
+06-14 16:12:17.747  4736  5259 W bt_bta_dm: system/bta/dm/bta_dm_act.cc:1043 bta_dm_check_av: [1]: info:0x00:none, pending removal:true
+06-14 16:12:17.747  4736  5259 E bt_btu_hcif: system/stack/btu/btu_hcif.cc:1335 btu_hcif_hdl_command_complete: Command complete for opcode:0x80d should not be handled here
+06-14 16:12:17.751  4736  5265 I bluetooth: system/gd/hci/hci_layer.cc:193 drop: Dropping event MAX_SLOTS_CHANGE(0x1b)
+06-14 16:12:17.751  4736  5812 I ContainerConfigurationPolicy: Bluetooth And NFC caller permission check
+06-14 16:12:17.752  4736  5259 E btm_acl : system/stack/acl/btm_acl.cc:422 btm_brcm_enable_dbfwplus_linkloss_cmpl: [BTCORE][DBFW+]btm_brcm_enable_dbfwpluslinklosscmpl: p_params->opcode:0xfdf1, param_len:0x0001
+06-14 16:12:17.752  4736  5259 E btm_acl : system/stack/acl/btm_acl.cc:425 btm_brcm_enable_dbfwplus_linkloss_cmpl: [BTCORE][DBFW+]btm_brcm_enable_dbfwpluslinklosscmpl status = 0x00
+06-14 16:12:17.752  4736  5259 E btm_acl : system/stack/acl/btm_acl.cc:432 btm_brcm_enable_dbfwplus_linkloss_cmpl: [BTCORE][DBFW+]success: enable dbfwpluslinkloss callback
+--------- beginning of system
+06-14 16:12:17.752  2401  2948 D ActivityManager: sync unfroze 18117 com.android.settings for 10
+06-14 16:12:17.753  2401  2948 D ActivityManager: sync unfroze 5174 com.samsung.android.scpm for 10
+06-14 16:12:17.753  2401  2948 D ActivityManager: sync unfroze 12334 com.samsung.android.lool for 10
+06-14 16:12:17.754  2401  2948 D ActivityManager: sync unfroze 12506 com.samsung.android.provider.filterprovider for 10
+06-14 16:12:17.754  2401  2948 D ActivityManager: sync unfroze 12430 com.android.keychain for 10
+06-14 16:12:17.754  2401  2948 D ActivityManager: sync unfroze 32522 com.samsung.android.fmm for 10
+06-14 16:12:17.755  2401  2948 D ActivityManager: sync unfroze 16130 com.samsung.android.dqagent for 10
+06-14 16:12:17.755  2401  2948 D ActivityManager: sync unfroze 24706 com.samsung.android.stickercenter for 10
+06-14 16:12:17.755  4736  5265 I bluetooth: system/gd/hci/remote_name_request.cc:152 on_start_remote_name_request_status: Started remote name request peer:xx:xx:xx:xx:a8:5e status:SUCCESS(0x00)
+06-14 16:12:17.756  2401  2948 D ActivityManager: sync unfroze 20519 com.samsung.android.vtcamerasettings for 10
+06-14 16:12:17.756  2401  2948 D ActivityManager: sync unfroze 7261 com.samsung.android.sm.provider for 10
+06-14 16:12:17.757  2401  2948 D ActivityManager: sync unfroze 19785 com.samsung.aasaservice for 10
+06-14 16:12:17.757  2401  2948 I ActivityManager: Changes in 10215 19 to 19, 0 to 128
+06-14 16:12:17.757  2401  2948 I ActivityManager: Changes in 5009 10 to 10, 0 to 128
+06-14 16:12:17.757  2401  2948 W ProcessStats: Tracking association SourceState{261adcc com.samsung.android.app.contacts/10127 Service #2508088} whose proc state 8 is better than process ProcessState{ae54b4b com.samsung.android.scpm/5009 pkg=com.samsung.android.scpm} proc state 15 (2 skipped)
+06-14 16:12:17.757  2401  4018 I BluetoothDeviceBatteryManager: action: android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.758  2401  4018 I BluetoothDeviceBatteryManager: # Alias(IjUxMEZKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA) / Address(BC9307_E)
+06-14 16:12:17.758  4736  6347 I BluetoothRemoteDevices: getBatteryLevel : -1 from HFP
+06-14 16:12:17.758  2401  4018 I BluetoothDeviceBatteryManager: # BatteryLevel : -1
+06-14 16:12:17.759  2401  2401 D BluetoothPolicyService: onReceive android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.760  2401  2401 D BluetoothPolicyService: isDesktopConnectivityEnabled : true
+06-14 16:12:17.760  2401  2401 D SLocation: DeviceStatusNotifyManager - broadcastReceiver.onReceive start 1074821019
+06-14 16:12:17.760  2401  2401 D SLocation: DeviceStatusNotifyManager - broadcastReceiver.onReceive end 1074821019
+06-14 16:12:17.760  4640  4833 W BluetoothEventManager: AclStateChangedHandler: activeDevice is null
+06-14 16:12:17.761  2401 13226 I Mocca_VehicleDetectionHelper: (1.1.04.1)BT: Processing BT intent android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.761  2401 13226 I Mocca_VehicleDetectionHelper: (1.1.04.1)BT: Major class: 512 Minor class: 524
+06-14 16:12:17.761  1844  1992 I VSyncReactor: Current= 120, Period= 120, Distance= 0
+06-14 16:12:17.762  2401  2948 I ActivityManager: Changes in 10360 8 to 8, 0 to 128
+06-14 16:12:17.763  2401 24643 D PerProcessNandswap$NandswapHandler: nandswap start for non-activity com.samsung.android.app.aodservice(pid 6191) action:6 adj:100 type:2
+06-14 16:12:17.764  9881  9881 I SHEALTH#OOBEManager: getState :NOT_NEEDED / remote
+06-14 16:12:17.764  4736  5812 E BluetoothRemoteDevices: setAclConnected :: connected = true, mSocketConnectedCount = 0
+06-14 16:12:17.764  8680  8680 I Connection4WatchManager: ConnectionReceiver.onReceive-android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.765  7320  7320 I [MCFDs]_IntentUtil: emitToConsumer - (ACL_CONNECTION_STATE) ACTION_ID_ACL_CONNECTED, consumer size=2
+06-14 16:12:17.766 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:17.767  2401  2401 D SLocation: DeviceStatusNotifyManager - broadcastReceiver.onReceive start 1074821025
+06-14 16:12:17.767  2401  2401 D SLocation: DeviceStatusNotifyManager - broadcastReceiver.onReceive end 1074821025
+06-14 16:12:17.767  4640  4833 W BluetoothEventManager: AclStateChangedHandler: activeDevice is null
+06-14 16:12:17.767 18117 18117 V BluetoothEventManager: onReceive :: android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.767  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.767  5528  5593 I RequestManager_FLP: onOpChanged, op=0 / packageName=com.samsung.android.oneconnect
+06-14 16:12:17.768  2401  4941 I SLocation: DeviceStatusNotifyManager - received action : android.bluetooth.device.action.ACL_CONNECTED, package : null
+06-14 16:12:17.768  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.768  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.768  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.768  2401  4941 I SLocation: DeviceStatusNotifyManager - received action : android.bluetooth.device.action.ACL_CONNECTED, package : null
+06-14 16:12:17.768  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.768 25776 10611 I NearbyDiscovery: (REDACTED) %s: onDeviceConnected
+06-14 16:12:17.768  2401  4941 D SLocation: BluetoothStatusMonitor - conn, (BC:93:07:**:**:5E/687), state : 10, 1
+06-14 16:12:17.768  2401  4941 D SLocation: BluetoothStatusMonitor - conn, (BC:93:07:**:**:5E/687), state : 10, 1
+06-14 16:12:17.769  8680 20252 I Connection4WatchManager: BluetoothEventHandler.onBluetoothEvent-action: android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.769  8680 20252 W Connection4WatchManager: WatchData.isManualConnectWatch() : do not have device - ##:##:##:##:A8:5E!!
+06-14 16:12:17.769  8680 20252 I Connection4WatchManager: ConnectionHandler.getDeviceFromIntent() : non contain watch - ##:##:##:##:A8:5E
+06-14 16:12:17.769  1844  1992 I VSyncReactor: Current= 120, Period= 120, Distance= 120
+06-14 16:12:17.769  2401  3952 D BackgroundInstallControlService: Package event received: 0
+06-14 16:12:17.770  4736  5265 I bluetooth: system/main/shim/acl.cc:535 OnReadClockOffsetComplete: UNIMPLEMENTED
+06-14 16:12:17.771 12841 12841 I [+0900]oneconnect[1.8.45.24_01][CORE]: QcSupportUtil.isQcSupportedMode - user: 0
+06-14 16:12:17.771 12841 12841 W [+0900]oneconnect[1.8.45.24_01][CORE]: QcReceiver.handleIntent - owner mode: android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.771 18117 18117 W BluetoothEventManager: AclStateChangedHandler: activeDevice is null
+06-14 16:12:17.773  2401 24643 D PerProcessNandswapNative: enable WriteBooster
+06-14 16:12:17.774 12841 12841 I [+0900]oneconnect[1.8.45.24_01][CORE]: BTStateChangeReceiver.onReceive - Action : android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.774 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:17.774 12513 12513 I aakq    : onReceive
+06-14 16:12:17.775 12841 12841 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelper.handleActionConnectionStateChanged -  [action]android.bluetooth.device.action.ACL_CONNECTED [connState]2[address]IjUxMEZKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA - ($)
+06-14 16:12:17.775 12841 12841 I [+0900]oneconnect[1.8.45.24_01][CORE]: ExcludeDiscoveryEventManager.isExcludeDeviceStateBtEvent -  device: ($)-I(42) | BT: ($)BC:93
+06-14 16:12:17.776 32522 32654 I D_FMM:[WearableManager     ]: LBA_Event : IjUxMEZKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA - BC:**:**:**:A8:5E
+06-14 16:12:17.777 32522 32654 W D_FMM:[WDDvcDBHandler      ]: select wearable failed : BC:**:**:**:A8:5E
+06-14 16:12:17.778  2401  2948 I ActivityManager: Changes in 10115 10 to 10, 0 to 128
+06-14 16:12:17.780 12841 14583 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessConnectionBroadcastReceiver.onReceive - Not a remoteless: ($)BC:93 
+06-14 16:12:17.780 25776 25966 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.781  1666  1666 D Zygote  : Forked child process 20259
+06-14 16:12:17.781 12841 13764 I BluetoothHeadset: getConnectionState() in if statement
+06-14 16:12:17.782 25776 20257 I Nearby  : (REDACTED) is blocked device type %s, isAuto=%s, isIot=%s, isLatchsky=%s, isChinaWearable=%s, isTv=%s, isWearable=%s (supportWearOs=%s), isChromeOsDevice=%s (supportChromeOs=%s)
+06-14 16:12:17.782 10083 10083 I BUPlugin_BluetoothReceiver: onReceive()
+06-14 16:12:17.782 10083 10083 I BUPlugin_BluetoothReceiverHandle: onReceive() : android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.782  4736  4755 E BluetoothRemoteDevices: mSocketConnectedCount 0
+06-14 16:12:17.782 10083 10083 I BUPlugin_BluetoothManager: onReceive() : android.bluetooth.device.action.ACL_CONNECTED
+06-14 16:12:17.782 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelper.getBtDevice - deviceBt ($)-I(42)
+06-14 16:12:17.782 10083 10083 I BUPlugin_BluetoothManager: isAdapterOn() : true
+06-14 16:12:17.783  4736  5175 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.783 25776 25966 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.783  4736  5175 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.783  4736  5259 I bt_btm_sec: system/stack/btm/btm_sec.cc:4712 btm_sec_execute_procedure: No immediate action taken in busy state: le_link=tSECURITY_STATE::IDLE(0x0) classic_link=tSECURITY_STATE::GETTING_NAME(0x3)
+06-14 16:12:17.783  4736  5175 I BluetoothRemoteDevices: isSsDualBuds XX:XX:XX:XX:A8:5E, false
+06-14 16:12:17.784 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelperUtil.getManufacturerData -  - ($)
+06-14 16:12:17.784 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelper.getBtDevice - isConnected:false
+06-14 16:12:17.785  4736  5265 I bluetooth: system/gd/hci/remote_name_request.cc:194 completed: Received REMOTE_NAME_REQUEST_COMPLETE from xx:xx:xx:xx:a8:5e with status SUCCESS(0x00)
+06-14 16:12:17.785  4736  5265 I bluetooth: system/gd/hci/acl_manager/acl_scheduler.cc:139 operator(): Remote name request completed
+06-14 16:12:17.786 12513 12689 I abzo    : (REDACTED) bluetoothConnectionStateChanged. Action: %s
+06-14 16:12:17.787 25776 25776 I NearbyDiscovery: (REDACTED) DiscoveryService onStartCommand action: %s
+06-14 16:12:17.787  2401  2949 I ActivityManager: Start proc 20259:com.google.android.projection.gearhead:shared/u0a258 for broadcast {com.google.android.projection.gearhead/com.google.android.apps.auto.wireless.bluetooth.WifiBluetoothReceiver}
+06-14 16:12:17.787  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:17.788 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelper.setDeviceTypeAndIconForExceptedDevices - devicename: ($)-I(42)
+06-14 16:12:17.788  4736  5259 I bluetooth: system/stack/rnr/remote_name_request.cc:239 btm_process_remote_name: RNR received UNEXPECTED name bd_addr:xx:xx:xx:xx:a8:5e inq_addr:00:00:00:00:00:00 hci_status:HCI_SUCCESS le_link:true rnr_active:false
+06-14 16:12:17.788  4736  5259 I bt_btm_sec: system/stack/btm/btm_sec.cc:2250 btm_sec_rmt_name_request_complete: btm_sec_rmt_name_request_complete for xx:xx:xx:xx:a8:5e
+06-14 16:12:17.788  4736  5259 I bt_btif_dm: system/btif/src/btif_dm.cc:2464 btif_on_name_read_from_btm: xx:xx:xx:xx:a8:5e IklWQUdKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA
+06-14 16:12:17.788  4736  5259 I bt_btif_dm: system/btif/src/btif_dm.cc:2443 btif_on_name_read: Callback for read name event addr:xx:xx:xx:xx:a8:5e name:IklWQUdKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA
+06-14 16:12:17.788  4736  5259 E bt_btu_hcif: system/stack/btu/btu_hcif.cc:1335 btu_hcif_hdl_command_complete: Command complete for opcode:0x80d should not be handled here
+06-14 16:12:17.791  4736  5812 I ContainerConfigurationPolicy: Bluetooth And NFC caller permission check
+06-14 16:12:17.791 25776 25776 I NearbyDiscovery: (REDACTED) onAclChange: state=%s, transport=%s, %s
+06-14 16:12:17.791 18117 18117 V BluetoothEventManager: onReceive :: android.bluetooth.device.action.NAME_CHANGED
+06-14 16:12:17.791 10083 10083 I BUPlugin_BluetoothReceiverHandle: onReceive() : android.bluetooth.device.action.NAME_CHANGED
+06-14 16:12:17.791 10083 10083 I BUPlugin_UhmDatabase: postUpdatePluginDeviceName()
+06-14 16:12:17.791 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: ExcludeDiscoveryEventManager.isExcludeDeviceStateBtEvent -  device: ($)-I(42) | BT: ($)BC:93
+06-14 16:12:17.791 10083 10752 I BUPlugin_UhmDatabase: updatePluginDeviceName()
+06-14 16:12:17.791 12841 13764 I [+0900]oneconnect[1.8.45.24_01][CORE]: BluetoothHelper.addDevice - ADD: |name:($)-I(42)|deviceType:MOBILE|discoverType:_BT|services:_FilesShare|connected:false[Alias]IjUxMEZKiuQAAAAAAAAAD-qwgOuyvOyatO2SjeyEoA[Bonded]false[ConnectedA2dpSink]false[mLeAudioGroupId]-1[isLeAudioDualMode]false[ConnectedA2dpSinkByOtherModule]false[SecType]Unknown[PluginTypes]null
+06-14 16:12:17.791 10083 10752 I BUPlugin_BluetoothManager: isAdapterOn() : true
+06-14 16:12:17.791 10083 10752 I BUPlugin_UhmDatabase: getDeviceList() : result.size() = 1
+06-14 16:12:17.791  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.791  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.791 10083 10752 I BUPlugin_UhmDatabase: updatePluginDeviceName()_end
+06-14 16:12:17.791  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.791  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.791  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.792 12841 13585 I [+0900]oneconnect[1.8.45.24_01][CORE]: AbstractDiscoveryManager.updateDeviceList - @DL_DeviceInfo no existItem, add ($)-I(42)
+06-14 16:12:17.792 12841 13585 I [+0900]oneconnect[1.8.45.24_01][CORE]: NearbyDeviceRepositoryImpl.onDiscoveryResult - event: 1001 | qcDevice: [Name]($)-I(42)[DeviceType]MOBILE[Discover]_BT[DiscoveryTime]0[Services]_FilesShare[Action][Connected]false[SecType]-1[SecIcon]-1[ConType]NONE[size()]1[BT]($)BC:93[OCFDiscovery]NONE[OCFOwned]-1
+06-14 16:12:17.792 19038 19077 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.793  4736  4755 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.793 25776 26028 I NearbyDiscovery: (REDACTED) FastPair: lock scan rate if needed, %s, bondState=%s
+06-14 16:12:17.793 19038 19077 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.794  4736  6347 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.798 20259 20259 I gearhead:shared: Using CollectorTypeCMC GC.
+06-14 16:12:17.799 19038 20263 I Nearby  : (REDACTED) is blocked device type %s, isAuto=%s, isIot=%s, isLatchsky=%s, isChinaWearable=%s, isTv=%s, isWearable=%s (supportWearOs=%s), isChromeOsDevice=%s (supportChromeOs=%s)
+06-14 16:12:17.799 19038 20263 I Nearby  : (REDACTED) is blocked device type %s, isAuto=%s, isIot=%s, isLatchsky=%s, isChinaWearable=%s, isTv=%s, isWearable=%s (supportWearOs=%s), isChromeOsDevice=%s (supportChromeOs=%s)
+06-14 16:12:17.801  5911  6085 I adbd    : jdwp connection from 20259
+06-14 16:12:17.801  4736  5259 I smp     : system/stack/smp/smp_l2c.cc:268 smp_br_connect_callback: BDA:xx:xx:xx:xx:a8:5e pairing_bda:00:00:00:00:00:00, connected:true
+06-14 16:12:17.802  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_CLOSED [0] event:L2CEVT_L2CAP_CONNECT_REQ(0xa) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.802  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_TERM_W4_SEC_COMP [2] event:L2CEVT_SEC_COMP(0x7) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.802  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_W4_L2CA_CONNECT_RSP [4] event:L2CEVT_L2CA_CONNECT_RSP(0x16) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.802  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_CONFIG [5] event:L2CEVT_L2CA_CONFIG_REQ(0x18) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.802  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:446 l2c_csm_closed: Check security for psm 0x0001, status 0
+06-14 16:12:17.802 20259 20259 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 16:12:17.803 19038 19077 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.803  4736  6350 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.803 19038 19077 D BluetoothAdapter: getBondedDevices() - package : com.google.android.gms, state : 12
+06-14 16:12:17.803  4736  6350 I AdapterProperties: getBondedDevices: length=5
+06-14 16:12:17.803 20259 20259 D ActivityThread: setConscryptValidator
+06-14 16:12:17.803 20259 20259 D ActivityThread: setConscryptValidator - put
+06-14 16:12:17.808  5907  6063 V OsAgent : broadcastSystemEvent - 7
+06-14 16:12:17.809  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_CONFIG [5] event:L2CEVT_L2CAP_CONFIG_REQ(0xe) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.809  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_CONFIG [5] event:L2CEVT_L2CA_CONFIG_RSP(0x19) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.810 20259 20259 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+06-14 16:12:17.810 20259 20259 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+06-14 16:12:17.820  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_CONFIG [5] event:L2CEVT_L2CAP_CONFIG_RSP(0xf) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.821  2401 24643 D PerProcessNandswap$NandswapHandler: nandswap end for non-activity com.samsung.android.app.aodservice(pid 6191) ret:17918984192 adj:100
+06-14 16:12:17.825 20259 20259 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.826 20259 20259 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.826 20259 20259 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.826  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_OPEN [6] event:L2CEVT_L2CAP_DISCONNECT_REQ(0x11) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.826  4736  5259 W stack::sdp: system/stack/sdp/sdp_main.cc:210 sdp_disconnect_ind: SDP - Rcvd L2CAP disc, process pend sdp ccb: 0x79
+06-14 16:12:17.826  4736  5259 I l2c_csm : system/stack/l2cap/l2c_csm.cc:230 l2c_csm_execute: Enter CSM, chnl_state:CST_W4_L2CA_DISCONNECT_RSP [8] event:L2CEVT_L2CA_DISCONNECT_RSP(0x1c) lcid:0x0079 rcid:0x005f
+06-14 16:12:17.827 20259 20259 D nativeloader: Configuring clns-9 for other apk /data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.ko.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.xxhdpi.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/lib/arm64:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhe
+06-14 16:12:17.829  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment: Currently set values for:
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in per-application setting
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment: ANGLE allowlist from config: 
+06-14 16:12:17.835 20259 20259 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in ANGLE allowlist or settings, returning default
+06-14 16:12:17.839  4736  5259 W bt_btm_sec: system/stack/btm/btm_sec.cc:2693 btm_io_capabilities_rsp: 
+06-14 16:12:17.839  4736  5259 W bt_bta_dm_sec: system/bta/dm/bta_dm_sec.cc:426 bta_dm_sp_cback: event:BTM_SP_IO_RSP_EVT
+06-14 16:12:17.839  4736  5259 W bt_btm_sec: system/stack/btm/btm_sec.cc:2484 btm_io_capabilities_req: 
+06-14 16:12:17.839  4736  5259 W bt_bta_dm_sec: system/bta/dm/bta_dm_sec.cc:426 bta_dm_sp_cback: event:BTM_SP_IO_REQ_EVT
+06-14 16:12:17.839  4736  5259 W bt_bta_dm_sec: system/bta/dm/bta_dm_sec.cc:438 bta_dm_sp_cback: io mitm: 0 oob_data:0
+06-14 16:12:17.841  4736  5259 E bt_btu_hcif: system/stack/btu/btu_hcif.cc:1335 btu_hcif_hdl_command_complete: Command complete for opcode:0x42b should not be handled here
+06-14 16:12:17.855 20259 20259 I CAR.GH  : onCreate
+06-14 16:12:17.872 20259 20259 I GH.PrimesMgr: transmitting to prod
+06-14 16:12:17.880  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:12:17.881 20259 20259 I CAR.GH  : Process: SHARED_SERVICE
+06-14 16:12:17.881 20259 20259 I CAR.GH  : Channel: PROD
+06-14 16:12:17.883 20259 20259 I CAR.GH  : onCreate completed
+06-14 16:12:17.884  2401  7942 I ActivityManager: Changes in 10258 19 to 11, 0 to 128
+06-14 16:12:17.884 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:17.884 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:17.885  5528  5593 I RequestManager_FLP: onOpChanged, op=0 / packageName=com.google.android.projection.gearhead
+06-14 16:12:17.886  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.886  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.886  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.887  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.887  2401  3623 E JobScheduler.Background: Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 16:12:17.892 20259 20259 I GH.WifiBluetoothRcvr: Connection action: android.bluetooth.device.action.ACL_CONNECTED, device XX:XX:XX:XX:A8:5E
+06-14 16:12:17.898 20259 20259 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [com.google.android.apps.auto.components.connectivity.impl.ConnectivityEventHandlerImpl.c(SourceFile:94)] [com.google.android.apps.auto.components.connectivity.impl.ConnectivityEventHandlerImpl$ConnectivityEventBroadcastReceiver.c(SourceFile:111)] [ktf.b(SourceFile:173)] [lzd.onReceive(SourceFile:97)] [android.app.ActivityThread.handleReceiver(ActivityThread.java:5586)] [android.app.ActivityThread.-$$Nest$mhandleReceiver(Unknown Source:0)] [android.app.ActivityThread$H.handleMessage(ActivityThread.java:2857)]
+06-14 16:12:17.899 20259 20284 I GH.CarSvcDataStorage: Using DB version: 13
+06-14 16:12:17.899 20259 20259 I GH.WifiBluetoothRcvr: Wireless projection is available on this phone.
+06-14 16:12:17.900  2401  3868 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 16:12:17.900  2401  3868 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:12:17.900 20259 20286 I GH.ConnBroadcast: Internet connected
+06-14 16:12:17.900  1666  1666 D Zygote  : Forked child process 20288
+06-14 16:12:17.901 20259 20284 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+06-14 16:12:17.901  2401  2949 I ActivityManager: Start proc 20288:com.google.android.projection.gearhead:car/u0a258 for broadcast {com.google.android.projection.gearhead/com.google.android.apps.auto.carservice.gmscorecompat.CarBluetoothReceiver}
+06-14 16:12:17.901  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:17.902 20259 20283 I BluetoothAdapter: BluetoothAdapter() : com.google.android.projection.gearhead
+06-14 16:12:17.903 20259 20283 W CAR.BTCapsStore: Device not bonded, thus it's not currently AAW capable.
+06-14 16:12:17.903 20259 20283 I CAR.BTCapsStore: AAW status (NOT_BONDED).
+06-14 16:12:17.903 20259 20284 W CAR.BTCapsStore: Device not bonded, thus it's not currently AAW capable.
+06-14 16:12:17.903 20259 20284 I CAR.BTCapsStore: AAW status (NOT_BONDED).
+06-14 16:12:17.911 20259 20289 D nativeloader: Load /data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk!/lib/arm64-v8a/libmappedcountercacheversionjni.so using class loader ns clns-9 (caller=/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk): ok
+06-14 16:12:17.911 20288 20288 I on.gearhead:car: Using CollectorTypeCMC GC.
+06-14 16:12:17.913  5911  6085 I adbd    : jdwp connection from 20288
+06-14 16:12:17.915 20288 20288 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 16:12:17.916 20288 20288 D ActivityThread: setConscryptValidator
+06-14 16:12:17.916 20288 20288 D ActivityThread: setConscryptValidator - put
+06-14 16:12:17.923 20288 20288 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+06-14 16:12:17.923 20288 20288 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+06-14 16:12:17.932 20288 20288 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.933 20288 20288 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.933 20288 20288 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:17.933 20288 20288 D nativeloader: Configuring clns-9 for other apk /data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.ko.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.xxhdpi.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/lib/arm64:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhe
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment: Currently set values for:
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in per-application setting
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment: ANGLE allowlist from config: 
+06-14 16:12:17.937 20288 20288 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in ANGLE allowlist or settings, returning default
+06-14 16:12:17.940 20288 20288 I CAR.GH  : onCreate
+06-14 16:12:17.943 20288 20288 I GH.PrimesMgr: transmitting to prod
+06-14 16:12:17.944 20288 20288 I CAR.GH  : Process: CAR
+06-14 16:12:17.944 20288 20288 I CAR.GH  : Channel: PROD
+06-14 16:12:17.945 20288 20288 I CAR.GH  : onCreate completed
+06-14 16:12:17.953 20288 20288 I BluetoothAdapter: BluetoothAdapter() : com.google.android.projection.gearhead
+06-14 16:12:17.959  1666  1666 D Zygote  : Forked child process 20317
+06-14 16:12:17.959  2401  2949 I ActivityManager: Start proc 20317:com.sec.android.CcInfo/1000 for broadcast {com.sec.android.CcInfo/com.sec.android.CcInfo.WifiConnectionReceiver}
+06-14 16:12:17.959  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:17.974 20317 20317 I .android.CcInfo: Using CollectorTypeCMC GC.
+06-14 16:12:17.997 20317 20317 I BluetoothAdapter: BluetoothAdapter() : com.sec.android.CcInfo
+06-14 16:12:18.011  1666  1666 D Zygote  : Forked child process 20330
+06-14 16:12:18.012  2401  2949 I ActivityManager: Start proc 20330:com.google.android.projection.gearhead:shared/u150a258 for broadcast {com.google.android.projection.gearhead/com.google.android.apps.auto.wireless.bluetooth.WifiBluetoothReceiver}
+06-14 16:12:18.012  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:18.026 20330 20330 I gearhead:shared: Using CollectorTypeCMC GC.
+06-14 16:12:18.027  1807  2630 I thermal_core: pivot(AP) : 371, skin : 373
+06-14 16:12:18.027  1807  2630 I vendor.samsung.hardware.thermal-service: index = -6.000000
+06-14 16:12:18.027  1807  2630 I vendor.samsung.hardware.thermal-service: 2 / 2
+06-14 16:12:18.028  5911  6085 I adbd    : jdwp connection from 20330
+06-14 16:12:18.030 20330 20330 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 16:12:18.032 20330 20330 D ActivityThread: setConscryptValidator
+06-14 16:12:18.032 20330 20330 D ActivityThread: setConscryptValidator - put
+06-14 16:12:18.040 20330 20330 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+06-14 16:12:18.040 20330 20330 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+06-14 16:12:18.049 20330 20330 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.049 20330 20330 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.049 20330 20330 W gearhead:shared: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.050 20330 20330 D nativeloader: Configuring clns-9 for other apk /data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.ko.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.xxhdpi.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/lib/arm64:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhe
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment: Currently set values for:
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in per-application setting
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment: ANGLE allowlist from config: 
+06-14 16:12:18.056 20330 20330 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in ANGLE allowlist or settings, returning default
+06-14 16:12:18.060 20330 20330 I CAR.GH  : onCreate
+06-14 16:12:18.064 20330 20330 I GH.PrimesMgr: transmitting to prod
+06-14 16:12:18.067 20330 20330 I CAR.GH  : Process: SHARED_SERVICE
+06-14 16:12:18.067 20330 20330 I CAR.GH  : Channel: PROD
+06-14 16:12:18.067  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:12:18.067  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:12:18.067  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_rcv: 0
+06-14 16:12:18.068  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:12:18.068  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:12:18.068  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_spk: 0
+06-14 16:12:18.068 20330 20330 I CAR.GH  : onCreate completed
+06-14 16:12:18.068  7228  7940 I SDHMS:x : SIOP:: AP:371 BAT:353 USB:350 CHG:362 PA:365 CP:364 WIFI:373 CF:369 BLK:0 SUBBAT:354 LRPTHM:359 SKIN:364 SKINF:368 SKINB:374 LRP:364 LRF:368 LRB:374 APT:368 APR:374 RCV:320 SPK:320 CAPR:364 CRCV:320 CSPK:329 CAMT:373 UPSPK:353 DNSPK:354 VAP02:371 VAP05:369 AMB2:315 HIGH:0 AVGCUR:-198 POWER:-799
+06-14 16:12:18.069  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_spk=33
+06-14 16:12:18.069  1831  1831 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_spk=33
+06-14 16:12:18.070  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:12:18.070  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_spk
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_spk: 33
+06-14 16:12:18.070  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3002
+06-14 16:12:18.070  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:12:18.070  1831  1831 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:12:18.070  1831  1831 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:12:18.070  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_rcv=32
+06-14 16:12:18.070  1831  1831 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_rcv=32
+06-14 16:12:18.070  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:12:18.070  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_rcv
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:12:18.070  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_rcv: 32
+06-14 16:12:18.070  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3001
+06-14 16:12:18.070  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:12:18.070  1831  1831 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:12:18.071  1831  1831 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:12:18.081  1666  1666 D Zygote  : Forked child process 20350
+06-14 16:12:18.082  2401  2949 I ActivityManager: Start proc 20350:com.google.android.projection.gearhead:car/u150a258 for broadcast {com.google.android.projection.gearhead/com.google.android.apps.auto.carservice.gmscorecompat.CarBluetoothReceiver}
+06-14 16:12:18.082  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:18.089  1763  5741 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+06-14 16:12:18.090  1763  5741 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:12:18.090 20350 20350 I on.gearhead:car: Using CollectorTypeCMC GC.
+06-14 16:12:18.092  5911  6085 I adbd    : jdwp connection from 20350
+06-14 16:12:18.093 20350 20350 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 16:12:18.095 20350 20350 D ActivityThread: setConscryptValidator
+06-14 16:12:18.095 20350 20350 D ActivityThread: setConscryptValidator - put
+06-14 16:12:18.095  2439  2439 I CNSS    : /sys/wifi/max_chipset_log_size doesn't exist
+06-14 16:12:18.102 20350 20350 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+06-14 16:12:18.102 20350 20350 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+06-14 16:12:18.112 20350 20350 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.112 20350 20350 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.112 20350 20350 W on.gearhead:car: Failed to find entry 'classes.dex': Entry not found
+06-14 16:12:18.112 20350 20350 D nativeloader: Configuring clns-9 for other apk /data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.ko.apk:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.xxhdpi.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/lib/arm64:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/base.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhead-Ekhes8qEc66SvBkWWb5SIw==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~IiXLmUOKqtlhqoEtQ9ry5g==/com.google.android.projection.gearhe
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment: Currently set values for:
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in per-application setting
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment: ANGLE allowlist from config: 
+06-14 16:12:18.116 20350 20350 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in ANGLE allowlist or settings, returning default
+06-14 16:12:18.119 20350 20350 I CAR.GH  : onCreate
+06-14 16:12:18.122 20350 20350 I GH.PrimesMgr: transmitting to prod
+06-14 16:12:18.124 20350 20350 I CAR.GH  : Process: CAR
+06-14 16:12:18.124 20350 20350 I CAR.GH  : Channel: PROD
+06-14 16:12:18.124 20350 20350 I CAR.GH  : onCreate completed
+06-14 16:12:18.134 20350 20350 I BluetoothAdapter: BluetoothAdapter() : com.google.android.projection.gearhead
+06-14 16:12:18.135  2401  7942 D PersonaServiceHelper: isUsbHostModeEnabledForContainer: userId-150
+06-14 16:12:18.135  2401  7942 I ContainerConfigurationPolicy: Usb Host Mode permission check
+06-14 16:12:18.135  2401  7942 D ContainerConfigurationPolicy: current version : KNOX_ENTERPRISE_SDK_VERSION_3_12, Required version : KNOX_ENTERPRISE_SDK_VERSION_2_5
+06-14 16:12:18.136  2401  7942 D PersonaServiceHelper: isUsbHostModeEnabledForContainer: userId-150
+06-14 16:12:18.136  2401  7942 I ContainerConfigurationPolicy: Usb Host Mode permission check
+06-14 16:12:18.136  2401  7942 D ContainerConfigurationPolicy: current version : KNOX_ENTERPRISE_SDK_VERSION_3_12, Required version : KNOX_ENTERPRISE_SDK_VERSION_2_5
+06-14 16:12:18.140  1666  1666 D Zygote  : Forked child process 20374
+06-14 16:12:18.140  2401  2949 I ActivityManager: Start proc 20374:com.sec.android.CcInfo/u150s1000 for broadcast {com.sec.android.CcInfo/com.sec.android.CcInfo.WifiConnectionReceiver}
+06-14 16:12:18.141  2401  2949 I ActivityManager: ProcessObserver broadcast disabled
+06-14 16:12:18.158 20374 20374 I .android.CcInfo: Using CollectorTypeCMC GC.
+06-14 16:12:18.170  5907  6063 V OsAgent : broadcastSystemEvent - 7
+06-14 16:12:18.178  2401  3841 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+06-14 16:12:18.179  2401  6666 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 69230, isSameBssidAndFreq true
+06-14 16:12:18.180  2401  3973 E SemWifiLinkQualityMonitor: Too old or invalid TMI: currentTime=1781421138180 lastDateWindow=1781420959000
+06-14 16:12:18.181  2401  3973 I SemWifiLinkQualityMonitor: Link stat: 1524 / 17 / 1.13 (68) / 234 / -71.0 || 100.0 : 234.00 / 0.5 : 0.88 / 0.55 : 0.01 / G (G) || 94c098bf5180: 0.107 / 74.766 / N || N N / 0 0 / N 2.0 / N X 2 / 651288325 0 || 2026-06-14 16:09:19  / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0
+06-14 16:12:18.181  2401  3974 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : N. Outage Triggered: false
+06-14 16:12:18.181  2401  3974 D SemInsManager: {"bssid": "94c098bf5180","rssi": -71.0,"latency": 0.10700024387615628,"outage_count": 0,"lq_callback_triggered": false,"outage_log": "Link stat: 1524 / 17 / 1.13 (68) / 234 / -71.0 || 100.0 : 234.00 / 0.5 : 0.88 / 0.55 : 0.01 / G (G) || 94c098bf5180: 0.107 / 74.766 / N || N N / 0 0 / N 2.0 / N X 2 / 651288325 0 || 2026-06-14 16:09:19  / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 16:12:18.181  2401  3991 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:105)
+06-14 16:12:18.181  2401  3991 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 16:12:18.184  2401  7942 I ActivityManager: Changes in 15001000 19 to 11, 0 to 128
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.185 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.186 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 20374 20374 I BluetoothAdapter: BluetoothAdapter() : com.sec.android.CcInfo
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. appOpsListener %s %s
+06-14 16:12:18.187 12513 12617 I emlo    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+06-14 16:12:18.240  1763  5272 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+06-14 16:12:18.247  4736  5259 I btm_acl : system/stack/acl/btm_acl.cc:644 BTM_SwitchRoleToCentral: Requested role is already in effect
+06-14 16:12:18.247  4736  5259 I btm_acl : system/stack/acl/btm_acl.cc:644 BTM_SwitchRoleToCentral: Requested role is already in effect

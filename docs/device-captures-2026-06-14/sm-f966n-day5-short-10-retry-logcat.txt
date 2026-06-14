@@ -1,0 +1,705 @@
+--------- beginning of main
+06-14 16:22:50.167  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:50.168  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:50.168  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:50.168  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:50.168  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_rcv
+06-14 16:22:50.168  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:50.168  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_rcv: 32
+06-14 16:22:50.168  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3001
+06-14 16:22:50.168  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:50.169  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:50.169  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:50.178  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:05:F9, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-67, periodicAdvInt=0x0
+06-14 16:22:50.184  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:50.197  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-45, periodicAdvInt=0x0
+--------- beginning of system
+06-14 16:22:50.198  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:50.200  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:50.200  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:50.200  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:50.203  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 16:22:50.211  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:40:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-45, periodicAdvInt=0x0
+06-14 16:22:50.228  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:BD:CF, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-49, periodicAdvInt=0x0
+06-14 16:22:50.247  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:50.286  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:50.286  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:50.302  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:50.302  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:50.302  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:50.306  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:55:71, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-51, periodicAdvInt=0x0
+06-14 16:22:50.308  4736  5812 I ScanController: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 16:22:50.309  4736  5812 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 16:22:50.310 12841 13769 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 16:22:50.313 12841 18239 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:22:50.320  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:50.328  1743  1907 E minksocket: MinkIPC ERROR: ( 1743:1907 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.328  1743  1896 E minksocket: MinkIPC ERROR: ( 1743:1896 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.328  1743  1907 E minksocket: MinkIPC ERROR: ( 1743:1907 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.328  1743  1896 E minksocket: MinkIPC ERROR: ( 1743:1896 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.329  1743  1907 E minksocket: MinkIPC ERROR: ( 1743:1907 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.329  1743  1896 E minksocket: MinkIPC ERROR: ( 1743:1896 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.330  1743  1907 E minksocket: MinkIPC ERROR: ( 1743:1907 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.330  1743  1896 E minksocket: MinkIPC ERROR: ( 1743:1896 ) MinkIPC_preProcess:272 Client down, but cannot find corresponding minksession
+06-14 16:22:50.333  4088  4217 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+06-14 16:22:50.338  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-45, periodicAdvInt=0x0
+06-14 16:22:50.361  5911  5911 I adbd    : New TLS connection [fd=36]
+06-14 16:22:50.362  5911 29955 I adbd    : host-36: connection terminated: read failed
+06-14 16:22:50.363  1770 14565 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1075453618319944 ns; value = [210, 210, 139, 154, 228, 77, 67, 52, 36352, 46, 1]
+06-14 16:22:50.377  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:50.377  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:50.400  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:50.400  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:50.400  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:50.400  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:50.446  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:50.527  1763  5272 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+06-14 16:22:50.583  2401 29949 D WifiConnectivityMonitor.DnsThread:  [|202]
+06-14 16:22:50.584  2401  4003 D WifiConnectivityMonitor.NetworkStatsAnalyzer: DNS resultType : 0, responseTime : 202
+06-14 16:22:50.584  2401  4001 D OpenNetworkQos[4.00]: updateBssidLatestDnsResultType - result: 0
+06-14 16:22:50.584  2401  4001 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 16:22:50.584  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:50.584  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:50.584  2401  4001 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 16:22:50.584  2401  4001 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 16:22:50.585  2401  5514 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 16:22:50.585  2401  5514 D WifiProfileShare: nearby scanning settings run
+06-14 16:22:50.585  2401  5514 D WifiProfileShare: network score provider settings enabled
+06-14 16:22:50.585  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:50.585  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:50.585  2401  5514 I WifiProfileShare.Caster: current network type: 0, score: [30, 26, 30]
+06-14 16:22:50.585  2401  5514 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:bf
+06-14 16:22:50.585  2401  5514 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 16:22:50.586  2401  5514 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c7, qosData:7c after:type:QOS, pBssid:12:0c:c7, qosData:7c
+06-14 16:22:50.587  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:50.587  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:50.587  2401  5514 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 16:22:50.587  2401  5514 D WifiProfileShare.MCF: success update QosData !
+06-14 16:22:50.587  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:50.587  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:50.587  2401  5514 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 16:22:50.600  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:50.600  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:50.600  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:50.600  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:50.780  1770  6900 I sensors-hal: handle_sns_client_event:208, auto_rotation_debug_2 mode,255,last,255, type,3,0 main,0.081,0.263,9.882 sub,-0.220,0.225,-9.858, ar,0, h_ic,1, s,3, ver,12, pedo,1,e,1,i,3
+06-14 16:22:50.800  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:50.800  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:50.800  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:50.800  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:50.843  1770 14483 I sensors-hal: handle_sns_std_sensor_event:404, [SSC_LIGHT] P: 211(211),c:316,b:77,m:37,cl:67,l:211,s:211,l0:36448,l1:832,s0:27250,s1:250,acl:1,opr:0.60,f(r):111,u(bl):100,if:111,wi:62,si:15,0(N:1)
+06-14 16:22:50.950  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:50.999  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:51.000  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:51.000  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:51.000  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:51.016  2401  3884 D DisplayAiqeAidl: connectToProxy: start
+06-14 16:22:51.017  2401  3884 D DisplayAiqeAidl: getCoprValue : 
+06-14 16:22:51.017  2401  3884 D DisplayAiqeAidl: arr[0] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[1] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[2] - 786444 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[3] - 786444 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[4] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[5] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[6] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[7] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[8] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeAidl: arr[9] - 0 
+06-14 16:22:51.018  2401  3884 D DisplayAiqeManagerService: getCoprValue: 12
+06-14 16:22:51.018  2401  3884 D DisplayAiqeManager: getCoprValue : 12
+06-14 16:22:51.018  2401  3884 V EyeComfortSolutionService: count : 170 , bopr_value : 12.0, platform_value : 77.0 , app_weighting : 1.0 , cal_value : 0.09174058 , sum_value : 14.285304 , BOPR_MAX_VALUE : 21000
+06-14 16:22:51.165  1807  2630 I thermal_core: pivot(AP) : 378, skin : 379
+06-14 16:22:51.165  1807  2630 I vendor.samsung.hardware.thermal-service: index = -2.600000
+06-14 16:22:51.165  1807  2630 I vendor.samsung.hardware.thermal-service: 1 / 2
+06-14 16:22:51.183  1770  6942 I sensors-hal: handle_sns_client_event:379, [0][31308700] accel_sample [ 0.075,  0.254,  9.859] 1075454409912288
+06-14 16:22:51.200  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:51.200  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:51.200  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:51.201  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:51.400  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:51.401  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:51.401  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:51.401  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:51.437  1113  1113 D io_stats: !@   8,0 r 162926840 3550286336 w 42695810 927054500 d 5561169 1081475912 f 700020 4370518 iot 13214312 0 th 0 0 0 pt 0 inp 0 0 651921.582
+06-14 16:22:51.451  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 69999 us
+06-14 16:22:51.481  2401  3841 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+06-14 16:22:51.486  2401  3868 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [238 WIFI]
+06-14 16:22:51.486  2401  6666 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 69440, isSameBssidAndFreq true
+06-14 16:22:51.488  2401  3973 E SemWifiLinkQualityMonitor: Too old or invalid TMI: currentTime=1781421771488 lastDateWindow=1781421581000
+06-14 16:22:51.489  9232 11265 I HBD     : g onCapabilitiesChanged network : 238 current network state : wifi 
+06-14 16:22:51.489  4640  4932 I WifiPickerTracker: NetworkCallback : onCapabilitiesChanged
+06-14 16:22:51.490  4640  4932 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 16:22:51.491  2401  3973 I SemWifiLinkQualityMonitor: Link stat: 834 / 52 / 1.36 (45) / 117 / -74.0 || 100.0 : 117.00 / 0.5 : 0.73 / 0.55 : 0.06 / G (G) || 94c098bf5180: 0.145 / 55.110 / N || N N / 0 0 / N 2.0 / N X 2 / 651921631 0 || 2026-06-14 16:19:41  / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0
+06-14 16:22:51.494  2401  3991 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:105)
+06-14 16:22:51.494  2401  3991 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 16:22:51.494  2401  3991 I SemWifiIntelligentConnectionManager: BL removed: 98:bf
+06-14 16:22:51.495  2401  3991 I SemWifiIntelligentConnectionManager: HQ: U3osrJbDff / 98:bf / 5180 / -74 / 117 / 122 | 91 / 1005 / 50 / NR / F / F / T / 92 / 58 | 0 / 0 (-75.0)
+06-14 16:22:51.495 12513 12706 I aayi    : (REDACTED) Network %s onCapabilitiesChanged: hasInternet %b, hasValidated %b
+06-14 16:22:51.496  5000  5525 D txpwrJni: sendNetworkInfo start
+06-14 16:22:51.496  5000  5525 D txpwrJni: sendNetworkInfo RatType 0
+06-14 16:22:51.496 19038 19071 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):34)] [ljy.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:51.496 17528 17850 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+06-14 16:22:51.496  2401  3974 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : N. Outage Triggered: false
+06-14 16:22:51.496  2401  3974 D SemInsManager: {"bssid": "94c098bf5180","rssi": -74.0,"latency": 0.1451637921612346,"outage_count": 0,"lq_callback_triggered": false,"outage_log": "Link stat: 834 / 52 / 1.36 (45) / 117 / -74.0 || 100.0 : 117.00 / 0.5 : 0.73 / 0.55 : 0.06 / G (G) || 94c098bf5180: 0.145 / 55.110 / N || N N / 0 0 / N 2.0 / N X 2 / 651921631 0 || 2026-06-14 16:19:41  / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 16:22:51.498  4441  4583 I PdnController<0>: onCapabilitiesChanged: network 238 networkCapabilities [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=73893Kbps LinkDnBandwidth>=98555Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /192.168.1.59, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -74, Link speed: 117Mbps, Tx Link speed: 117Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 195Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -74 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 16:22:51.498 25776 18851 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):34)] [ljy.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:51.498  4640  4932 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 16:22:51.498 19038 19071 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):43)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:51.499  4640  4932 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 16:22:51.499 19038 19071 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 16:22:51.499  4640  4932 I WifiPickerTracker: DefaultNetworkCallback : onCapabilitiesChanged
+06-14 16:22:51.499 19038 19071 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 16:22:51.499  2401  3868 D ConnectivityService: Rematched networks [computed 0ms] [applied 1ms] [issued 1]
+06-14 16:22:51.499  2401  3868 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:22:51.499 25776 10611 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 16:22:51.499 25776 10611 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 16:22:51.499  4640  4866 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 16:22:51.499  4640  4867 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 16:22:51.500 25776 18851 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):43)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:51.500  5116  5222 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236005, activityId=2131236031)
+06-14 16:22:51.500  5116  5222 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236005, activityId=2131236031)
+06-14 16:22:51.500 25776 18851 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 16:22:51.500 25776 18851 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 16:22:51.500  2401  3868 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 16:22:51.500  2401  3868 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:22:51.501  2401  3911 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 16:22:51.501  2401  3911 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 238(valid: true/captive: false)
+06-14 16:22:51.501  2401  3994 D SemApeService: Deducted link capacity (M: R=136 T=81) RSSI=-74
+06-14 16:22:51.501  2401  3994 D SemApeService: Deducted link capacity (M: R=136 T=81) on (wlan0) GoogleAPI(M: R=98 T=73) RSSI=-74 isDefault=false isMlo=false
+06-14 16:22:51.501  2401  3911 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=73893Kbps LinkDnBandwidth>=98555Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.59, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -74, Link speed: 117Mbps, Tx Link speed: 117Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 195Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -74 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 16:22:51.501  2401  4001 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 16:22:51.501  2401  4001 I WifiConnectivityMonitor: determineMode : MODE_AGG_BY_SWITCH_TO_MOBILE_DATA_OPTION
+06-14 16:22:51.501  2401  3911 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:98.555Uplink: 73.893
+06-14 16:22:51.501  2401  4001 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 16:22:51.501  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:51.501  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:51.501  2401  4001 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 16:22:51.501  2401  4001 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 16:22:51.501  2401  5514 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 16:22:51.501  2401  4001 D WifiConnectivityMonitor: VALIDATED_DETECTED
+06-14 16:22:51.501  2401  5514 D WifiProfileShare: nearby scanning settings run
+06-14 16:22:51.501  2401  5514 D WifiProfileShare: network score provider settings enabled
+06-14 16:22:51.501  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:51.501  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:51.501  2401  5514 I WifiProfileShare.Caster: current network type: 0, score: [30, 26, 30]
+06-14 16:22:51.501  2401  5514 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:bf
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 16:22:51.501  2401  5514 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c7, qosData:7c after:type:QOS, pBssid:12:0c:c7, qosData:7c
+06-14 16:22:51.501  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.MCF: success update QosData !
+06-14 16:22:51.501  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:51.501  2401  5514 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 16:22:51.581  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:51.593  9232  9232 I HBD     : g onCapabilityChanged  setNetworkState currentNetworkState : wifi 
+06-14 16:22:51.593  9232  9232 I HBD     : g LogTag.TAG_LMDOWNLOAD network status is changed.
+06-14 16:22:51.601  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:51.601  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:51.602  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:51.602  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:51.801  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:51.801  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:51.801  1763  5733 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+06-14 16:22:51.801  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:51.802  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:51.802  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:51.802  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:51.802  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:51.803  1770  6900 I sensors-hal: handle_sns_std_sensor_event:127, [SSC_LIGHT] A: 210(210),c:316,b:77,m:37,cl:67,l:210,s:207,l0:36384,l1:832,s0:27250,s1:500,acl:1,opr:0.60,f(r):111,u(bl):100,if:111,wi:46,si:31,0(N:1)
+06-14 16:22:51.810  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:5B:71, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-53, periodicAdvInt=0x0
+06-14 16:22:51.810  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-61, periodicAdvInt=0x0
+06-14 16:22:51.811  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:81:28, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-78, periodicAdvInt=0x0
+06-14 16:22:51.833  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:05:F9, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 16:22:51.834  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:40:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 16:22:51.837  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 16:22:51.860  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:BD:CF, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 16:22:51.875  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-92, periodicAdvInt=0x0
+06-14 16:22:51.882  4736  5812 I ScanController: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-92, periodicAdvInt=0x0
+06-14 16:22:51.883  4736  5812 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-92, periodicAdvInt=0x0
+06-14 16:22:51.883 12841 13769 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 16:22:51.884 12841 14583 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessBleStateRepository.collectBleStateDomains.onEach - BleStateDomains size: 1 - ($)
+06-14 16:22:51.884 12841 15760 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessBleStateRepository.collectBleStateDomains.onEach - BleStateDomains size: 1 - ($)
+06-14 16:22:51.886 12841 14581 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:22:51.922  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:51.922  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:51.931  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:51.931  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:51.931  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:51.932  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-61, periodicAdvInt=0x0
+06-14 16:22:51.950  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:51.971  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:51.971  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:51.976  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:51.976  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:51.976  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:51.980  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 16:22:51.987  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-90, periodicAdvInt=0x0
+06-14 16:22:51.998 25776 18851 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 16:22:52.003  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:52.003  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:52.003  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:52.003  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:52.011  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:60:44, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-61, periodicAdvInt=0x0
+06-14 16:22:52.050  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:52.050  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:52.137  2401  4030 D NetdEventListenerService: DNS Requested by 238, 10078(com.shinhan.sbanking), SUCCESS, 0ms
+06-14 16:22:52.166  1807  2630 I thermal_core: pivot(AP) : 377, skin : 379
+06-14 16:22:52.166  1807  2630 I vendor.samsung.hardware.thermal-service: index = -2.200000
+06-14 16:22:52.166  1807  2630 I vendor.samsung.hardware.thermal-service: 2 / 2
+06-14 16:22:52.201  1763  5272 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+06-14 16:22:52.203  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:52.203  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:52.204  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:52.204  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:52.204  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:52.204  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:52.204  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_rcv: 0
+06-14 16:22:52.204  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:52.204  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:52.205  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_spk: 0
+06-14 16:22:52.205  7228  7940 I SDHMS:x : SIOP:: AP:377 BAT:355 USB:350 CHG:370 PA:373 CP:372 WIFI:380 CF:378 BLK:0 SUBBAT:354 LRPTHM:365 SKIN:370 SKINF:375 SKINB:379 LRP:370 LRF:375 LRB:379 APT:375 APR:379 RCV:321 SPK:321 CAPR:370 CRCV:320 CSPK:329 CAMT:379 UPSPK:354 DNSPK:354 VAP02:383 VAP05:378 AMB2:308 HIGH:0 AVGCUR:-193 POWER:-776
+06-14 16:22:52.205  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_spk=33
+06-14 16:22:52.206  1831  1933 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_spk=33
+06-14 16:22:52.206  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:52.206  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:52.206  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_spk
+06-14 16:22:52.206  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:52.206  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_spk: 33
+06-14 16:22:52.206  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3002
+06-14 16:22:52.206  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:52.206  1831  1933 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:52.206  1831  1933 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:52.207  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:52.207  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:52.207  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:52.207  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:52.207  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_rcv
+06-14 16:22:52.207  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:52.207  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_rcv: 32
+06-14 16:22:52.207  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3001
+06-14 16:22:52.207  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:52.207  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:52.207  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:52.364  4088  4217 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+06-14 16:22:52.403  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:52.403  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:52.404  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:52.404  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:52.451  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:52.473  2401  3971 I SemWifiServiceDetector: Service det. resumed: T / T / 15593
+06-14 16:22:52.603  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:52.603  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:52.603  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:52.603  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:52.804  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:52.804  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:52.805  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:52.805  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:52.891  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.teamviewer.host.market/com.teamviewer.incomingsessionlib.service.MainService } U=0: not found
+06-14 16:22:52.891  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.rsupport.mobile.agent/.service.AgentMainService } U=0: not found
+06-14 16:22:52.891  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.rsupport.mobile.agent/.modules.push.service.RSPushService } U=0: not found
+06-14 16:22:52.892  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.teamviewer.quicksupport.market/com.teamviewer.incomingsessionlib.service.MainService } U=0: not found
+06-14 16:22:52.892  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.anydesk.anydeskandroid/.IncomingConnectionService } U=0: not found
+06-14 16:22:52.892  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=net.koino.anysupportMobile/net.koino.anysupport.service.AnySupportMainService } U=0: not found
+06-14 16:22:52.892  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.apowersoft.mirror/com.apowersoft.mirrorcast.service.CastScreenService } U=0: not found
+06-14 16:22:52.892  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.sand.airdroid/.webrtc.SandWebRTCService_ } U=0: not found
+06-14 16:22:52.893  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.sand.airdroid/.webrtc.SandWebRTCService } U=0: not found
+06-14 16:22:52.893  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.sand.aircast/.webrtc.SandWebRTCService_ } U=0: not found
+06-14 16:22:52.893  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.mobzapp.screenstream.trial/com.mobzapp.screenstream.service.ScreenStreamService } U=0: not found
+06-14 16:22:52.893  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=de.im.RemoDroid/.server.utils.ServerService } U=0: not found
+06-14 16:22:52.894  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.imobie.anymirror/.service.MirrorService } U=0: not found
+06-14 16:22:52.894  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.webkey/.service.BackgroundService } U=0: not found
+06-14 16:22:52.894  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=screen.mirroring.screenmirroring/com.example.myapplication.MirrorService } U=0: not found
+06-14 16:22:52.895  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.agileapps.screenstream/.helpers.AppService } U=0: not found
+06-14 16:22:52.895  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.agileapps.screenstream/.service.FgService } U=0: not found
+06-14 16:22:52.895  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.screenmirrorapp/.mirroring.ScreenRecordingService } U=0: not found
+06-14 16:22:52.895  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.screen.mirroring.tv.cast.remote/.browser.core.MirrorForegroundService } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.logmein.rescuemobile/com.lmi.rescue.app.RescueServerImpl } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.awesun.control/com.oray.sunlogin.service.MediaProjectionAndKeepAliveService } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.mobile.to.web.browser.mirroring.wifi.screen.share.miracast.screenmirroring/.service.BrowserForegroundService } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.midassoft.ezmobileandroid/com.midassoft.ezhelp.EzHelpRemoteService } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.midassoft.ezmobilesamsung1/com.midassoft.ezhelp.EzHelpRemoteService } U=0: not found
+06-14 16:22:52.896  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.sigma_rt.totalcontrol/.ap.service.DaemonService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.casttotv.screenmirroring.smarttv.castvideo/com.cast.to.smart.tv.ui.activities.function.screen_mirror.service.ForegroundService } U=0: not found
+06-14 16:22:52.897  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.casttotv.screenmirroring.smarttv.castvideo/com.base.mjpeg.MjpegModuleService } U=0: not found
+06-14 16:22:52.897  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=de.twokit.screen.mirroring.app/.util.MirroringService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.smartcast.casttotv.screenmirror.mirroringcast.chromecast/.service.ForegroundService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.nero.swiftlink.mirror/.core.MirroringService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.nero.swiftlink.mirror/.core.MirrorService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.ahranta.android.arc.asp/com.ahranta.android.arc.core.CoreService } U=0: not found
+06-14 16:22:52.897  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.imobie.anymiro/.service.ScreenCastService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.sand.airsos/.webrtc.SandWebRTCService_ } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.zoho.assist.agent/.service.KeepAliveService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.aomei.anyviewer/.root.sub.screenCapture.AMRecorderService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.apowersoft.letsview/com.apowersoft.mirrorcast.service.CastScreenService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.frixapps.casttotv/.browser.browsercasting.FgService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.imyfone.mirrorto/.web.AppService } U=0: not found
+06-14 16:22:52.898  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.kakao.talk/.vox.ui.cecall.screenshare.CeCallScreenShareService } U=0: not found
+06-14 16:22:52.899  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.islonline.isllight.mobile.android/.SessionService } U=0: not found
+06-14 16:22:52.899  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=kr.co.helpu.host/remotecontrol.host.service.RCHostMainService } U=0: not found
+06-14 16:22:52.899  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.rsupport.mobile.agent/.service.RVAForegroundService } U=0: not found
+06-14 16:22:52.899  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.carriez.flutter_hbb/.FloatingWindowService } U=0: not found
+06-14 16:22:52.899  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.remotepc.host/com.remotepcnew.host.host.service.CaptureService } U=0: not found
+06-14 16:22:52.899  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.wisemo.host.v10/com.wisemo.host.HostService } U=0: not found
+06-14 16:22:52.900  2401  7942 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.cisco.wx2.android/com.webex.teams.notifications.ScreenShareForegroundService } U=0: not found
+06-14 16:22:52.900  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.hoptodesk.app/.MainService } U=0: not found
+06-14 16:22:52.900  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.easywork.easycast/.MediaProjectionService } U=0: not found
+06-14 16:22:52.900  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=jp.naver.line.android/com.linecorp.voip2.feature.pip.service.VoIPScreenShareService } U=0: not found
+06-14 16:22:52.900  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.islonline.isllight.mobile.android/.mediaprojection.MediaProjectionCaptureService } U=0: not found
+06-14 16:22:52.900  2401  4123 W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.splashtop.sos/com.splashtop.streamer.StreamerService } U=0: not found
+06-14 16:22:52.923  1770 14565 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1075456178329059 ns; value = [210, 210, 139, 154, 228, 77, 67, 52, 36384, 46, 1]
+06-14 16:22:52.929  8008  8008 I MSDK    : 2,1,9,0,0,0
+06-14 16:22:52.930  8008  8008 I MSDK    : 2,1,9,1,0,0
+06-14 16:22:52.952  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:53.005  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:53.005  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:53.005  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:53.005  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:53.205  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:53.205  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:53.206  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:53.206  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:53.207  1807  2630 I thermal_core: pivot(AP) : 377, skin : 379
+06-14 16:22:53.207  1807  2630 I vendor.samsung.hardware.thermal-service: index = -1.600000
+06-14 16:22:53.207  1807  2630 I vendor.samsung.hardware.thermal-service: 1 / 2
+06-14 16:22:53.208  1770  6942 I sensors-hal: handle_sns_client_event:379, [0][31308733] accel_sample [ 0.076,  0.257,  9.864] 1075456434995726
+06-14 16:22:53.406  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:53.406  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:53.406  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:53.406  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:53.438  1113  1113 D io_stats: !@   8,0 r 162926840 3550286336 w 42695823 927054544 d 5561169 1081475912 f 700020 4370520 iot 13214320 0 th 0 0 0 pt 0 inp 0 0 651923.583
+06-14 16:22:53.438  1113  1113 D io_stats: !@ Read_top(KB): kworker/u17:2:/(25923) 1280 shsusrd0:normal(2433) 16 m.android.phone:normal(4088) 16
+06-14 16:22:53.438  1113  1113 D io_stats: !@ Write_top(KB): kworker/u17:2:/(25923) 1240 com.kakao.talk:low(12369) 20 soft.appmanager:low(30581) 16
+06-14 16:22:53.439  1113  1113 D io_stats: !@ fuse-log: WORST (0 18 0 1 0) (2000 14 0 1 0) (2000 25 0 1 0) TOTAL_LATENCY (0 0 18 0 1) (2000 0 14 0 1 25 0 1 63 0 1) (10078 0 1 0 2) TOTAL_CNT (2000 3 14 1 25 1 63 1) (10078 2 1 2) (10660 2 1 2) 
+06-14 16:22:53.449  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:53.606  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:53.606  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:53.607  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:53.607  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:53.627  2401  4123 E BatteryStatsService: Invalid uid for waking network packet: -1
+06-14 16:22:53.768  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:53.768  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:53.768  1763  5733 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+06-14 16:22:53.768  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:53.777  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-59, periodicAdvInt=0x0
+06-14 16:22:53.790  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:BD:CF, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-53, periodicAdvInt=0x0
+06-14 16:22:53.792  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-49, periodicAdvInt=0x0
+06-14 16:22:53.807  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:53.807  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:53.808  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:53.808  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:53.810  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-89, periodicAdvInt=0x0
+06-14 16:22:53.851  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:60:44, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-60, periodicAdvInt=0x0
+06-14 16:22:53.876  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:40:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-59, periodicAdvInt=0x0
+06-14 16:22:53.884  1770 14483 I sensors-hal: handle_sns_std_sensor_event:404, [SSC_LIGHT] P: 212(212),c:316,b:77,m:37,cl:67,l:212,s:209,l0:36640,l1:832,s0:27500,s1:500,acl:1,opr:0.60,f(r):111,u(bl):100,if:111,wi:46,si:31,0(N:1)
+06-14 16:22:53.900  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-59, periodicAdvInt=0x0
+06-14 16:22:53.933  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:BD:CF, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-53, periodicAdvInt=0x0
+06-14 16:22:53.935  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-52, periodicAdvInt=0x0
+06-14 16:22:53.971  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:53.972  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:53.972  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:53.976  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:53.976  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:53.976  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:53.978  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:55:71, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 16:22:54.008  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:54.008  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:54.008  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:54.008  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:54.017  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:54.017  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:54.166  2401  7942 W ParceledListSlice: Element #44 is 20412 bytes.
+06-14 16:22:54.166  2401  7942 W ParceledListSlice: Element #54 is 31412 bytes.
+06-14 16:22:54.168  1763  5272 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+06-14 16:22:54.186  2401  7942 W ParceledListSlice: Element #840 is 35756 bytes.
+06-14 16:22:54.187  2401  7942 W ParceledListSlice: Element #857 is 17340 bytes.
+06-14 16:22:54.207  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:54.208  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:54.208  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:54.208  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:54.209  1807  2630 I thermal_core: pivot(AP) : 376, skin : 379
+06-14 16:22:54.209  1807  2630 I vendor.samsung.hardware.thermal-service: index = -1.400000
+06-14 16:22:54.209  1807  2630 I vendor.samsung.hardware.thermal-service: 2 / 2
+06-14 16:22:54.252  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:54.252  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:54.252  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_rcv: 0
+06-14 16:22:54.253  1773  1773 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:54.253  1773  1773 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:54.253  1773  1773 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_spk: 0
+06-14 16:22:54.254  7228  7940 I SDHMS:x : SIOP:: AP:376 BAT:355 USB:350 CHG:370 PA:372 CP:372 WIFI:377 CF:377 BLK:0 SUBBAT:353 LRPTHM:365 SKIN:370 SKINF:375 SKINB:379 LRP:370 LRF:375 LRB:379 APT:375 APR:379 RCV:321 SPK:321 CAPR:370 CRCV:320 CSPK:328 CAMT:379 UPSPK:354 DNSPK:354 VAP02:383 VAP05:378 AMB2:308 HIGH:0 AVGCUR:-193 POWER:-776
+06-14 16:22:54.255  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_spk=33
+06-14 16:22:54.255  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_spk=33
+06-14 16:22:54.256  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:54.256  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:54.256  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_spk
+06-14 16:22:54.256  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:54.256  1773  1773 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_spk: 33
+06-14 16:22:54.256  1773  1773 I PAL: API: pal_set_param: 1377: Enter: param id 3002
+06-14 16:22:54.256  1773  1773 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:54.256  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:54.256  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:54.257  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:54.258  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:54.258  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:54.258  1773  9487 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:54.258  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_rcv
+06-14 16:22:54.258  1773  9487 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:54.258  1773  9487 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_rcv: 32
+06-14 16:22:54.258  1773  9487 I PAL: API: pal_set_param: 1377: Enter: param id 3001
+06-14 16:22:54.258  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:54.258  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:54.259  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:54.408  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:54.408  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:54.408  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:54.408  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:54.470  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:54.472  4088  4217 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+06-14 16:22:54.514  2401  3841 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+06-14 16:22:54.519  2401  6666 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 69441, isSameBssidAndFreq true
+06-14 16:22:54.519  2401  3868 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [238 WIFI]
+06-14 16:22:54.521  2401  3973 E SemWifiLinkQualityMonitor: Too old or invalid TMI: currentTime=1781421774521 lastDateWindow=1781421581000
+06-14 16:22:54.521  4640  4932 I WifiPickerTracker: NetworkCallback : onCapabilitiesChanged
+06-14 16:22:54.522  9232 11265 I HBD     : g onCapabilitiesChanged network : 238 current network state : wifi 
+06-14 16:22:54.522  5000  5525 D txpwrJni: sendNetworkInfo start
+06-14 16:22:54.523  5000  5525 D txpwrJni: sendNetworkInfo RatType 0
+06-14 16:22:54.525  4640  4932 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 16:22:54.526 12513 12706 I aayi    : (REDACTED) Network %s onCapabilitiesChanged: hasInternet %b, hasValidated %b
+06-14 16:22:54.526  2401  3991 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:105)
+06-14 16:22:54.526  2401  3991 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 16:22:54.526 25776 18851 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):34)] [ljy.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:54.526  2401  3991 I SemWifiIntelligentConnectionManager: HQ: U3osrJbDff / 98:bf / 5180 / -75 / 175 / 102 | 91 / 1005 / 50 / NR / F / F / T / 2 / 61 | 0 / 1 (-75.0)
+06-14 16:22:54.527 19038 19071 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):34)] [ljy.a(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):19)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:54.528  4640  4932 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 16:22:54.528  4640  4932 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 16:22:54.528  4640  4932 I WifiPickerTracker: DefaultNetworkCallback : onCapabilitiesChanged
+06-14 16:22:54.529  2401  3974 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : N. Outage Triggered: false
+06-14 16:22:54.529  2401  3974 D SemInsManager: {"bssid": "94c098bf5180","rssi": -75.0,"latency": 0.0,"outage_count": 0,"lq_callback_triggered": false,"outage_log": "Unreliable statistics: -75.0 / 2 / 409 / 9 / 0 || 94c098bf5180: 0.000 / 0.000 / @ || N N / 0 0 / N 2.0 / N X 2 / 651924665 0 || 2026-06-14 16:19:41  / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0 / 0: 0 0 0 0 0 0""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 16:22:54.529 25776 26103 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 16:22:54.529  4640  4851 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 16:22:54.529 25776 26103 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 16:22:54.529  4640  4851 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 16:22:54.530  5116  5222 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236004, activityId=2131236031)
+06-14 16:22:54.530  5116  5222 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236004, activityId=2131236031)
+06-14 16:22:54.530 17528 17850 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+06-14 16:22:54.530  4441  4583 I PdnController<0>: onCapabilitiesChanged: network 238 networkCapabilities [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=3793Kbps LinkDnBandwidth>=57120Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /192.168.1.59, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -75, Link speed: 175Mbps, Tx Link speed: 175Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 195Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -75 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 16:22:54.531 19038 19071 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):43)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:54.532 19038 19071 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 16:22:54.532 19038 19071 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 16:22:54.532  2401  3868 D ConnectivityService: Rematched networks [computed 1ms] [applied 0ms] [issued 1]
+06-14 16:22:54.532  2401  3868 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:22:54.533 25776 18851 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262063035@26.20.63 (260400-927507690):43)] [drfs.O(:com.google.android.gms@262063035@26.20.63 (260400-927507690):20)] [drfs.K(:com.google.android.gms@262063035@26.20.63 (260400-927507690):7)] [drfs.I(:com.google.android.gms@262063035@26.20.63 (260400-927507690):23)] [drfk.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):9)] [bkqh.c(:com.google.android.gms@262063035@26.20.63 (260400-927507690):50)] [bkqh.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262063035@26.20.63 (260400-927507690):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 16:22:54.533 25776 18851 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 16:22:54.533 25776 18851 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 16:22:54.533  2401  3868 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 16:22:54.533  2401  3868 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:22:54.535  2401  3911 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 16:22:54.535  2401  3911 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 238(valid: true/captive: false)
+06-14 16:22:54.535  2401  3911 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=3793Kbps LinkDnBandwidth>=57120Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.59, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -75, Link speed: 175Mbps, Tx Link speed: 175Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 195Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -75 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 16:22:54.535  2401  3994 D SemApeService: Deducted link capacity (M: R=136 T=122) RSSI=-75
+06-14 16:22:54.535  2401  3994 D SemApeService: Deducted link capacity (M: R=136 T=122) on (wlan0) GoogleAPI(M: R=57 T=3) RSSI=-75 isDefault=false isMlo=false
+06-14 16:22:54.535  2401  4001 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 16:22:54.535  2401  4001 I WifiConnectivityMonitor: determineMode : MODE_AGG_BY_SWITCH_TO_MOBILE_DATA_OPTION
+06-14 16:22:54.535  2401  3911 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:57.12Uplink: 3.793
+06-14 16:22:54.535  2401  4001 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 16:22:54.535  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:54.535  2401  4001 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:54.535  2401  4001 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 16:22:54.535  2401  4001 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 16:22:54.535  2401  4001 D WifiConnectivityMonitor: VALIDATED_DETECTED
+06-14 16:22:54.535  2401  5514 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 16:22:54.535  2401  5514 D WifiProfileShare: nearby scanning settings run
+06-14 16:22:54.535  2401  5514 D WifiProfileShare: network score provider settings enabled
+06-14 16:22:54.535  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 30 26 30 
+06-14 16:22:54.535  2401  5514 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 16:22:54.535  2401  5514 I WifiProfileShare.Caster: current network type: 0, score: [30, 26, 30]
+06-14 16:22:54.535  2401  5514 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:bf
+06-14 16:22:54.535  2401  5514 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 16:22:54.535  2401  5514 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c7, qosData:7c after:type:QOS, pBssid:12:0c:c7, qosData:7c
+06-14 16:22:54.535  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:54.536  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:54.536  2401  5514 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 16:22:54.536  2401  5514 D WifiProfileShare.MCF: success update QosData !
+06-14 16:22:54.536  2401  5514 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 16:22:54.536  2401  5514 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 16:22:54.536  2401  5514 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 16:22:54.608  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:54.608  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:54.609  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:54.609  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:54.618  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:54.623  9232  9232 I HBD     : g onCapabilityChanged  setNetworkState currentNetworkState : wifi 
+06-14 16:22:54.623  9232  9232 I HBD     : g LogTag.TAG_LMDOWNLOAD network status is changed.
+06-14 16:22:54.712 25776 28337 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:15) and sleep 5000 for endpoint IXZC.
+06-14 16:22:54.809  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:54.809  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:54.809  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:54.809  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:54.812 25776 18851 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 16:22:54.812 25776 18851 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4b 0x41 0x43 0x44 0x11 0x32 0xf5 0x73 0xae 0x87 0x3c 0x89 0xdc 0xb6 0x09 0xe6 0xba 0xca 0x93 0x36 0x59 0x95 ], deviceToken=[ 0x58 0x81 ], rxAdvertisement=null } : 15 times.
+06-14 16:22:54.812 25776 18851 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x35 0x41 0x38 0x11 0x32 0x01 0x52 0x4e 0xef 0x08 0x95 0x8f 0x39 0xa2 0x84 0x6c 0xdb 0xe2 0x8c 0x3a 0x60 ], deviceToken=[ 0xc3 0x16 ], rxAdvertisement=null } : 13 times.
+06-14 16:22:54.812 25776 18851 I NearbyMediums: Total 28 fast advertisements from 2 unique advertisers.
+06-14 16:22:54.812 25776 18851 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 16:22:54.970  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:55.010  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:55.010  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:55.011  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:55.011  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:55.030 25776 18851 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 16:22:55.062 25776 28338 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:15) and reply a KEEP_ALIVE frame with ack from endpoint IXZC on channel ENCRYPTED_WIFI_LAN.
+06-14 16:22:55.211  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:55.212  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:55.212  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:55.212  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:55.233  1770  6942 I sensors-hal: handle_sns_client_event:379, [0][31308766] accel_sample [ 0.075,  0.255,  9.866] 1075458460079163
+06-14 16:22:55.255  1807  2630 I thermal_core: pivot(AP) : 375, skin : 379
+06-14 16:22:55.255  1807  2630 I vendor.samsung.hardware.thermal-service: index = -2.400000
+06-14 16:22:55.255  1807  2630 I vendor.samsung.hardware.thermal-service: 1 / 2
+06-14 16:22:55.267 25776 28338 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:15) with ACK from endpoint IXZC on channel ENCRYPTED_WIFI_LAN.
+06-14 16:22:55.412  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:55.412  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:55.412  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:55.412  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:55.440  2401  4003 D WifiConnectivityMonitor.NetworkStatsAnalyzer: Backhaul result - RSSI:-75, CE:17, PE:17, TI:27, PTI:27, TW:0, PTW:0, Tx:55, Rx:44, TxS:50, RxS:36, RESULT:true, IC:0, ICT:2, WC:0, WCT:3, R:4, RC:0, IE:0, EC:0
+06-14 16:22:55.470  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 69999 us
+06-14 16:22:55.475  2401  3971 I SemWifiServiceDetector: Service det. suspended: T / T / 15593
+06-14 16:22:55.483  1770 14565 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1075458738324892 ns; value = [210, 210, 139, 154, 233, 77, 67, 52, 36416, 46, 1]
+06-14 16:22:55.584  4147 24532 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 45 up
+06-14 16:22:55.612  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:55.612  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:55.612  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:55.612  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:55.624  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:55.624  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:55.624  1763  5733 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+06-14 16:22:55.624  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:55.633  4736  5812 I ScanController: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 16:22:55.633  4736  5812 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 16:22:55.635 12841 13769 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 16:22:55.638 12841 15759 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:22:55.648  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 16:22:55.650  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:81:28, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-64, periodicAdvInt=0x0
+06-14 16:22:55.655  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-52, periodicAdvInt=0x0
+06-14 16:22:55.662  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:55.664  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:05:F9, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-69, periodicAdvInt=0x0
+06-14 16:22:55.668  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:40:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:55.694  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-52, periodicAdvInt=0x0
+06-14 16:22:55.695  4736  5812 I ScanController: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 16:22:55.696  4736  5812 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 16:22:55.696 12841 13769 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 16:22:55.697 12841 15698 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessBleStateRepository.collectBleStateDomains.onEach - BleStateDomains size: 1 - ($)
+06-14 16:22:55.697 12841 11020 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessBleStateRepository.collectBleStateDomains.onEach - BleStateDomains size: 1 - ($)
+06-14 16:22:55.699 12841 10470 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:22:55.719  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:BD:CF, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 16:22:55.760  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:55.760  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:55.793  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:55.793  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:55.793  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:55.797  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:25:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-51, periodicAdvInt=0x0
+06-14 16:22:55.798  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=XX:XX:XX:XX:5E:F1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:55.805  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:40:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-50, periodicAdvInt=0x0
+06-14 16:22:55.812  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:55.812  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:55.812  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:55.812  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:55.815  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-84, periodicAdvInt=0x0
+06-14 16:22:55.816  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:55:71, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 16:22:55.825  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-51, periodicAdvInt=0x0
+06-14 16:22:55.864  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:55.864  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:55.947  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:55.947  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:55.947  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:55.950  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:60:44, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-53, periodicAdvInt=0x0
+06-14 16:22:55.972  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:55.990  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 16:22:55.990  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 16:22:56.012  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:56.013  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:56.013  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:56.013  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:56.140  1763  5272 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+06-14 16:22:56.212  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:56.213  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:56.213  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:56.213  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:56.257  1807  2630 I thermal_core: pivot(AP) : 375, skin : 379
+06-14 16:22:56.257  1807  2630 I vendor.samsung.hardware.thermal-service: index = -3.000000
+06-14 16:22:56.257  1807  2630 I vendor.samsung.hardware.thermal-service: 2 / 2
+06-14 16:22:56.281  2401  4030 D NetdEventListenerService: DNS Requested by 238, 10078(com.shinhan.sbanking), SUCCESS, 0ms
+06-14 16:22:56.294  1773  9487 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:56.294  1773  9487 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:56.294  1773  9487 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_rcv: 0
+06-14 16:22:56.294  1773  1773 D AHAL_ModulePrimary_QTI: getVendorParameters: id count: 1
+06-14 16:22:56.294  1773  1773 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:56.294  1773  1773 D AHAL_SecModulePrimary: onGetSECGenericParameters get temperature for g_hw_speaker_amp_temp_spk: 0
+06-14 16:22:56.295  7228  7940 I SDHMS:x : SIOP:: AP:375 BAT:355 USB:350 CHG:369 PA:372 CP:372 WIFI:379 CF:376 BLK:0 SUBBAT:354 LRPTHM:365 SKIN:370 SKINF:375 SKINB:379 LRP:370 LRF:375 LRB:379 APT:375 APR:379 RCV:321 SPK:321 CAPR:370 CRCV:320 CSPK:329 CAMT:379 UPSPK:354 DNSPK:354 VAP02:383 VAP05:378 AMB2:308 HIGH:0 AVGCUR:-193 POWER:-776
+06-14 16:22:56.295  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_spk=33
+06-14 16:22:56.295  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_spk=33
+06-14 16:22:56.296  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:56.296  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_spk
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_spk: 33
+06-14 16:22:56.296  1773  1773 I PAL: API: pal_set_param: 1377: Enter: param id 3002
+06-14 16:22:56.296  1773  1773 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:56.296  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:56.296  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:56.296  7228  7940 I AudioManager: setParameters keyValuePairs = g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:56.296  1831 30779 D AudioFlinger: setParameters: filtered dev setParameters keyvalue g_hw_speaker_amp_temp_rcv=32
+06-14 16:22:56.296  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters enter
+06-14 16:22:56.296  1773  1773 D AHAL_HFP_QTI: hfp_set_parameters Exit
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: configured g_hw_speaker_amp_temp_rcv
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: processSetVendorParameters: handler set on Feature:0
+06-14 16:22:56.296  1773  1773 D AHAL_SecModulePrimary: onSetSECGenericParameters set temperature for g_hw_speaker_amp_temp_rcv: 32
+06-14 16:22:56.296  1773  1773 I PAL: API: pal_set_param: 1377: Enter: param id 3001
+06-14 16:22:56.296  1773  1773 I PAL: ResourceManager: getActiveStream_l: 6569: no active streams found for device 3 ret -2
+06-14 16:22:56.297  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:56.297  1831 30779 E ConversionHelperAidl: Function: parseAndSetVendorParameters Line: 94 Failed 
+06-14 16:22:56.412  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:56.413  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:56.413  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:56.413  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:56.473  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:56.497  2401  2932 E Watchdog: !@Sync: 21714 heap(MB): 237 / 261 FD: 1928 [2026-06-14 16:22:56.497]
+06-14 16:22:56.612  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:56.613  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:56.613  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:56.613  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:56.813  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:56.813  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:56.813  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:56.813  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:56.973  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:57.013  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:57.013  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:57.013  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:57.013  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:57.083  1770  6900 I sensors-hal: handle_sns_std_sensor_event:127, [SSC_LIGHT] A: 211(211),c:316,b:77,m:37,cl:67,l:211,s:211,l0:36480,l1:832,s0:27250,s1:250,acl:1,opr:0.60,f(r):111,u(bl):100,if:111,wi:46,si:15,0(N:1)
+06-14 16:22:57.083  1770 14483 I sensors-hal: handle_sns_std_sensor_event:404, [SSC_LIGHT] P: 211(211),c:316,b:77,m:37,cl:67,l:211,s:211,l0:36480,l1:832,s0:27250,s1:250,acl:1,opr:0.60,f(r):111,u(bl):100,if:111,wi:46,si:15,0(N:1)
+06-14 16:22:57.213  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:57.213  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:57.213  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:57.213  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:57.258  1770  6942 I sensors-hal: handle_sns_client_event:379, [0][31308799] accel_sample [ 0.075,  0.253,  9.859] 1075460485160309
+06-14 16:22:57.296  1807  2630 I thermal_core: pivot(AP) : 375, skin : 379
+06-14 16:22:57.296  1807  2630 I vendor.samsung.hardware.thermal-service: index = -3.400000
+06-14 16:22:57.296  1807  2630 I vendor.samsung.hardware.thermal-service: 1 / 2
+06-14 16:22:57.414  2401  3028 D PowerManagerService: displayReady: false groupId=0
+06-14 16:22:57.416  2401  3028 D DisplayPowerController[0]: animateScreenStateChange: target=ON, mIsEnabled=true
+06-14 16:22:57.416  2401  3028 D DisplayPowerController[1]: animateScreenStateChange: target=OFF, mIsEnabled=false
+06-14 16:22:57.417  2401  3028 D PowerManagerService: displayReady: true groupId=0
+06-14 16:22:57.441  1113  1113 D io_stats: !@   8,0 r 162926840 3550286336 w 42695832 927055876 d 5561169 1081475912 f 700020 4370520 iot 13214324 0 th 0 0 0 pt 0 inp 0 0 651927.586
+06-14 16:22:57.441  1113  1113 D io_stats: !@ Write_top(KB): kworker/u17:2:/(25923) 1332
+06-14 16:22:57.441  1113  1113 D io_stats: !@ fuse-log: WORST (10078 1 0 2 0) (10660 1 0 2 0) TOTAL_LATENCY (10078 0 1 0 2) (10660 0 1 0 2) TOTAL_CNT (10078 2 1 2) (10660 2 1 2) 
+06-14 16:22:57.474  1791  2322 I SDM     : DisplayBase::CommitThread: Received idle timeout, panel: cmd, timeout: 70000 us
+06-14 16:22:57.479  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 16:22:57.479  1763  5733 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 16:22:57.479  1763  5733 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+06-14 16:22:57.479  1763  5733 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 16:22:57.490  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CF:B6, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-60, periodicAdvInt=0x0
+06-14 16:22:57.492  4736  5812 I ScanController: onScanResult to scannerId: 3- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-91, periodicAdvInt=0x0
+06-14 16:22:57.529  4736  5812 I ScanController: onScanResult to scannerId: 11- eventType=0x0, addressType=1, address=XX:XX:XX:XX:60:44, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-60, periodicAdvInt=0x0

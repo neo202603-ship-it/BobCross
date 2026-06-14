@@ -10,6 +10,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
@@ -47,6 +48,7 @@ import android.view.Gravity
 import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import android.view.inputmethod.InputMethodManager
@@ -72,14 +74,22 @@ import com.babcross.app.data.MenuCalorieCatalog
 import com.babcross.app.data.MenuCatalog
 import com.babcross.app.data.NearVoteStore
 import com.babcross.app.data.NearbyPoll
+import com.babcross.app.data.PollCompletionPolicy
+import com.babcross.app.data.PollParticipationPolicy
 import com.babcross.app.data.PollDefaults
 import com.babcross.app.data.PollTemplate
 import com.babcross.app.data.SharedResult
+import com.babcross.app.data.SharedResultInsights
 import com.babcross.app.data.VoteReceipt
 import com.babcross.app.nearby.NearbyVoteConnectionManager
 import com.babcross.app.protocol.NearVoteMessage
 import com.babcross.app.protocol.NearVoteMessageReplayGuard
 import com.babcross.app.protocol.NearVoteMessageType
+import com.babcross.app.protocol.NearVoteMessageValidator
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.EncodeHintType
+import com.google.zxing.qrcode.QRCodeWriter
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import com.babcross.app.simulation.LocalVoteSimulator
 import org.json.JSONArray
 import org.json.JSONObject
@@ -106,7 +116,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private lateinit var connectionStatusView: TextView
     private var topConnectionBadgeContainerView: FrameLayout? = null
     private var topConnectionBadgePulseView: View? = null
-    private var topConnectionBadgeView: TextView? = null
+    private var topConnectionSignalView: ConnectionSignalView? = null
     private var compactTitleBarView: LinearLayout? = null
     private var compactTitleTextView: TextView? = null
     private var expandedTitleView: View? = null
@@ -128,6 +138,18 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private var tutorialEndTarget: View? = null
     private var tutorialResult: SharedResult? = null
     private var tutorialPoll: NearbyPoll? = null
+    private var pendingJoinStatusText: TextView? = null
+    private var pendingJoinDotStep = 0
+    private val pendingJoinDots = object : Runnable {
+        override fun run() {
+            val hint = pendingJoinHint
+            val status = pendingJoinStatusText
+            if (hint == null || status == null) return
+            pendingJoinDotStep = (pendingJoinDotStep + 1) % 4
+            status.text = "밥판을 연결 중 입니다" + ".".repeat(pendingJoinDotStep + 1)
+            handler.postDelayed(this, JOIN_PENDING_DOT_MS)
+        }
+    }
     private lateinit var nearby: NearbyVoteConnectionManager
     private lateinit var simulator: LocalVoteSimulator
     private lateinit var store: NearVoteStore
@@ -137,7 +159,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private val handler = Handler(Looper.getMainLooper())
     private val nearbyHeartbeat = object : Runnable {
         override fun run() {
-            nearby.maintainNearbyMode()
+            applyNearbyRoleMode()
             updateConnectionStatus()
             handler.postDelayed(this, NEARBY_HEARTBEAT_MS)
         }
@@ -165,11 +187,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private val voteEndpointIdsByPoll = linkedMapOf<String, LinkedHashMap<String, String>>()
     private val invitedPeersByPoll = linkedMapOf<String, LinkedHashMap<String, String>>()
     private val pollResponsesByPoll = linkedMapOf<String, LinkedHashMap<String, String>>()
-    private val completionPromptShownPollIds = linkedSetOf<String>()
+    private val hostConnectedCountsByPoll = linkedMapOf<String, Int>()
+    private val hostReadyCountsByPoll = linkedMapOf<String, Int>()
+    private val completionPromptShownKeys = linkedSetOf<String>()
     private val submittedVotes = linkedMapOf<String, String>()
     private val acceptedPollIds = linkedSetOf<String>()
     private val declinedPollIds = linkedSetOf<String>()
     private var declinedPollNotice: String? = null
+    private var voteChoiceGuardUntilMillis = 0L
     private val sharedResultPollIds = linkedSetOf<String>()
     private val seenIncomingPollIds = linkedSetOf<String>()
     private val seenResultPollIds = linkedSetOf<String>()
@@ -178,6 +203,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private var restoringScreen = false
     private var composeSuggestionToken = 0
     private var permissionIntroShown = false
+    private var pendingJoinHint: JoinHint? = null
 
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -213,6 +239,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         } else {
             showFirstRunOnboarding()
         }
+        handleJoinIntent(intent)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleJoinIntent(intent)
     }
 
     override fun onDestroy() {
@@ -236,7 +269,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     override fun onEndpointConnected(endpointId: String) {
         appendLog("연결됨: $endpointId")
         sendProfile(endpointId)
-        handler.postDelayed({ sendProfile(endpointId) }, CONNECTION_SYNC_DELAY_MS)
+        handler.postDelayed({
+            sendProfile(endpointId)
+            resendAcceptedPollResponses(endpointId)
+        }, CONNECTION_SYNC_DELAY_MS)
     }
 
     override fun onEndpointDisconnected(endpointId: String) {
@@ -247,13 +283,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val countChanged = connectedCount != count
         connectedCount = count
         updateConnectionStatus(animateBadge = countChanged)
+        sendHostConnectionSync()
     }
 
     private fun showHome() {
         setPage("홈", compactTitle = "밥크로스")
         rememberScreen { showHome() }
         page.addView(homeDashboardCard())
-        page.addView(experienceCard())
+        if (!store.hasCompletedDemo()) {
+            page.addView(experienceCard())
+        }
         if (!hasNearbyPermissions() || disabledConnectionRequirements().isNotEmpty()) {
             page.addView(connectionFixCard())
         }
@@ -409,7 +448,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showSettings() }
         page.addView(breadcrumb("홈", "설정"))
         page.addView(topBar("설정"))
-        page.addView(settingsProfileCard())
         page.addView(connectionReadinessCard())
         page.addView(trustSummaryCard())
         page.addView(autoConnectSettingCard())
@@ -582,63 +620,25 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showCompose(template, selectedFoodCategory) }
         page.addView(breadcrumb("홈", "밥판", "밥판 열기"))
         page.addView(topBar("밥판 열기"))
-        var composeMode = ComposeMode.TOGETHER
-        val modeText = bodyText("")
-        lateinit var soloModeSegment: TextView
-        lateinit var togetherModeSegment: TextView
+        val composeMode = ComposeMode.TOGETHER
         var publishButton: Button? = null
-        var rulesCard: LinearLayout? = null
+        lateinit var rulesCard: LinearLayout
         var refreshComposePreview: (() -> Unit)? = null
         var refreshAdvancedSummary: (() -> Unit)? = null
-
-        fun updateComposeModeUi() {
-            val soloSelected = composeMode == ComposeMode.SOLO
-            modeText.text = if (soloSelected) {
-                "후보를 보고 내 선택으로 오늘의 밥결정을 만듭니다. 결과 카드는 바로 공유할 수 있어요."
-            } else {
-                "주변 밥친구에게 밥신호를 보내고, 선택이 모이면 함께 오늘의 밥결정을 만듭니다."
-            }
-            listOf(soloModeSegment to soloSelected, togetherModeSegment to !soloSelected).forEach { (segment, selected) ->
-                segment.setTextColor(if (selected) 0xFFFFFFFF.toInt() else 0xFFD73B24.toInt())
-                segment.background = if (selected) {
-                    rounded(0xFFD73B24.toInt(), 12)
-                } else {
-                    rounded(0x00FFFFFF, 0)
-                }
-            }
-            publishButton?.text = if (soloSelected) "오늘의 밥판 만들기" else "밥신호 보내기"
-            rulesCard?.visibility = if (soloSelected) View.GONE else View.VISIBLE
-            refreshComposePreview?.invoke()
-            refreshAdvancedSummary?.invoke()
-        }
-
-        soloModeSegment = composeModeSegment("혼자 정하기") {
-            composeMode = ComposeMode.SOLO
-            updateComposeModeUi()
-        }
-        togetherModeSegment = composeModeSegment("같이 고르기") {
-            composeMode = ComposeMode.TOGETHER
-            updateComposeModeUi()
-        }
-        page.addView(LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-            gravity = Gravity.CENTER
-            background = rounded(0xFFFFF1E8.toInt(), 14, 0xFFE0B49E.toInt(), 1)
-            layoutParams = blockParams()
-            addView(togetherModeSegment, LinearLayout.LayoutParams(0, dp(48), 1f))
-            addView(View(context).apply {
-                background = rounded(0xFFE0B49E.toInt(), 0)
-            }, LinearLayout.LayoutParams(dp(1), ViewGroup.LayoutParams.MATCH_PARENT))
-            addView(soloModeSegment, LinearLayout.LayoutParams(0, dp(48), 1f))
-        })
-        page.addView(modeText)
-        updateComposeModeUi()
 
         val questionInput = inputBox("오늘의 질문", selectedTemplate.question).apply {
             tutorialQuestionTarget = this
         }
         val optionEditor = OptionTagEditor(selectedTemplate.options) {
             refreshComposePreview?.invoke()
+        }
+        val requireInviteCodeInput = CheckBox(this).apply {
+            text = "비공개로 보내기"
+            textSize = 15f
+            setTextColor(0xFF23362D.toInt())
+            isChecked = false
+            buttonTintList = android.content.res.ColorStateList.valueOf(0xFFD73B24.toInt())
+            layoutParams = blockParams()
         }
         val allowParticipantOptionsInput = CheckBox(this).apply {
             text = "밥친구가 메뉴 후보 추가 가능"
@@ -683,24 +683,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addView(durationWheel, LinearLayout.LayoutParams(dp(128), dp(128)))
         }
 
-        page.addView(lockedFoodCategoryCard(
-            category = selectedFoodCategory,
-            onTemplateClick = {
-                showTemplatePicker(
-                    questionInput.text.toString(),
-                    optionEditor.values().joinToString("\n"),
-                    durationInput.text.toString(),
-                    allowParticipantOptionsInput.isChecked,
-                    revealSelectionsInput.isChecked,
-                    selectedFoodCategory
-                )
-            },
-            onChangeCategoryClick = { showComposeCategoryPicker() }
-        ))
-        page.addView(label("오늘의 질문"))
-        page.addView(questionInput)
-        page.addView(labelActionRow("메뉴 후보", menuRouletteLink(optionEditor) { selectedFoodCategory }, bottomPaddingDp = 2))
-        page.addView(optionEditor.view.apply { tutorialOptionsTarget = this })
         val pastRunnerUpSuggestionSlot = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             visibility = View.GONE
@@ -709,7 +691,18 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
         }
-        page.addView(pastRunnerUpSuggestionSlot)
+        val saveTemplateLink = templateActionLink("${selectedFoodCategory.label} 템플릿으로 저장") {
+            val template = buildTemplateFromInputs(
+                questionInput,
+                optionEditor.values(),
+                durationInput,
+                allowParticipantOptionsInput.isChecked,
+                revealSelectionsInput.isChecked,
+                selectedFoodCategory
+            ) ?: return@templateActionLink
+            store.saveTemplate(template)
+            Toast.makeText(this, "밥판 템플릿 저장 완료", Toast.LENGTH_SHORT).show()
+        }
         val advancedContent = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             visibility = View.GONE
@@ -734,6 +727,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             }
         ))
         advancedContent.addView(customDurationPanel)
+        advancedContent.addView(requireInviteCodeInput)
         advancedContent.addView(allowParticipantOptionsInput)
         advancedContent.addView(revealSelectionsInput)
         lateinit var advancedToggle: TextView
@@ -743,19 +737,26 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             advancedToggle.text = if (showAdvanced) "규칙 닫기" else "규칙 변경"
         }
         rulesCard = composeRulesCard(advancedSummaryText, advancedToggle, advancedContent)
-        page.addView(rulesCard)
-        page.addView(outlineButton("템플릿으로 저장") {
-            val template = buildTemplateFromInputs(
-                questionInput,
-                optionEditor.values(),
-                durationInput,
-                allowParticipantOptionsInput.isChecked,
-                revealSelectionsInput.isChecked,
-                selectedFoodCategory
-            ) ?: return@outlineButton
-            store.saveTemplate(template)
-            Toast.makeText(this, "밥판 템플릿 저장 완료", Toast.LENGTH_SHORT).show()
-        })
+        page.addView(composeSetupCard(
+            category = selectedFoodCategory,
+            onTemplateClick = {
+                showTemplatePicker(
+                    questionInput.text.toString(),
+                    optionEditor.values().joinToString("\n"),
+                    durationInput.text.toString(),
+                    allowParticipantOptionsInput.isChecked,
+                    revealSelectionsInput.isChecked,
+                    selectedFoodCategory
+                )
+            },
+            onChangeCategoryClick = { showComposeCategoryPicker() },
+            questionInput = questionInput,
+            optionsView = optionEditor.view.apply { tutorialOptionsTarget = this },
+            rouletteAction = menuRouletteLink(optionEditor) { selectedFoodCategory },
+            suggestionSlot = pastRunnerUpSuggestionSlot,
+            rulesSection = rulesCard,
+            saveTemplateLink = saveTemplateLink
+        ))
         val composePreviewSlot = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             layoutParams = blockParams()
@@ -768,6 +769,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             advancedSummaryText.text = composeRulesSummary(
                 composeMode = composeMode,
                 durationSeconds = durationSeconds,
+                requireInviteCode = requireInviteCodeInput.isChecked,
                 allowParticipantOptions = allowParticipantOptionsInput.isChecked,
                 revealSelections = revealSelectionsInput.isChecked
             )
@@ -782,6 +784,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 question = questionInput.text.toString(),
                 optionCount = optionEditor.values().size,
                 durationSeconds = durationSeconds,
+                requireInviteCode = requireInviteCodeInput.isChecked,
                 allowParticipantOptions = allowParticipantOptionsInput.isChecked,
                 revealSelections = revealSelectionsInput.isChecked
             ))
@@ -792,6 +795,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             refreshAdvancedSummary?.invoke()
         }
         allowParticipantOptionsInput.setOnCheckedChangeListener { _, _ ->
+            refreshComposePreview?.invoke()
+            refreshAdvancedSummary?.invoke()
+        }
+        requireInviteCodeInput.setOnCheckedChangeListener { _, _ ->
             refreshComposePreview?.invoke()
             refreshAdvancedSummary?.invoke()
         }
@@ -814,22 +821,19 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 Toast.makeText(this, "메뉴 후보는 2개 이상 필요합니다.", Toast.LENGTH_SHORT).show()
                 return@publish
             }
-            val publish = {
-                publishPoll(
-                    question,
-                    options,
-                    durationSeconds.coerceIn(CUSTOM_DURATION_MIN_SECONDS, CUSTOM_DURATION_MAX_SECONDS),
-                    allowParticipantOptionsInput.isChecked,
-                    revealSelectionsInput.isChecked
-                )
+            if (!autoConnectEnabled) {
+                setAutoConnectEnabled(true, "자동 연결을 켜고 밥신호를 보냅니다.")
             }
-            if (composeMode == ComposeMode.TOGETHER && connectedCount == 0) {
-                confirmPublishingWithoutPeers(publish)
-            } else {
-                publish()
-            }
+            publishPoll(
+                question,
+                options,
+                durationSeconds.coerceIn(CUSTOM_DURATION_MIN_SECONDS, CUSTOM_DURATION_MAX_SECONDS),
+                requireInviteCodeInput.isChecked,
+                allowParticipantOptionsInput.isChecked,
+                revealSelectionsInput.isChecked
+            )
         }
-        publishButton = stickyPrimaryActionButton(if (composeMode == ComposeMode.SOLO) "오늘의 밥판 만들기" else "밥신호 보내기", publishAction).apply {
+        publishButton = stickyPrimaryActionButton("밥신호 보내기", publishAction).apply {
             tutorialPublishTarget = this
         }
         setStickyBottomAction(publishButton!!)
@@ -1016,17 +1020,38 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private fun lockedFoodCategoryCard(
         category: FoodCategory,
         onTemplateClick: (() -> Unit)? = null,
-        onChangeCategoryClick: (() -> Unit)? = null
+        onChangeCategoryClick: (() -> Unit)? = null,
+        embedded: Boolean = false
     ): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
             setPadding(dp(14), dp(12), dp(14), dp(12))
-            background = rounded(category.backgroundColor, 14, category.strokeColor, 1)
-            layoutParams = blockParams()
+            background = if (embedded) {
+                roundedCorners(
+                    color = category.backgroundColor,
+                    topLeft = 14,
+                    topRight = 14
+                )
+            } else {
+                rounded(category.backgroundColor, 14, category.strokeColor, 1)
+            }
+            layoutParams = if (embedded) {
+                LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            } else {
+                blockParams()
+            }
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
+                if (onChangeCategoryClick != null) {
+                    isClickable = true
+                    isFocusable = true
+                    setOnClickListener { onChangeCategoryClick() }
+                }
                 layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                 addView(TextView(context).apply {
                     text = "종류"
@@ -1036,19 +1061,17 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     setPadding(0, 0, dp(8), 0)
                 })
                 addView(foodCategoryBadge(category, prominent = true))
+                if (onChangeCategoryClick != null) {
+                    addView(TextView(context).apply {
+                        text = "›"
+                        textSize = 22f
+                        setTextColor(0xFF8AA093.toInt())
+                        setPadding(dp(6), 0, 0, 0)
+                    })
+                }
             })
             if (onTemplateClick != null) {
-                addView(linkActionText("${category.label} 템플릿", onTemplateClick).apply {
-                    layoutParams = LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    ).apply {
-                        rightMargin = if (onChangeCategoryClick != null) dp(10) else 0
-                    }
-                })
-            }
-            if (onChangeCategoryClick != null) {
-                addView(linkActionText("다른 종류로 시작", onChangeCategoryClick))
+                addView(templateActionLink("${category.label} 템플릿 선택", onTemplateClick))
             }
         }
     }
@@ -1291,7 +1314,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val card = templateCard(template) {
             showCompose(template, templateFoodCategory(template))
         }.apply {
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+            layoutParams = LinearLayout.LayoutParams(
+                if (template.builtIn) ViewGroup.LayoutParams.MATCH_PARENT else 0,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                if (template.builtIn) 0f else 1f
+            )
         }
         row.addView(card)
         if (!template.builtIn) {
@@ -1351,12 +1378,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private fun templateCard(template: PollTemplate, onClick: () -> Unit): LinearLayout {
         val icon = if (template.builtIn) "🍚" else "👤"
         val category = templateFoodCategory(template)
+        fun View.applyTemplateClick() {
+            isClickable = true
+            setOnClickListener { onClick() }
+        }
         return LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
             setPadding(0, 0, dp(16), 0)
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt())
-            setOnClickListener { onClick() }
+            background = groupedCardBackground()
+            applyTemplateClick()
             layoutParams = blockParams()
             addView(View(context).apply {
                 background = rounded(0xFFD73B24.toInt(), 16)
@@ -1375,11 +1406,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         setTextColor(0xFF10251D.toInt())
                         setTypeface(typeface, Typeface.BOLD)
                         layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                        applyTemplateClick()
                     })
                     addView(TextView(context).apply {
                         text = "제한시간 ${formatDurationText(template.durationSeconds)}"
                         textSize = 13f
                         setTextColor(0xFF66776E.toInt())
+                        applyTemplateClick()
                     })
                 })
                 addView(TextView(context).apply {
@@ -1396,6 +1429,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     ).apply {
                         topMargin = dp(8)
                     }
+                    applyTemplateClick()
                 })
                 addView(templateTagBar(template).apply {
                     layoutParams = LinearLayout.LayoutParams(
@@ -1404,6 +1438,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     ).apply {
                         topMargin = dp(8)
                     }
+                    applyTemplateClick()
                 })
                 if (template.allowParticipantOptions) {
                     addView(TextView(context).apply {
@@ -1411,6 +1446,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         textSize = 13f
                         setTextColor(0xFFD73B24.toInt())
                         setPadding(0, dp(8), 0, 0)
+                        applyTemplateClick()
                     })
                 }
                 addView(TextView(context).apply {
@@ -1418,12 +1454,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     textSize = 13f
                     setTextColor(0xFF66776E.toInt())
                     setPadding(0, dp(6), 0, 0)
+                    applyTemplateClick()
                 })
+                applyTemplateClick()
             })
             addView(TextView(context).apply {
                 text = "›"
                 textSize = 28f
                 setTextColor(0xFF8AA093.toInt())
+                applyTemplateClick()
             })
         }
     }
@@ -1444,7 +1483,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 val subtitle = when {
                     submitted != null -> "내 선택: $submitted"
                     accepted -> "${poll.proposerName}의 밥신호 · ${poll.remainingText()}"
-                    else -> "${poll.proposerName}님의 밥판 초대 · 수락 후 메뉴 선택"
+                    poll.inviteCode.isBlank() -> "${poll.proposerName}님의 밥판 초대"
+                    else -> "${poll.proposerName}님의 비공개 밥판 초대"
                 }
                 page.addView(actionCard(poll.question, subtitle) {
                     if (accepted || submitted != null) {
@@ -1466,12 +1506,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showPollInvitation(poll) }
         page.addView(breadcrumb("홈", "밥판", "밥판 초대"))
         page.addView(topBar("밥판 초대"))
-        page.addView(avatarInfoCard("새 밥신호 도착", "${poll.proposerName}님의 밥판", "밥판 코드를 입력하면 바로 참여합니다.", resolvedAvatarId(poll.proposerId, poll.proposerAvatarId)))
-        page.addView(countdownCard(poll))
+        val inviteDetail = if (poll.inviteCode.isBlank()) "밥판 참여를 누르면 메뉴 선택으로 이동합니다." else "밥판 코드를 입력하면 바로 참여합니다."
+        page.addView(avatarInfoCard("새 밥신호 도착", poll.question, "보낸 밥친구: ${poll.proposerName} · $inviteDetail", resolvedAvatarId(poll.proposerId, poll.proposerAvatarId), poll))
         page.addView(inviteCodeEntryCard(poll))
     }
 
     private fun inviteCodeEntryCard(poll: NearbyPoll): LinearLayout {
+        if (poll.inviteCode.isBlank()) {
+            return unlockedInvitationCard(poll)
+        }
         lateinit var slotRow: LinearLayout
         val codeInput = inputBox("4자리 코드", "", numberOnly = true).apply {
             gravity = Gravity.CENTER
@@ -1519,7 +1562,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 setTextColor(0xFF10251D.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
-                background = rounded(0xFFFFFFFF.toInt(), 14, 0xFFE0B49E.toInt(), 1)
+                background = rounded(0xFFFFFFFF.toInt(), 14, 0xFF8B5C45.toInt(), 2)
                 layoutParams = LinearLayout.LayoutParams(0, dp(54), 1f).apply {
                     if (index > 0) leftMargin = dp(6)
                     if (index < 3) rightMargin = dp(6)
@@ -1535,6 +1578,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             setPadding(0, 0, 0, dp(10))
         }
         var acceptedByCode = false
+        var previousCodeLength = 0
+        fun tickCodeInput() {
+            slotRow.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+            vibrateCodeInput()
+        }
         fun shakeCodeSlots() {
             slotRow.performHapticFeedback(HapticFeedbackConstants.REJECT)
             vibrateCodeError()
@@ -1557,16 +1605,21 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
         fun refreshCodeSlots() {
             val enteredCode = codeInput.text.toString()
+            val visibleDigitIndex = enteredCode.lastIndex
             codeSlots.forEachIndexed { index, slot ->
                 val digit = enteredCode.getOrNull(index)?.toString().orEmpty()
-                slot.text = digit.ifBlank { "" }
+                slot.text = when {
+                    digit.isBlank() -> ""
+                    index < visibleDigitIndex -> "*"
+                    else -> digit
+                }
                 val filled = digit.isNotBlank()
                 val active = index == enteredCode.length.coerceAtMost(3) && !acceptedByCode
                 slot.background = rounded(
                     if (filled) 0xFFFFF1E8.toInt() else 0xFFFFFFFF.toInt(),
                     14,
-                    if (active || filled) 0xFFD73B24.toInt() else 0xFFE0B49E.toInt(),
-                    if (active) 2 else 1
+                    if (active || filled) 0xFFD73B24.toInt() else 0xFF8B5C45.toInt(),
+                    if (active || filled) 3 else 2
                 )
             }
         }
@@ -1574,6 +1627,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             refreshCodeSlots()
             if (acceptedByCode) return
             val enteredCode = codeInput.text.toString()
+            if (enteredCode.length > previousCodeLength) {
+                tickCodeInput()
+            }
+            previousCodeLength = enteredCode.length
             if (poll.inviteCode.isBlank()) {
                 status.text = "이 밥판은 코드가 없어 참여할 수 없습니다."
                 status.setTextColor(0xFFD73B24.toInt())
@@ -1600,7 +1657,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             sendPollResponse(poll, POLL_RESPONSE_ACCEPTED)
             persistSessionState()
             Toast.makeText(this, "밥판에 참여합니다.", Toast.LENGTH_SHORT).show()
-            showVotePoll(poll)
+            openVotePollAfterJoin(poll)
         }
         codeInput.afterTextChanged { acceptIfCodeMatches() }
         return LinearLayout(this).apply {
@@ -1642,11 +1699,48 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
+    private fun unlockedInvitationCard(poll: NearbyPoll): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16), dp(14), dp(16), dp(14))
+            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFB7DCC9.toInt(), 1)
+            layoutParams = blockParams()
+            addView(primaryButton("밥판 참여") {
+                acceptedPollIds += poll.id
+                sendPollResponse(poll, POLL_RESPONSE_ACCEPTED)
+                persistSessionState()
+                Toast.makeText(this@MainActivity, "밥판에 참여합니다.", Toast.LENGTH_SHORT).show()
+                openVotePollAfterJoin(poll)
+            }.apply {
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    dp(46)
+                )
+            })
+            addView(compactButton("거절", BUTTON_OUTLINE) {
+                declinedPollIds += poll.id
+                incomingPolls.remove(poll.id)
+                sendPollResponse(poll, POLL_RESPONSE_DECLINED)
+                persistSessionState()
+                declinedPollNotice = "${poll.proposerName}님의 밥판 초대를 거절했습니다. 필요하면 새 밥판을 열거나 주변 밥신호를 다시 확인할 수 있어요."
+                Toast.makeText(this@MainActivity, "초대를 거절하고 홈으로 돌아갑니다.", Toast.LENGTH_SHORT).show()
+                showHome()
+            }.apply {
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    dp(42)
+                ).apply {
+                    topMargin = dp(8)
+                }
+            })
+        }
+    }
+
     private fun pollRulesCard(poll: NearbyPoll): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(dp(14), dp(12), dp(14), dp(12))
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt(), 1)
+            background = groupedCardBackground()
             layoutParams = blockParams()
             addView(TextView(context).apply {
                 text = "밥판 규칙"
@@ -1668,11 +1762,133 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
+    private fun composeContentCard(
+        questionInput: View,
+        optionsView: View,
+        rouletteAction: TextView,
+        suggestionSlot: LinearLayout,
+        rulesSection: LinearLayout,
+        embedded: Boolean = false
+    ): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16), dp(14), dp(16), dp(14))
+            if (!embedded) {
+                background = groupedCardBackground()
+            }
+            layoutParams = if (embedded) {
+                LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            } else {
+                blockParams()
+            }
+            addView(TextView(context).apply {
+                text = "밥판 내용"
+                textSize = 17f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+            })
+            addView(TextView(context).apply {
+                text = "질문과 후보를 한 번에 정리합니다."
+                textSize = 13f
+                setTextColor(0xFF526158.toInt())
+                setPadding(0, dp(4), 0, dp(10))
+            })
+            addView(label("오늘의 질문"))
+            addView(questionInput)
+            addView(labelActionRow("메뉴 후보", rouletteAction, bottomPaddingDp = 2))
+            addView(optionsView)
+            addView(suggestionSlot)
+            addView(View(context).apply {
+                background = rounded(0xFFD8E2DA.toInt(), 0)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    dp(1)
+                ).apply {
+                    topMargin = dp(14)
+                    bottomMargin = dp(12)
+                }
+            })
+            addView(rulesSection)
+        }
+    }
+
+    private fun composeSetupCard(
+        category: FoodCategory,
+        onTemplateClick: () -> Unit,
+        onChangeCategoryClick: () -> Unit,
+        questionInput: View,
+        optionsView: View,
+        rouletteAction: TextView,
+        suggestionSlot: LinearLayout,
+        rulesSection: LinearLayout,
+        saveTemplateLink: TextView
+    ): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            background = groupedCardBackground()
+            setPadding(dp(2), dp(2), dp(2), dp(2))
+            layoutParams = blockParams()
+            addView(lockedFoodCategoryCard(
+                category = category,
+                onTemplateClick = onTemplateClick,
+                onChangeCategoryClick = onChangeCategoryClick,
+                embedded = true
+            ))
+            addView(View(context).apply {
+                background = rounded(0xFFD8E2DA.toInt(), 0)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    dp(1)
+                )
+            })
+            addView(composeContentCard(
+                questionInput = questionInput,
+                optionsView = optionsView,
+                rouletteAction = rouletteAction,
+                suggestionSlot = suggestionSlot,
+                rulesSection = rulesSection,
+                embedded = true
+            ))
+            addView(View(context).apply {
+                background = rounded(0xFFD8E2DA.toInt(), 0)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    dp(1)
+                )
+            })
+            addView(LinearLayout(context).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.END
+                setPadding(dp(14), dp(7), dp(14), dp(8))
+                background = roundedCorners(
+                    color = 0xFFFFFBF5.toInt(),
+                    bottomRight = 14,
+                    bottomLeft = 14
+                )
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                addView(saveTemplateLink.apply {
+                    val currentParams = layoutParams as? LinearLayout.LayoutParams
+                    layoutParams = (currentParams ?: LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ))
+                })
+            })
+        }
+    }
+
     private fun composeAudiencePreviewCard(
         composeMode: ComposeMode,
         question: String,
         optionCount: Int,
         durationSeconds: Int,
+        requireInviteCode: Boolean,
         allowParticipantOptions: Boolean,
         revealSelections: Boolean
     ): LinearLayout {
@@ -1682,7 +1898,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(dp(16), dp(14), dp(16), dp(14))
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt(), 1)
+            background = groupedCardBackground()
             addView(TextView(context).apply {
                 text = if (soloMode) "결과 카드 미리보기" else "상대에게 이렇게 보여요"
                 textSize = 17f
@@ -1711,6 +1927,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addView(TextView(context).apply {
                 text = if (soloMode) {
                     "${if (optionCount > 0) "후보 ${optionCount}개" else "후보 준비 중"} · 내 선택으로 결과 카드 생성"
+                } else if (requireInviteCode) {
+                    "${if (optionCount > 0) "후보 ${optionCount}개" else "후보 준비 중"} · $durationText · 비공개"
                 } else {
                     "${if (optionCount > 0) "후보 ${optionCount}개" else "후보 준비 중"} · $durationText"
                 }
@@ -1744,9 +1962,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     ): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(dp(16), dp(14), dp(16), dp(14))
-            background = rounded(0xFFFFFBF5.toInt(), 16, 0xFFE0B49E.toInt(), 1)
-            layoutParams = blockParams()
+            setPadding(0, 0, 0, 0)
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
@@ -1767,13 +1987,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private fun composeRulesSummary(
         composeMode: ComposeMode,
         durationSeconds: Int,
+        requireInviteCode: Boolean,
         allowParticipantOptions: Boolean,
         revealSelections: Boolean
     ): String {
-        val modeText = if (composeMode == ComposeMode.SOLO) "혼자 정하기" else "같이 고르기"
+        val modeText = if (composeMode == ComposeMode.SOLO) "내 선택" else "밥신호"
+        val inviteText = if (composeMode == ComposeMode.TOGETHER && requireInviteCode) "비공개" else null
         val addText = if (allowParticipantOptions) "후보 추가 가능" else "후보 추가 불가"
         val revealText = if (revealSelections) "밥친구별 선택 공개" else "득표수만 공개"
-        return "$modeText · ${formatDurationText(durationSeconds)} · $addText · $revealText"
+        return listOfNotNull(modeText, formatDurationText(durationSeconds), inviteText, addText, revealText).joinToString(" · ")
     }
 
     private fun composePreviewRow(label: String, value: String, positive: Boolean): LinearLayout {
@@ -1864,25 +2086,20 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showPublishedPoll(poll) }
         page.addView(breadcrumb("홈", "밥판", "내가 연 밥판"))
         page.addView(topBar("내가 연 밥판"))
-        page.addView(avatarInfoCard(if (ended) "밥판 종료" else "밥신호 발신 중", poll.question, "", selfAvatarId))
+        page.addView(avatarInfoCard(if (ended) "밥판 종료" else "밥신호 발신 중", poll.question, "", selfAvatarId, poll))
         if (!ended) {
-            page.addView(inviteCodeHostCard(poll))
+            page.addView(joinQrHostCard(poll))
+            page.addView(pollParticipationCard(poll))
         }
-        page.addView(countdownCard(poll))
         val hasMyVote = receivedVotes.containsKey(userId)
-        page.addView(publishedPollStageCard(poll, hasMyVote, receivedVotes.size))
+        if (ended || hasMyVote || sharedResultPollIds.contains(poll.id)) {
+            page.addView(publishedPollStageCard(poll, hasMyVote, receivedVotes.size))
+        }
         if (!ended) {
             if (hasMyVote) {
                 page.addView(statusCard("나의 참여", "내 선택: ${receivedVotes[userId].orEmpty()}"))
             } else {
-                page.addView(mySelectionPrompt())
-                poll.options.forEachIndexed { index, option ->
-                    page.addView(choicePill(option) { castVote(poll, option) }.apply {
-                        if (index == 0) {
-                            tutorialResponseTarget = this
-                        }
-                    })
-                }
+                page.addView(hostSelectionCard(poll))
                 if (poll.allowParticipantOptions) {
                     page.addView(participantOptionComposer(poll))
                 }
@@ -1911,37 +2128,277 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun inviteCodeHostCard(poll: NearbyPoll): LinearLayout {
+    private fun pollParticipationCard(poll: NearbyPoll): TextView {
+        return statusCard("밥판 참여 현황", pollParticipationSnapshot(poll).detailText())
+    }
+
+    private fun joinQrHostCard(poll: NearbyPoll): LinearLayout {
+        val joinUri = buildJoinUri(poll)
+        val privatePoll = poll.inviteCode.isNotBlank()
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER
             setPadding(dp(16), dp(13), dp(16), dp(13))
-            background = rounded(0xFFFFF0D9.toInt(), 14, 0xFFD73B24.toInt(), 2)
+            background = groupedCardBackground(0xFFFFF0D9.toInt(), 0xFFD73B24.toInt())
             layoutParams = blockParams()
             addView(TextView(context).apply {
-                text = "밥판 코드"
+                text = if (privatePoll) "비공개 밥판 코드" else "밥판 참여 QR"
                 textSize = 13f
                 setTextColor(0xFF8B5C45.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
             })
+            if (privatePoll) {
+                addView(TextView(context).apply {
+                    text = poll.inviteCode
+                    textSize = 34f
+                    letterSpacing = 0.08f
+                    setTextColor(0xFFD73B24.toInt())
+                    setTypeface(typeface, Typeface.BOLD)
+                    gravity = Gravity.CENTER
+                    includeFontPadding = false
+                    setPadding(0, dp(4), 0, dp(4))
+                })
+            }
             addView(TextView(context).apply {
-                text = poll.inviteCode.ifBlank { "----" }
-                textSize = 34f
-                letterSpacing = 0.08f
-                setTextColor(0xFFD73B24.toInt())
-                setTypeface(typeface, Typeface.BOLD)
-                gravity = Gravity.CENTER
-                includeFontPadding = false
-                setPadding(0, dp(4), 0, dp(4))
-            })
-            addView(TextView(context).apply {
-                text = "같이 먹을 사람에게 이 번호를 알려주세요."
+                text = if (privatePoll) {
+                    "같이 먹을 사람에게 이 번호나 QR을 알려주세요."
+                } else {
+                    "자동 연결이 늦으면 같이 먹을 사람이 QR로 이 밥판을 먼저 찾을 수 있어요."
+                }
                 textSize = 12f
                 setTextColor(0xFF526158.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
+                setPadding(0, if (privatePoll) 0 else dp(8), 0, 0)
             })
+            createJoinQrBitmap(joinUri, dp(156))?.let { qrBitmap ->
+                addView(ImageView(context).apply {
+                    setImageBitmap(qrBitmap)
+                    contentDescription = "밥판 참여 QR"
+                    setPadding(dp(10), dp(10), dp(10), dp(10))
+                    background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE7B59D.toInt(), 1)
+                    layoutParams = LinearLayout.LayoutParams(dp(176), dp(176)).apply {
+                        topMargin = dp(12)
+                    }
+                })
+                addView(TextView(context).apply {
+                    text = if (privatePoll) {
+                        "QR은 연결 힌트로만 쓰고, 실제 밥판 내용은 가까운 기기 연결로 전달됩니다."
+                    } else {
+                        "QR에는 후보와 참여자 정보가 들어가지 않습니다."
+                    }
+                    textSize = 12f
+                    setTextColor(0xFF526158.toInt())
+                    gravity = Gravity.CENTER
+                    setPadding(0, dp(8), 0, 0)
+                })
+            }
+        }
+    }
+
+    private fun buildJoinUri(poll: NearbyPoll): String {
+        return Uri.Builder()
+            .scheme("babcross")
+            .authority("join")
+            .appendQueryParameter("v", "1")
+            .appendQueryParameter("poll", poll.id)
+            .appendQueryParameter("code", poll.inviteCode)
+            .appendQueryParameter("host", joinHostToken(poll.id, poll.proposerId, poll.inviteCode, poll.endAtMillis))
+            .appendQueryParameter("exp", poll.endAtMillis.toString())
+            .appendQueryParameter("nonce", hash("join-nonce:${poll.id}:${poll.inviteCode}:${poll.endAtMillis}").take(10))
+            .build()
+            .toString()
+    }
+
+    private fun joinHostToken(pollId: String, proposerId: String, inviteCode: String, expiresAtMillis: Long): String {
+        return hash("join-host:$pollId:$proposerId:$inviteCode:$expiresAtMillis").take(16)
+    }
+
+    private fun createJoinQrBitmap(value: String, sizePx: Int): Bitmap? {
+        return runCatching {
+            val hints = mapOf(
+                EncodeHintType.ERROR_CORRECTION to ErrorCorrectionLevel.M,
+                EncodeHintType.MARGIN to 1,
+                EncodeHintType.CHARACTER_SET to "UTF-8"
+            )
+            val matrix = QRCodeWriter().encode(value, BarcodeFormat.QR_CODE, sizePx, sizePx, hints)
+            Bitmap.createBitmap(sizePx, sizePx, Bitmap.Config.ARGB_8888).apply {
+                for (y in 0 until sizePx) {
+                    for (x in 0 until sizePx) {
+                        setPixel(x, y, if (matrix[x, y]) Color.BLACK else Color.WHITE)
+                    }
+                }
+            }
+        }.getOrElse {
+            appendLog("밥판 QR 생성 실패: ${it.message}")
+            null
+        }
+    }
+
+    private fun handleJoinIntent(intent: Intent?) {
+        val uri = intent?.data ?: return
+        if (uri.scheme != "babcross" || uri.host != "join") return
+        val hint = parseJoinHint(uri) ?: run {
+            Toast.makeText(this, "유효하지 않은 밥판 QR입니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+        pendingJoinHint = hint
+        if (!tryShowPendingJoinHint()) {
+            showJoinPendingPage(hint)
+        }
+        if (!autoConnectEnabled) {
+            setAutoConnectEnabled(true)
+        }
+        if (hasNearbyPermissions() && disabledConnectionRequirements().isEmpty()) {
+            startNearbyConnectionTest()
+        } else {
+            showPermissionFallbackDialog()
+        }
+    }
+
+    private fun parseJoinHint(uri: Uri): JoinHint? {
+        if (uri.getQueryParameter("v") != "1") return null
+        val pollId = uri.getQueryParameter("poll")?.trim().orEmpty()
+        val inviteCode = uri.getQueryParameter("code")?.trim().orEmpty()
+        val hostToken = uri.getQueryParameter("host")?.trim().orEmpty()
+        val expiresAtMillis = uri.getQueryParameter("exp")?.toLongOrNull() ?: return null
+        val now = System.currentTimeMillis()
+        val valid = pollId.startsWith("poll-") &&
+            pollId.length <= MAX_ID_LENGTH &&
+            (inviteCode.isBlank() || inviteCode.matches(Regex("\\d{4}"))) &&
+            hostToken.matches(Regex("[0-9a-f]{8,32}")) &&
+            expiresAtMillis > now &&
+            expiresAtMillis <= now + JOIN_QR_MAX_FUTURE_MS
+        return if (valid) JoinHint(pollId, inviteCode, hostToken, expiresAtMillis) else null
+    }
+
+    private fun showJoinPendingPage(hint: JoinHint) {
+        setPage("밥판")
+        page.addView(breadcrumb("홈", "밥판", "QR 연결"))
+        page.addView(topBar("QR 밥판 연결"))
+        page.addView(LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            gravity = Gravity.CENTER_HORIZONTAL
+            setPadding(dp(18), dp(22), dp(18), dp(22))
+            background = groupedCardBackground(0xFFFFFBF5.toInt(), 0xFFE7B59D.toInt())
+            layoutParams = blockParams()
+            addView(ImageView(context).apply {
+                setImageResource(R.drawable.bab_cross_launcher)
+                contentDescription = "밥크로스"
+                scaleType = ImageView.ScaleType.CENTER_CROP
+                background = rounded(0xFFFFF1E8.toInt(), 24, 0xFFE7B59D.toInt(), 2)
+                clipToOutline = true
+                layoutParams = LinearLayout.LayoutParams(dp(112), dp(112)).apply {
+                    bottomMargin = dp(18)
+                }
+            })
+            addView(TextView(context).apply {
+                text = "밥판을 연결 중 입니다."
+                textSize = 23f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+                gravity = Gravity.CENTER
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                pendingJoinStatusText = this
+            })
+            addView(TextView(context).apply {
+                text = "QR은 밥판을 찾기 위한 힌트로만 사용하고, 실제 메뉴와 참여 정보는 가까운 기기 연결로 받을게요."
+                textSize = 15f
+                setTextColor(0xFF526158.toInt())
+                gravity = Gravity.CENTER
+                setPadding(0, dp(12), 0, 0)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            })
+            addView(TextView(context).apply {
+                val remainingSeconds = ((hint.expiresAtMillis - System.currentTimeMillis()) / 1_000L).coerceAtLeast(0L)
+                text = "남은 대기 시간 약 ${remainingSeconds / 60L + 1L}분"
+                textSize = 13f
+                setTextColor(0xFF8A5A44.toInt())
+                gravity = Gravity.CENTER
+                setPadding(0, dp(10), 0, 0)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            })
+        })
+        page.addView(primaryButton("다시 연결 시도") {
+            if (hasNearbyPermissions() && disabledConnectionRequirements().isEmpty()) {
+                startNearbyConnectionTest()
+                tryShowPendingJoinHint()
+            } else {
+                showPermissionFallbackDialog()
+            }
+        })
+        page.addView(outlineButton("홈으로") {
+            pendingJoinHint = null
+            showHome()
+        })
+        startJoinPendingDots()
+    }
+
+    private fun startJoinPendingDots() {
+        handler.removeCallbacks(pendingJoinDots)
+        pendingJoinDotStep = 0
+        pendingJoinStatusText?.text = "밥판을 연결 중 입니다."
+        handler.postDelayed(pendingJoinDots, JOIN_PENDING_DOT_MS)
+    }
+
+    private fun tryShowPendingJoinHint(): Boolean {
+        val hint = pendingJoinHint ?: return false
+        if (hint.expiresAtMillis <= System.currentTimeMillis()) {
+            pendingJoinHint = null
+            pendingJoinStatusText = null
+            handler.removeCallbacks(pendingJoinDots)
+            Toast.makeText(this, "밥판 QR 시간이 지났습니다.", Toast.LENGTH_SHORT).show()
+            return true
+        }
+        val poll = incomingPolls[hint.pollId] ?: return false
+        if (!joinHintMatches(hint, poll)) {
+            appendLog("QR 힌트와 다른 밥판은 자동 진입하지 않음")
+            return false
+        }
+        pendingJoinHint = null
+        pendingJoinStatusText = null
+        handler.removeCallbacks(pendingJoinDots)
+        acceptPollFromQr(poll)
+        return true
+    }
+
+    private fun joinHintMatches(hint: JoinHint, poll: NearbyPoll): Boolean {
+        return poll.id == hint.pollId &&
+            poll.inviteCode == hint.inviteCode &&
+            !poll.hasEnded() &&
+            joinHostToken(poll.id, poll.proposerId, poll.inviteCode, poll.endAtMillis) == hint.hostToken
+    }
+
+    private fun acceptPollFromQr(poll: NearbyPoll) {
+        declinedPollIds -= poll.id
+        val alreadyAccepted = acceptedPollIds.contains(poll.id)
+        acceptedPollIds += poll.id
+        if (!alreadyAccepted) {
+            sendPollResponse(poll, POLL_RESPONSE_ACCEPTED)
+        }
+        scheduleAcceptedPollResponseRetry(poll)
+        persistSessionState()
+        Toast.makeText(this, "QR로 밥판에 참여합니다.", Toast.LENGTH_SHORT).show()
+        openVotePollAfterJoin(poll)
+    }
+
+    private fun scheduleAcceptedPollResponseRetry(poll: NearbyPoll) {
+        listOf(QR_ACCEPT_RESPONSE_RETRY_MS, QR_ACCEPT_RESPONSE_RETRY_MS * 2).forEach { delayMs ->
+            handler.postDelayed({
+                if (acceptedPollIds.contains(poll.id) && incomingPolls.containsKey(poll.id) && !poll.hasEnded()) {
+                    sendPollResponse(poll, POLL_RESPONSE_ACCEPTED)
+                }
+            }, delayMs)
         }
     }
 
@@ -1950,14 +2407,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val (title, message) = when {
             hasResult -> "밥결정 완료" to "오늘의 밥결정 카드가 준비되었습니다."
             poll.hasEnded() -> "밥판 종료" to "제한시간이 끝났습니다. 메뉴 결정으로 결과를 확인할 수 있습니다."
-            !hasMyVote -> "내 선택부터 정해요" to "혼자 정하기로 열어도 괜찮아요. 밥판장이 한 표를 고르면 결과 카드까지 바로 만들 수 있습니다."
+            !hasMyVote -> "내 선택부터 정해요" to "밥판장이 한 표를 고르면 결과 카드까지 바로 만들 수 있습니다."
             voteCount <= 1 -> "결과 카드 공유 준비" to "내 선택은 들어갔습니다. 지금 오늘의 밥결정을 만들고 대화방에 공유할 수 있습니다."
             else -> "메뉴 결정 가능" to "선택 ${voteCount}표가 모였습니다. 지금 메뉴를 결정할 수 있습니다."
         }
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(dp(16), dp(13), dp(16), dp(13))
-            background = rounded(0xFFFFFFFF.toInt(), 14, 0xFFE7B59D.toInt(), 1)
+            background = groupedCardBackground(0xFFFFFBF5.toInt(), 0xFFE7B59D.toInt())
             layoutParams = blockParams()
             addView(TextView(context).apply {
                 text = title
@@ -1979,8 +2436,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         rememberScreen { showVotePoll(poll) }
         page.addView(breadcrumb("홈", "밥판", "메뉴 선택"))
         page.addView(topBar("메뉴 선택"))
-        page.addView(avatarInfoCard("밥판", poll.question, "보낸 밥친구: ${poll.proposerName} · ${poll.remainingText()}", resolvedAvatarId(poll.proposerId, poll.proposerAvatarId)))
-        page.addView(countdownCard(poll))
+        page.addView(avatarInfoCard("밥판", poll.question, "보낸 밥친구: ${poll.proposerName}", resolvedAvatarId(poll.proposerId, poll.proposerAvatarId), poll))
         val submitted = submittedVotes[poll.id]
         when {
             sharedResultsByPoll[poll.id] != null -> {
@@ -1988,7 +2444,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             }
             submitted != null -> {
                 page.addView(statusCard("이미 메뉴 선택 완료", submitted))
-                page.addView(bodyText("한 밥판에는 한 번만 고를 수 있습니다."))
             }
             poll.hasEnded() -> {
                 page.addView(statusCard("밥판 종료", "제한시간이 지나 더 이상 고를 수 없습니다."))
@@ -1996,14 +2451,31 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             else -> {
                 page.addView(label("메뉴 후보"))
                 poll.options.forEach { option ->
-                    page.addView(choicePill(option) { castVote(poll, option) })
+                    page.addView(choicePill(option) {
+                        if (System.currentTimeMillis() < voteChoiceGuardUntilMillis) return@choicePill
+                        castVote(poll, option)
+                    }.apply {
+                        val enableDelay = voteChoiceGuardUntilMillis - System.currentTimeMillis()
+                        if (enableDelay > 0L) {
+                            isEnabled = false
+                            alpha = 0.72f
+                            postDelayed({
+                                isEnabled = true
+                                alpha = 1f
+                            }, enableDelay)
+                        }
+                    })
                 }
                 if (poll.allowParticipantOptions) {
                     page.addView(participantOptionComposer(poll))
                 }
             }
         }
-        page.addView(outlineButton("주변 밥신호로") { showDiscover() })
+    }
+
+    private fun openVotePollAfterJoin(poll: NearbyPoll) {
+        voteChoiceGuardUntilMillis = System.currentTimeMillis() + JOIN_TO_CHOICE_GUARD_MS
+        showVotePoll(poll)
     }
 
     private fun showVoteSubmitted(poll: NearbyPoll, option: String) {
@@ -2229,6 +2701,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             attachResultDeckSwipe(
                 resultDeck = resultDeck,
                 deckIndex = deckIndex,
+                currentResult = currentResult,
                 currentCard = currentCard,
                 previousCard = previousCard,
                 nextCard = nextCard
@@ -2276,6 +2749,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private fun FrameLayout.attachResultDeckSwipe(
         resultDeck: List<SharedResult>,
         deckIndex: Int,
+        currentResult: SharedResult,
         currentCard: View,
         previousCard: View?,
         nextCard: View?
@@ -2285,6 +2759,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         var horizontalDrag = false
         var verticalDrag = false
         var navigating = false
+        var longPressConsumed = false
+        val longPressSlop = dp(10)
+        val longPressRunnable = Runnable {
+            longPressConsumed = true
+            parent?.requestDisallowInterceptTouchEvent(true)
+            currentCard.performSelectionHaptic()
+            copyDecisionCardImage(currentResult, currentCard)
+        }
         setOnTouchListener { view, event ->
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
@@ -2293,16 +2775,24 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     horizontalDrag = false
                     verticalDrag = false
                     navigating = false
+                    longPressConsumed = false
                     parent?.requestDisallowInterceptTouchEvent(false)
                     currentCard.animate().cancel()
                     previousCard?.animate()?.cancel()
                     nextCard?.animate()?.cancel()
                     layoutResultDeckCards(currentCard, previousCard, nextCard, 0f, 0)
+                    handler.postDelayed(longPressRunnable, ViewConfiguration.getLongPressTimeout().toLong())
                     true
                 }
                 MotionEvent.ACTION_MOVE -> {
                     val deltaX = event.x - downX
                     val deltaY = event.y - downY
+                    if (abs(deltaX) > longPressSlop || abs(deltaY) > longPressSlop) {
+                        handler.removeCallbacks(longPressRunnable)
+                    }
+                    if (longPressConsumed) {
+                        return@setOnTouchListener true
+                    }
                     if (!horizontalDrag && !verticalDrag) {
                         when {
                             abs(deltaY) > dp(10) && abs(deltaY) > abs(deltaX) * 1.15f -> {
@@ -2326,7 +2816,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     true
                 }
                 MotionEvent.ACTION_UP -> {
+                    handler.removeCallbacks(longPressRunnable)
                     parent?.requestDisallowInterceptTouchEvent(false)
+                    if (longPressConsumed) {
+                        animateResultDeckReset(currentCard, previousCard, nextCard)
+                        return@setOnTouchListener true
+                    }
                     val deltaX = event.x - downX
                     val deltaY = event.y - downY
                     val commitWidth = currentCard.width.takeIf { it > 0 } ?: view.width
@@ -2348,6 +2843,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     true
                 }
                 MotionEvent.ACTION_CANCEL -> {
+                    handler.removeCallbacks(longPressRunnable)
                     parent?.requestDisallowInterceptTouchEvent(false)
                     animateResultDeckReset(currentCard, previousCard, nextCard)
                     true
@@ -2720,10 +3216,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         voteEndpointIdsByPoll.remove(pollId)
         invitedPeersByPoll.remove(pollId)
         pollResponsesByPoll.remove(pollId)
+        hostConnectedCountsByPoll.remove(pollId)
+        hostReadyCountsByPoll.remove(pollId)
         submittedVotes.remove(pollId)
         acceptedPollIds.remove(pollId)
         declinedPollIds.remove(pollId)
-        completionPromptShownPollIds.remove(pollId)
+        completionPromptShownKeys.removeAll { key -> key == pollId || key.startsWith("$pollId:") }
         sharedResultPollIds.remove(pollId)
         seenIncomingPollIds.remove(pollId)
         seenResultPollIds.remove(pollId)
@@ -2807,11 +3305,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 title = "7. 종료하기",
                 message = "선택이 모이면 밥판을 종료하고 오늘의 밥결정 카드로 결과를 확인합니다.",
                 targetProvider = { null },
-                primaryLabel = "다음",
+                primaryLabel = "실제 밥판 열기",
                 secondaryLabel = "닫기",
                 primaryAction = {
-                    Toast.makeText(this, "밥판 체험을 마쳤습니다.", Toast.LENGTH_SHORT).show()
-                    showHome()
+                    store.saveDemoCompleted()
+                    clearTutorialPoll()
+                    Toast.makeText(this, "체험 후보로 실제 밥판을 열어볼게요.", Toast.LENGTH_SHORT).show()
+                    showCompose(resultAsTemplate(result, "draft-simulation-ready-${System.currentTimeMillis()}"), inferredFoodCategory(result.options))
                 },
                 secondaryAction = { hideCoachOverlay() }
             )
@@ -2909,6 +3409,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         tutorialPublishTarget = null
         tutorialResponseTarget = null
         tutorialEndTarget = null
+        pendingJoinStatusText = null
+        handler.removeCallbacks(pendingJoinDots)
         stickyBottomPaddingExtra = 0
         keyboardLiftTarget = null
         keyboardLiftToBottom = false
@@ -3062,27 +3564,31 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
-            setPadding(dp(14), dp(12), dp(14), dp(12))
+            setPadding(dp(12), dp(12), dp(12), dp(12))
             background = rounded(0xFFFFFFFF.toInt(), 18, 0xBFD73B24.toInt(), 2)
             layoutParams = blockParams()
             addView(babCrossBrandPane(compact = false).apply {
-                layoutParams = LinearLayout.LayoutParams(0, dp(104), 1f).apply {
-                    rightMargin = dp(12)
+                minimumHeight = dp(104)
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply {
+                    rightMargin = dp(10)
                 }
             })
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.VERTICAL
                 gravity = Gravity.CENTER
-                layoutParams = LinearLayout.LayoutParams(dp(112), ViewGroup.LayoutParams.WRAP_CONTENT)
-                addView(homeAvatarButton().apply {
+                layoutParams = LinearLayout.LayoutParams(dp(118), ViewGroup.LayoutParams.WRAP_CONTENT)
+                addView(profileSummaryButton(compact = true, nameWidthDp = 54).apply {
                     onboardingHomeAvatarTarget = this
-                    layoutParams = LinearLayout.LayoutParams(dp(54), dp(54))
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
                 })
                 addView(homeActionButton("밥판 열기", "", true) { showCompose() }.apply {
                     onboardingHomeCreateTarget = this
                     layoutParams = LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
-                        dp(42)
+                        ViewGroup.LayoutParams.WRAP_CONTENT
                     ).apply {
                         topMargin = dp(8)
                     }
@@ -3109,21 +3615,25 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 rightMargin = dp(12)
             }
             addView(babCrossBrandPane(compact = true).apply {
-                layoutParams = LinearLayout.LayoutParams(0, dp(76), 1f).apply {
+                minimumHeight = dp(76)
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply {
                     rightMargin = dp(10)
                 }
             })
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.VERTICAL
                 gravity = Gravity.CENTER
-                layoutParams = LinearLayout.LayoutParams(dp(96), ViewGroup.LayoutParams.WRAP_CONTENT)
-                addView(homeAvatarButton().apply {
-                    layoutParams = LinearLayout.LayoutParams(dp(40), dp(40))
+                layoutParams = LinearLayout.LayoutParams(dp(116), ViewGroup.LayoutParams.WRAP_CONTENT)
+                addView(profileSummaryButton(compact = true, nameWidthDp = 48).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
                 })
                 addView(homeActionButton("밥판 열기", "", true) { showCompose() }.apply {
                     layoutParams = LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
-                        dp(36)
+                        ViewGroup.LayoutParams.WRAP_CONTENT
                     ).apply {
                         topMargin = dp(6)
                     }
@@ -3143,11 +3653,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 scaleType = ImageView.ScaleType.CENTER_CROP
                 alpha = if (compact) 0.18f else 0.22f
                 layoutParams = FrameLayout.LayoutParams(
-                    if (compact) dp(104) else dp(148),
-                    if (compact) dp(104) else dp(148),
+                    if (compact) dp(76) else dp(104),
+                    if (compact) dp(76) else dp(104),
                     Gravity.LEFT or Gravity.CENTER_VERTICAL
                 ).apply {
-                    leftMargin = if (compact) -dp(20) else -dp(28)
+                    leftMargin = if (compact) -dp(14) else -dp(18)
                 }
             })
             addView(LinearLayout(context).apply {
@@ -3156,19 +3666,22 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 setPadding(if (compact) dp(54) else dp(82), 0, dp(10), 0)
                 layoutParams = FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT
+                    ViewGroup.LayoutParams.WRAP_CONTENT
                 )
-                addView(TextView(context).apply {
-                    text = "밥크로스"
-                    textSize = if (compact) 20f else 29f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
+                addView(BabCrossWordmarkView(context, compact).apply {
+                    contentDescription = "밥크로스"
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        if (compact) dp(25) else dp(36)
+                    )
                 })
                 if (!compact) {
                     addView(TextView(context).apply {
                         text = "근처 밥친구와 메뉴를 정합니다"
                         textSize = 13f
                         setTextColor(0xFF526158.toInt())
+                        maxLines = 2
+                        ellipsize = TextUtils.TruncateAt.END
                         setPadding(0, dp(5), 0, 0)
                     })
                 }
@@ -3197,45 +3710,48 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun resultFollowUpActions(result: SharedResult): LinearLayout {
         val mapMenu = mapSearchMenuFor(result)
+        val hasVotes = resultHasVotes(result)
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(dp(16), dp(14), dp(16), dp(14))
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt(), 1)
             layoutParams = blockParams()
-            addView(TextView(context).apply {
-                text = "이제 어디로 갈까"
-                textSize = 17f
-                setTextColor(0xFF10251D.toInt())
-                setTypeface(typeface, Typeface.BOLD)
-            })
-            addView(TextView(context).apply {
-                text = "결정 메뉴를 바로 찾고, 대화방에 보내고, 같은 후보로 다시 열 수 있어요."
-                textSize = 13f
-                setTextColor(0xFF526158.toInt())
-                setPadding(0, dp(5), 0, dp(10))
-            })
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                gravity = Gravity.CENTER
-                addView(resultIconButton("지도에서 찾기", ResultAction.MAP, 0xFF3D8B67.toInt()) {
-                    if (mapMenu == null) {
-                        Toast.makeText(this@MainActivity, "결정 메뉴가 있어야 지도를 열 수 있습니다.", Toast.LENGTH_SHORT).show()
-                    } else {
-                        openMapSearch(mapMenu)
-                    }
-                }.apply {
-                    layoutParams = LinearLayout.LayoutParams(0, dp(58), 1f).apply {
-                        rightMargin = dp(8)
-                    }
+            if (hasVotes) {
+                setPadding(dp(16), dp(14), dp(16), dp(14))
+                background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt(), 1)
+                addView(TextView(context).apply {
+                    text = "이제 어디로 갈까"
+                    textSize = 17f
+                    setTextColor(0xFF10251D.toInt())
+                    setTypeface(typeface, Typeface.BOLD)
                 })
-                addView(resultIconButton("대화방에 보내기", ResultAction.SHARE, 0xFF3D8B67.toInt()) {
-                    shareDecisionText(result)
-                }.apply {
-                    layoutParams = LinearLayout.LayoutParams(0, dp(58), 1f).apply {
-                        leftMargin = dp(8)
-                    }
+                addView(TextView(context).apply {
+                    text = "결정 메뉴를 바로 찾고, 대화방에 보내고, 같은 후보로 다시 열 수 있어요."
+                    textSize = 13f
+                    setTextColor(0xFF526158.toInt())
+                    setPadding(0, dp(5), 0, dp(10))
                 })
-            })
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    gravity = Gravity.CENTER
+                    addView(resultIconButton("지도에서 찾기", ResultAction.MAP, 0xFF3D8B67.toInt()) {
+                        if (mapMenu == null) {
+                            Toast.makeText(this@MainActivity, "결정 메뉴가 있어야 지도를 열 수 있습니다.", Toast.LENGTH_SHORT).show()
+                        } else {
+                            openMapSearch(mapMenu)
+                        }
+                    }.apply {
+                        layoutParams = LinearLayout.LayoutParams(0, dp(58), 1f).apply {
+                            rightMargin = dp(8)
+                        }
+                    })
+                    addView(resultIconButton("공유하기", ResultAction.SHARE, 0xFF3D8B67.toInt()) {
+                        shareDecisionText(result)
+                    }.apply {
+                        layoutParams = LinearLayout.LayoutParams(0, dp(58), 1f).apply {
+                            leftMargin = dp(8)
+                        }
+                    })
+                })
+            }
             addView(resultIconButton("이 후보로 다시 열기", ResultAction.REVOTE, 0xFFD73B24.toInt()) {
                 showCompose(resultAsTemplate(result, "draft-result-${System.currentTimeMillis()}"))
             }.apply {
@@ -3243,15 +3759,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     dp(58)
                 ).apply {
-                    topMargin = dp(10)
+                    topMargin = if (hasVotes) dp(10) else 0
                 }
-            })
-            addView(TextView(context).apply {
-                text = "지난 결정에 저장됐어요"
-                textSize = 12f
-                setTextColor(0xFF3D8B67.toInt())
-                setTypeface(typeface, Typeface.BOLD)
-                setPadding(0, dp(10), 0, 0)
             })
         }
     }
@@ -3348,6 +3857,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 setTextColor(if (primary) 0xFFFFFFFF.toInt() else 0xFFD73B24.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
+                maxLines = 2
+                ellipsize = TextUtils.TruncateAt.END
+                includeFontPadding = false
+                setPadding(dp(6), dp(9), dp(6), dp(9))
             })
             if (subtitle.isNotBlank()) {
                 addView(TextView(context).apply {
@@ -3723,7 +4236,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 setTypeface(typeface, Typeface.BOLD)
                 layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
             })
-            addView(profileAvatarButton())
+            addView(profileSummaryButton())
             compactTitleTextView?.text = title
             expandedTitleView = this
             addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
@@ -3739,6 +4252,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             visibility = View.GONE
             setPadding(dp(18), dp(12) + systemStatusTopInset(), dp(18), dp(12))
             background = rounded(0xFFFFFFFF.toInt(), 0, 0xFFD8E2DA.toInt(), 1)
+            elevation = dp(6).toFloat()
             layoutParams = FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -3751,8 +4265,46 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                 compactTitleTextView = this
             })
-            addView(profileAvatarButton(compact = true))
+            addView(profileSummaryButton(compact = true))
             compactTitleBarView = this
+        }
+    }
+
+    private fun profileSummaryButton(compact: Boolean = false, nameWidthDp: Int? = null): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            isClickable = true
+            isFocusable = true
+            contentDescription = "내 밥닉네임 관리"
+            setPadding(dp(4), dp(2), dp(8), dp(2))
+            background = rounded(0xFFFFFBF5.toInt(), if (compact) 15 else 17, 0xFFE7B59D.toInt(), 1)
+            setOnClickListener { showMyPage() }
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            addView(profileAvatarButton(compact = compact))
+            addView(View(context).apply {
+                background = rounded(0xFFE0B49E.toInt(), 0)
+                layoutParams = LinearLayout.LayoutParams(dp(1), if (compact) dp(20) else dp(22)).apply {
+                    leftMargin = dp(3)
+                    rightMargin = dp(6)
+                }
+            })
+            addView(TextView(context).apply {
+                text = selfName
+                textSize = if (compact) 12f else 13f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+                maxLines = 1
+                ellipsize = TextUtils.TruncateAt.END
+                gravity = Gravity.CENTER_VERTICAL
+                layoutParams = LinearLayout.LayoutParams(
+                    dp(nameWidthDp ?: if (compact) 62 else 82),
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            })
         }
     }
 
@@ -3781,10 +4333,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun updateCompactTitleBar(scrollY: Int) {
-        val anchorBottom = expandedTitleView?.bottom
+        val triggerY = expandedTitleView?.top
             ?: page.getChildAt(0)?.bottom
             ?: 0
-        val shouldShow = anchorBottom > 0 && scrollY >= anchorBottom
+        val shouldShow = triggerY > 0 && scrollY >= triggerY
         stickyHomeTopCardView?.let { stickyCard ->
             stickyCard.visibility = if (shouldShow) View.VISIBLE else View.GONE
             compactTitleBarView?.visibility = View.GONE
@@ -3894,23 +4446,20 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addView(View(context).apply {
                 alpha = 0f
                 background = connectionPulseBackground()
-                layoutParams = FrameLayout.LayoutParams(dp(44), dp(38), Gravity.CENTER)
+                layoutParams = FrameLayout.LayoutParams(dp(46), dp(46), Gravity.CENTER)
                 topConnectionBadgePulseView = this
             })
             addView(FrameLayout(context).apply {
-                background = rounded(connectionBadgeBackgroundColor(), 18, connectionBadgeStrokeColor(), 2)
-                layoutParams = FrameLayout.LayoutParams(dp(44), dp(38), Gravity.CENTER)
-                addView(TextView(context).apply {
-                    text = topConnectionBadgeText()
-                    textSize = 15f
-                    gravity = Gravity.CENTER
-                    setTypeface(typeface, Typeface.BOLD)
-                    setTextColor(connectionBadgeTextColor())
+                background = rounded(0xFFFFFEFA.toInt(), 22, connectionBadgeStrokeColor(), 2)
+                elevation = dp(2).toFloat()
+                layoutParams = FrameLayout.LayoutParams(dp(40), dp(40), Gravity.CENTER)
+                contentDescription = connectionStateLabel()
+                addView(ConnectionSignalView(context).apply {
                     layoutParams = FrameLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT
                     )
-                    topConnectionBadgeView = this
+                    topConnectionSignalView = this
                 })
                 topConnectionBadgeContainerView = this
             })
@@ -3918,28 +4467,155 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun showConnectionPopup() {
-        val peers = nearby.connectedPeerNames()
-        val selfLine = "• $selfName (나)"
-        val message = if (!autoConnectEnabled) {
-            "$selfLine\n\n자동 연결이 꺼져 있습니다.\n설정에서 자동 연결을 켜면 주변 기기를 찾습니다."
-        } else {
-            buildList {
-                add(selfLine)
-                peers.forEach { name -> add("• $name") }
-                if (peers.isEmpty()) {
-                    add("")
-                    add("아직 연결된 밥친구가 없습니다.")
-                }
-            }.joinToString("\n")
+        lateinit var dialog: AlertDialog
+        val content = connectionPopupContent { dialog.dismiss() }
+        dialog = AlertDialog.Builder(this)
+            .setView(content)
+            .create()
+        dialog.setOnShowListener {
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
-        AlertDialog.Builder(this)
-            .setTitle(if (autoConnectEnabled) "참여 가능 ${participantReadyCount()}/${NearbyVoteConnectionManager.MAX_CONNECTIONS + 1}명" else "자동 연결 꺼짐")
-            .setMessage(message)
-            .setPositiveButton(if (autoConnectEnabled) "연결 끄기" else "연결 켜기") { _, _ ->
-                setAutoConnectEnabled(!autoConnectEnabled)
+        dialog.show()
+    }
+
+    private fun connectionPopupContent(close: () -> Unit): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(18), dp(17), dp(18), dp(16))
+            background = rounded(0xFFFFFEFA.toInt(), 20, connectionBadgeStrokeColor(), 2)
+            addView(connectionPopupHeader())
+            addView(connectionPopupBody())
+            addView(connectionPopupActionRow(close))
+        }
+    }
+
+    private fun connectionPopupHeader(): LinearLayout {
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            addView(FrameLayout(context).apply {
+                background = rounded(0xFFFFFFFF.toInt(), 22, connectionBadgeStrokeColor(), 2)
+                layoutParams = LinearLayout.LayoutParams(dp(42), dp(42)).apply {
+                    rightMargin = dp(12)
+                }
+                addView(ConnectionSignalView(context).apply {
+                    layoutParams = FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT
+                    )
+                })
+            })
+            addView(LinearLayout(context).apply {
+                orientation = LinearLayout.VERTICAL
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                addView(TextView(context).apply {
+                    text = connectionStateLabel()
+                    textSize = 20f
+                    setTextColor(0xFF10251D.toInt())
+                    setTypeface(typeface, Typeface.BOLD)
+                })
+                addView(TextView(context).apply {
+                    text = connectionPopupSummary()
+                    textSize = 13f
+                    setTextColor(0xFF526158.toInt())
+                    setPadding(0, dp(3), 0, 0)
+                })
+            })
+        }
+    }
+
+    private fun connectionPopupBody(): LinearLayout {
+        val peers = nearby.connectedPeerNames()
+        return LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(0, dp(14), 0, dp(8))
+            addView(TextView(context).apply {
+                text = connectionPopupDetail()
+                textSize = 14f
+                setTextColor(0xFF263B31.toInt())
+                setLineSpacing(dp(2).toFloat(), 1f)
+            })
+            addView(TextView(context).apply {
+                text = buildList {
+                    add("• $selfName (나)")
+                    peers.forEach { name -> add("• $name") }
+                    if (peers.isEmpty()) {
+                        add("• 연결된 밥친구 없음")
+                    }
+                }.joinToString("\n")
+                textSize = 13f
+                setTextColor(0xFF526158.toInt())
+                setPadding(0, dp(10), 0, 0)
+            })
+        }
+    }
+
+    private fun connectionPopupActionRow(close: () -> Unit): LinearLayout {
+        val actions = connectionPopupActions(close)
+        return compactButtonRow(*actions.toTypedArray()).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+    }
+
+    private fun connectionPopupActions(close: () -> Unit): List<Button> {
+        return when {
+            !autoConnectEnabled -> listOf(
+                compactButton("자동 연결 켜기", BUTTON_PRIMARY) {
+                    close()
+                    setAutoConnectEnabled(true)
+                },
+                compactButton("닫기", BUTTON_OUTLINE) { close() }
+            )
+            !hasNearbyPermissions() -> listOf(
+                compactButton("권한 허용", BUTTON_PRIMARY) {
+                    close()
+                    requestNearbyPermissions()
+                },
+                compactButton("앱 설정", BUTTON_OUTLINE) {
+                    close()
+                    openAppSettings()
+                }
+            )
+            disabledConnectionRequirements().isNotEmpty() -> listOf(
+                compactButton("기기 설정", BUTTON_PRIMARY) {
+                    close()
+                    openAppSettings()
+                },
+                compactButton("닫기", BUTTON_OUTLINE) { close() }
+            )
+            displayConnectionCount() == 0 -> listOf(
+                compactButton("닫기", BUTTON_OUTLINE) { close() }
+            )
+            else -> listOf(
+                compactButton("닫기", BUTTON_OUTLINE) { close() }
+            )
+        }
+    }
+
+    private fun connectionPopupSummary(): String {
+        return when {
+            !autoConnectEnabled -> "회색 · 자동 연결 꺼짐"
+            !hasNearbyPermissions() -> "빨강 · 권한 조치 필요"
+            disabledConnectionRequirements().isNotEmpty() -> "노랑 · 기기 설정 확인 필요"
+            displayConnectionCount() == 0 -> "노랑 · 밥친구 대기 중"
+            else -> "초록 · 밥친구 연결됨"
+        }
+    }
+
+    private fun connectionPopupDetail(): String {
+        return when {
+            !autoConnectEnabled -> "자동 연결을 켜면 앱이 주변 밥친구를 다시 찾습니다."
+            !hasNearbyPermissions() -> connectionFixText() + "\n위치 권한은 위치 추적이 아니라 Nearby 연결에만 사용됩니다."
+            disabledConnectionRequirements().isNotEmpty() -> {
+                val missing = disabledConnectionRequirements().joinToString(" · ")
+                "$missing 상태를 켜면 주변 탐색이 안정적으로 이어집니다."
             }
-            .setNegativeButton("닫기", null)
-            .show()
+            displayConnectionCount() == 0 -> "아직 들어온 밥친구가 없습니다. 주변 밥친구가 들어오면 자동으로 연결 상태가 바뀝니다."
+            else -> "연결 상태가 정상입니다."
+        }
     }
 
     private fun breadcrumb(vararg items: String): TextView {
@@ -3957,7 +4633,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
             setPadding(0, 0, dp(16), 0)
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFE0E7DD.toInt())
+            background = groupedCardBackground()
             setOnClickListener { onClick() }
             layoutParams = blockParams()
             addView(View(context).apply {
@@ -3995,7 +4671,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             setOnClickListener { onClick() }
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                dp(88)
+                dp(112)
             ).apply {
                 bottomMargin = dp(12)
             }
@@ -4003,7 +4679,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addView(LinearLayout(context).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
-                setPadding(dp(78), dp(10), dp(14), dp(10))
+                setPadding(dp(78), dp(12), dp(14), dp(12))
                 layoutParams = FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -4024,7 +4700,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         textSize = 16f
                         setTextColor(0xFF10251D.toInt())
                         setTypeface(typeface, Typeface.BOLD)
-                        maxLines = 1
+                        maxLines = 2
                         ellipsize = TextUtils.TruncateAt.END
                         setPadding(0, dp(4), 0, 0)
                     })
@@ -4046,6 +4722,9 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     isClickable = true
                     isFocusable = true
                     setPadding(dp(10), dp(7), dp(10), dp(7))
+                    minHeight = dp(38)
+                    maxLines = 2
+                    ellipsize = TextUtils.TruncateAt.END
                     background = rounded(0xFFD73B24.toInt(), 16)
                     setOnClickListener {
                         showCompose(resultAsTemplate(result, "draft-history-${System.currentTimeMillis()}"))
@@ -4121,7 +4800,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val rarity = if (hasVotes) assignedCardRarity(result) else pendingCardRarity()
         val singleWinningMenu = singleWinningMenu(result)
         val winningCalorieText = singleWinningMenu?.let { calorieTextFor(it) }
-        return ShinyCardFrameLayout(rarity).apply {
+        return ShinyCardFrameLayout(fixedFontScaleContext(), rarity).apply {
             setPadding(dp(7), dp(7), dp(7), dp(7))
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -4182,21 +4861,35 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                             }
                         })
                     }
-                    addView(TextView(context).apply {
-                        text = result.question
-                        fixedCardTextSize(13f)
-                        setTextColor(0xFF6F5A4D.toInt())
-                        gravity = Gravity.CENTER
-                        setTypeface(typeface, Typeface.BOLD)
-                        maxLines = 2
+                    addView(LinearLayout(context).apply {
+                        orientation = LinearLayout.HORIZONTAL
+                        gravity = Gravity.CENTER_VERTICAL
                         setPadding(dp(12), 0, dp(12), 0)
                         layoutParams = FrameLayout.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT,
                             Gravity.TOP or Gravity.CENTER_HORIZONTAL
                         ).apply {
-                            topMargin = dp(20)
+                            topMargin = dp(14)
                         }
+                        addView(AvatarTileView(
+                            resolvedAvatarId(result.proposerId, result.proposerAvatarId),
+                            contentInsetDp = 0,
+                            clipAsCircle = true
+                        ).apply {
+                            layoutParams = LinearLayout.LayoutParams(dp(34), dp(34)).apply {
+                                rightMargin = dp(8)
+                            }
+                        })
+                        addView(TextView(context).apply {
+                            text = result.question
+                            fixedCardTextSize(13f)
+                            setTextColor(0xFF6F5A4D.toInt())
+                            gravity = Gravity.CENTER_VERTICAL
+                            setTypeface(typeface, Typeface.BOLD)
+                            maxLines = 2
+                            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                        })
                     })
                     addView(LinearLayout(context).apply {
                         orientation = LinearLayout.VERTICAL
@@ -4333,6 +5026,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun TextView.fixedCardTextSize(sizeSp: Float) {
         setTextSize(TypedValue.COMPLEX_UNIT_PX, sizeSp * resources.displayMetrics.density)
+    }
+
+    private fun fixedFontScaleContext(): Context {
+        val configuration = Configuration(resources.configuration).apply {
+            fontScale = 1f
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                fontWeightAdjustment = 0
+            }
+        }
+        return createConfigurationContext(configuration)
     }
 
     private fun rarityProgressTrack(activeRarity: CardRarity): LinearLayout {
@@ -4690,18 +5393,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun shareDecisionCard(result: SharedResult, bitmap: Bitmap = createDecisionShareBitmap(result)) {
-        val shareDir = File(cacheDir, "shared_results").apply { mkdirs() }
-        val file = File(shareDir, "bab-cross-${result.pollId.replace(Regex("[^A-Za-z0-9_-]"), "_")}.png")
-        cleanupSharedResultCache(shareDir, keepFile = file)
-        runCatching {
-            FileOutputStream(file).use { output ->
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
-            }
-        }.onFailure {
+        val uri = decisionShareImageUri(result, bitmap) ?: run {
             Toast.makeText(this, "공유 이미지를 만들지 못했습니다.", Toast.LENGTH_SHORT).show()
             return
         }
-        val uri = FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = "image/png"
             putExtra(Intent.EXTRA_STREAM, uri)
@@ -4709,6 +5404,44 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
         startActivity(Intent.createChooser(intent, "밥결정 카드 공유"))
+    }
+
+    private fun copyDecisionCardImage(result: SharedResult, cardView: View) {
+        val uri = decisionCardViewImageUri(result, cardView) ?: run {
+            Toast.makeText(this, "카드 이미지를 복사하지 못했습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
+        clipboard?.setPrimaryClip(ClipData.newUri(contentResolver, "밥결정 카드", uri))
+        Toast.makeText(this, "결정 카드 이미지를 복사했습니다.", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun decisionCardViewImageUri(result: SharedResult, cardView: View): Uri? {
+        val width = cardView.width.takeIf { it > 0 } ?: return null
+        val height = cardView.height.takeIf { it > 0 } ?: return null
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        Canvas(bitmap).apply {
+            drawColor(Color.TRANSPARENT)
+            cardView.draw(this)
+        }
+        return decisionShareImageUri(result, bitmap, nameSuffix = "screen")
+    }
+
+    private fun decisionShareImageUri(
+        result: SharedResult,
+        bitmap: Bitmap = createDecisionShareBitmap(result),
+        nameSuffix: String = "share"
+    ): Uri? {
+        val shareDir = File(cacheDir, "shared_results").apply { mkdirs() }
+        val safePollId = result.pollId.replace(Regex("[^A-Za-z0-9_-]"), "_")
+        val file = File(shareDir, "bab-cross-$safePollId-$nameSuffix.png")
+        cleanupSharedResultCache(shareDir, keepFile = file)
+        return runCatching {
+            FileOutputStream(file).use { output ->
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
+            }
+            FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
+        }.getOrNull()
     }
 
     private fun cleanupSharedResultCache(shareDir: File, keepFile: File) {
@@ -4722,7 +5455,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun buildDecisionShareText(result: SharedResult): String {
-        return "오늘의 밥결정: ${decisionMenuHeadline(result)}\n후보: ${shareCandidateSummary(result)}\n이유: ${decisionReasonText(result)}"
+        return SharedResultInsights.buildShareText(result, userId, SHARE_MAX_VISIBLE_CANDIDATES)
     }
 
     private fun shareDecisionText(result: SharedResult) {
@@ -4740,32 +5473,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun decisionMenuHeadline(result: SharedResult): String {
-        if (!resultHasVotes(result)) return "결정 보류"
-        val winningCount = result.counts.values.maxOrNull() ?: return "결정 보류"
-        val winningOptions = rankedResultOptions(result).filter { option -> result.counts[option] == winningCount }
-        return if (winningOptions.size == 1) {
-            winningOptions.first()
-        } else {
-            "공동 1등: ${winningOptions.joinToString(", ")}"
-        }
+        return SharedResultInsights.decisionMenuHeadline(result)
     }
 
     private fun shareCandidateSummary(result: SharedResult): String {
-        val ranked = rankedResultOptions(result)
-        return ranked.take(SHARE_MAX_VISIBLE_CANDIDATES).joinToString(", ") { option ->
-            "$option ${(result.counts[option] ?: 0)}표"
-        } + if (ranked.size > SHARE_MAX_VISIBLE_CANDIDATES) " 외 ${ranked.size - SHARE_MAX_VISIBLE_CANDIDATES}개" else ""
+        return SharedResultInsights.shareCandidateSummary(result, SHARE_MAX_VISIBLE_CANDIDATES)
     }
 
     private fun decisionReasonText(result: SharedResult): String {
-        if (!resultHasVotes(result)) return "아직 표가 모이지 않아 다음 밥판으로 넘겼습니다."
-        val winningCount = result.counts.values.maxOrNull() ?: 0
-        val winningOptions = rankedResultOptions(result).filter { option -> result.counts[option] == winningCount }
-        return if (winningOptions.size == 1) {
-            "${winningOptions.first()}이(가) ${winningCount}표로 가장 많이 선택됐습니다."
-        } else {
-            "공동 1등이라 밥판장 기준으로 ${tieBreakSuggestion(result) ?: winningOptions.first()}을(를) 추천합니다."
-        }
+        return SharedResultInsights.decisionReasonText(result, userId)
     }
 
     private fun createDecisionShareBitmap(result: SharedResult): Bitmap {
@@ -4822,9 +5538,28 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             textSize = 34f
             typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
         }
+        val invitePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xFFD73B24.toInt()
+            textSize = 32f
+            textAlign = Paint.Align.CENTER
+            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
+        }
 
         canvas.drawText("BAB-CROSS", SHARE_SAFE_LEFT, 218f, labelPaint)
-        drawFittedTextBlock(canvas, result.question, titlePaint, SHARE_SAFE_LEFT, 304f, SHARE_SAFE_WIDTH, 2, 42f)
+        val proposerAvatar = transparentAvatarBitmap(resolvedAvatarId(result.proposerId, result.proposerAvatarId))
+        val avatarRect = RectF(SHARE_SAFE_LEFT, 256f, SHARE_SAFE_LEFT + 88f, 344f)
+        val avatarPath = Path().apply { addOval(avatarRect, Path.Direction.CW) }
+        canvas.drawOval(avatarRect, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFFFE2D2.toInt() })
+        val avatarSave = canvas.save()
+        canvas.clipPath(avatarPath)
+        canvas.drawBitmap(proposerAvatar, null, Rect(avatarRect.left.toInt(), avatarRect.top.toInt(), avatarRect.right.toInt(), avatarRect.bottom.toInt()), Paint(Paint.ANTI_ALIAS_FLAG))
+        canvas.restoreToCount(avatarSave)
+        canvas.drawOval(avatarRect, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xFFD73B24.toInt()
+            style = Paint.Style.STROKE
+            strokeWidth = 4f
+        })
+        drawFittedTextBlock(canvas, result.question, titlePaint, SHARE_SAFE_LEFT + 112f, 304f, SHARE_SAFE_WIDTH - 112f, 2, 42f)
 
         val mascot = BitmapFactory.decodeResource(resources, R.drawable.bab_cross_launcher)
         val mascotRect = RectF(332f, 382f, 748f, 798f)
@@ -4845,6 +5580,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         canvas.drawText(statText, SHARE_SAFE_LEFT, 1116f, bodyPaint)
         drawFittedTextBlock(canvas, "후보: ${shareCandidateSummary(result)}", bodyPaint, SHARE_SAFE_LEFT, 1180f, SHARE_SAFE_WIDTH, 2, 27f)
         drawFittedTextBlock(canvas, "이유: ${decisionReasonText(result)}", bodyPaint, SHARE_SAFE_LEFT, 1266f, SHARE_SAFE_WIDTH, 2, 27f)
+        canvas.drawText("다음 밥판은 같이 고르기", width / 2f, 1362f, invitePaint)
         return bitmap
     }
 
@@ -5094,70 +5830,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun settingsProfileCard(): LinearLayout {
-        return LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            setPadding(dp(16), dp(15), dp(16), dp(15))
-            background = rounded(0xFFFFFFFF.toInt(), 18, 0xFFE0E7DD.toInt(), 1)
-            layoutParams = blockParams()
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                gravity = Gravity.CENTER_VERTICAL
-                addView(FrameLayout(context).apply {
-                    background = oval(0xFFFFF1E8.toInt(), 0xFF7CAD93.toInt(), 2)
-                    setPadding(dp(3), dp(3), dp(3), dp(3))
-                    layoutParams = LinearLayout.LayoutParams(dp(64), dp(64)).apply {
-                        rightMargin = dp(14)
-                    }
-                    addView(AvatarTileView(selfAvatarId, contentInsetDp = 0, clipAsCircle = true).apply {
-                        layoutParams = FrameLayout.LayoutParams(
-                            ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.MATCH_PARENT,
-                            Gravity.CENTER
-                        )
-                    })
-                })
-                addView(LinearLayout(context).apply {
-                    orientation = LinearLayout.VERTICAL
-                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                    addView(TextView(context).apply {
-                        text = "내 밥크로스"
-                        textSize = 13f
-                        setTextColor(0xFF647268.toInt())
-                        setTypeface(typeface, Typeface.BOLD)
-                    })
-                    addView(TextView(context).apply {
-                        text = selfName
-                        textSize = 23f
-                        setTextColor(0xFF10251D.toInt())
-                        setTypeface(typeface, Typeface.BOLD)
-                        setPadding(0, dp(3), 0, dp(3))
-                    })
-                    addView(TextView(context).apply {
-                        text = settingsConnectionSummary()
-                        textSize = 13f
-                        setTextColor(0xFF526158.toInt())
-                    })
-                })
-                addView(compactButton("수정", BUTTON_OUTLINE) { showMyPage() }.apply {
-                    layoutParams = LinearLayout.LayoutParams(dp(76), dp(40)).apply {
-                        leftMargin = dp(10)
-                    }
-                })
-            })
-        }
-    }
-
-    private fun settingsConnectionSummary(): String {
-        return when {
-            !autoConnectEnabled -> "자동 연결 꺼짐 · 내 정보는 결과와 밥친구 목록에 표시됩니다."
-            !hasNearbyPermissions() -> "권한 확인 필요 · 밥친구를 찾으려면 연결 준비가 필요합니다."
-            disabledConnectionRequirements().isNotEmpty() -> "기기 설정 확인 필요 · ${disabledConnectionRequirements().joinToString(", ")} 상태를 켜 주세요."
-            connectedCount == 0 -> "연결 준비 완료 · 지금은 나만 참여 가능합니다."
-            else -> "연결 중 · 참여 가능 ${participantReadyCount()}명"
-        }
-    }
-
     private fun experienceCard(): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
@@ -5182,23 +5854,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 orientation = LinearLayout.VERTICAL
                 layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                 addView(TextView(context).apply {
-                    text = "밥판 체험하기"
+                    text = "처음이시네요"
                     textSize = 20f
                     setTextColor(0xFF10251D.toInt())
                     setTypeface(typeface, Typeface.BOLD)
                 })
                 addView(TextView(context).apply {
-                    text = "가상 밥친구 3명이 들어와 후보를 고르고, 오늘의 밥결정 카드까지 바로 보여줍니다."
+                    text = "밥판 체험을 먼저 시작해볼까요?"
                     textSize = 13f
                     setTextColor(0xFF526158.toInt())
                     setPadding(0, dp(5), 0, 0)
-                })
-                addView(TextView(context).apply {
-                    text = "권한 없이 먼저 둘러보기"
-                    textSize = 12f
-                    setTextColor(0xFFD73B24.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
-                    setPadding(0, dp(6), 0, 0)
                 })
             })
             addView(TextView(context).apply {
@@ -5331,10 +5996,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             })
             addView(trustSummaryRow("수집하지 않아요", "위치 기록 · 서버 저장 · 광고/분석 SDK 전송"))
             addView(trustSummaryRow("주변에 보내요", "밥닉/아바타 · 후보 · 선택 결과 또는 득표 요약"))
-            addView(compactButtonRow(
-                compactButton("자세히 보기", BUTTON_OUTLINE) { showPrivacyPolicy() },
-                compactButton("권한 확인", BUTTON_CHOICE) { requestNearbyPermissions() }
-            ))
         }
     }
 
@@ -5470,12 +6131,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 onClick = {
                     savePollDefaults(defaults.copy(revealSelections = !defaults.revealSelections))
                 }
-            ))
-            addView(compactButtonRow(
-                compactButton("템플릿 보기", BUTTON_CHOICE) {
-                    showTemplateCategoryPicker()
-                },
-                compactButton("밥판 열기", BUTTON_PRIMARY) { showCompose() }
             ))
         }
     }
@@ -5778,12 +6433,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun avatarInfoCard(title: String, value: String, caption: String, avatarId: Int): LinearLayout {
+    private fun avatarInfoCard(title: String, value: String, caption: String, avatarId: Int, timerPoll: NearbyPoll? = null): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
             setPadding(dp(14), dp(12), dp(18), dp(12))
-            background = rounded(0xFFFFFFFF.toInt(), 14)
+            background = groupedCardBackground()
             layoutParams = blockParams()
             addView(AvatarTileView(avatarId).apply {
                 layoutParams = LinearLayout.LayoutParams(dp(AVATAR_CARD_SIZE), dp(AVATAR_CARD_SIZE)).apply {
@@ -5800,12 +6455,29 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                         setTextColor(0xFF647268.toInt())
                     })
                 }
-                addView(TextView(context).apply {
-                    text = value
-                    textSize = 20f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
+                addView(LinearLayout(context).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    gravity = Gravity.CENTER_VERTICAL
                     setPadding(0, dp(3), 0, dp(3))
+                    addView(TextView(context).apply {
+                        text = value
+                        textSize = 20f
+                        setTextColor(0xFF10251D.toInt())
+                        setTypeface(typeface, Typeface.BOLD)
+                        maxLines = 2
+                        ellipsize = TextUtils.TruncateAt.END
+                        layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                    })
+                    timerPoll?.let { poll ->
+                        addView(CountdownRingView(poll, compact = true).apply {
+                            layoutParams = LinearLayout.LayoutParams(
+                                dp(54),
+                                dp(54)
+                            ).apply {
+                                leftMargin = dp(10)
+                            }
+                        })
+                    }
                 })
                 if (caption.isNotBlank()) {
                     addView(TextView(context).apply {
@@ -5824,7 +6496,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             textSize = 15f
             setTextColor(0xFF294237.toInt())
             setPadding(dp(18), dp(16), dp(18), dp(16))
-            background = rounded(0xFFFFF0D9.toInt(), 14)
+            background = groupedCardBackground(0xFFFFF0D9.toInt(), 0xFFE0B49E.toInt())
             layoutParams = blockParams()
         }
     }
@@ -5940,7 +6612,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             textSize = 17f
             gravity = Gravity.CENTER
             setPadding(dp(24), dp(42), dp(24), dp(42))
-            background = rounded(0xFFFFFFFF.toInt(), 14)
+            background = groupedCardBackground()
             layoutParams = blockParams()
         }
     }
@@ -6169,41 +6841,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun countdownCard(poll: NearbyPoll): LinearLayout {
-        return LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding(dp(18), dp(16), dp(18), dp(16))
-            background = rounded(0xFFFFFFFF.toInt(), 16, 0xFFD8E2DA.toInt())
-            layoutParams = blockParams()
-            addView(CountdownRingView(poll).apply {
-                layoutParams = LinearLayout.LayoutParams(dp(92), dp(92)).apply {
-                    rightMargin = dp(16)
-                }
-            })
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.VERTICAL
-                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                addView(TextView(context).apply {
-                    text = if (poll.hasEnded()) "밥판 시간이 종료되었습니다" else "남은 시간"
-                    textSize = 18f
-                    setTextColor(0xFF10251D.toInt())
-                    setTypeface(typeface, Typeface.BOLD)
-                })
-                addView(TextView(context).apply {
-                    text = if (poll.hasEnded()) {
-                        "결과 공유를 기다리거나 직접 결과를 공유할 수 있습니다."
-                    } else {
-                        "원형 표시가 줄어들수록 마감 시간이 가까워집니다."
-                    }
-                    textSize = 14f
-                    setTextColor(0xFF526158.toInt())
-                    setPadding(0, dp(6), 0, 0)
-                })
-            })
-        }
-    }
-
     private fun choicePill(text: String, onClick: (() -> Unit)? = null): LinearLayout {
         val calorieText = calorieTextFor(text)
         return LinearLayout(this).apply {
@@ -6267,6 +6904,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         vibrator.vibrate(VibrationEffect.createOneShot(SELECTION_VIBRATION_MS, VibrationEffect.DEFAULT_AMPLITUDE))
     }
 
+    private fun vibrateCodeInput() {
+        val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            getSystemService(VibratorManager::class.java).defaultVibrator
+        } else {
+            getSystemService(Vibrator::class.java)
+        }
+        if (!vibrator.hasVibrator()) return
+        vibrator.vibrate(VibrationEffect.createOneShot(CODE_INPUT_VIBRATION_MS, CODE_INPUT_VIBRATION_AMPLITUDE))
+    }
+
     private fun vibrateCodeError() {
         val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             getSystemService(VibratorManager::class.java).defaultVibrator
@@ -6283,25 +6930,32 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         )
     }
 
-    private fun mySelectionPrompt(): LinearLayout {
+    private fun hostSelectionCard(poll: NearbyPoll): LinearLayout {
         return LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(dp(18), dp(14), dp(18), dp(14))
             background = rounded(0xFFE9F4FF.toInt(), 14, 0xFF91BBE5.toInt(), 2)
             layoutParams = blockParams()
             addView(TextView(context).apply {
-                text = "나의 참여"
-                textSize = 13f
-                setTextColor(0xFF356A9E.toInt())
-                setTypeface(typeface, Typeface.BOLD)
-            })
-            addView(TextView(context).apply {
                 text = "나의 선택은?"
                 textSize = 19f
                 setTextColor(0xFF153F68.toInt())
                 setTypeface(typeface, Typeface.BOLD)
-                setPadding(0, dp(4), 0, 0)
+                setPadding(0, 0, 0, dp(4))
             })
+            poll.options.forEachIndexed { index, option ->
+                addView(choicePill(option) { castVote(poll, option) }.apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        topMargin = dp(8)
+                    }
+                    if (index == 0) {
+                        tutorialResponseTarget = this
+                    }
+                })
+            }
         }
     }
 
@@ -6387,6 +7041,26 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             minHeight = dp(30)
             setPadding(dp(8), dp(4), 0, dp(4))
             setOnClickListener { onClick() }
+        }
+    }
+
+    private fun templateActionLink(label: String, onClick: () -> Unit): TextView {
+        return TextView(this).apply {
+            text = "🍽 $label"
+            textSize = 13f
+            setTypeface(typeface, Typeface.BOLD)
+            setTextColor(0xFFD73B24.toInt())
+            paintFlags = paintFlags or Paint.UNDERLINE_TEXT_FLAG
+            minHeight = dp(26)
+            gravity = Gravity.CENTER
+            setPadding(dp(6), dp(2), 0, dp(2))
+            isClickable = true
+            isFocusable = true
+            setOnClickListener { onClick() }
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
     }
 
@@ -6591,6 +7265,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun startNearbyConnectionTest() {
+        if (!autoConnectEnabled) {
+            showAutoConnectRequiredDialog()
+            updateConnectionStatus()
+            return
+        }
         if (!hasNearbyPermissions()) {
             showPermissionFallbackDialog()
             return
@@ -6603,6 +7282,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
         appendLog("양쪽 기기에서 이 버튼을 누르면 서로를 찾고 연결을 시도합니다.")
         nearby.startNearbyMode()
+        applyNearbyRoleMode()
         updateConnectionStatus()
     }
 
@@ -6611,6 +7291,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         if (!hasNearbyPermissions() || disabledConnectionRequirements().isNotEmpty()) return
         appendLog("아직 밥친구를 못 찾아 주변 탐색을 다시 시작합니다.")
         nearby.restartNearbyMode()
+        applyNearbyRoleMode()
         updateConnectionStatus()
     }
 
@@ -6621,6 +7302,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             .setTitle("연결 준비가 더 필요해요")
             .setMessage("밖에서 바로 옆 기기를 찾을 때도 두 기기 모두 Bluetooth, Wi-Fi, 위치가 켜져 있어야 합니다.\n\n지금 필요한 준비: $detail")
             .setPositiveButton("설정 열기") { _, _ -> openAppSettings() }
+            .setNegativeButton("닫기", null)
+            .show()
+    }
+
+    private fun showAutoConnectRequiredDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("자동 연결이 꺼져 있어요")
+            .setMessage("QR은 밥판을 찾기 위한 힌트이고, 실제 밥판 내용은 가까운 기기 연결로 받아야 합니다.\n\n자동 연결을 켜면 주변 밥친구를 찾기 시작합니다.")
+            .setPositiveButton("자동 연결 켜기") { _, _ -> setAutoConnectEnabled(true) }
             .setNegativeButton("닫기", null)
             .show()
     }
@@ -6636,10 +7326,36 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 runningPolls.forEach { poll ->
                     registerInvitedPeer(poll.id, peerId, nearby.connectedPeers()[peerId] ?: peerId.take(8))
                     sendPoll(poll, endpointId)
+                    sendHostConnectionSync(poll, endpointId)
                 }
                 persistSessionState()
             }
         }, CONNECTION_SYNC_DELAY_MS)
+    }
+
+    private fun hasRunningHostedPoll(): Boolean {
+        return autoConnectEnabled &&
+            activePolls.values.any { poll -> !poll.hasEnded() && !sharedResultPollIds.contains(poll.id) }
+    }
+
+    private fun hasRunningIncomingPoll(): Boolean {
+        return autoConnectEnabled &&
+            incomingPolls.values.any { poll -> !poll.hasEnded() && !seenResultPollIds.contains(poll.id) }
+    }
+
+    private fun applyNearbyRoleMode() {
+        if (!autoConnectEnabled || !hasNearbyPermissions() || disabledConnectionRequirements().isNotEmpty()) return
+        val hostActive = hasRunningHostedPoll()
+        val participantActive = !hostActive && hasRunningIncomingPoll()
+        nearby.maintainNearbyMode(
+            keepDiscoveryOpen = hostActive,
+            acceptIncomingOnly = hostActive,
+            suppressAdvertising = participantActive
+        )
+    }
+
+    private fun updateLateJoinDiscoveryMode() {
+        applyNearbyRoleMode()
     }
 
     private fun startNearbyHeartbeat() {
@@ -6676,6 +7392,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val secondaryLabel: String = "나중에",
         val primaryAction: (() -> Unit)? = null,
         val secondaryAction: (() -> Unit)? = null
+    )
+
+    private data class JoinHint(
+        val pollId: String,
+        val inviteCode: String,
+        val hostToken: String,
+        val expiresAtMillis: Long
     )
 
     private fun firstRunCoachSteps(): List<OnboardingCoachStep> {
@@ -6863,11 +7586,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             .show()
     }
 
-    private fun setAutoConnectEnabled(enabled: Boolean) {
+    private fun setAutoConnectEnabled(enabled: Boolean, toastMessage: String? = null) {
         autoConnectEnabled = enabled
         store.saveAutoConnectEnabled(enabled)
         applyAutoConnectSetting()
-        Toast.makeText(this, if (enabled) "자동 연결 켜짐" else "자동 연결 꺼짐", Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this,
+            toastMessage ?: if (enabled) "자동 연결 켜짐" else "자동 연결 꺼짐",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     private fun updateConnectionStatus(animateBadge: Boolean = false) {
@@ -6878,7 +7605,8 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 connectionStatusView.background = rounded(connectionBadgeBackgroundColor(), 24, connectionBadgeStrokeColor(), 2)
             }
             topConnectionBadgeContainerView?.background =
-                rounded(connectionBadgeBackgroundColor(), 18, connectionBadgeStrokeColor(), 2)
+                rounded(0xFFFFFEFA.toInt(), 22, connectionBadgeStrokeColor(), 2)
+            topConnectionBadgeContainerView?.contentDescription = connectionStateLabel()
             topConnectionBadgePulseView?.let { pulse ->
                 pulse.background = connectionPulseBackground()
                 if (!autoConnectEnabled) {
@@ -6886,18 +7614,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     pulse.alpha = 0f
                 }
             }
-            topConnectionBadgeView?.let { badge ->
-                val nextText = topConnectionBadgeText()
-                badge.setTextColor(connectionBadgeTextColor())
-                if (animateBadge && badge.text.toString() != nextText) {
-                    animateConnectionBadge(badge, nextText)
-                } else {
-                    badge.animate().cancel()
-                    badge.translationY = 0f
-                    badge.alpha = 1f
-                    badge.text = nextText
-                }
-            }
+            topConnectionSignalView?.invalidate()
         }
     }
 
@@ -6936,32 +7653,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun animateConnectionBadge(badge: TextView, nextText: String) {
-        badge.animate().cancel()
-        badge.translationY = 0f
-        badge.alpha = 1f
-        badge.animate()
-            .translationY(-dp(12).toFloat())
-            .alpha(0f)
-            .setDuration(130L)
-            .withEndAction {
-                badge.text = nextText
-                badge.translationY = dp(12).toFloat()
-                badge.alpha = 0f
-                badge.animate()
-                    .translationY(0f)
-                    .alpha(1f)
-                    .setDuration(150L)
-                    .start()
-            }
-            .start()
-    }
-
-    private fun topConnectionBadgeText(): String {
+    private fun connectionStateLabel(): String {
         return when {
-            !autoConnectEnabled -> "🚫"
-            !hasNearbyPermissions() -> "!"
-            else -> participantReadyCount().toString()
+            !autoConnectEnabled -> "자동 연결 꺼짐"
+            !hasNearbyPermissions() -> "연결 권한 필요"
+            disabledConnectionRequirements().isNotEmpty() -> "연결 준비 필요"
+            displayConnectionCount() == 0 -> "밥친구 대기 중"
+            else -> "밥친구 연결됨"
         }
     }
 
@@ -6969,7 +7667,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return when {
             !autoConnectEnabled -> 0xFF5F6661.toInt()
             !hasNearbyPermissions() -> 0xFF8B1E1E.toInt()
-            connectedCount == 0 -> 0xFF8B1E1E.toInt()
+            displayConnectionCount() == 0 -> 0xFF8B1E1E.toInt()
             else -> 0xFF174C8B.toInt()
         }
     }
@@ -6978,7 +7676,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return when {
             !autoConnectEnabled -> 0xFFE9ECE9.toInt()
             !hasNearbyPermissions() -> 0xFFFFE8E8.toInt()
-            connectedCount == 0 -> 0xFFFFE8E8.toInt()
+            displayConnectionCount() == 0 -> 0xFFFFE8E8.toInt()
             else -> 0xFFE7F1FF.toInt()
         }
     }
@@ -6987,7 +7685,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return when {
             !autoConnectEnabled -> 0xFF9AA39C.toInt()
             !hasNearbyPermissions() -> 0xFFD76A6A.toInt()
-            connectedCount == 0 -> 0xFFD76A6A.toInt()
+            displayConnectionCount() == 0 -> 0xFFD76A6A.toInt()
             else -> 0xFF5B91D9.toInt()
         }
     }
@@ -6995,10 +7693,20 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     private fun connectionPulseBackground(): GradientDrawable {
         val fillColor = when {
             !autoConnectEnabled -> 0x00000000
-            connectedCount == 0 -> 0x22D76A6A
+            displayConnectionCount() == 0 -> 0x22D76A6A
             else -> 0x225B91D9
         }
-        return rounded(fillColor, 18, connectionBadgeStrokeColor(), 3)
+        return rounded(fillColor, 24, connectionBadgeStrokeColor(), 3)
+    }
+
+    private fun connectionSignalActiveColor(): Int {
+        return when {
+            !autoConnectEnabled -> 0xFF7A827D.toInt()
+            !hasNearbyPermissions() -> 0xFFD73B24.toInt()
+            disabledConnectionRequirements().isNotEmpty() -> 0xFFE5A11A.toInt()
+            displayConnectionCount() == 0 -> 0xFFE5A11A.toInt()
+            else -> 0xFF2F9B64.toInt()
+        }
     }
 
     private fun connectionBadgeText(): String {
@@ -7011,11 +7719,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         disabledConnectionRequirements().takeIf { it.isNotEmpty() }?.let { missing ->
             return "연결 준비 필요\n${missing.joinToString(", ")} 상태를 켜면 근처 밥친구를 찾을 수 있습니다."
         }
-        if (connectedCount == 0) {
-            return "나만 접속 중\n${connectionStatusText()}"
+        val displayConnectedCount = displayConnectionCount()
+        if (displayConnectedCount == 0) {
+            return "밥친구 대기 중\n${connectionStatusText()}"
         }
         val peerNames = nearby.connectedPeerNames().takeIf { it.isNotEmpty() }?.joinToString(", ")
-        return "참여 가능 ${participantReadyCount()}명\n연결된 상대 ${connectedCount}/${NearbyVoteConnectionManager.MAX_CONNECTIONS}명${peerNames?.let { " · $it" }.orEmpty()}"
+        return "밥친구 연결됨\n${peerNames?.let { "연결된 밥친구: $it" } ?: "근처 밥친구와 연결되어 있습니다."}"
     }
 
     private fun connectionStatusText(): String {
@@ -7028,11 +7737,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         disabledConnectionRequirements().takeIf { it.isNotEmpty() }?.let { missing ->
             return "${missing.joinToString(", ")} 상태를 켜면 자동으로 근처 밥친구를 다시 찾습니다."
         }
-        return if (connectedCount == 0) {
-            "현재 나만 참여 가능합니다 · 약 ${NEARBY_HEARTBEAT_MS / 1000}초마다 주변 연결 상태를 확인합니다."
+        val displayConnectedCount = displayConnectionCount()
+        return if (displayConnectedCount == 0) {
+            "근처 밥친구를 기다리는 중입니다 · 약 ${NEARBY_HEARTBEAT_MS / 1000}초마다 주변 연결 상태를 확인합니다."
         } else {
             val peerNames = nearby.connectedPeerNames().takeIf { it.isNotEmpty() }?.joinToString(", ")
-            "참여 가능 ${participantReadyCount()}명 · 연결된 상대 ${connectedCount}/${NearbyVoteConnectionManager.MAX_CONNECTIONS}명${peerNames?.let { " · $it" }.orEmpty()}"
+            peerNames?.let { "연결된 밥친구: $it" } ?: "근처 밥친구와 연결되어 있습니다."
         }
     }
 
@@ -7078,8 +7788,26 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun participantReadyCount(): Int {
-        return if (autoConnectEnabled && hasNearbyPermissions()) connectedCount + 1 else 0
+    private fun localReadyCount(): Int {
+        if (!autoConnectEnabled || !hasNearbyPermissions()) return 0
+        return connectedCount + 1
+    }
+
+    private fun pollParticipantCount(poll: NearbyPoll): Int {
+        return pollParticipationSnapshot(poll).participantCount
+    }
+
+    private fun pollParticipationSnapshot(poll: NearbyPoll): PollParticipationPolicy.HostSnapshot {
+        return PollParticipationPolicy.hostSnapshot(
+            selfParticipantId = userId,
+            responseByParticipantId = responsesFor(poll.id),
+            votedParticipantIds = votesFor(poll.id).keys
+        )
+    }
+
+    private fun displayConnectionCount(): Int {
+        val incomingPoll = visibleIncomingPolls().firstOrNull()
+        return incomingPoll?.let { poll -> hostConnectedCountsByPoll[poll.id] } ?: connectedCount
     }
 
     private fun visibleIncomingPolls(): List<NearbyPoll> {
@@ -7126,13 +7854,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun participationStatusText(poll: NearbyPoll): String? {
         val invitees = invitedPeersByPoll[poll.id] ?: return null
-        if (invitees.isEmpty()) return null
-        val responses = responsesFor(poll.id)
-        val completed = invitees.keys.count { votesFor(poll.id).containsKey(it) }
-        val declined = invitees.keys.count { responses[it] == POLL_RESPONSE_DECLINED }
-        val waitingVote = invitees.keys.count { responses[it] == POLL_RESPONSE_ACCEPTED && !votesFor(poll.id).containsKey(it) }
-        val awaitingResponse = invitees.keys.count { !responses.containsKey(it) }
-        return "선택 완료 ${completed}명 · 메뉴 대기 ${waitingVote}명 · 미응답 ${awaitingResponse}명 · 거절 ${declined}명"
+        return PollParticipationPolicy.inviteeStatusText(
+            inviteeParticipantIds = invitees.keys,
+            responseByParticipantId = responsesFor(poll.id),
+            votedParticipantIds = votesFor(poll.id).keys
+        )
     }
 
     private fun isMyResult(result: SharedResult): Boolean {
@@ -7148,9 +7874,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun rankedResultOptions(result: SharedResult): List<String> {
-        return result.options.withIndex()
-            .sortedWith(compareByDescending<IndexedValue<String>> { result.counts[it.value] ?: 0 }.thenBy { it.index })
-            .map { it.value }
+        return SharedResultInsights.rankedOptions(result)
     }
 
     private fun historyReuseSuggestions(results: List<SharedResult>): List<HistoryReuseSuggestion> {
@@ -7366,26 +8090,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun singleWinningMenu(result: SharedResult): String? {
-        val winningCount = result.counts.values.maxOrNull() ?: return null
-        if (winningCount <= 0) return null
-        val winningOptions = rankedResultOptions(result).filter { option -> result.counts[option] == winningCount }
-        return winningOptions.singleOrNull()
+        return SharedResultInsights.singleWinningMenu(result)
     }
 
     private fun tieBreakSuggestion(result: SharedResult): String? {
-        val winningCount = result.counts.values.maxOrNull() ?: return null
-        if (winningCount <= 0) return null
-        val winningOptions = rankedResultOptions(result).filter { option -> result.counts[option] == winningCount }
-        if (winningOptions.size < 2) return null
-        val proposerSelection = result.participantSelections[result.proposerId]
-        if (proposerSelection in winningOptions) return proposerSelection
-        val mySelection = result.participantSelections[userId]
-        if (mySelection in winningOptions) return mySelection
-        return winningOptions.firstOrNull()
+        return SharedResultInsights.tieBreakSuggestion(result, userId)
     }
 
     private fun resultHasVotes(result: SharedResult): Boolean {
-        return result.counts.values.any { count -> count > 0 }
+        return SharedResultInsights.hasVotes(result)
     }
 
     private fun showBabDecisionDialog(result: SharedResult) {
@@ -7459,20 +8172,20 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                     addView(TextView(context).apply {
                         text = "밥크로스의 한마디"
-                        textSize = 12f
+                        fixedCardTextSize(12f)
                         setTextColor(0xFF8B5C45.toInt())
                         setTypeface(typeface, Typeface.BOLD)
                     })
                     addView(TextView(context).apply {
                         text = decisionCutSceneSubject(category)
-                        textSize = 17f
+                        fixedCardTextSize(17f)
                         setTextColor(0xFF10251D.toInt())
                         setTypeface(typeface, Typeface.BOLD)
                         setPadding(0, dp(6), 0, 0)
                     })
                     addView(TextView(context).apply {
                         text = winningMenu
-                        textSize = 27f
+                        fixedCardTextSize(27f)
                         setTextColor(0xFFFFFFFF.toInt())
                         setTypeface(typeface, Typeface.BOLD)
                         gravity = Gravity.CENTER
@@ -7489,7 +8202,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     calorieTextFor(winningMenu)?.let { calorieText ->
                         addView(TextView(context).apply {
                             text = calorieText
-                            textSize = 12f
+                            fixedCardTextSize(12f)
                             setTextColor(0xFF6F5A4D.toInt())
                             setTypeface(typeface, Typeface.BOLD)
                             setPadding(0, dp(6), 0, 0)
@@ -7497,7 +8210,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     }
                     addView(TextView(context).apply {
                         text = decisionCutSceneClosing(category)
-                        textSize = 14f
+                        fixedCardTextSize(14f)
                         setTextColor(0xFF526158.toInt())
                         setPadding(0, dp(10), 0, 0)
                     })
@@ -7512,7 +8225,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             })
             addView(TextView(context).apply {
                 text = "결정!"
-                textSize = 11f
+                fixedCardTextSize(11f)
                 setTextColor(0xFFFFFFFF.toInt())
                 setTypeface(typeface, Typeface.BOLD)
                 gravity = Gravity.CENTER
@@ -7541,11 +8254,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun decisionCutSceneClosing(category: FoodCategory): String {
         return when (category) {
-            FoodCategory.DRINK -> "참 쉽죠? 이제 시원하게 마시면 됩니다."
+            FoodCategory.DRINK -> "밥결정 완료. 이제 시원하게 마시면 됩니다."
             FoodCategory.DESSERT,
-            FoodCategory.SNACK -> "참 쉽죠? 이제 맛있게 즐기면 됩니다."
-            FoodCategory.OTHER -> "참 쉽죠? 이제 그대로 가면 됩니다."
-            else -> "참 쉽죠? 이제 맛있게 먹으면 됩니다."
+            FoodCategory.SNACK -> "밥결정 완료. 이제 맛있게 즐기면 됩니다."
+            FoodCategory.OTHER -> "밥결정 완료. 이제 그대로 가면 됩니다."
+            else -> "밥결정 완료. 이제 맛있게 먹으면 됩니다."
         }
     }
 
@@ -7613,25 +8326,25 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             return LinearLayout(context).apply {
                 orientation = LinearLayout.VERTICAL
                 setPadding(dp(18), dp(16), dp(18), dp(16))
-                background = rounded(0xFFFFFFFF.toInt(), 18, 0xFFFFD7C5.toInt(), 1)
+                background = rounded(0xFF24352D.toInt(), 18, 0xFF6C8B78.toInt(), 1)
                 elevation = dp(12).toFloat()
                 addView(TextView(context).apply {
                     text = "$stepNumber/$stepCount"
                     textSize = 12f
-                    setTextColor(0xFFD73B24.toInt())
+                    setTextColor(0xFFFFB49E.toInt())
                     setTypeface(typeface, Typeface.BOLD)
                 })
                 addView(TextView(context).apply {
                     text = step.title
                     textSize = 21f
-                    setTextColor(0xFF10251D.toInt())
+                    setTextColor(0xFFFFFBF5.toInt())
                     setTypeface(typeface, Typeface.BOLD)
                     setPadding(0, dp(4), 0, 0)
                 })
                 addView(TextView(context).apply {
                     text = step.message
                     textSize = 15f
-                    setTextColor(0xFF526158.toInt())
+                    setTextColor(0xFFE4EEE7.toInt())
                     setLineSpacing(dp(2).toFloat(), 1.0f)
                     setPadding(0, dp(8), 0, dp(10))
                 })
@@ -7646,12 +8359,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     textSize = 12f
                     gravity = Gravity.CENTER
                     setTypeface(typeface, if (primary) Typeface.BOLD else Typeface.NORMAL)
-                    setTextColor(if (primary) 0xFFD73B24.toInt() else 0xFF6B756D.toInt())
+                    setTextColor(if (primary) 0xFF10251D.toInt() else 0xFFE4EEE7.toInt())
                     setPadding(dp(12), 0, dp(12), 0)
                     background = rounded(
-                        if (primary) 0xFFFFF1E8.toInt() else 0xFFF4F6F2.toInt(),
+                        if (primary) 0xFFFFB49E.toInt() else 0xFF34473D.toInt(),
                         16,
-                        if (primary) 0xFFFFC4AC.toInt() else 0xFFE1E6DE.toInt(),
+                        if (primary) 0xFFFFD7C5.toInt() else 0xFF6C8B78.toInt(),
                         1
                     )
                     isClickable = true
@@ -7686,6 +8399,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         private fun positionCoachCard() {
             val sideMargin = dp(18)
             val gap = dp(20)
+            val bottomSafeInset = ViewCompat.getRootWindowInsets(this)
+                ?.getInsets(WindowInsetsCompat.Type.systemBars())
+                ?.bottom
+                ?: 0
+            val bottomLimit = height - sideMargin - bottomSafeInset
             val cardWidth = (width - sideMargin * 2).coerceAtLeast(dp(240))
             coachCard.measure(
                 View.MeasureSpec.makeMeasureSpec(cardWidth, View.MeasureSpec.EXACTLY),
@@ -7696,11 +8414,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 val belowTop = rect.bottom.toInt() + gap
                 val aboveTop = rect.top.toInt() - cardHeight - gap
                 when {
-                    belowTop + cardHeight + sideMargin <= height -> belowTop
+                    belowTop + cardHeight <= bottomLimit -> belowTop
                     aboveTop >= sideMargin -> aboveTop
-                    else -> height - cardHeight - sideMargin
+                    else -> bottomLimit - cardHeight
                 }
-            } ?: (height - cardHeight - sideMargin)
+            } ?: (bottomLimit - cardHeight)
             coachCard.layoutParams = FrameLayout.LayoutParams(cardWidth, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
                 leftMargin = sideMargin
                 topMargin = top.coerceAtLeast(sideMargin)
@@ -7741,10 +8459,12 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             .put("receivedVoteAvatars", serializeNestedInts(receivedVoteAvatarsByPoll))
             .put("invitedPeers", serializeNestedStrings(invitedPeersByPoll))
             .put("pollResponses", serializeNestedStrings(pollResponsesByPoll))
+            .put("hostConnectedCounts", JSONObject(hostConnectedCountsByPoll as Map<*, *>))
+            .put("hostReadyCounts", JSONObject(hostReadyCountsByPoll as Map<*, *>))
             .put("submittedVotes", JSONObject(submittedVotes as Map<*, *>))
             .put("acceptedPollIds", JSONArray(acceptedPollIds.toList()))
             .put("declinedPollIds", JSONArray(declinedPollIds.toList()))
-            .put("completionPromptShownPollIds", JSONArray(completionPromptShownPollIds.toList()))
+            .put("completionPromptShownKeys", JSONArray(completionPromptShownKeys.toList()))
             .put("sharedResults", JSONArray(sharedResultsByPoll.values.map { it.toHistoryJson() }))
         latestReceipt?.let { state.put("latestReceipt", it.toJson()) }
         store.saveSessionState(state.toString())
@@ -7761,7 +8481,9 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         voteEndpointIdsByPoll.clear()
         invitedPeersByPoll.clear()
         pollResponsesByPoll.clear()
-        completionPromptShownPollIds.clear()
+        hostConnectedCountsByPoll.clear()
+        hostReadyCountsByPoll.clear()
+        completionPromptShownKeys.clear()
         submittedVotes.clear()
         acceptedPollIds.clear()
         declinedPollIds.clear()
@@ -7783,10 +8505,13 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         restoreNestedInts(state.optJSONObject("receivedVoteAvatars"), receivedVoteAvatarsByPoll)
         restoreNestedStrings(state.optJSONObject("invitedPeers"), invitedPeersByPoll)
         restoreNestedStrings(state.optJSONObject("pollResponses"), pollResponsesByPoll)
+        readIntMap(state.optJSONObject("hostConnectedCounts")).forEach { (pollId, count) -> hostConnectedCountsByPoll[pollId] = count }
+        readIntMap(state.optJSONObject("hostReadyCounts")).forEach { (pollId, count) -> hostReadyCountsByPoll[pollId] = count }
         readStringMap(state.optJSONObject("submittedVotes")).forEach { (pollId, option) -> submittedVotes[pollId] = option }
         readStringSet(state.optJSONArray("acceptedPollIds")).forEach { acceptedPollIds += it }
         readStringSet(state.optJSONArray("declinedPollIds")).forEach { declinedPollIds += it }
-        readStringSet(state.optJSONArray("completionPromptShownPollIds")).forEach { completionPromptShownPollIds += it }
+        readStringSet(state.optJSONArray("completionPromptShownKeys")).forEach { completionPromptShownKeys += it }
+        readStringSet(state.optJSONArray("completionPromptShownPollIds")).forEach { completionPromptShownKeys += it }
         val results = state.optJSONArray("sharedResults")
         if (results != null) {
             for (index in 0 until results.length()) {
@@ -7859,6 +8584,11 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return raw.keys().asSequence().associateWith { key -> raw.optString(key) }
     }
 
+    private fun readIntMap(raw: JSONObject?): Map<String, Int> {
+        if (raw == null) return emptyMap()
+        return raw.keys().asSequence().associateWith { key -> raw.optInt(key) }
+    }
+
     private fun readStringSet(raw: JSONArray?): Set<String> {
         if (raw == null) return emptySet()
         return (0 until raw.length()).map { index -> raw.getString(index) }.toSet()
@@ -7925,7 +8655,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return if (avatarId in 0 until AVATAR_COUNT) avatarId else avatarIdForUser(id)
     }
 
-    private fun publishPoll(question: String, options: List<String>, durationSeconds: Int, allowParticipantOptions: Boolean, revealSelections: Boolean) {
+    private fun publishPoll(
+        question: String,
+        options: List<String>,
+        durationSeconds: Int,
+        requireInviteCode: Boolean,
+        allowParticipantOptions: Boolean,
+        revealSelections: Boolean
+    ) {
         val durationMinutes = ((durationSeconds + 59) / 60).coerceAtLeast(1)
         val poll = NearbyPoll(
             id = "poll-${UUID.randomUUID()}",
@@ -7939,7 +8676,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
             endAtMillis = System.currentTimeMillis() + durationSeconds * 1_000L,
             allowParticipantOptions = allowParticipantOptions,
             revealSelections = revealSelections,
-            inviteCode = generateInviteCode()
+            inviteCode = if (requireInviteCode) generateInviteCode() else ""
         )
         activePolls[poll.id] = poll
         receivedVotesByPoll[poll.id] = linkedMapOf()
@@ -7948,12 +8685,16 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         voteEndpointIdsByPoll[poll.id] = linkedMapOf()
         invitedPeersByPoll[poll.id] = LinkedHashMap(nearby.connectedPeers())
         pollResponsesByPoll[poll.id] = linkedMapOf()
-        completionPromptShownPollIds -= poll.id
+        completionPromptShownKeys.removeAll { key -> key == poll.id || key.startsWith("${poll.id}:") }
         sharedResult = null
         sharedResultPollIds -= poll.id
         seenResultPollIds -= poll.id
-        startNearbyConnectionTest()
+        updateLateJoinDiscoveryMode()
+        if (autoConnectEnabled) {
+            startNearbyConnectionTest()
+        }
         sendPoll(poll)
+        sendHostConnectionSync(poll)
         scheduleResultShare(poll)
         persistSessionState()
         showPublishedPoll(poll)
@@ -7961,20 +8702,6 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
 
     private fun generateInviteCode(): String {
         return Random.nextInt(1_000, 10_000).toString()
-    }
-
-    private fun confirmPublishingWithoutPeers(onConfirm: () -> Unit) {
-        val connectionHint = if (autoConnectEnabled) {
-            "밥친구가 곧 앱을 켜면 진행 중인 밥판을 이어 받을 수 있습니다."
-        } else {
-            "가까운 연결을 켜지 않아도 후보 정리와 결과 카드 공유는 할 수 있습니다."
-        }
-        AlertDialog.Builder(this)
-            .setTitle("혼자 정할까요?")
-            .setMessage("지금은 연결된 밥친구가 없어도 후보를 보고 내 선택으로 오늘의 밥결정 카드를 만들 수 있습니다.\n\n$connectionHint")
-            .setPositiveButton("혼자 정하기") { _, _ -> onConfirm() }
-            .setNegativeButton("조금 기다리기", null)
-            .show()
     }
 
     private fun sendPoll(poll: NearbyPoll, endpointId: String? = null) {
@@ -7990,20 +8717,60 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
-    private fun sendPollResponse(poll: NearbyPoll, response: String) {
-        nearby.sendToAll(
-            NearVoteMessage(
-                type = NearVoteMessageType.POLL_RESPONSE,
+    private fun sendPollResponse(poll: NearbyPoll, response: String, endpointId: String? = null) {
+        if (response == POLL_RESPONSE_ACCEPTED) {
+            acceptedPollIds += poll.id
+        }
+        val message = NearVoteMessage(
+            type = NearVoteMessageType.POLL_RESPONSE,
+            senderId = userId,
+            payloadJson = JSONObject()
+                .put("pollId", poll.id)
+                .put("respondentId", userId)
+                .put("respondentName", selfName)
+                .put("respondentAvatarId", selfAvatarId)
+                .put("response", response)
+                .toString()
+        ).toJson()
+        if (endpointId == null) {
+            nearby.sendToAll(message)
+        } else {
+            nearby.sendTo(endpointId, message)
+        }
+    }
+
+    private fun resendAcceptedPollResponses(endpointId: String? = null) {
+        incomingPolls.values
+            .filter { poll ->
+                acceptedPollIds.contains(poll.id) &&
+                    !submittedVotes.containsKey(poll.id) &&
+                    !poll.hasEnded()
+            }
+            .forEach { poll -> sendPollResponse(poll, POLL_RESPONSE_ACCEPTED, endpointId) }
+    }
+
+    private fun sendHostConnectionSync(poll: NearbyPoll? = null, endpointId: String? = null) {
+        if (!autoConnectEnabled || !hasNearbyPermissions()) return
+        val polls = poll?.let { listOf(it) }
+            ?: visibleActivePolls().filter { activePoll -> !sharedResultPollIds.contains(activePoll.id) }
+        if (polls.isEmpty()) return
+        polls.forEach { activePoll ->
+            val readyCount = localReadyCount()
+            val message = NearVoteMessage(
+                type = NearVoteMessageType.CONNECTION_SYNC,
                 senderId = userId,
                 payloadJson = JSONObject()
-                    .put("pollId", poll.id)
-                    .put("respondentId", userId)
-                    .put("respondentName", selfName)
-                    .put("respondentAvatarId", selfAvatarId)
-                    .put("response", response)
+                    .put("pollId", activePoll.id)
+                    .put("connectedCount", connectedCount)
+                    .put("readyCount", readyCount)
                     .toString()
             ).toJson()
-        )
+            if (endpointId == null) {
+                nearby.sendToAll(message)
+            } else {
+                nearby.sendTo(endpointId, message)
+            }
+        }
     }
 
     private fun normalizedOption(option: String): String {
@@ -8086,14 +8853,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     }
 
     private fun isValidIncomingMessage(message: NearVoteMessage): Boolean {
-        return message.schemaVersion in 1..NearVoteMessage.CURRENT_SCHEMA_VERSION &&
-            message.messageId.isNotBlank() &&
-            message.messageId.length <= MAX_MESSAGE_ID_LENGTH &&
-            message.senderId.isNotBlank() &&
-            message.senderId.length <= MAX_ID_LENGTH &&
-            message.payloadJson.length <= MAX_NEARBY_PAYLOAD_JSON_LENGTH &&
-            message.createdAtMillis > 0L &&
-            messageReplayGuard.shouldAccept(message)
+        return NearVoteMessageValidator.isValid(
+            message = message,
+            limits = NearVoteMessageValidator.Limits(
+                maxSenderIdLength = MAX_ID_LENGTH,
+                maxMessageIdLength = MAX_MESSAGE_ID_LENGTH,
+                maxPayloadJsonLength = MAX_NEARBY_PAYLOAD_JSON_LENGTH
+            ),
+            replayGuard = messageReplayGuard
+        )
     }
 
     private fun isValidRemoteAvatarId(avatarId: Int): Boolean {
@@ -8218,7 +8986,15 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 }
                 val alreadyKnown = !seenIncomingPollIds.add(poll.id)
                 incomingPolls[poll.id] = poll
+                updateLateJoinDiscoveryMode()
                 persistSessionState()
+                if (acceptedPollIds.contains(poll.id) || submittedVotes.containsKey(poll.id)) {
+                    sendPollResponse(poll, POLL_RESPONSE_ACCEPTED, endpointId)
+                }
+                if (pendingJoinHint?.pollId == poll.id) {
+                    runOnUiThread { tryShowPendingJoinHint() }
+                    return
+                }
                 if (alreadyKnown || submittedVotes.containsKey(poll.id)) {
                     appendLog("이미 받은 밥판 갱신: ${poll.question}")
                     return
@@ -8249,8 +9025,10 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 registerInvitedPeer(poll.id, respondentId, respondentName)
                 responsesFor(poll.id)[respondentId] = response
                 persistSessionState()
+                sendHostConnectionSync(poll)
                 runOnUiThread {
                     showPublishedPoll(poll)
+                    updateConnectionStatus(animateBadge = true)
                     maybeOfferEarlyClosure(poll)
                 }
             }
@@ -8349,6 +9127,33 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                     }
                 }
             }
+            NearVoteMessageType.CONNECTION_SYNC -> {
+                val payload = runCatching { JSONObject(message.payloadJson) }.getOrElse {
+                    appendLog("연결 수 동기화 메시지를 읽지 못함")
+                    return
+                }
+                val pollId = payload.optString("pollId")
+                val poll = incomingPolls[pollId] ?: return
+                if (poll.proposerId != message.senderId) {
+                    appendLog("밥판장이 아닌 기기의 연결 수 동기화는 무시함")
+                    return
+                }
+                val hostConnectedCount = payload.optInt("connectedCount", -1)
+                val hostReadyCount = payload.optInt("readyCount", -1)
+                if (hostConnectedCount !in 0..NearbyVoteConnectionManager.MAX_CONNECTIONS ||
+                    hostReadyCount !in 1..(NearbyVoteConnectionManager.MAX_CONNECTIONS + 1) ||
+                    hostReadyCount < hostConnectedCount + 1
+                ) {
+                    appendLog("유효하지 않은 연결 수 동기화는 무시함")
+                    return
+                }
+                val countChanged = hostConnectedCountsByPoll[pollId] != hostConnectedCount ||
+                    hostReadyCountsByPoll[pollId] != hostReadyCount
+                hostConnectedCountsByPoll[pollId] = hostConnectedCount
+                hostReadyCountsByPoll[pollId] = hostReadyCount
+                persistSessionState()
+                updateConnectionStatus(animateBadge = countChanged)
+            }
             NearVoteMessageType.RESULT_BLOCK -> {
                 val result = runCatching { SharedResult.fromPayload(message.senderId, message.payloadJson) }.getOrElse {
                     appendLog("결과 블록을 읽지 못함")
@@ -8371,6 +9176,9 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 sharedResult = result
                 sharedResultsByPoll[result.pollId] = result
                 incomingPolls.remove(result.pollId)
+                hostConnectedCountsByPoll.remove(result.pollId)
+                hostReadyCountsByPoll.remove(result.pollId)
+                updateLateJoinDiscoveryMode()
                 store.saveResult(result)
                 persistSessionState()
                 if (alreadyKnown) {
@@ -8481,6 +9289,7 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         sharedResultPollIds += poll.id
         store.saveResult(result)
         persistSessionState()
+        updateLateJoinDiscoveryMode()
         val participantEndpoints = participantIds.mapNotNull { participantId ->
             voteEndpointIdsByPoll[poll.id]?.get(participantId) ?: nearby.endpointForPeer(participantId)
         }.distinct()
@@ -8493,37 +9302,92 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         val endedPoll = poll.copy(endAtMillis = System.currentTimeMillis())
         activePolls[poll.id] = endedPoll
         persistSessionState()
+        updateLateJoinDiscoveryMode()
         shareResultBlock(endedPoll)
     }
 
     private fun maybeOfferEarlyClosure(poll: NearbyPoll) {
-        if (poll.hasEnded() || sharedResultPollIds.contains(poll.id) || completionPromptShownPollIds.contains(poll.id)) {
-            return
-        }
         val responses = responsesFor(poll.id)
         val receivedVotes = votesFor(poll.id)
-        val invitedIds = invitedPeersFor(poll.id).keys
-        val requiredParticipantIds = (invitedIds + userId).toSet()
-        val allRequiredParticipantsVoted = requiredParticipantIds.all { participantId ->
-            receivedVotes.containsKey(participantId)
-        }
-        if (!allRequiredParticipantsVoted) {
-            return
-        }
-        val unansweredCount = invitedPeersFor(poll.id).keys.count { peerId -> !responses.containsKey(peerId) }
-        val declinedCount = invitedPeersFor(poll.id).keys.count { peerId -> responses[peerId] == POLL_RESPONSE_DECLINED }
-        if (unansweredCount > 0 || declinedCount > 0) {
-            return
-        }
-        val message = "밥판장을 포함해 참여 가능한 밥친구가 모두 메뉴를 골랐습니다.\n\n아직 시간이 남았지만 지금 메뉴를 결정할까요?"
-        completionPromptShownPollIds += poll.id
+        val prompt = PollCompletionPolicy.promptFor(
+            PollCompletionPolicy.Input(
+                pollId = poll.id,
+                isEnded = poll.hasEnded(),
+                isResultShared = sharedResultPollIds.contains(poll.id),
+                readyCount = pollParticipantCount(poll),
+                votedParticipantIds = receivedVotes.keys,
+                invitedParticipantIds = invitedPeersFor(poll.id).keys,
+                responseByParticipantId = responses,
+                selfParticipantId = userId,
+                shownPromptKeys = completionPromptShownKeys
+            )
+        ) ?: return
+
+        completionPromptShownKeys += prompt.key
         persistSessionState()
-        AlertDialog.Builder(this)
-            .setTitle("메뉴 결정")
-            .setMessage(message)
-            .setPositiveButton("지금 종료") { _, _ -> endPollAndShareResult(activePolls[poll.id] ?: poll) }
-            .setNegativeButton("조금 더 기다리기", null)
-            .show()
+        showCompletionPromptDialog(poll, prompt.readyCount, prompt.votedCount)
+    }
+
+    private fun showCompletionPromptDialog(poll: NearbyPoll, readyCount: Int, votedCount: Int) {
+        lateinit var dialog: AlertDialog
+        val content = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(18), dp(17), dp(18), dp(16))
+            background = rounded(0xFFFFFEFA.toInt(), 18, 0xFFD73B24.toInt(), 2)
+            addView(TextView(context).apply {
+                text = "모두 골랐어요"
+                textSize = 20f
+                setTextColor(0xFF10251D.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+            })
+            addView(TextView(context).apply {
+                text = "참여 가능한 밥친구가 모두 메뉴를 선택했습니다. 지금 오늘의 밥결정을 만들까요?"
+                textSize = 14f
+                setTextColor(0xFF526158.toInt())
+                setPadding(0, dp(7), 0, dp(12))
+            })
+            addView(TextView(context).apply {
+                text = "선택 완료 $votedCount/${readyCount}명"
+                textSize = 13f
+                setTextColor(0xFFD73B24.toInt())
+                setTypeface(typeface, Typeface.BOLD)
+                gravity = Gravity.CENTER
+                setPadding(dp(12), dp(7), dp(12), dp(7))
+                background = rounded(0xFFFFF1E8.toInt(), 14, 0xFFE7B59D.toInt(), 1)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    bottomMargin = dp(14)
+                }
+            })
+            addView(LinearLayout(context).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                addView(compactButton("조금 더 기다리기", BUTTON_OUTLINE) {
+                    dialog.dismiss()
+                }.apply {
+                    layoutParams = LinearLayout.LayoutParams(0, dp(44), 1f).apply {
+                        rightMargin = dp(6)
+                    }
+                })
+                addView(compactButton("지금 종료", BUTTON_PRIMARY) {
+                    dialog.dismiss()
+                    endPollAndShareResult(activePolls[poll.id] ?: poll)
+                }.apply {
+                    layoutParams = LinearLayout.LayoutParams(0, dp(44), 1f).apply {
+                        leftMargin = dp(6)
+                    }
+                })
+            })
+        }
+        dialog = AlertDialog.Builder(this)
+            .setView(content)
+            .create()
+        dialog.setOnShowListener {
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        }
+        dialog.show()
     }
 
     private fun sendResultBlock(result: SharedResult, endpointIds: List<String>) {
@@ -8613,6 +9477,35 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
                 setStroke(dp(strokeWidth), strokeColor)
             }
         }
+    }
+
+    private fun roundedCorners(
+        color: Int,
+        topLeft: Int = 0,
+        topRight: Int = 0,
+        bottomRight: Int = 0,
+        bottomLeft: Int = 0
+    ): GradientDrawable {
+        return GradientDrawable().apply {
+            setColor(color)
+            cornerRadii = floatArrayOf(
+                dp(topLeft).toFloat(),
+                dp(topLeft).toFloat(),
+                dp(topRight).toFloat(),
+                dp(topRight).toFloat(),
+                dp(bottomRight).toFloat(),
+                dp(bottomRight).toFloat(),
+                dp(bottomLeft).toFloat(),
+                dp(bottomLeft).toFloat()
+            )
+        }
+    }
+
+    private fun groupedCardBackground(
+        fillColor: Int = 0xFFFFFEFA.toInt(),
+        strokeColor: Int = 0xFFD4DED7.toInt()
+    ): GradientDrawable {
+        return rounded(fillColor, 16, strokeColor, 2)
     }
 
     private fun oval(color: Int, strokeColor: Int? = null, strokeWidth: Int = 1): GradientDrawable {
@@ -8730,8 +9623,9 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
     )
 
     private inner class ShinyCardFrameLayout(
+        context: Context,
         private val rarity: CardRarity
-    ) : LinearLayout(this) {
+    ) : LinearLayout(context) {
         private val framePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             style = Paint.Style.FILL
         }
@@ -9294,6 +10188,39 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         return abs(red) + abs(green) + abs(blue)
     }
 
+    private inner class BabCrossWordmarkView(
+        context: Context,
+        private val compact: Boolean
+    ) : View(context) {
+        private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.SUBPIXEL_TEXT_FLAG).apply {
+            color = 0xFF10251D.toInt()
+            typeface = Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD)
+            style = Paint.Style.FILL
+        }
+        private val accentPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0xFFD73B24.toInt()
+            style = Paint.Style.FILL
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            super.onDraw(canvas)
+            val label = "밥크로스"
+            textPaint.textSize = dp(if (compact) 21 else 30).toFloat()
+            val maxWidth = width.toFloat().coerceAtLeast(1f)
+            while (textPaint.measureText(label) > maxWidth && textPaint.textSize > dp(16)) {
+                textPaint.textSize -= dp(1).toFloat()
+            }
+            val baseline = height / 2f - (textPaint.descent() + textPaint.ascent()) / 2f
+            canvas.drawText(label, 0f, baseline, textPaint)
+            canvas.drawCircle(
+                textPaint.measureText(label).coerceAtMost(maxWidth) + dp(5).toFloat(),
+                baseline + textPaint.ascent() * 0.32f,
+                dp(if (compact) 2 else 3).toFloat(),
+                accentPaint
+            )
+        }
+    }
+
     private inner class AvatarTileView(
         private val avatarId: Int,
         chosen: Boolean = false,
@@ -9546,6 +10473,44 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         }
     }
 
+    private inner class ConnectionSignalView(context: Context) : View(context) {
+        private val haloPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.FILL
+        }
+        private val activePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.FILL
+        }
+        private val ringPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.STROKE
+            strokeWidth = dp(1).toFloat()
+        }
+        private val highlightPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = 0x66FFFFFF
+            style = Paint.Style.FILL
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            super.onDraw(canvas)
+            val activeColor = connectionSignalActiveColor()
+            val centerX = width / 2f
+            val centerY = height / 2f
+            val radius = (width.coerceAtMost(height) / 2f - dp(8).toFloat()).coerceAtLeast(dp(10).toFloat())
+
+            haloPaint.color = withAlpha(activeColor, 0x18)
+            activePaint.color = activeColor
+            ringPaint.color = withAlpha(activeColor, 0x74)
+
+            canvas.drawCircle(centerX, centerY, radius + dp(3).toFloat(), haloPaint)
+            canvas.drawCircle(centerX, centerY, radius, activePaint)
+            canvas.drawCircle(centerX, centerY, radius + dp(1).toFloat(), ringPaint)
+            canvas.drawCircle(centerX - radius * 0.34f, centerY - radius * 0.38f, radius * 0.24f, highlightPaint)
+        }
+
+        private fun withAlpha(color: Int, alpha: Int): Int {
+            return (color and 0x00FFFFFF) or (alpha.coerceIn(0, 255) shl 24)
+        }
+    }
+
     private inner class BarcodeView(private val value: String) : View(this) {
         private val barPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             color = 0xFF10251D.toInt()
@@ -9609,8 +10574,14 @@ class MainActivity : ComponentActivity(), NearbyVoteConnectionManager.Listener {
         private const val COACH_FADE_OUT_MS = 140L
         private const val URGENT_COUNTDOWN_MS = 10_000L
         private const val SELECTION_VIBRATION_MS = 35L
+        private const val CODE_INPUT_VIBRATION_MS = 18L
+        private const val CODE_INPUT_VIBRATION_AMPLITUDE = 90
         private const val CODE_ERROR_VIBRATION_MS = 55L
         private const val CODE_ERROR_CLEAR_DELAY_MS = 420L
+        private const val JOIN_QR_MAX_FUTURE_MS = 24L * 60L * 60L * 1_000L
+        private const val JOIN_PENDING_DOT_MS = 450L
+        private const val QR_ACCEPT_RESPONSE_RETRY_MS = 700L
+        private const val JOIN_TO_CHOICE_GUARD_MS = 520L
         private const val COMPOSE_MENU_SUGGESTION_DELAY_MS = 5_000L
         private const val RECENT_RUNNER_UP_WINDOW_MS = 7L * 24L * 60L * 60L * 1_000L
         private const val HISTORY_REUSE_SUGGESTION_LIMIT = 3

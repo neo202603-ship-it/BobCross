@@ -1,0 +1,153 @@
+--------- beginning of main
+06-14 14:26:04.137 I/om.babcross.app(  984): Late-enabling -Xcheck:jni
+06-14 14:26:04.158 I/om.babcross.app(  984): Using CollectorTypeCMC GC.
+06-14 14:26:04.164 D/nativeloader(  984): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 14:26:04.167 D/ActivityThread(  984): setConscryptValidator
+06-14 14:26:04.168 D/ActivityThread(  984): setConscryptValidator - put
+06-14 14:26:04.231 D/nativeloader(  984): Configuring clns-9 for other apk /data/app/~~lRT5gq1ykAkYqiKEc0a0YQ==/com.babcross.app-kpiEG9NJm6A0-EDHXRCV4w==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~lRT5gq1ykAkYqiKEc0a0YQ==/com.babcross.app-kpiEG9NJm6A0-EDHXRCV4w==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.babcross.app
+06-14 14:26:04.232 D/CompatChangeReporter(  984): Compat change id reported: 202956589; UID 10614; state: ENABLED
+06-14 14:26:04.236 V/GraphicsEnvironment(  984): Currently set values for:
+06-14 14:26:04.236 V/GraphicsEnvironment(  984):   angle_gl_driver_selection_pkgs=[]
+06-14 14:26:04.236 V/GraphicsEnvironment(  984):   angle_gl_driver_selection_values=[]
+06-14 14:26:04.236 V/GraphicsEnvironment(  984): com.babcross.app is not listed in per-application setting
+06-14 14:26:04.236 V/GraphicsEnvironment(  984): ANGLE allowlist from config: 
+06-14 14:26:04.236 V/GraphicsEnvironment(  984): com.babcross.app is not listed in ANGLE allowlist or settings, returning default
+06-14 14:26:04.236 V/GraphicsEnvironment(  984): App is not on the allowlist for updatable production driver.
+--------- beginning of system
+06-14 14:26:04.262 D/ActivityThread(  984): com.babcross.app will use render engine as VK
+06-14 14:26:04.262 D/HWUI    (  984): HWUI - treat SMPTE_170M as sRGB
+06-14 14:26:04.263 I/DisplayManager(  984): Choreographer implicitly registered for the refresh rate.
+06-14 14:26:04.264 D/HWUI    (  984): CacheManager constructor. deviceInfo=(1080, 1920)
+06-14 14:26:04.271 E/Adreno-AppProfiles(  984): QSPM AIDL service doesn't exist
+06-14 14:26:04.272 I/AdrenoVK-0(  984): ===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+06-14 14:26:04.272 I/AdrenoVK-0(  984): ===== END DUMP OF OVERRIDDEN SETTINGS =====
+06-14 14:26:04.278 I/AdrenoVK-0(  984): QUALCOMM build          : c81b28e1a5, I5a61fcf667
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Build Date              : 06/20/25
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Shader Compiler Version : E031.45.02.26
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Local Branch            : 
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Remote Branch           : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.948
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Remote Branch           : NONE
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Reconstruct Branch      : NOTHING
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Build Config            : S P 16.1.2 AArch64
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Driver Path             : /vendor/lib64/hw/vulkan.adreno.so
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Driver Version          : 0762.39
+06-14 14:26:04.278 I/AdrenoVK-0(  984): PFP                     : 0x01520181
+06-14 14:26:04.278 I/AdrenoVK-0(  984): ME                      : 0x01520023
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Application Name    : android framework
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Application Version : 0x00000000
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Engine Name         : android framework
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Engine Version      : 0x00000000
+06-14 14:26:04.278 I/AdrenoVK-0(  984): Api Version         : 0x00401000
+06-14 14:26:04.284 E/ashmem  (  984): Pinning is deprecated since Android Q. Please use trim or other methods.
+06-14 14:26:04.422 D/CompatChangeReporter(  984): Compat change id reported: 279646685; UID 10614; state: ENABLED
+06-14 14:26:04.424 D/ScrollView(  984): initGoToTop
+06-14 14:26:04.425 D/CompatChangeReporter(  984): Compat change id reported: 63938206; UID 10614; state: ENABLED
+06-14 14:26:04.458 I/BluetoothAdapter(  984): BluetoothAdapter() : com.babcross.app
+06-14 14:26:04.461 D/CompatChangeReporter(  984): Compat change id reported: 309578419; UID 10614; state: ENABLED
+06-14 14:26:04.461 D/DesktopModeFlags(  984): Toggle override initialized to: OVERRIDE_UNSET
+06-14 14:26:04.462 I/DecorView(  984): setWindowBackground: isPopOver=false color=fffafafa d=android.graphics.drawable.ColorDrawable@db760de
+06-14 14:26:04.472 W/WindowOnBackDispatcher(  984): OnBackInvokedCallback is not enabled for the application.
+06-14 14:26:04.472 W/WindowOnBackDispatcher(  984): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+06-14 14:26:04.475 D/CompatChangeReporter(  984): Compat change id reported: 352594277; UID 10614; state: ENABLED
+06-14 14:26:04.477 D/ViewRootImpl(  984): desktopMode is false
+06-14 14:26:04.477 D/CompatChangeReporter(  984): Compat change id reported: 349153669; UID 10614; state: ENABLED
+06-14 14:26:04.477 I/ViewRootImpl(  984): dVRR is disabled
+06-14 14:26:04.478 D/HardwareRenderer(  984): onDisplayChanged. displayId=0 current wxh=1440x3120 mLargest wxh=0x0
+06-14 14:26:04.478 D/HardwareRenderer(  984): Set largestWidth and largestHeight as logical resolution. (1440x3120)
+06-14 14:26:04.478 D/HWUI    (  984): setMaxSurfaceArea requested wxh=(1440,3120) requestedSurfaceArea(4492800) mMaxSurfaceArea(2073600)
+06-14 14:26:04.478 D/NativeCustomFrequencyManager(  984): [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+06-14 14:26:04.480 D/InputTransport(  984): Input channel constructed: 'b13b74e', fd=122
+06-14 14:26:04.481 I/InsetsController(  984): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.onInsetsStateChanged:3026, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1440, 3120), mDisplayCutout=DisplayCutout{insets=Rect(0, 112 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(686, 0 - 754, 112), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1440 displayHeight=3120 physicalDisplayWidth=1440 physicalDisplayHeight=3120 density={3.75} cutoutSpec={M 0,0 H -9.066666666666667 V 29.86666666666667 H 9.066666666666667 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=7, center=Point(7, 7)}, RoundedCorner{position=TopRight, radius=7, center=Point(1433, 7)}, RoundedCorner{position=BottomRight, radius=7, center=Point(1433, 3113)}, RoundedCorner{position=BottomLeft, radius=7, center=Point(7, 3113)}]}  mRoundedCornerFrame=Rect(0, 0 - 1440, 3120), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(1286, 0 - 1440, 113) rotation=0}, mDisplayShape=DisplayShape{ spec=1406003047 displayWidth=1440 displayHeight=3120 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {b0f70000 mType=statusBars mFrame=[0,0][1440,113] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {b0f70005 mType=mandatorySystemGestures mFrame=[0,0][1440,154] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {b0f70006 mType=tappableElement mFrame=[0,0][1440,113] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {ed0d0001 mType=navigationBars mFrame=[0,2952][1440,3120] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ed0d0004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {ed0d0005 mType=mandatorySystemGestures mFrame=[0,2952][1440,3120] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ed0d0006 mType=tappableElement mFrame=[0,2952][1440,3120] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ed0d0024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1440,112] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null} }
+06-14 14:26:04.481 I/VRI[MainActivity]@490fd87(  984): synced displayState. AttachInfo displayState=2
+06-14 14:26:04.481 I/VRI[MainActivity]@490fd87(  984): setView = com.android.internal.policy.DecorView@4f5eb23 IsHRR=false mFlingFrameRateChange=0 TM=true
+06-14 14:26:04.482 I/IDS_TAG (  984): Clearing training data of android.app.Application@8c67a59
+06-14 14:26:04.482 I/IDS_TAG (  984): Starting IDS observe window
+06-14 14:26:04.482 I/IDS_TAG (  984): Getting Shared Preference for android.app.Application@8c67a59 uid = 10614
+06-14 14:26:04.482 I/IDS_TAG (  984): App android.app.Application@8c67a59 has not finished training
+06-14 14:26:04.483 I/IDS_TAG (  984): Closing IDS observe window
+06-14 14:26:04.483 I/IDS_TAG (  984): Getting Shared Preference for android.app.Application@8c67a59 uid = 10614
+06-14 14:26:04.483 I/IDS_TAG (  984): IDS count updated to 1 for android.app.Application@8c67a59
+06-14 14:26:04.500 E/om.babcross.app(  984): Unable to open libpenguin.so: dlopen failed: library "libpenguin.so" not found.
+06-14 14:26:04.500 W/libc    (  984): Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+06-14 14:26:04.500 I/BufferQueueProducer(  984): [](id:3d800000000,api:0,p:1777260016,c:984) setDequeueTimeout:2077252342
+06-14 14:26:04.501 I/BLASTBufferQueue_Java(  984): new BLASTBufferQueue, mName= VRI[MainActivity]@490fd87 mNativeObject= 0xb400006e59f1b3f0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3585 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910 android.view.Choreographer.doCallbacks:1367 android.view.Choreographer.doFrame:1292 android.view.Choreographer$FrameDisplayEventReceiver.run:1870 
+06-14 14:26:04.501 I/BLASTBufferQueue_Java(  984): update, w= 1440 h= 3120 mName = VRI[MainActivity]@490fd87 mNativeObject= 0xb400006e59f1b3f0 sc.mNativeObject= 0xb400006dd9ed9d10 format= -1 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3590 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 
+06-14 14:26:04.501 W/libc    (  984): Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+06-14 14:26:04.501 I/VRI[MainActivity]@490fd87(  984): Relayout returned: old=(0,0,1440,3120) new=(0,0,1440,3120) relayoutAsync=false req=(1440,3120)0 dur=4 res=0x3 s={true 0xb400006ea9f226a0} ch=true seqId=0
+06-14 14:26:04.501 I/VRI[MainActivity]@490fd87(  984): performConfigurationChange setNightDimText nightDimLevel=32
+06-14 14:26:04.502 D/VRI[MainActivity]@490fd87(  984): mThreadedRenderer.initialize() mSurface={isValid=true 0xb400006ea9f226a0} hwInitialized=true
+06-14 14:26:04.507 D/ScrollView(  984):  onsize change changed 
+06-14 14:26:04.507 D/VRI[MainActivity]@490fd87(  984): reportNextDraw android.view.ViewRootImpl.performTraversals:5443 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910 
+06-14 14:26:04.507 D/VRI[MainActivity]@490fd87(  984): Setup new sync=wmsSync-VRI[MainActivity]@490fd87#0
+06-14 14:26:04.507 I/VRI[MainActivity]@490fd87(  984): Creating new active sync group VRI[MainActivity]@490fd87#1
+06-14 14:26:04.509 D/VRI[MainActivity]@490fd87(  984): registerCallbacksForSync syncBuffer=false
+06-14 14:26:04.511 I/Kumiho-Kumiho(  984): getPackageName: com.babcross.app
+06-14 14:26:04.517 I/Kumiho-Kumiho(  984): getPackageName: com.babcross.app
+06-14 14:26:04.574 D/VRI[MainActivity]@490fd87(  984): Received frameDrawingCallback syncResult=0 frameNum=1.
+06-14 14:26:04.574 I/VRI[MainActivity]@490fd87(  984): mWNT: t=0xb400006e09ef9190 mBlastBufferQueue=0xb400006e59f1b3f0 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$12.onFrameDraw:15441 android.view.ThreadedRenderer$1.onFrameDraw:718 <bottom of call stack> 
+06-14 14:26:04.574 I/VRI[MainActivity]@490fd87(  984): Setting up sync and frameCommitCallback
+06-14 14:26:04.575 I/AdrenoUtils(  984): <ReadGpuID:357>: Reading chip ID through GSL
+06-14 14:26:04.575 W/qdgralloc(  984): getInterlacedFlag: getMetaData returned 3, defaulting to interlaced_flag = 0
+06-14 14:26:04.596 I/BLASTBufferQueue(  984): [VRI[MainActivity]@490fd87#0](f:0,a:0,s:0) onFrameAvailable the first frame is available
+06-14 14:26:04.596 I/SurfaceComposerClient(  984): apply transaction with the first frame. layerId: 69168, bufferData(ID: 4226247819267, frameNumber: 1)
+06-14 14:26:04.596 I/VRI[MainActivity]@490fd87(  984): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+06-14 14:26:04.596 D/HWUI    (  984): CFMS:: SetUp Pid : 984    Tid : 1119
+06-14 14:26:04.597 D/VRI[MainActivity]@490fd87(  984): reportDrawFinished seqId=0
+06-14 14:26:04.597 D/HWUI    (  984): HWUI - treat SMPTE_170M as sRGB
+06-14 14:26:04.599 W/qdgralloc(  984): getInterlacedFlag: getMetaData returned 3, defaulting to interlaced_flag = 0
+06-14 14:26:04.601 I/InsetsSourceConsumer(  984): applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:04.601 I/InsetsSourceConsumer(  984): applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:04.606 W/qdgralloc(  984): getInterlacedFlag: getMetaData returned 3, defaulting to interlaced_flag = 0
+06-14 14:26:04.617 W/qdgralloc(  984): getInterlacedFlag: getMetaData returned 3, defaulting to interlaced_flag = 0
+06-14 14:26:04.618 D/VRI[MainActivity]@490fd87(  984): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb400006ea9f226a0}
+06-14 14:26:04.618 D/InputMethodManagerUtils(  984): startInputInner - Id : 0
+06-14 14:26:04.618 I/InputMethodManager(  984): startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+06-14 14:26:04.619 I/om.babcross.app(  984): Compiler allocated 5066KB to compile void android.view.ViewRootImpl.performTraversals()
+06-14 14:26:04.623 I/InputMethodManager(  984): handleMessage: setImeVisibility visible=false
+06-14 14:26:04.623 D/InsetsController(  984): hide(ime(), fromIme=false)
+06-14 14:26:04.624 I/ImeTracker(  984): com.babcross.app:be663d45: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+06-14 14:26:04.624 D/InputTransport(  984): Input channel constructed: 'ClientS', fd=147
+06-14 14:26:05.678 D/NearbyConnections(  984): Discovery started with NFC requested, but there is no NfcDispatcher available. Discovery will continue over other mediums instead. To use NFC discovery, pass in an Activity when calling Nearby.getConnectionsClient().
+06-14 14:26:08.786 I/BLASTBufferQueue_Java(  984): update, w= 1440 h= 3120 mName = VRI[MainActivity]@490fd87 mNativeObject= 0xb400006e59f1b3f0 sc.mNativeObject= 0xb400006dd9ed9d10 format= -1 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3574 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 
+06-14 14:26:08.786 I/VRI[MainActivity]@490fd87(  984): Relayout returned: old=(0,0,1440,3120) new=(0,0,1440,3120) relayoutAsync=true req=(1440,3120)0 dur=0 res=0x0 s={true 0xb400006ea9f226a0} ch=false seqId=0
+06-14 14:26:08.786 I/VRI[MainActivity]@490fd87(  984): registerCallbackForPendingTransactions
+06-14 14:26:08.787 I/VRI[MainActivity]@490fd87(  984): mWNT: t=0xb400006e09ee2050 mBlastBufferQueue=0xb400006e59f1b3f0 fn= 211 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$10.onFrameDraw:6536 android.view.ViewRootImpl$4.onFrameDraw:2489 android.view.ThreadedRenderer$1.onFrameDraw:718 
+06-14 14:26:10.145 D/ProfileInstaller(  984): Installing profile for com.babcross.app
+06-14 14:26:24.510 W/om.babcross.app(  984): userfaultfd: MOVE ioctl seems unsupported: Connection timed out
+06-14 14:26:35.750 D/NearbyConnections(  984): Discovery started with NFC requested, but there is no NfcDispatcher available. Discovery will continue over other mediums instead. To use NFC discovery, pass in an Activity when calling Nearby.getConnectionsClient().
+06-14 14:26:35.752 W/NearbyConnections(  984): Failed to start discovery.
+06-14 14:26:35.752 W/NearbyConnections(  984): com.google.android.gms.common.api.ApiException: 8002: STATUS_ALREADY_DISCOVERING
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzdo.setFailedResult(com.google.android.gms:play-services-nearby@@19.2.0:1)
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzce.zzb(com.google.android.gms:play-services-nearby@@19.2.0:4)
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzfr.zza(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzb.onTransact(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at android.os.Binder.execTransactInternal(Binder.java:1462)
+06-14 14:26:35.752 W/NearbyConnections(  984): 	at android.os.Binder.execTransact(Binder.java:1401)
+06-14 14:26:35.754 W/NearbyConnections(  984): Failed to start discovery.
+06-14 14:26:35.754 W/NearbyConnections(  984): com.google.android.gms.common.api.ApiException: 8002: STATUS_ALREADY_DISCOVERING
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzdo.setFailedResult(com.google.android.gms:play-services-nearby@@19.2.0:1)
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzce.zzb(com.google.android.gms:play-services-nearby@@19.2.0:4)
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzfr.zza(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at com.google.android.gms.internal.nearby.zzb.onTransact(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at android.os.Binder.execTransactInternal(Binder.java:1462)
+06-14 14:26:35.754 W/NearbyConnections(  984): 	at android.os.Binder.execTransact(Binder.java:1401)
+06-14 14:40:56.009 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 0
+06-14 14:40:56.012 I/VRI[MainActivity]@490fd87(  984): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@490fd87
+06-14 14:40:56.080 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 1
+06-14 14:40:59.084 I/VRI[MainActivity]@490fd87(  984): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@490fd87
+06-14 14:41:08.698 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 0
+06-14 14:41:08.699 I/VRI[MainActivity]@490fd87(  984): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@490fd87
+06-14 14:41:08.751 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 1
+06-14 14:41:08.758 D/ScrollView(  984): initGoToTop
+06-14 14:41:08.805 D/ScrollView(  984):  onsize change changed 
+06-14 14:41:09.580 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 0
+06-14 14:41:09.650 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 1
+06-14 14:41:09.663 I/Toast   (  984): show: caller = com.babcross.app.MainActivity.setAutoConnectEnabled:7586 
+06-14 14:41:09.663 I/Toast   (  984): show: contextDispId = 0 mCustomDisplayId = -1 focusedDisplayId = 0 isActivityContext = true
+06-14 14:41:09.666 D/ScrollView(  984): initGoToTop
+06-14 14:41:09.683 D/ScrollView(  984):  onsize change changed 
+06-14 14:41:11.158 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 0
+06-14 14:41:11.239 I/VRI[MainActivity]@490fd87(  984): ViewPostIme pointer 1
+06-14 14:41:11.241 D/ScrollView(  984): initGoToTop
+06-14 14:41:11.269 D/ScrollView(  984):  onsize change changed 
+06-14 14:41:14.244 I/VRI[MainActivity]@490fd87(  984): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@490fd87

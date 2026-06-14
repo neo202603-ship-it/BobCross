@@ -1,0 +1,318 @@
+--------- beginning of main
+06-14 14:26:02.772 D/ActivityThread( 1273): setConscryptValidator - put
+06-14 14:26:02.794 W/ziparchive( 1273): Unable to open '/data/app/~~Uu3TL4_0SDv-IRf2rDY7cA==/com.babcross.app-67vFaHpATS1zOMgk1wn52w==/base.dm': No such file or directory
+06-14 14:26:02.794 W/ziparchive( 1273): Unable to open '/data/app/~~Uu3TL4_0SDv-IRf2rDY7cA==/com.babcross.app-67vFaHpATS1zOMgk1wn52w==/base.dm': No such file or directory
+06-14 14:26:02.841 D/nativeloader( 1273): Configuring clns-7 for other apk /data/app/~~Uu3TL4_0SDv-IRf2rDY7cA==/com.babcross.app-67vFaHpATS1zOMgk1wn52w==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~Uu3TL4_0SDv-IRf2rDY7cA==/com.babcross.app-67vFaHpATS1zOMgk1wn52w==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.babcross.app
+06-14 14:26:02.843 D/CompatChangeReporter( 1273): Compat change id reported: 202956589; UID 10488; state: ENABLED
+06-14 14:26:02.849 V/GraphicsEnvironment( 1273): Currently set values for:
+06-14 14:26:02.849 V/GraphicsEnvironment( 1273):   angle_gl_driver_selection_pkgs=[]
+06-14 14:26:02.849 V/GraphicsEnvironment( 1273):   angle_gl_driver_selection_values=[]
+06-14 14:26:02.849 V/GraphicsEnvironment( 1273): Global.Settings values are invalid: number of packages: 0, number of values: 0
+06-14 14:26:02.849 V/GraphicsEnvironment( 1273): App is not on the allowlist for updatable production driver.
+--------- beginning of system
+06-14 14:26:02.901 D/ActivityThread( 1273): com.babcross.app will use render engine as VK
+06-14 14:26:02.901 D/HWUI    ( 1273): HWUI - treat SMPTE_170M as sRGB
+06-14 14:26:02.904 D/HWUI    ( 1273): CacheManager constructor. deviceInfo=(1080, 1920)
+06-14 14:26:03.345 D/CompatChangeReporter( 1273): Compat change id reported: 279646685; UID 10488; state: ENABLED
+06-14 14:26:03.349 D/ScrollView( 1273): initGoToTop
+06-14 14:26:03.351 D/CompatChangeReporter( 1273): Compat change id reported: 63938206; UID 10488; state: ENABLED
+06-14 14:26:03.391 I/BluetoothAdapter( 1273): BluetoothAdapter() : com.babcross.app
+06-14 14:26:03.399 D/CompatChangeReporter( 1273): Compat change id reported: 309578419; UID 10488; state: ENABLED
+06-14 14:26:03.401 I/DecorView( 1273): setWindowBackground: isPopOver=false color=fffafafa d=android.graphics.drawable.ColorDrawable@cc227d
+06-14 14:26:03.424 W/WindowOnBackDispatcher( 1273): OnBackInvokedCallback is not enabled for the application.
+06-14 14:26:03.424 W/WindowOnBackDispatcher( 1273): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+06-14 14:26:03.425 D/CompatChangeReporter( 1273): Compat change id reported: 352594277; UID 10488; state: ENABLED
+06-14 14:26:03.429 I/ViewRootImpl( 1273): dVRR is disabled
+06-14 14:26:03.429 D/HardwareRenderer( 1273): onDisplayChanged. displayId=0 current wxh=1080x2400 mLargest wxh=0x0
+06-14 14:26:03.429 D/HardwareRenderer( 1273): Set largestWidth and largestHeight as logical resolution. (1080x2400)
+06-14 14:26:03.429 D/HWUI    ( 1273): setMaxSurfaceArea requested wxh=(1080,2400) requestedSurfaceArea(2592000) mMaxSurfaceArea(2073600)
+06-14 14:26:03.429 D/NativeCustomFrequencyManager( 1273): [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+06-14 14:26:03.430 I/om.babcross.app( 1273): Compiler allocated 4353KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+06-14 14:26:03.433 D/InputTransport( 1273): Input channel constructed: 'd415208', fd=126
+06-14 14:26:03.434 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.setView:1999, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:26:03.435 I/VRI[MainActivity]@6b0ac1e( 1273): synced displayState. AttachInfo displayState=2
+06-14 14:26:03.435 I/VRI[MainActivity]@6b0ac1e( 1273): setView = com.android.internal.policy.DecorView@a376c2a IsHRR=false TM=true
+06-14 14:26:03.435 I/IDS_TAG ( 1273): Clearing training data of android.app.Application@65d7f5f
+06-14 14:26:03.436 I/IDS_TAG ( 1273): Starting IDS observe window
+06-14 14:26:03.436 I/IDS_TAG ( 1273): Getting Shared Preference for android.app.Application@65d7f5f uid = 10488
+06-14 14:26:03.437 I/IDS_TAG ( 1273): App android.app.Application@65d7f5f has not finished training
+06-14 14:26:03.438 I/IDS_TAG ( 1273): Closing IDS observe window
+06-14 14:26:03.438 I/IDS_TAG ( 1273): Getting Shared Preference for android.app.Application@65d7f5f uid = 10488
+06-14 14:26:03.440 I/IDS_TAG ( 1273): IDS count updated to 1 for android.app.Application@65d7f5f
+06-14 14:26:03.484 I/BLASTBufferQueue_Java( 1273): new BLASTBufferQueue, mName= VRI[MainActivity]@6b0ac1e mNativeObject= 0xb40000740f146db0 sc.mNativeObject= 0xb40000737f138690 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 android.view.Choreographer.doCallbacks:1216 android.view.Choreographer.doFrame:1142 android.view.Choreographer$FrameDisplayEventReceiver.run:1707 
+06-14 14:26:03.484 I/BLASTBufferQueue_Java( 1273): update, w= 1080 h= 2400 mName = VRI[MainActivity]@6b0ac1e mNativeObject= 0xb40000740f146db0 sc.mNativeObject= 0xb40000737f138690 format= -1 caller= android.graphics.BLASTBufferQueue.<init>:88 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 
+06-14 14:26:03.484 I/VRI[MainActivity]@6b0ac1e( 1273): Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) relayoutAsync=false req=(1080,2400)0 dur=5 res=0x3 s={true 0xb40000736f197ce0} ch=true seqId=0
+06-14 14:26:03.485 I/VRI[MainActivity]@6b0ac1e( 1273): performConfigurationChange setNightDimText nightDimLevel=0
+06-14 14:26:03.485 D/VRI[MainActivity]@6b0ac1e( 1273): mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000736f197ce0} hwInitialized=true
+06-14 14:26:03.495 D/ScrollView( 1273):  onsize change changed 
+06-14 14:26:03.495 D/VRI[MainActivity]@6b0ac1e( 1273): reportNextDraw android.view.ViewRootImpl.performTraversals:5193 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 
+06-14 14:26:03.496 D/VRI[MainActivity]@6b0ac1e( 1273): Setup new sync=wmsSync-VRI[MainActivity]@6b0ac1e#0
+06-14 14:26:03.496 I/VRI[MainActivity]@6b0ac1e( 1273): Creating new active sync group VRI[MainActivity]@6b0ac1e#1
+06-14 14:26:03.497 D/VRI[MainActivity]@6b0ac1e( 1273): registerCallbacksForSync syncBuffer=false
+06-14 14:26:03.625 D/VRI[MainActivity]@6b0ac1e( 1273): Received frameDrawingCallback syncResult=0 frameNum=1.
+06-14 14:26:03.625 I/VRI[MainActivity]@6b0ac1e( 1273): mWNT: t=0xb4000074bf1669d0 mBlastBufferQueue=0xb40000740f146db0 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$11.onFrameDraw:15016 android.view.ThreadedRenderer$1.onFrameDraw:761 <bottom of call stack> 
+06-14 14:26:03.625 I/VRI[MainActivity]@6b0ac1e( 1273): Setting up sync and frameCommitCallback
+06-14 14:26:03.653 I/BLASTBufferQueue( 1273): [VRI[MainActivity]@6b0ac1e#0](f:0,a:0,s:0) onFrameAvailable the first frame is available
+06-14 14:26:03.653 I/VRI[MainActivity]@6b0ac1e( 1273): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+06-14 14:26:03.654 D/HWUI    ( 1273): CFMS:: SetUp Pid : 1273    Tid : 1323
+06-14 14:26:03.654 D/VRI[MainActivity]@6b0ac1e( 1273): reportDrawFinished seqId=0
+06-14 14:26:03.654 D/HWUI    ( 1273): HWUI - treat SMPTE_170M as sRGB
+06-14 14:26:03.661 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:03.661 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:03.668 I/om.babcross.app( 1273): Compiler allocated 7599KB to compile void android.view.ViewRootImpl.performTraversals()
+06-14 14:26:03.675 D/VRI[MainActivity]@6b0ac1e( 1273): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000736f197ce0}
+06-14 14:26:03.675 D/InputMethodManagerUtils( 1273): startInputInner - Id : 0
+06-14 14:26:03.675 I/InputMethodManager( 1273): startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+06-14 14:26:03.686 D/InputTransport( 1273): Input channel constructed: 'ClientS', fd=151
+06-14 14:26:03.690 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.handleInsetsControlChanged:2888, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:26:03.691 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=false, type=ime, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:04.482 D/NearbyConnections( 1273): Discovery started with NFC requested, but there is no NfcDispatcher available. Discovery will continue over other mediums instead. To use NFC discovery, pass in an Activity when calling Nearby.getConnectionsClient().
+06-14 14:26:05.799 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:07.974 I/BLASTBufferQueue_Java( 1273): update, w= 1080 h= 2400 mName = VRI[MainActivity]@6b0ac1e mNativeObject= 0xb40000740f146db0 sc.mNativeObject= 0xb40000737f138690 format= -1 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3386 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 
+06-14 14:26:07.974 I/VRI[MainActivity]@6b0ac1e( 1273): Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) relayoutAsync=true req=(1080,2400)0 dur=0 res=0x0 s={true 0xb40000736f197ce0} ch=false seqId=0
+06-14 14:26:07.974 I/VRI[MainActivity]@6b0ac1e( 1273): registerCallbackForPendingTransactions
+06-14 14:26:07.976 I/VRI[MainActivity]@6b0ac1e( 1273): mWNT: t=0xb4000074bf174490 mBlastBufferQueue=0xb40000740f146db0 fn= 258 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$9.onFrameDraw:6276 android.view.ViewRootImpl$3.onFrameDraw:2440 android.view.ThreadedRenderer$1.onFrameDraw:761 
+06-14 14:26:07.987 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:08.182 D/ProfileInstaller( 1273): Installing profile for com.babcross.app
+06-14 14:26:19.421 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:19.422 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:26:19.472 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:19.481 I/Dialog  ( 1273): mIsDeviceDefault = false, mIsSamsungBasicInteraction = false, isMetaDataInActivity = false
+06-14 14:26:19.483 I/DecorView( 1273): setWindowBackground: isPopOver=false color=fff1f1f3 d=android.graphics.drawable.InsetDrawable@5009953
+06-14 14:26:19.487 D/ScrollView( 1273): initGoToTop
+06-14 14:26:19.489 D/ScrollView( 1273): initGoToTop
+06-14 14:26:19.491 W/Settings( 1273): Setting show_button_background has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+06-14 14:26:19.492 I/WindowManager( 1273): WindowManagerGlobal#addView, ty=2, view=com.android.internal.policy.DecorView{a9c5fd V.E...... R.....I. 0,0-0,0}[MainActivity], caller=android.view.WindowManagerImpl.addView:158 android.app.Dialog.show:511 com.babcross.app.MainActivity.showConnectionPopup:4470 
+06-14 14:26:19.493 I/ViewRootImpl( 1273): dVRR is disabled
+06-14 14:26:19.493 D/NativeCustomFrequencyManager( 1273): [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+06-14 14:26:19.499 D/InputTransport( 1273): Input channel constructed: 'f3021b2', fd=160
+06-14 14:26:19.500 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.setView:1999, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:26:19.500 I/VRI[MainActivity]@14a92f2( 1273): synced displayState. AttachInfo displayState=2
+06-14 14:26:19.500 I/VRI[MainActivity]@14a92f2( 1273): setView = com.android.internal.policy.DecorView@a9c5fd IsHRR=false TM=true
+06-14 14:26:19.512 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:19.512 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:19.513 I/BLASTBufferQueue_Java( 1273): new BLASTBufferQueue, mName= VRI[MainActivity]@14a92f2 mNativeObject= 0xb40000740f141c70 sc.mNativeObject= 0xb40000737f13d790 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 android.view.Choreographer.doCallbacks:1216 android.view.Choreographer.doFrame:1142 android.view.Choreographer$FrameDisplayEventReceiver.run:1707 
+06-14 14:26:19.513 I/BLASTBufferQueue_Java( 1273): update, w= 1192 h= 1220 mName = VRI[MainActivity]@14a92f2 mNativeObject= 0xb40000740f141c70 sc.mNativeObject= 0xb40000737f13d790 format= -3 caller= android.graphics.BLASTBufferQueue.<init>:88 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 
+06-14 14:26:19.513 I/VRI[MainActivity]@14a92f2( 1273): Relayout returned: old=(0,75,1080,2274) new=(28,648,1052,1700) relayoutAsync=false req=(1024,1052)0 dur=4 res=0x3 s={true 0xb40000736f1fdfe0} ch=true seqId=0
+06-14 14:26:19.514 I/VRI[MainActivity]@14a92f2( 1273): performConfigurationChange setNightDimText nightDimLevel=0
+06-14 14:26:19.514 D/VRI[MainActivity]@14a92f2( 1273): mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000736f1fdfe0} hwInitialized=true
+06-14 14:26:19.516 D/VRI[MainActivity]@14a92f2( 1273): reportNextDraw android.view.ViewRootImpl.performTraversals:5193 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 
+06-14 14:26:19.516 D/VRI[MainActivity]@14a92f2( 1273): Setup new sync=wmsSync-VRI[MainActivity]@14a92f2#2
+06-14 14:26:19.517 I/VRI[MainActivity]@14a92f2( 1273): Creating new active sync group VRI[MainActivity]@14a92f2#3
+06-14 14:26:19.517 D/VRI[MainActivity]@14a92f2( 1273): registerCallbacksForSync syncBuffer=false
+06-14 14:26:19.519 D/VRI[MainActivity]@14a92f2( 1273): Received frameDrawingCallback syncResult=0 frameNum=1.
+06-14 14:26:19.519 I/VRI[MainActivity]@14a92f2( 1273): mWNT: t=0xb4000074bf180a50 mBlastBufferQueue=0xb40000740f141c70 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$11.onFrameDraw:15016 android.view.ThreadedRenderer$1.onFrameDraw:761 <bottom of call stack> 
+06-14 14:26:19.519 I/VRI[MainActivity]@14a92f2( 1273): Setting up sync and frameCommitCallback
+06-14 14:26:19.524 I/BLASTBufferQueue( 1273): [VRI[MainActivity]@14a92f2#1](f:0,a:0,s:0) onFrameAvailable the first frame is available
+06-14 14:26:19.524 I/VRI[MainActivity]@14a92f2( 1273): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+06-14 14:26:19.524 D/HWUI    ( 1273): CFMS:: SetUp Pid : 1273    Tid : 1323
+06-14 14:26:19.524 D/VRI[MainActivity]@14a92f2( 1273): reportDrawFinished seqId=0
+06-14 14:26:19.525 D/HWUI    ( 1273): HWUI - treat SMPTE_170M as sRGB
+06-14 14:26:19.526 I/DecorView( 1273): setWindowBackground: isPopOver=false color=0 d=android.graphics.drawable.ColorDrawable@6a58e4a
+06-14 14:26:19.534 I/BLASTBufferQueue_Java( 1273): update, w= 1192 h= 1136 mName = VRI[MainActivity]@14a92f2 mNativeObject= 0xb40000740f141c70 sc.mNativeObject= 0xb40000737f13ea50 format= -2 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3386 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 
+06-14 14:26:19.534 I/VRI[MainActivity]@14a92f2( 1273): Relayout returned: old=(28,648,1052,1700) new=(28,690,1052,1658) relayoutAsync=false req=(1024,968)0 dur=5 res=0x0 s={true 0xb40000736f1fdfe0} ch=false seqId=0
+06-14 14:26:19.534 D/VRI[MainActivity]@14a92f2( 1273): mThreadedRenderer.updateSurface() mSurface={isValid=true 0xb40000736f1fdfe0}
+06-14 14:26:19.536 I/VRI[MainActivity]@14a92f2( 1273): registerCallbackForPendingTransactions
+06-14 14:26:19.537 I/VRI[MainActivity]@14a92f2( 1273): mWNT: t=0xb4000074bf185c90 mBlastBufferQueue=0xb40000740f141c70 fn= 2 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$9.onFrameDraw:6276 android.view.ViewRootImpl$3.onFrameDraw:2440 android.view.ThreadedRenderer$1.onFrameDraw:761 
+06-14 14:26:19.543 I/VRI[MainActivity]@14a92f2( 1273): handleResized, frames=ClientWindowFrames{frame=[28,690][1052,1658] display=[0,75][1080,2274] parentFrame=[0,0][0,0]} displayId=0 dragResizing=false compatScale=1.0 frameChanged=false attachedFrameChanged=false configChanged=false displayChanged=false compatScaleChanged=false dragResizingChanged=false
+06-14 14:26:19.543 I/ImeFocusController( 1273): onPreWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+06-14 14:26:19.544 I/ImeFocusController( 1273): onPostWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+06-14 14:26:19.552 D/VRI[MainActivity]@14a92f2( 1273): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000736f1fdfe0}
+06-14 14:26:19.552 I/ImeFocusController( 1273): onPreWindowFocus: skipped hasWindowFocus=true mHasImeFocus=false
+06-14 14:26:19.553 I/ImeFocusController( 1273): onPostWindowFocus: skipped hasWindowFocus=true mHasImeFocus=false
+06-14 14:26:22.475 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:26:23.401 I/VRI[MainActivity]@14a92f2( 1273): ViewPostIme pointer 0
+06-14 14:26:23.482 I/VRI[MainActivity]@14a92f2( 1273): ViewPostIme pointer 1
+06-14 14:26:23.483 I/WindowManager( 1273): WindowManagerGlobal#removeView, ty=2, view=com.android.internal.policy.DecorView{a9c5fd V.ED..... R....... 0,0-1024,968}[MainActivity], caller=android.view.WindowManagerGlobal.removeView:626 android.view.WindowManagerImpl.removeViewImmediate:216 android.app.Dialog.dismissDialog:808 
+06-14 14:26:23.483 W/WindowOnBackDispatcher( 1273): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda15@8eaec3e
+06-14 14:26:23.485 I/VRI[MainActivity]@14a92f2( 1273): dispatchDetachedFromWindow
+06-14 14:26:23.492 W/InputEventReceiver( 1273): Attempted to finish an input event but the input event receiver has already been disposed.
+06-14 14:26:23.492 D/InputTransport( 1273): Input channel destroyed: 'f3021b2', fd=160
+06-14 14:26:23.499 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:23.499 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:26:23.509 D/VRI[MainActivity]@6b0ac1e( 1273): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000736f197ce0}
+06-14 14:26:23.509 D/InputMethodManagerUtils( 1273): startInputInner - Id : 0
+06-14 14:26:23.509 I/InputMethodManager( 1273): startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+06-14 14:26:23.512 D/InputTransport( 1273): Input channel constructed: 'ClientS', fd=155
+06-14 14:26:27.323 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:27.323 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:26:27.401 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:27.403 D/ScrollView( 1273): initGoToTop
+06-14 14:26:27.459 D/ScrollView( 1273):  onsize change changed 
+06-14 14:26:28.391 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:28.493 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:28.927 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:29.119 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:29.515 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:29.837 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:30.438 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:26:31.238 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:26:34.238 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:26:34.298 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:34.736 D/NearbyConnections( 1273): Discovery started with NFC requested, but there is no NfcDispatcher available. Discovery will continue over other mediums instead. To use NFC discovery, pass in an Activity when calling Nearby.getConnectionsClient().
+06-14 14:26:34.737 W/NearbyConnections( 1273): Failed to start discovery.
+06-14 14:26:34.737 W/NearbyConnections( 1273): com.google.android.gms.common.api.ApiException: 8002: STATUS_ALREADY_DISCOVERING
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzdo.setFailedResult(com.google.android.gms:play-services-nearby@@19.2.0:1)
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzce.zzb(com.google.android.gms:play-services-nearby@@19.2.0:4)
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzfr.zza(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzb.onTransact(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at android.os.Binder.execTransactInternal(Binder.java:1541)
+06-14 14:26:34.737 W/NearbyConnections( 1273): 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 14:26:34.738 W/NearbyConnections( 1273): Failed to start discovery.
+06-14 14:26:34.738 W/NearbyConnections( 1273): com.google.android.gms.common.api.ApiException: 8002: STATUS_ALREADY_DISCOVERING
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzdo.setFailedResult(com.google.android.gms:play-services-nearby@@19.2.0:1)
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzce.zzb(com.google.android.gms:play-services-nearby@@19.2.0:4)
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzfr.zza(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at com.google.android.gms.internal.nearby.zzb.onTransact(com.google.android.gms:play-services-nearby@@19.2.0:3)
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at android.os.Binder.execTransactInternal(Binder.java:1541)
+06-14 14:26:34.738 W/NearbyConnections( 1273): 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 14:26:36.514 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:36.661 D/InputTransport( 1273): Input channel destroyed: 'ClientS', fd=155
+06-14 14:26:36.847 I/Choreographer( 1273): Skipped 39 frames!  The application may be doing too much work on its main thread.
+06-14 14:26:43.493 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:43.520 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:53.504 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:53.527 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:26:58.140 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:27:03.499 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:27:04.288 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:27:13.557 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:27:33.551 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:27:43.590 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:03.500 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:03.540 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:03.586 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:13.662 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:33.572 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:43.686 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:47.882 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:28:53.697 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:03.527 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:03.555 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:03.593 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:13.732 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:33.617 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:29:43.792 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:03.536 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:03.581 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:03.613 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:13.839 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:33.625 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:30:43.860 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:03.574 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:03.613 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:03.652 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:13.922 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:33.656 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:31:43.964 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:03.597 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:03.631 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:03.675 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:14.028 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:33.697 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:32:44.065 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:03.605 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:03.637 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:03.672 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:14.132 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:33.687 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:33:44.158 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:03.642 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:03.687 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:03.722 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:14.225 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:33.730 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:34:44.278 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:03.664 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:03.692 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:03.725 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:14.327 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:33.744 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:35:44.386 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:03.686 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:03.725 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:03.759 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:14.414 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:18.797 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:24.452 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:36:31.703 I/VRI[MainActivity]@6b0ac1e( 1273): handleAppVisibility mAppVisible = true visible = false
+06-14 14:36:31.703 D/VRI[MainActivity]@6b0ac1e( 1273): visibilityChanged oldVisibility=true newVisibility=false
+06-14 14:36:31.707 D/HWUI    ( 1273): CacheManager::trimMemory(20)
+06-14 14:36:31.720 I/VRI[MainActivity]@6b0ac1e( 1273): Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) relayoutAsync=false req=(1080,2400)8 dur=8 res=0x2 s={false 0x0} ch=true seqId=0
+06-14 14:36:31.721 D/VRI[MainActivity]@6b0ac1e( 1273): Not drawing due to not visible. Reason=!mAppVisible && !mForceDecorViewVisibility
+06-14 14:36:31.723 D/HWUI    ( 1273): CacheManager::trimMemory(20)
+06-14 14:36:31.725 I/VRI[MainActivity]@6b0ac1e( 1273): stopped(true) old = false
+06-14 14:36:31.725 D/VRI[MainActivity]@6b0ac1e( 1273): WindowStopped on com.babcross.app/com.babcross.app.MainActivity set to true
+06-14 14:36:31.726 D/HWUI    ( 1273): CacheManager::trimMemory(20)
+06-14 14:36:31.731 I/ImeFocusController( 1273): onPreWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+06-14 14:36:31.733 I/ImeFocusController( 1273): onPostWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+06-14 14:36:31.746 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=1
+06-14 14:36:31.904 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=1 newDisplayState=1
+06-14 14:36:31.965 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=1 newDisplayState=1
+06-14 14:36:32.203 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=1 newDisplayState=3
+06-14 14:36:32.420 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=3
+06-14 14:36:33.612 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=4
+06-14 14:36:33.636 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=4
+06-14 14:36:36.645 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=3
+06-14 14:36:36.674 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=3
+06-14 14:36:36.856 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=4
+06-14 14:36:36.874 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=4
+06-14 14:37:00.072 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=3
+06-14 14:37:00.106 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=3
+06-14 14:37:00.700 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=3 newDisplayState=4
+06-14 14:37:00.701 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=4
+06-14 14:40:59.155 I/VRI[MainActivity]@6b0ac1e( 1273): handleAppVisibility mAppVisible = false visible = true
+06-14 14:40:59.155 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=4 newDisplayState=2
+06-14 14:40:59.156 I/VRI[MainActivity]@6b0ac1e( 1273): stopped(false) old = true
+06-14 14:40:59.156 D/VRI[MainActivity]@6b0ac1e( 1273): WindowStopped on com.babcross.app/com.babcross.app.MainActivity set to false
+06-14 14:40:59.157 W/WindowOnBackDispatcher( 1273): OnBackInvokedCallback is not enabled for the application.
+06-14 14:40:59.157 W/WindowOnBackDispatcher( 1273): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+06-14 14:40:59.158 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.handleInsetsControlChanged:2888, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=false mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:40:59.201 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.relayoutWindow:11304, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:40:59.202 I/BLASTBufferQueue_Java( 1273): new BLASTBufferQueue, mName= VRI[MainActivity]@6b0ac1e mNativeObject= 0xb40000740f146db0 sc.mNativeObject= 0xb40000737f1346d0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 android.view.Choreographer.doCallbacks:1216 android.view.Choreographer.doFrame:1142 android.view.Choreographer$FrameDisplayEventReceiver.run:1707 
+06-14 14:40:59.202 I/BLASTBufferQueue_Java( 1273): update, w= 1080 h= 2400 mName = VRI[MainActivity]@6b0ac1e mNativeObject= 0xb40000740f146db0 sc.mNativeObject= 0xb40000737f1346d0 format= -1 caller= android.graphics.BLASTBufferQueue.<init>:88 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3397 android.view.ViewRootImpl.relayoutWindow:11361 android.view.ViewRootImpl.performTraversals:4544 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 
+06-14 14:40:59.203 I/VRI[MainActivity]@6b0ac1e( 1273): Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) relayoutAsync=false req=(1080,2400)0 dur=4 res=0x3 s={true 0xb40000736f197ce0} ch=true seqId=0
+06-14 14:40:59.203 D/VRI[MainActivity]@6b0ac1e( 1273): mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000736f197ce0} hwInitialized=true
+06-14 14:40:59.203 D/VRI[MainActivity]@6b0ac1e( 1273): reportNextDraw android.view.ViewRootImpl.performTraversals:5193 android.view.ViewRootImpl.doTraversal:3708 android.view.ViewRootImpl$TraversalRunnable.run:12542 android.view.Choreographer$CallbackRecord.run:1751 android.view.Choreographer$CallbackRecord.run:1760 
+06-14 14:40:59.203 D/VRI[MainActivity]@6b0ac1e( 1273): Setup new sync=wmsSync-VRI[MainActivity]@6b0ac1e#4
+06-14 14:40:59.203 I/VRI[MainActivity]@6b0ac1e( 1273): Creating new active sync group VRI[MainActivity]@6b0ac1e#5
+06-14 14:40:59.203 D/VRI[MainActivity]@6b0ac1e( 1273): Start draw after previous draw not visible
+06-14 14:40:59.204 D/VRI[MainActivity]@6b0ac1e( 1273): registerCallbacksForSync syncBuffer=false
+06-14 14:40:59.217 D/VRI[MainActivity]@6b0ac1e( 1273): Received frameDrawingCallback syncResult=0 frameNum=1.
+06-14 14:40:59.217 I/VRI[MainActivity]@6b0ac1e( 1273): mWNT: t=0xb4000074bf145790 mBlastBufferQueue=0xb40000740f146db0 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$11.onFrameDraw:15016 android.view.ThreadedRenderer$1.onFrameDraw:761 <bottom of call stack> 
+06-14 14:40:59.217 I/VRI[MainActivity]@6b0ac1e( 1273): Setting up sync and frameCommitCallback
+06-14 14:40:59.224 I/BLASTBufferQueue( 1273): [VRI[MainActivity]@6b0ac1e#2](f:0,a:0,s:0) onFrameAvailable the first frame is available
+06-14 14:40:59.224 I/VRI[MainActivity]@6b0ac1e( 1273): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+06-14 14:40:59.225 D/VRI[MainActivity]@6b0ac1e( 1273): reportDrawFinished seqId=0
+06-14 14:40:59.226 I/InsetsController( 1273): onStateChanged: host=com.babcross.app/com.babcross.app.MainActivity, from=android.view.ViewRootImpl.handleResized:2789, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 75 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(512, 0 - 569, 75), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.8125} cutoutSpec={M 0, 0 H -10.13333333333333 V 26.66666666666667 H 10.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=95, center=Point(95, 95)}, RoundedCorner{position=TopRight, radius=95, center=Point(985, 95)}, RoundedCorner{position=BottomRight, radius=95, center=Point(985, 2305)}, RoundedCorner{position=BottomLeft, radius=95, center=Point(95, 2305)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 75) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {911c0000 mType=statusBars mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0005 mType=mandatorySystemGestures mFrame=[0,0][1080,107] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {911c0006 mType=tappableElement mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][1080,75] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {f180001 mType=navigationBars mFrame=[0,2274][1080,2400] mVisible=false mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {f180005 mType=mandatorySystemGestures mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180006 mType=tappableElement mFrame=[0,2274][1080,2400] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {f180024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null} }
+06-14 14:40:59.226 I/VRI[MainActivity]@6b0ac1e( 1273): handleResized, frames=ClientWindowFrames{frame=[0,0][1080,2400] display=[0,0][1080,2400] parentFrame=[0,0][0,0]} displayId=0 dragResizing=false compatScale=1.0 frameChanged=false attachedFrameChanged=false configChanged=false displayChanged=false compatScaleChanged=false dragResizingChanged=false
+06-14 14:40:59.226 I/VRI[MainActivity]@6b0ac1e( 1273): handleResized, frames=ClientWindowFrames{frame=[0,0][1080,2400] display=[0,0][1080,2400] parentFrame=[0,0][0,0]} displayId=0 dragResizing=false compatScale=1.0 frameChanged=false attachedFrameChanged=false configChanged=false displayChanged=false compatScaleChanged=false dragResizingChanged=false
+06-14 14:40:59.270 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:40:59.280 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:40:59.280 I/InsetsSourceConsumer( 1273): applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.babcross.app/com.babcross.app.MainActivity
+06-14 14:40:59.314 D/VRI[MainActivity]@6b0ac1e( 1273): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000736f197ce0}
+06-14 14:40:59.315 D/InputMethodManagerUtils( 1273): startInputInner - Id : 0
+06-14 14:40:59.315 I/InputMethodManager( 1273): startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+06-14 14:40:59.319 D/InputTransport( 1273): Input channel constructed: 'ClientS', fd=150
+06-14 14:41:01.464 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:01.478 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:02.529 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:05.083 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:41:05.084 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:41:05.116 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:05.134 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:41:05.152 I/Toast   ( 1273): show: caller = com.babcross.app.MainActivity.setAutoConnectEnabled:7586 
+06-14 14:41:05.153 I/Toast   ( 1273): show: isDexDualMode = false
+06-14 14:41:05.153 I/Toast   ( 1273): show: contextDispId = 0 mCustomDisplayId = -1 focusedDisplayId = 0 isActivityContext = true
+06-14 14:41:05.161 D/ScrollView( 1273): initGoToTop
+06-14 14:41:05.195 D/ScrollView( 1273):  onsize change changed 
+06-14 14:41:08.136 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:41:08.739 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:11.591 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 0
+06-14 14:41:11.592 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=high hint, reason=touch, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:41:11.639 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:41:11.654 I/VRI[MainActivity]@6b0ac1e( 1273): ViewPostIme pointer 1
+06-14 14:41:11.655 D/ScrollView( 1273): initGoToTop
+06-14 14:41:11.685 D/ScrollView( 1273):  onsize change changed 
+06-14 14:41:14.659 I/VRI[MainActivity]@6b0ac1e( 1273): call setFrameRateCategory for touch hint category=no preference, reason=boost timeout, vri=VRI[MainActivity]@6b0ac1e
+06-14 14:41:18.528 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2

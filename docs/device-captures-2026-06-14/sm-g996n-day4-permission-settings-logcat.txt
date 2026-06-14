@@ -1,0 +1,28 @@
+38:06-14 15:33:17.491 24327 24052 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:7) and sleep 5000 for endpoint PGYO.
+39:06-14 15:33:17.502 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:7) with ACK from endpoint PGYO on channel WIFI_AWARE.
+41:06-14 15:33:17.587 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:7) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel WIFI_AWARE.
+42:06-14 15:33:17.596  1385  2160 D SGM:GameManager: identifyForegroundApp. com.babcross.app, mCurrentUserId: 0, callerUserId: 0
+48:06-14 15:33:17.668 24327 22699 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+153:06-14 15:33:18.830  1385  3124 D FreecessController: com.babcross.app(10488) is important[12]
+182:06-14 15:33:22.496 24327 24052 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:8) and sleep 5000 for endpoint PGYO.
+185:06-14 15:33:22.530 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:8) with ACK from endpoint PGYO on channel WIFI_AWARE.
+186:06-14 15:33:22.590 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:8) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel WIFI_AWARE.
+204:06-14 15:33:23.831  1385  3124 D FreecessController: com.babcross.app(10488) is important[12]
+226:06-14 15:33:24.121  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_23895#5256 Max (can't resolve refresh rate)
+290:06-14 15:33:24.785  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_23895#5256 Max (can't resolve refresh rate)
+320:06-14 15:33:26.018  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_23895#5256 at index 1
+322:06-14 15:33:26.020  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_23895#5264 at index 3
+378:06-14 15:33:27.501 24327 24052 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:9) and sleep 5000 for endpoint PGYO.
+379:06-14 15:33:27.557 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:9) with ACK from endpoint PGYO on channel WIFI_AWARE.
+380:06-14 15:33:27.614 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:9) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel WIFI_AWARE.
+384:06-14 15:33:27.671 24327 22699 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+385:06-14 15:33:27.673 24327 24058 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x49 0x47 0x4f 0x11 0x32 0x03 0x5d 0xf2 0x94 0xc1 0x42 0xb5 0x21 0xda 0x0a 0x58 0x0e 0xf6 0x0b 0xcc 0xe8 ], deviceToken=[ 0x4c 0xe8 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@ec28ad6 size=2 contents="L\350">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+386:06-14 15:33:27.673 24327 24058 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x49 0x47 0x4f 0x11 0x32 0x03 0x5d 0xf2 0x94 0xc1 0x42 0xb5 0x21 0xda 0x0a 0x58 0x0e 0xf6 0x0b 0xcc 0xe8 ], deviceToken=[ 0x4c 0xe8 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@ec28ad6 size=2 contents="L\350">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId LIGO and EndpointInfo [ 0x32 0x03 0x5d 0xf2 0x94 0xc1 0x42 0xb5 0x21 0xda 0x0a 0x58 0x0e 0xf6 0x0b 0xcc 0xe8 ]).
+387:06-14 15:33:27.674 24327 24058 I NearbyConnections: ClientProxy(237100707) reporting onEndpointLost(LIGO)
+444:06-14 15:33:28.835  1385  3124 D FreecessController: com.babcross.app(10488) is important[12]
+468:06-14 15:33:32.510 24327 24052 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:10) and sleep 5000 for endpoint PGYO.
+469:06-14 15:33:32.572 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:10) with ACK from endpoint PGYO on channel WIFI_AWARE.
+470:06-14 15:33:32.584 24327 24051 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:10) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel WIFI_AWARE.
+490:06-14 15:33:33.618  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_23895#5256 Max (can't resolve refresh rate)
+513:06-14 15:33:33.673  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_23895#5256 is small dirty
+576:06-14 15:33:33.836  1385  3124 D FreecessController: com.babcross.app(10488) is important[12]

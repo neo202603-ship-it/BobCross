@@ -1,0 +1,775 @@
+--------- beginning of main
+06-14 16:31:50.018  7439  7441 I artd    : Loading /data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.018  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.018  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~53YxY0qRU9zrXfsJz3CbKA==@com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==@base.apk@classes.vdex)
+06-14 16:31:50.018  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~53YxY0qRU9zrXfsJz3CbKA==@com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~53YxY0qRU9zrXfsJz3CbKA==@com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.018  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~53YxY0qRU9zrXfsJz3CbKA==@com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~53YxY0qRU9zrXfsJz3CbKA==@com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.018  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.vdex)
+06-14 16:31:50.019  7439  7441 I artd    : Successfully loaded /data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.019  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.vdex
+06-14 16:31:50.019  7439  7441 I artd    : /data/app/~~53YxY0qRU9zrXfsJz3CbKA==/com.samsung.android.aremojieditor-ZBNbC_oXDMQ57XhEvqlCMA==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.044  7439  7441 I artd    : Dex parent of /data/app/~~wOl5KMKteN7NB_D5o138MQ==/com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==/base.apk is not writable: Permission denied
+06-14 16:31:50.044  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~wOl5KMKteN7NB_D5o138MQ==@com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==@base.apk@classes.dex)
+06-14 16:31:50.044  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~wOl5KMKteN7NB_D5o138MQ==@com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.044  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~wOl5KMKteN7NB_D5o138MQ==@com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~wOl5KMKteN7NB_D5o138MQ==@com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.044  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~wOl5KMKteN7NB_D5o138MQ==/com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==/oat/arm64/base.odex)
+06-14 16:31:50.044  7439  7441 I artd    : Loading /data/app/~~wOl5KMKteN7NB_D5o138MQ==/com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.045  7439  7441 I artd    : Successfully loaded /data/app/~~wOl5KMKteN7NB_D5o138MQ==/com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.045  7439  7441 I artd    : /data/app/~~wOl5KMKteN7NB_D5o138MQ==/com.yunmai.ko.scale-1NBIr3nz6FAkEB5017J91A==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.049  7439  7441 I artd    : Dex parent of /data/app/~~TBdu8C3_m9x0jOyy_f1p0Q==/com.android.vending-OZaWau3AwXjREUPg_QrWpA==/base.apk is not writable: Permission denied
+06-14 16:31:50.049  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~TBdu8C3_m9x0jOyy_f1p0Q==@com.android.vending-OZaWau3AwXjREUPg_QrWpA==@base.apk@classes.dex)
+06-14 16:31:50.049  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~TBdu8C3_m9x0jOyy_f1p0Q==@com.android.vending-OZaWau3AwXjREUPg_QrWpA==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.049  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~TBdu8C3_m9x0jOyy_f1p0Q==@com.android.vending-OZaWau3AwXjREUPg_QrWpA==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~TBdu8C3_m9x0jOyy_f1p0Q==@com.android.vending-OZaWau3AwXjREUPg_QrWpA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.049  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~TBdu8C3_m9x0jOyy_f1p0Q==/com.android.vending-OZaWau3AwXjREUPg_QrWpA==/oat/arm64/base.odex)
+06-14 16:31:50.049  7439  7441 I artd    : Loading /data/app/~~TBdu8C3_m9x0jOyy_f1p0Q==/com.android.vending-OZaWau3AwXjREUPg_QrWpA==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.050  7439  7441 I artd    : Successfully loaded /data/app/~~TBdu8C3_m9x0jOyy_f1p0Q==/com.android.vending-OZaWau3AwXjREUPg_QrWpA==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.050  7439  7441 I artd    : /data/app/~~TBdu8C3_m9x0jOyy_f1p0Q==/com.android.vending-OZaWau3AwXjREUPg_QrWpA==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.051  7439  7441 I artd    : Dex parent of /data/user/0/com.android.vending/app_dg_cache/5833371D1ACC412507A92815B074897510CCCEDD/the.apk is not writable: Permission denied
+06-14 16:31:50.051  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@5833371D1ACC412507A92815B074897510CCCEDD@the.apk@classes.dex)
+06-14 16:31:50.051  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@5833371D1ACC412507A92815B074897510CCCEDD@the.apk@classes.dex with executable: 0
+06-14 16:31:50.052  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@5833371D1ACC412507A92815B074897510CCCEDD@the.apk@classes.dex: File /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@5833371D1ACC412507A92815B074897510CCCEDD@the.apk@classes.vdex does not exist.
+06-14 16:31:50.052  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/user/0/com.android.vending/app_dg_cache/5833371D1ACC412507A92815B074897510CCCEDD/oat/arm64/the.odex)
+06-14 16:31:50.052  7439  7441 I artd    : Loading /data/user/0/com.android.vending/app_dg_cache/5833371D1ACC412507A92815B074897510CCCEDD/oat/arm64/the.odex with executable: 0
+06-14 16:31:50.052  7439  7441 I artd    : Successfully loaded /data/user/0/com.android.vending/app_dg_cache/5833371D1ACC412507A92815B074897510CCCEDD/oat/arm64/the.odex with executable: 0
+06-14 16:31:50.052  7439  7441 I artd    : /data/user/0/com.android.vending/app_dg_cache/5833371D1ACC412507A92815B074897510CCCEDD/oat/arm64/the.odex is kOatUpToDate with filter verify
+06-14 16:31:50.052  7439  7441 W artd    : Could not get dex checksums for location /data/app/~~gnNfwnNYlJB4rbiW0EFOSA==/com.android.vending-QLxY4tw6pFbAT9kvQ4Xi-A==/base.apk, fd=-1
+06-14 16:31:50.053  1385  4402 E ArtService: Failed to get dexopt status [packageName = com.android.vending, dexPath = /data/user/0/com.android.vending/app_dg_cache/9D5BCED7935D64431BF672B8BBD597199833CA19/the.apk, isa = arm64, classLoaderContext = PCL[];PCL[/data/app/~~gnNfwnNYlJB4rbiW0EFOSA==/com.android.vending-QLxY4tw6pFbAT9kvQ4Xi-A==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system/system_ext/framework/androidx.window.extensions.jar]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar]}]
+06-14 16:31:50.053  1385  4402 E ArtService: android.os.ServiceSpecificException: Failed to create OatFileAssistant: Failed to load class loader context files for '/data/user/0/com.android.vending/app_dg_cache/9D5BCED7935D64431BF672B8BBD597199833CA19/the.apk' with context 'PCL[];PCL[/data/app/~~gnNfwnNYlJB4rbiW0EFOSA==/com.android.vending-QLxY4tw6pFbAT9kvQ4Xi-A==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system/system_ext/framework/androidx.window.extensions.jar]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar]}' (code 1)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3270)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Parcel.createException(Parcel.java:3240)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Parcel.readException(Parcel.java:3223)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Parcel.readException(Parcel.java:3165)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.art.IArtd$Stub$Proxy.getDexoptStatus(IArtd.java:778)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.art.ArtFileManager.getUsableArtifacts(ArtFileManager.java:149)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.art.ArtManagerLocal.getArtManagedFileStats(ArtManagerLocal.java:1005)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.computeAppStatsByDataTypes(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:75)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.queryStatsForUid(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:138)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.queryStatsForPackage(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:83)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.app.usage.IStorageStatsManager$Stub.onTransact(IStorageStatsManager.java:265)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Binder.execTransactInternal(Binder.java:1536)
+06-14 16:31:50.053  1385  4402 E ArtService: 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 16:31:50.054  7439  7441 I artd    : Dex parent of /data/user/0/com.android.vending/app_dg_cache/729D45471C06B554246842057AC1D981DDFFE340/the.apk is not writable: Permission denied
+06-14 16:31:50.054  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@729D45471C06B554246842057AC1D981DDFFE340@the.apk@classes.dex)
+06-14 16:31:50.054  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@729D45471C06B554246842057AC1D981DDFFE340@the.apk@classes.dex with executable: 0
+06-14 16:31:50.054  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@729D45471C06B554246842057AC1D981DDFFE340@the.apk@classes.dex: File /data/dalvik-cache/arm64/data@user@0@com.android.vending@app_dg_cache@729D45471C06B554246842057AC1D981DDFFE340@the.apk@classes.vdex does not exist.
+06-14 16:31:50.054  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/user/0/com.android.vending/app_dg_cache/729D45471C06B554246842057AC1D981DDFFE340/oat/arm64/the.odex)
+06-14 16:31:50.054  7439  7441 I artd    : Loading /data/user/0/com.android.vending/app_dg_cache/729D45471C06B554246842057AC1D981DDFFE340/oat/arm64/the.odex with executable: 0
+06-14 16:31:50.054  7439  7441 I artd    : Successfully loaded /data/user/0/com.android.vending/app_dg_cache/729D45471C06B554246842057AC1D981DDFFE340/oat/arm64/the.odex with executable: 0
+06-14 16:31:50.055  7439  7441 I artd    : /data/user/0/com.android.vending/app_dg_cache/729D45471C06B554246842057AC1D981DDFFE340/oat/arm64/the.odex is kOatUpToDate with filter verify
+06-14 16:31:50.063  7439  7441 I artd    : Dex parent of /data/app/~~sEZM0wFI-kXeYK1V659BNA==/com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==/base.apk is not writable: Permission denied
+06-14 16:31:50.063  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~sEZM0wFI-kXeYK1V659BNA==@com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==@base.apk@classes.dex)
+06-14 16:31:50.063  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~sEZM0wFI-kXeYK1V659BNA==@com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.063  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~sEZM0wFI-kXeYK1V659BNA==@com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~sEZM0wFI-kXeYK1V659BNA==@com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.063  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~sEZM0wFI-kXeYK1V659BNA==/com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==/oat/arm64/base.odex)
+06-14 16:31:50.063  7439  7441 I artd    : Loading /data/app/~~sEZM0wFI-kXeYK1V659BNA==/com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.063  7439  7441 I artd    : Successfully loaded /data/app/~~sEZM0wFI-kXeYK1V659BNA==/com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.064  7439  7441 I artd    : /data/app/~~sEZM0wFI-kXeYK1V659BNA==/com.samsung.android.game.gamehome-4gaXc0Vns8LjggFZZgq-DQ==/oat/arm64/base.odex is kOatUpToDate with filter verify
+06-14 16:31:50.081  7439  7441 I artd    : Dex parent of /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/base.apk is not writable: Permission denied
+06-14 16:31:50.081  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.dex)
+06-14 16:31:50.081  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.081  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.081  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.odex)
+06-14 16:31:50.081  7439  7441 I artd    : Loading /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.081  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.081  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex)
+06-14 16:31:50.081  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.081  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~gLkaek681PO0nksTd8U0sw==@com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.081  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.vdex)
+06-14 16:31:50.082  7439  7441 I artd    : Successfully loaded /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.082  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.vdex
+06-14 16:31:50.082  7439  7441 I artd    : /data/app/~~gLkaek681PO0nksTd8U0sw==/com.TouchEn.mVaccine.webs-oxUs9PZC_7kC5Er0PNiDWg==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.100  7439  7441 I artd    : Dex parent of /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/base.apk is not writable: Permission denied
+06-14 16:31:50.100  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.dex)
+06-14 16:31:50.100  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.100  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.100  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.odex)
+06-14 16:31:50.100  7439  7441 I artd    : Loading /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.100  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.100  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex)
+06-14 16:31:50.100  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.100  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~weKAv-33qKxwYPlYj0lDNA==@com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.100  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.vdex)
+06-14 16:31:50.101  7439  7441 I artd    : Successfully loaded /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.101  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.vdex
+06-14 16:31:50.101  7439  7441 I artd    : /data/app/~~weKAv-33qKxwYPlYj0lDNA==/com.google.android.apps.nbu.files-vvvHii1K4GPREN01XL3KJw==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.117  7439  7441 I artd    : Dex parent of /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/base.apk is not writable: Permission denied
+06-14 16:31:50.117  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.dex)
+06-14 16:31:50.117  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.117  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.117  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.odex)
+06-14 16:31:50.117  7439  7441 I artd    : Loading /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.117  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.117  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex)
+06-14 16:31:50.117  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.117  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~dVAwzOYMFA7HiJmuJvmj5Q==@com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.117  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.vdex)
+06-14 16:31:50.118  7439  7441 I artd    : Successfully loaded /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.118  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.vdex
+06-14 16:31:50.118  7439  7441 I artd    : /data/app/~~dVAwzOYMFA7HiJmuJvmj5Q==/com.cvsnet.app.mobile.android.postbox-sfF92XTCyATvOkVSkow9oA==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.130  7439  7441 I artd    : Dex parent of /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/base.apk is not writable: Permission denied
+06-14 16:31:50.130  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.dex)
+06-14 16:31:50.130  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.130  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.odex)
+06-14 16:31:50.130  7439  7441 I artd    : Loading /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.130  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.odex: File /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex)
+06-14 16:31:50.130  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~eTBU04WgkpcOGEGYB8fmnQ==@io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex)
+06-14 16:31:50.130  7439  7441 I artd    : unable to open vdex file /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex: File /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex: File /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/oat/arm64/base.vdex does not exist.
+06-14 16:31:50.130  7439  7441 I artd    : GetBestInfo checking dm (/data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/base.dm)
+06-14 16:31:50.131  7439  7441 I artd    : Successfully loaded /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/base.dm with executable: 0
+06-14 16:31:50.131  7439  7441 I artd    : Image checksum test skipped for vdex file primary.vdex mapped directly in memory from /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/base.dm
+06-14 16:31:50.131  7439  7441 I artd    : primary.vdex mapped directly in memory from /data/app/~~eTBU04WgkpcOGEGYB8fmnQ==/io.comup.goldrewardapp-SPrZenrZWG3guAVjwhHZhw==/base.dm is kOatUpToDate with filter verify
+06-14 16:31:50.134  7439  7441 I artd    : Dex parent of /data/app/~~zCq1LkH4yBaGmREY_Y2yXQ==/com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==/base.apk is not writable: Permission denied
+06-14 16:31:50.134  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~zCq1LkH4yBaGmREY_Y2yXQ==@com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==@base.apk@classes.dex)
+06-14 16:31:50.134  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~zCq1LkH4yBaGmREY_Y2yXQ==@com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.134  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~zCq1LkH4yBaGmREY_Y2yXQ==@com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~zCq1LkH4yBaGmREY_Y2yXQ==@com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.134  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~zCq1LkH4yBaGmREY_Y2yXQ==/com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==/oat/arm64/base.odex)
+06-14 16:31:50.134  7439  7441 I artd    : Loading /data/app/~~zCq1LkH4yBaGmREY_Y2yXQ==/com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.135  7439  7441 I artd    : Successfully loaded /data/app/~~zCq1LkH4yBaGmREY_Y2yXQ==/com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.136  7439  7441 I artd    : /data/app/~~zCq1LkH4yBaGmREY_Y2yXQ==/com.towneers.www-5hM4z7Dq_B9PDkM9c8gXcg==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.165  7439  7441 I artd    : Dex parent of /data/app/~~1OugCMmZuTTZvC-vkgzPew==/com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==/base.apk is not writable: Permission denied
+06-14 16:31:50.165  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~1OugCMmZuTTZvC-vkgzPew==@com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==@base.apk@classes.dex)
+06-14 16:31:50.165  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~1OugCMmZuTTZvC-vkgzPew==@com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.165  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~1OugCMmZuTTZvC-vkgzPew==@com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~1OugCMmZuTTZvC-vkgzPew==@com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.165  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~1OugCMmZuTTZvC-vkgzPew==/com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==/oat/arm64/base.odex)
+06-14 16:31:50.165  7439  7441 I artd    : Loading /data/app/~~1OugCMmZuTTZvC-vkgzPew==/com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.166  7439  7441 I artd    : Successfully loaded /data/app/~~1OugCMmZuTTZvC-vkgzPew==/com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.167  7439  7441 I artd    : /data/app/~~1OugCMmZuTTZvC-vkgzPew==/com.kakaopay.app-jLgm2VmrWacYCCLz3yF8lg==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.175  7439  7441 I artd    : Dex parent of /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/base.apk is not writable: Permission denied
+06-14 16:31:50.175  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.dex)
+06-14 16:31:50.175  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.175  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.175  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.odex)
+06-14 16:31:50.175  7439  7441 I artd    : Loading /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.175  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.175  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex)
+06-14 16:31:50.175  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.175  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~_cpcxzjiYZM-ip6tLbyaiQ==@com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.175  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.vdex)
+06-14 16:31:50.176  7439  7441 I artd    : Successfully loaded /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.176  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.vdex
+06-14 16:31:50.176  7439  7441 I artd    : /data/app/~~_cpcxzjiYZM-ip6tLbyaiQ==/com.samsung.android.livestickers--wnfJ4bQv6clYRaM0OoSjg==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.190  7439  7441 I artd    : Dex parent of /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/base.apk is not writable: Permission denied
+06-14 16:31:50.190  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.dex)
+06-14 16:31:50.190  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.190  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.190  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.odex)
+06-14 16:31:50.190  7439  7441 I artd    : Loading /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.190  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.190  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex)
+06-14 16:31:50.190  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.190  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~e_wxLm6Cf7rNtP-S9A--FA==@com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.190  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.vdex)
+06-14 16:31:50.190  7439  7441 I artd    : Successfully loaded /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.190  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.vdex
+06-14 16:31:50.190  7439  7441 I artd    : /data/app/~~e_wxLm6Cf7rNtP-S9A--FA==/com.nhn.android.works.drive-DKIaRhq2ovSsGhGB6910qw==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.202  7439  7441 I artd    : Dex parent of /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/base.apk is not writable: Permission denied
+06-14 16:31:50.202  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.dex)
+06-14 16:31:50.202  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.202  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.202  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.odex)
+06-14 16:31:50.202  7439  7441 I artd    : Loading /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.202  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.202  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex)
+06-14 16:31:50.202  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.202  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~ERjopC0kDIf8ukVS2eJqvg==@com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.202  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.vdex)
+06-14 16:31:50.202  7439  7441 I artd    : Successfully loaded /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.202  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.vdex
+06-14 16:31:50.202  7439  7441 I artd    : /data/app/~~ERjopC0kDIf8ukVS2eJqvg==/com.softlunch.billzi-n2C153p4itHP0MXbDHjWmg==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.210  7439  7441 I artd    : Dex parent of /data/app/~~6S7QUoLsOr0QH_bH37aU-Q==/com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==/base.apk is not writable: Permission denied
+06-14 16:31:50.210  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~6S7QUoLsOr0QH_bH37aU-Q==@com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==@base.apk@classes.dex)
+06-14 16:31:50.210  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~6S7QUoLsOr0QH_bH37aU-Q==@com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.210  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~6S7QUoLsOr0QH_bH37aU-Q==@com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~6S7QUoLsOr0QH_bH37aU-Q==@com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.210  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~6S7QUoLsOr0QH_bH37aU-Q==/com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==/oat/arm64/base.odex)
+06-14 16:31:50.210  7439  7441 I artd    : Loading /data/app/~~6S7QUoLsOr0QH_bH37aU-Q==/com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.211  7439  7441 I artd    : Successfully loaded /data/app/~~6S7QUoLsOr0QH_bH37aU-Q==/com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.211  7439  7441 I artd    : /data/app/~~6S7QUoLsOr0QH_bH37aU-Q==/com.google.android.youtube-KWVcRaAkPJyVazusUM2Cow==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.212  7439  7441 I artd    : Dex parent of /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/pcam.jar is not writable: Permission denied
+06-14 16:31:50.212  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.dex)
+06-14 16:31:50.212  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.dex with executable: 0
+06-14 16:31:50.212  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.dex: File /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex does not exist.
+06-14 16:31:50.212  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.odex)
+06-14 16:31:50.212  7439  7441 I artd    : Loading /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.odex with executable: 0
+06-14 16:31:50.212  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.213  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex)
+06-14 16:31:50.213  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex: File /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex does not exist.
+06-14 16:31:50.213  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex: File /data/dalvik-cache/arm64/data@user@0@com.google.android.youtube@app_pccache2@5@7A613BD952B4C9A3464BD07DB3FDE8BF1644696C@pcam.jar@classes.vdex does not exist.
+06-14 16:31:50.213  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.vdex)
+06-14 16:31:50.213  7439  7441 I artd    : Successfully loaded /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.vdex with executable: 0
+06-14 16:31:50.213  7439  7441 I artd    : Image checksum test skipped for vdex file /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.vdex
+06-14 16:31:50.213  7439  7441 I artd    : /data/user/0/com.google.android.youtube/app_pccache2/5/7A613BD952B4C9A3464BD07DB3FDE8BF1644696C/oat/arm64/pcam.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.213  7439  7441 W artd    : Could not get dex checksums for location /data/app/~~8U02U_lIp-Sa_2eWOt5cKA==/com.google.android.youtube-Ie2muCdn1C5evuvFrCyfrQ==/base.apk, fd=-1
+06-14 16:31:50.213  1385  4402 E ArtService: Failed to get dexopt status [packageName = com.google.android.youtube, dexPath = /data/user/0/com.google.android.youtube/app_yqzdkcache/drgd/v/pcam.jar, isa = arm64, classLoaderContext = PCL[];PCL[/data/app/~~8U02U_lIp-Sa_2eWOt5cKA==/com.google.android.youtube-Ie2muCdn1C5evuvFrCyfrQ==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system/system_ext/framework/androidx.window.extensions.jar]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar]}]
+06-14 16:31:50.213  1385  4402 E ArtService: android.os.ServiceSpecificException: Failed to create OatFileAssistant: Failed to load class loader context files for '/data/user/0/com.google.android.youtube/app_yqzdkcache/drgd/v/pcam.jar' with context 'PCL[];PCL[/data/app/~~8U02U_lIp-Sa_2eWOt5cKA==/com.google.android.youtube-Ie2muCdn1C5evuvFrCyfrQ==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system/system_ext/framework/androidx.window.extensions.jar]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar]}' (code 1)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3270)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Parcel.createException(Parcel.java:3240)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Parcel.readException(Parcel.java:3223)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Parcel.readException(Parcel.java:3165)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.art.IArtd$Stub$Proxy.getDexoptStatus(IArtd.java:778)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.art.ArtFileManager.getUsableArtifacts(ArtFileManager.java:149)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.art.ArtManagerLocal.getArtManagedFileStats(ArtManagerLocal.java:1005)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.computeAppStatsByDataTypes(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:75)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.queryStatsForUid(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:138)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at com.android.server.usage.StorageStatsService.queryStatsForPackage(qb/107175120 4e350bd776fbf1ec83e1f64f89a8dc7111d84fc39479e989da6f7ae2075c2822:83)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.app.usage.IStorageStatsManager$Stub.onTransact(IStorageStatsManager.java:265)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Binder.execTransactInternal(Binder.java:1536)
+06-14 16:31:50.213  1385  4402 E ArtService: 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 16:31:50.219 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.os.statsd' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.220  7439  7441 I artd    : Dex parent of /data/app/~~Soiy0ARfHmbgU-VtLHpjrQ==/com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==/base.apk is not writable: Permission denied
+06-14 16:31:50.220  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~Soiy0ARfHmbgU-VtLHpjrQ==@com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==@base.apk@classes.dex)
+06-14 16:31:50.220  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~Soiy0ARfHmbgU-VtLHpjrQ==@com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.220  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~Soiy0ARfHmbgU-VtLHpjrQ==@com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~Soiy0ARfHmbgU-VtLHpjrQ==@com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.220  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~Soiy0ARfHmbgU-VtLHpjrQ==/com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==/oat/arm64/base.odex)
+06-14 16:31:50.220  7439  7441 I artd    : Loading /data/app/~~Soiy0ARfHmbgU-VtLHpjrQ==/com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.220  7439  7441 I artd    : Successfully loaded /data/app/~~Soiy0ARfHmbgU-VtLHpjrQ==/com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.220  7439  7441 I artd    : /data/app/~~Soiy0ARfHmbgU-VtLHpjrQ==/com.DPMOBESA-R-MCI_nNYPZQcDuSra7Raw==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.232  7439  7441 I artd    : Dex parent of /data/app/~~5K7r5_5X-kTqlyOIGw_ejQ==/kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==/base.apk is not writable: Permission denied
+06-14 16:31:50.232  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~5K7r5_5X-kTqlyOIGw_ejQ==@kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==@base.apk@classes.dex)
+06-14 16:31:50.232  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~5K7r5_5X-kTqlyOIGw_ejQ==@kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.232  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~5K7r5_5X-kTqlyOIGw_ejQ==@kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~5K7r5_5X-kTqlyOIGw_ejQ==@kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.232  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~5K7r5_5X-kTqlyOIGw_ejQ==/kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==/oat/arm64/base.odex)
+06-14 16:31:50.232  7439  7441 I artd    : Loading /data/app/~~5K7r5_5X-kTqlyOIGw_ejQ==/kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.233  7439  7441 I artd    : Successfully loaded /data/app/~~5K7r5_5X-kTqlyOIGw_ejQ==/kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.233  7439  7441 I artd    : /data/app/~~5K7r5_5X-kTqlyOIGw_ejQ==/kr.co.samsungcard.mpocket-L4TGhyky4BRJNrWE7R5XVQ==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.241  7439  7441 I artd    : Dex parent of /data/app/~~AS3a6SMOvI8IgFIbb6I1Dw==/com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==/base.apk is not writable: Permission denied
+06-14 16:31:50.241  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~AS3a6SMOvI8IgFIbb6I1Dw==@com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==@base.apk@classes.dex)
+06-14 16:31:50.241  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~AS3a6SMOvI8IgFIbb6I1Dw==@com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.241  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~AS3a6SMOvI8IgFIbb6I1Dw==@com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~AS3a6SMOvI8IgFIbb6I1Dw==@com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.241  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~AS3a6SMOvI8IgFIbb6I1Dw==/com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==/oat/arm64/base.odex)
+06-14 16:31:50.241  7439  7441 I artd    : Loading /data/app/~~AS3a6SMOvI8IgFIbb6I1Dw==/com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.242  7439  7441 I artd    : Successfully loaded /data/app/~~AS3a6SMOvI8IgFIbb6I1Dw==/com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.242  7439  7441 I artd    : /data/app/~~AS3a6SMOvI8IgFIbb6I1Dw==/com.samsung.android.goodlock-EpjF0qpiCEK2s0IKTe8GYg==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.244  7439  7441 I artd    : Dex parent of /data/app/~~YL_c4QlKqclStTN9lYu5eA==/com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==/base.apk is not writable: Permission denied
+06-14 16:31:50.244  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~YL_c4QlKqclStTN9lYu5eA==@com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==@base.apk@classes.dex)
+06-14 16:31:50.244  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~YL_c4QlKqclStTN9lYu5eA==@com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.244  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~YL_c4QlKqclStTN9lYu5eA==@com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~YL_c4QlKqclStTN9lYu5eA==@com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.244  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~YL_c4QlKqclStTN9lYu5eA==/com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==/oat/arm64/base.odex)
+06-14 16:31:50.244  7439  7441 I artd    : Loading /data/app/~~YL_c4QlKqclStTN9lYu5eA==/com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.245  7439  7441 I artd    : Successfully loaded /data/app/~~YL_c4QlKqclStTN9lYu5eA==/com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.245  7439  7441 I artd    : /data/app/~~YL_c4QlKqclStTN9lYu5eA==/com.lguplus.tsmproxy-OYR87pWNT4ln4aXsAujnUQ==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.251 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.samsung.android.authfw.ta' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.258  7439  7441 I artd    : Dex parent of /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/base.apk is not writable: Permission denied
+06-14 16:31:50.258  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@base.apk@classes.dex)
+06-14 16:31:50.258  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.258  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.258  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/base.odex)
+06-14 16:31:50.258  7439  7441 I artd    : Loading /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.259  7439  7441 I artd    : Successfully loaded /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.261  7439  7441 I artd    : /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.263  7439  7441 I artd    : Dex parent of /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/split_lib_dynamic_sdk_kakao.apk is not writable: Permission denied
+06-14 16:31:50.263  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.dex)
+06-14 16:31:50.263  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.dex with executable: 0
+06-14 16:31:50.263  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex does not exist.
+06-14 16:31:50.263  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.odex)
+06-14 16:31:50.263  7439  7441 I artd    : Loading /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.odex with executable: 0
+06-14 16:31:50.263  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.263  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex)
+06-14 16:31:50.263  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex does not exist.
+06-14 16:31:50.263  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~eukZ1iveXQrHghC8IcFQtA==@com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==@split_lib_dynamic_sdk_kakao.apk@classes.vdex does not exist.
+06-14 16:31:50.263  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.vdex)
+06-14 16:31:50.264  7439  7441 I artd    : Successfully loaded /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.vdex with executable: 0
+06-14 16:31:50.264  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.vdex
+06-14 16:31:50.264  7439  7441 I artd    : /data/app/~~eukZ1iveXQrHghC8IcFQtA==/com.dubox.drive-rX50ue4z1ZyA9jAfDDg38Q==/oat/arm64/split_lib_dynamic_sdk_kakao.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.278 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.samsung.android.wifi.broadcom' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.279  7439  7441 I artd    : Dex parent of /data/app/~~0KpsKO6aYN_BSotZTcthog==/com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==/base.apk is not writable: Permission denied
+06-14 16:31:50.279  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~0KpsKO6aYN_BSotZTcthog==@com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==@base.apk@classes.dex)
+06-14 16:31:50.279  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~0KpsKO6aYN_BSotZTcthog==@com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.279  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~0KpsKO6aYN_BSotZTcthog==@com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~0KpsKO6aYN_BSotZTcthog==@com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.279  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~0KpsKO6aYN_BSotZTcthog==/com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==/oat/arm64/base.odex)
+06-14 16:31:50.279  7439  7441 I artd    : Loading /data/app/~~0KpsKO6aYN_BSotZTcthog==/com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.279  7439  7441 I artd    : Successfully loaded /data/app/~~0KpsKO6aYN_BSotZTcthog==/com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.279  7439  7441 I artd    : /data/app/~~0KpsKO6aYN_BSotZTcthog==/com.samsung.android.easysetup-kMGbCtSi9JcgWhAkpeMbZg==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.282  7439  7441 I artd    : Dex parent of /data/app/~~iKwe6bvdJFDrmJ49EBs-BA==/com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==/base.apk is not writable: Permission denied
+06-14 16:31:50.282  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~iKwe6bvdJFDrmJ49EBs-BA==@com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==@base.apk@classes.dex)
+06-14 16:31:50.282  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~iKwe6bvdJFDrmJ49EBs-BA==@com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.282  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~iKwe6bvdJFDrmJ49EBs-BA==@com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~iKwe6bvdJFDrmJ49EBs-BA==@com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.282  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~iKwe6bvdJFDrmJ49EBs-BA==/com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==/oat/arm64/base.odex)
+06-14 16:31:50.282  7439  7441 I artd    : Loading /data/app/~~iKwe6bvdJFDrmJ49EBs-BA==/com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.283  7439  7441 I artd    : Successfully loaded /data/app/~~iKwe6bvdJFDrmJ49EBs-BA==/com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.283  7439  7441 I artd    : /data/app/~~iKwe6bvdJFDrmJ49EBs-BA==/com.skt.skaf.OA00018282-s5YD-PyuLnWXUbxVbUDZYg==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.286  7439  7441 I artd    : Dex parent of /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/base.apk is not writable: Permission denied
+06-14 16:31:50.286  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.dex)
+06-14 16:31:50.286  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.286  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.286  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.odex)
+06-14 16:31:50.286  7439  7441 I artd    : Loading /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.286  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.286  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex)
+06-14 16:31:50.286  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.286  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~OHZZGP7WFb_RkUwmDads8g==@net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.286  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.vdex)
+06-14 16:31:50.286  7439  7441 I artd    : Successfully loaded /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.287  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.vdex
+06-14 16:31:50.287  7439  7441 I artd    : /data/app/~~OHZZGP7WFb_RkUwmDads8g==/net.daum.android.dictionary-QF_lieVATatK_lZNRThe7Q==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.308 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.rkpd' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.314  7439  7441 I artd    : Dex parent of /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/base.apk is not writable: Permission denied
+06-14 16:31:50.314  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.dex)
+06-14 16:31:50.314  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.314  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.314  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.odex)
+06-14 16:31:50.314  7439  7441 I artd    : Loading /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.314  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.314  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex)
+06-14 16:31:50.314  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.314  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~y4E13m7_4J7KtQ-sOVtZ8w==@com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.314  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.vdex)
+06-14 16:31:50.315  7439  7441 I artd    : Successfully loaded /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.315  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.vdex
+06-14 16:31:50.315  7439  7441 I artd    : /data/app/~~y4E13m7_4J7KtQ-sOVtZ8w==/com.samsung.android.privateshare-IT1RzMlYtce2kl69Rg9N8Q==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.330  7439  7441 I artd    : Dex parent of /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/base.apk is not writable: Permission denied
+06-14 16:31:50.330  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.dex)
+06-14 16:31:50.330  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.330  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.330  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.odex)
+06-14 16:31:50.330  7439  7441 I artd    : Loading /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.330  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.330  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex)
+06-14 16:31:50.330  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.330  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~BT6yyo5Pl7WDxxWTm_eagQ==@com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.330  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.vdex)
+06-14 16:31:50.330  7439  7441 I artd    : Successfully loaded /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.330  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.vdex
+06-14 16:31:50.330  7439  7441 I artd    : /data/app/~~BT6yyo5Pl7WDxxWTm_eagQ==/com.samsung.android.coldwalletservice-j7htJ5k5c3sqBGWUSVPqGg==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.346 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.scheduling' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.348  7439  7441 I artd    : Dex parent of /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/base.apk is not writable: Permission denied
+06-14 16:31:50.348  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.dex)
+06-14 16:31:50.348  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.348  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.348  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.odex)
+06-14 16:31:50.348  7439  7441 I artd    : Loading /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.348  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.odex: Failed to open oat filename for reading: No such file or directory
+06-14 16:31:50.348  7439  7441 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex)
+06-14 16:31:50.348  7439  7441 I artd    : unable to open vdex file /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.348  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex: File /data/dalvik-cache/arm64/data@app@~~DehN__d2RTxyN-jJib1Mqg==@com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.348  7439  7441 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.vdex)
+06-14 16:31:50.348  7439  7441 I artd    : Successfully loaded /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.vdex with executable: 0
+06-14 16:31:50.350  7439  7441 I artd    : Image checksum test skipped for vdex file /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.vdex
+06-14 16:31:50.350  7439  7441 I artd    : /data/app/~~DehN__d2RTxyN-jJib1Mqg==/com.skt.skaf.A000Z00040-b4oaX2SmH9K1gk7g_odLmQ==/oat/arm64/base.vdex is kOatUpToDate with filter verify
+06-14 16:31:50.366  7439  7441 I artd    : Dex parent of /data/app/~~yG5NmY8WiXfvREBRGk_mTQ==/com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==/base.apk is not writable: Permission denied
+06-14 16:31:50.366  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~yG5NmY8WiXfvREBRGk_mTQ==@com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==@base.apk@classes.dex)
+06-14 16:31:50.366  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~yG5NmY8WiXfvREBRGk_mTQ==@com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.366  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~yG5NmY8WiXfvREBRGk_mTQ==@com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~yG5NmY8WiXfvREBRGk_mTQ==@com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.366  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~yG5NmY8WiXfvREBRGk_mTQ==/com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==/oat/arm64/base.odex)
+06-14 16:31:50.366  7439  7441 I artd    : Loading /data/app/~~yG5NmY8WiXfvREBRGk_mTQ==/com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.368  7439  7441 I artd    : Successfully loaded /data/app/~~yG5NmY8WiXfvREBRGk_mTQ==/com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.368  7439  7441 I artd    : /data/app/~~yG5NmY8WiXfvREBRGk_mTQ==/com.google.android.gm-_TOSnKaQ1OO9rQgmGKzPzw==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.371  7439  7441 I artd    : Dex parent of /data/app/~~GNY21P8vfh5a9rPHz75fuQ==/com.kakao.talk-sfWHrtxLAUHkornM8X103Q==/base.apk is not writable: Permission denied
+06-14 16:31:50.371  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~GNY21P8vfh5a9rPHz75fuQ==@com.kakao.talk-sfWHrtxLAUHkornM8X103Q==@base.apk@classes.dex)
+06-14 16:31:50.371  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~GNY21P8vfh5a9rPHz75fuQ==@com.kakao.talk-sfWHrtxLAUHkornM8X103Q==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.371  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~GNY21P8vfh5a9rPHz75fuQ==@com.kakao.talk-sfWHrtxLAUHkornM8X103Q==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~GNY21P8vfh5a9rPHz75fuQ==@com.kakao.talk-sfWHrtxLAUHkornM8X103Q==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.371  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~GNY21P8vfh5a9rPHz75fuQ==/com.kakao.talk-sfWHrtxLAUHkornM8X103Q==/oat/arm64/base.odex)
+06-14 16:31:50.371  7439  7441 I artd    : Loading /data/app/~~GNY21P8vfh5a9rPHz75fuQ==/com.kakao.talk-sfWHrtxLAUHkornM8X103Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.375  7439  7441 I artd    : Successfully loaded /data/app/~~GNY21P8vfh5a9rPHz75fuQ==/com.kakao.talk-sfWHrtxLAUHkornM8X103Q==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.376  7439  7441 I artd    : /data/app/~~GNY21P8vfh5a9rPHz75fuQ==/com.kakao.talk-sfWHrtxLAUHkornM8X103Q==/oat/arm64/base.odex is kOatUpToDate with filter speed-profile
+06-14 16:31:50.380 31115 31115 W Finsky  : [2] STU: Failed to get storage stats for package 'com.samsung.android.lifeguard' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+06-14 16:31:50.389  7439  7441 I artd    : Dex parent of /data/app/~~VnjC45rb08vCD-jWcTN_Tg==/com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==/base.apk is not writable: Permission denied
+06-14 16:31:50.389  7439  7441 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/arm64/data@app@~~VnjC45rb08vCD-jWcTN_Tg==@com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==@base.apk@classes.dex)
+06-14 16:31:50.389  7439  7441 I artd    : Loading /data/dalvik-cache/arm64/data@app@~~VnjC45rb08vCD-jWcTN_Tg==@com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==@base.apk@classes.dex with executable: 0
+06-14 16:31:50.389  7439  7441 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/arm64/data@app@~~VnjC45rb08vCD-jWcTN_Tg==@com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==@base.apk@classes.dex: File /data/dalvik-cache/arm64/data@app@~~VnjC45rb08vCD-jWcTN_Tg==@com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==@base.apk@classes.vdex does not exist.
+06-14 16:31:50.389  7439  7441 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~VnjC45rb08vCD-jWcTN_Tg==/com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==/oat/arm64/base.odex)
+06-14 16:31:50.389  7439  7441 I artd    : Loading /data/app/~~VnjC45rb08vCD-jWcTN_Tg==/com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.390  7439  7441 I artd    : Successfully loaded /data/app/~~VnjC45rb08vCD-jWcTN_Tg==/com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==/oat/arm64/base.odex with executable: 0
+06-14 16:31:50.390  7439  7441 I artd    : /data/app/~~VnjC45rb08vCD-jWcTN_Tg==/com.localmemeboard-nKsamfzFhBJyk2SG6lGYzQ==/oat/arm64/base.odex is kOatUpToDate with filter verify
+06-14 16:31:50.419 31115 31115 I Finsky  : [2] App states replicator found 91 unowned apps
+06-14 16:31:50.432  8417  8423 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:50.432  8417  8423 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:50.432  8417  8423 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:50.433  8417  8423 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:50.515  1385  1909 I SemWifiServiceDetector: Service det. suspended: T / T / 25535
+06-14 16:31:50.518 24327 24503 E AuthPII : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.android.vending, Service: oauth2:https://www.googleapis.com/auth/googleplay
+06-14 16:31:50.518 24327 24503 E AuthPII : bjjk: Long live credential not available.
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicq.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):1347)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicx.b(:com.google.android.gms@262031035@26.20.31 (260400-919905943):26)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicv.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):745)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicu.b(:com.google.android.gms@262031035@26.20.31 (260400-919905943):151)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at abab.d(:com.google.android.gms@262031035@26.20.31 (260400-919905943):800)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at ahwh.getAuthToken(:com.google.android.gms@262031035@26.20.31 (260400-919905943):411)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at cqtp.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):12)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at ccio.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):169)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.execTransactInternal(Binder.java:1541)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 16:31:50.518 24327 24503 E AuthPII : Message is Long live credential not available.
+06-14 16:31:50.518 24327 24503 E AuthPII : bjjk: Long live credential not available.
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicq.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):1347)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicx.b(:com.google.android.gms@262031035@26.20.31 (260400-919905943):26)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicv.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):745)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at aicu.b(:com.google.android.gms@262031035@26.20.31 (260400-919905943):151)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at abab.d(:com.google.android.gms@262031035@26.20.31 (260400-919905943):800)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at ahwh.getAuthToken(:com.google.android.gms@262031035@26.20.31 (260400-919905943):411)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at cqtp.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):12)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at ccio.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):169)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.execTransactInternal(Binder.java:1541)
+06-14 16:31:50.518 24327 24503 E AuthPII : 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 16:31:50.532 24327 24503 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+06-14 16:31:50.532 24327 24503 W Auth    : [ChimeraGetToken] exception while trying to fetch auth tokens for app=com.google.android.gms, scope=oauth2:https://www.googleapis.com/auth/googleplay [CONTEXT service_id=153 ]
+06-14 16:31:50.532 24327 24503 W Auth    : aicp: GetToken failed with status code and recovery intent: BadAuthentication
+06-14 16:31:50.532 24327 24503 W Auth    : 	at aicu.b(:com.google.android.gms@262031035@26.20.31 (260400-919905943):352)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at abab.d(:com.google.android.gms@262031035@26.20.31 (260400-919905943):800)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at ahwh.getAuthToken(:com.google.android.gms@262031035@26.20.31 (260400-919905943):411)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at cqtp.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):12)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.os.Binder.transact(Binder.java:1381)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at ccio.onTransact(:com.google.android.gms@262031035@26.20.31 (260400-919905943):169)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.os.Binder.execTransactInternal(Binder.java:1541)
+06-14 16:31:50.532 24327 24503 W Auth    : 	at android.os.Binder.execTransact(Binder.java:1480)
+06-14 16:31:50.532 24327 24503 W GLSActivity: [GmsAccountAuthenticatorImpl] error status while fetching token:BadAuthentication
+06-14 16:31:50.540 31115  7729 I Finsky  : [378] Completed 1 account content syncs with 0 successful.
+06-14 16:31:50.541 31115 31115 I Finsky  : [2] [ContentSync] Installation state replication failed, parameters=Id: 12-1, CT: 1781422282812, Constraints: [{ L: 20000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }].
+06-14 16:31:50.541 31115 31115 I Finsky  : [2] [ContentSync] Scheduling replication attempt 1.
+06-14 16:31:50.541 31115 31115 I Finsky  : [2] SCH: jobFinished: 12-1. TimeElapsed: 7691ms.
+06-14 16:31:50.542 31115 31115 I Finsky  : [2] WM::SCH: Logging work end for 12-1
+06-14 16:31:50.547 31115  7512 I Finsky  : [373] SCH: Attempting to reschedule job: Id: 12-1, Constraints: [{ L: 40000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.563 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 1-1337, CT: 1781387356798, Constraints: [{ L: 42808440, D: 86008440, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.563 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7616, CT: 1781084592104, Constraints: [{ L: 604800000, D: 2486811330, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.563 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7623, CT: 1781084592105, Constraints: [{ L: 604800000, D: 2566071535, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.564 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7627, CT: 1781143551767, Constraints: [{ L: 604800000, D: 2591996385, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.564 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7633, CT: 1781222824909, Constraints: [{ L: 604800000, D: 2591998834, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.564 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7638, CT: 1781387357257, Constraints: [{ L: 604800000, D: 2534600291, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.564 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7641, CT: 1781409246631, Constraints: [{ L: 79199712, D: 1375199712, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.564 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 34-7642, CT: 1781409246804, Constraints: [{ L: 604800000, D: 2591999892, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.567 31115 31153 I Finsky  : [297] SCH: Scheduling 1 system job(s)
+06-14 16:31:50.568 31115 31153 I Finsky  : [297] SCH: Scheduling system job Id: 9558, L: 7854670, D: 51054670, C: false, I: false, N: 1
+--------- beginning of system
+06-14 16:31:50.571   694  8462 I keystore2: system/security/keystore2/watchdog/src/lib.rs:319 - Watchdog thread idle -> terminating. Have a great day.
+06-14 16:31:50.576 31115  7728 I Finsky  : [377] SCH: job service finished with id 9549.
+06-14 16:31:50.581  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 16480, isSameBssidAndFreq true
+06-14 16:31:50.586 31115 31115 I Finsky  : [2] Memory trim requested to level 40
+06-14 16:31:50.586 31115 31115 I Finsky  : [2] Flushing in-memory image cache
+06-14 16:31:50.620  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 16:31:50.636  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:17:35, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:50.645  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x10, addressType=1, address=XX:XX:XX:XX:93:14, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-52, periodicAdvInt=0x0
+06-14 16:31:50.649 31115 31145 I Finsky  : [289] WM::SCH: Logging work initialize for 12-1
+06-14 16:31:50.653 31115 31152 I Finsky  : [296] SCH: Scheduling phonesky job Id: 12-1, CT: 1781422310547, Constraints: [{ L: 40000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+06-14 16:31:50.658 31115 31153 I Finsky  : [297] SCH: Scheduling 1 system job(s)
+06-14 16:31:50.658 31115 31153 I Finsky  : [297] SCH: Scheduling system job Id: 9558, L: 39889, D: 51054580, C: false, I: false, N: 1
+06-14 16:31:50.716  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 16:31:50.721  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:0B:31, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-58, periodicAdvInt=0x0
+06-14 16:31:50.775  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:17:35, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-17, periodicAdvInt=0x0
+06-14 16:31:51.218  1385  3124 I NSLocationMonitor: getGPSUsingApps() called
+06-14 16:31:51.220  3123  3140 I NSLocationManager_FLP: getGPSUsingApps, No change
+06-14 16:31:51.237  1385  3124 D FreecessController: com.google.android.adservices.api(state: Initial -> Frozen, Reason: Bg-refreeze)
+06-14 16:31:51.237  1385  3124 D FreecessController: com.google.android.adservices.api is not MARs target, skip to freeze
+06-14 16:31:51.284  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 16:31:51.744  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+06-14 16:31:51.746  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+06-14 16:31:51.746  1385  1825 D InetDiagMessage: Destroyed live tcp sockets for uids={10213} in 5ms
+06-14 16:31:51.748  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+06-14 16:31:51.750  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+06-14 16:31:51.750  1385  1825 D InetDiagMessage: Destroyed live tcp sockets for uids={20213} in 3ms
+06-14 16:31:51.836  1096  1171 I VSyncReactor: Current= 60, Period= 60, hwcPeriod= 60
+06-14 16:31:51.852  1096  1096 I SurfaceFlinger: SFWD update time=76137760904887
+06-14 16:31:51.855   677   677 D io_stats: !@   8,0 r 7838872 166623508 w 1476564 20427732 d 423329 97617004 f 0 0 iot 3048920 0 th 0 0 0 pt 0 inp 0 0 76137.764
+06-14 16:31:51.855   677   677 D io_stats: !@ Read_top(KB): binder:1284_2(1284) 50916 hbox:interactor(27327) 536 binder:7439_2(7439) 440
+06-14 16:31:51.855   677   677 D io_stats: !@ Write_top(KB): roid.oneconnect(8417) 180 android.vending(31115) 112 kworker/u16:14(5219) 80
+06-14 16:31:51.856  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_7727#5624 Max (can't resolve refresh rate)
+06-14 16:31:51.856  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 16:31:51.858  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 16:31:51.858   986  1172 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 16:31:51.858   986  1172 I display : Set Affinity CPU ID : 0
+06-14 16:31:51.858   986  1172 I display : Set Affinity CPU ID : 1
+06-14 16:31:51.858   986  1172 I display : Set Affinity CPU ID : 2
+06-14 16:31:51.858   986  1172 I display : Set Affinity CPU ID : 3
+06-14 16:31:51.858   986  1172 I display : Set Affinity CPU ID : 4
+06-14 16:31:51.859   986  1172 I display : Set Affinity CPU ID : 5
+06-14 16:31:51.859   986  1172 I display : Set Affinity CPU ID : 6
+06-14 16:31:51.859   986  1172 I display : Set Affinity CPU ID : 7
+06-14 16:31:51.859   986  1172 I display : Set affinity HWC : 986
+06-14 16:31:51.859   986  1172 I display : CPU set : Cluster(0), min_clock(0)
+06-14 16:31:51.859   986  1172 I display : CPU set : Cluster(1), min_clock(0)
+06-14 16:31:51.860   986  1172 I display : CPU set : Cluster(2), min_clock(0)
+06-14 16:31:51.868   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 16:31:51.868   986  1053 I display : setActiveConfig(config=0)
+06-14 16:31:51.868   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 16:31:51.869   986  1053 I display : Current VRR MODE is 3
+06-14 16:31:51.869  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 16:31:51.878  1385  1488 D LocalDisplayAdapter: updateActiveModeLocked for d=4633128672291735937, mActiveModeId=1, mActiveSfDisplayMode=DisplayMode{id=0, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=120.00001, vsyncRate=120.00001, appVsyncOffsetNanos=0, presentationDeadlineNanos=9333333, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 16:31:51.879  1385  1488 I DisplayDeviceRepository: Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=120.00001, presentationDeadlineNanos=9333333, appVsyncOffsetNanos=0
+06-14 16:31:51.883  1385  1574 D BrightnessThermalClamper: Thermal status observer already started
+06-14 16:31:51.885  1385  1385 D SGM:GameManager: onDisplayChanged. displyId: 0, state: 2
+06-14 16:31:51.885  1385  3231 D LiftUpHandler: [LTW] Stopped already.
+06-14 16:31:51.885  1385  1780 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_LCD_ON
+06-14 16:31:51.886  1385  1385 D MotionRecognitionService: [DisplayListener] getRefreshRate 120.00001
+06-14 16:31:51.886  1385  1799 D MotionRecognitionService: Inject RefreshRate: 120
+06-14 16:31:51.886  1385  1799 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+06-14 16:31:51.886  1385  1799 D SensorService: setSContextDataLocked 100048c1
+06-14 16:31:51.886  1385  1385 D AODManagerService: requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 16:31:51.887  1002  1002 D Sensors : c1 48 00 10 78 00 00 00  
+06-14 16:31:51.887  1002  1002 E Sensors : inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 16:31:51.887  2024  2073 I VRI[ShellDropTarget]@6480554: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.887  2024  2024 D DisplayLifecycle: updateDisplay id = 0
+06-14 16:31:51.887  1086 15625 D AudioFlinger: setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 16:31:51.887  2024  2164 D StackScroller: onDisplayChanged for predraw skip to 2
+06-14 16:31:51.888   973  1660 D audio_hw_primary: device-adev_set_parameters: enter
+06-14 16:31:51.888   973  1660 I audio_hw_primary: device-adev_set_parameters: Screen State = on)
+06-14 16:31:51.888   973  1660 I audio_hw_proxy2: proxy-proxy_set_parameters: set Screen-state 1
+06-14 16:31:51.888   973  1660 D audio_hw_primary: device-adev_set_parameters: param (screen_state=on)
+06-14 16:31:51.888   973  1660 I audio_hw_primary_odm: odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 16:31:51.888   973  1660 V audio_hw_primary: device-adev_set_parameters: exit (screen_state=on)
+06-14 16:31:51.888  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 16:31:51.889   973  1009 I Audio_a2dpsink_hw: adev_set_parameters: kevpairs=[screen_state=on]
+06-14 16:31:51.889  1385  2175 D WifiDisplayAdapter: isFitToActiveDisplayLocked : false
+06-14 16:31:51.890  1002  1002 D Sensors : SContext Data Injection return 8
+06-14 16:31:51.893  4363  4363 I VRI[InputMethod]@a7ae199: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2542  2542 I VRI[RecentsTransitionOverlay]@725b4cf: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2542  2542 I VRI[CocktailBarService]@956d8b0: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[LockscreenShortcutBlur]@43e4b39: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2542  2542 I VRI[RecentsActivity]@2460c6b: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[NavigationBar0]@18aa930: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[NotificationShade]@ab1f331: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[StatusBar]@f6672fa: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[KeyguardBiometricToastView]@17015fb: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.893  2024  2024 I VRI[Bouncer]@ef2d4f0: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.894  7727  7727 I VRI[MainActivity]@6b0ac1e: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.895  2542  2618 I HoneySpace.RefreshRateSource: singleFrameMs 8
+06-14 16:31:51.895  1385  1488 D RefreshRateModeManager: updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 16:31:51.895 29165 29165 I VRI[SettingsHomepageActivity]@7940030: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.895 29165 29165 I VRI[SubSettings]@3068284: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.896  8465  8465 I VRI[HintService]@1966702: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:31:51.897 24327  8090 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:6) and sleep 5000 for endpoint IVAG.
+06-14 16:31:51.908 24327  8091 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:6) and reply a KEEP_ALIVE frame with ack from endpoint IVAG on channel ENCRYPTED_WIFI_LAN.
+06-14 16:31:51.933 24327  8091 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:6) with ACK from endpoint IVAG on channel ENCRYPTED_WIFI_LAN.
+06-14 16:31:52.067  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 16:31:52.094  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x0, addressType=1, address=XX:XX:XX:XX:B3:80, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 16:31:52.096  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:0B:31, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-57, periodicAdvInt=0x0
+06-14 16:31:52.141  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:52.224  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:52.517  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_7727#5624 Max (can't resolve refresh rate)
+06-14 16:31:52.517  1096  1096 I SurfaceFlinger: Idle - choose 60.00 Hz
+06-14 16:31:52.519  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 16:31:52.520   986  1172 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 0
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 1
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 2
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 3
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 4
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 5
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 6
+06-14 16:31:52.520   986  1172 I display : Set Affinity CPU ID : 7
+06-14 16:31:52.521   986  1172 I display : Set affinity HWC : 986
+06-14 16:31:52.521   986  1172 I display : CPU set : Cluster(0), min_clock(0)
+06-14 16:31:52.521   986  1172 I display : CPU set : Cluster(1), min_clock(0)
+06-14 16:31:52.521   986  1172 I display : CPU set : Cluster(2), min_clock(0)
+06-14 16:31:52.522  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 16:31:52.526   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 16:31:52.526   986  1053 I display : setActiveConfig(config=2)
+06-14 16:31:52.526   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 16:31:52.526   986  1053 I display : Current VRR MODE is 3
+06-14 16:31:52.527  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 16:31:52.536  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 16:31:53.011  4455  4455 I SDHMS:LOAD: type: LoadsFreqs, value: 0:1:0:1075619:2912000:533000:1452619:2808000:533000:5:130:0
+06-14 16:31:53.216  1385  8491 I AfterimageCompensationService: AfcThread mLuminance : 113 , AfpcPeriodCount : 1691 , rotation : 0 , AOD : false
+06-14 16:31:53.239  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer  at index 0
+06-14 16:31:53.239  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_7727#5624 at index 1
+06-14 16:31:53.241  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer StatusBar$_2024#94 at index 2
+06-14 16:31:53.241  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_2542#5605 at index 3
+06-14 16:31:53.242  1096  1123 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer NavigationBar0$_2024#90 at index 4
+06-14 16:31:53.260  1385  8491 D system_server: mAFPC_Read - w = 1080, h = 2400, s = 8, f = 4, s_size = 10444800, luminance = 113, count = 1691, captureOrientation = 0
+06-14 16:31:53.356  1385  3124 D FreecessController: com.microsoft.teams(10613) is important[18]
+06-14 16:31:53.545  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 16:31:53.591  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:71:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-64, periodicAdvInt=0x0
+06-14 16:31:53.594  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:53.640  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:17:35, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:53.648  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:53.654  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 16:31:53.690  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 16481, isSameBssidAndFreq true
+06-14 16:31:53.692  1385  1910 I SemWifiLinkQualityMonitor: Link stat: 1034 / 169 / 1.17 (7) / 130 / -61.0 || 100.0 : 130.00 / 0.5 : 0.86 / 0.55 : 0.16 / G (G) || 94c098be5745: 0.148 / 54.199 /  / N || N N / 0 / Y 2.0 / Y 0 / 76139599 0
+06-14 16:31:53.858   677   677 D io_stats: !@   8,0 r 7838877 166623636 w 1476572 20427756 d 423329 97617004 f 0 0 iot 3048940 0 th 0 0 0 pt 0 inp 0 0 76139.766
+06-14 16:31:54.168  8182  8190 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:54.169  8182  8190 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:54.169  8182  8190 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:54.169  8182  8190 W System  : A resource failed to call AbstractCursor.close. 
+06-14 16:31:54.474  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 16:31:55.021  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:55.027  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 1- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-86, periodicAdvInt=0x0
+06-14 16:31:55.027  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-86, periodicAdvInt=0x0
+06-14 16:31:55.029  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 16:31:55.033  9239  1580 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:31:55.039  1385  2175 D CustomizedBinderCallsStatsInternal: reportCpuUsage() : 1%
+06-14 16:31:55.040  1385  1499 I BinderCallsStats: Collected cpu time : 1435us, collected call count : 10529 for 85079407 ms
+06-14 16:31:55.045  1385  2175 I ActivityManager: Killing 7294:com.samsung.android.lool/1000 (adj 995): empty #33
+06-14 16:31:55.045  1385  2175 I ActivityManager: Killing 24589:com.samsung.android.globalpostprocmgr/1000 (adj 995): empty #34
+06-14 16:31:55.045  1385  2175 I ActivityManager: Killing 2805:com.samsung.android.biometrics.app.setting/1000 (adj 995): empty #35
+06-14 16:31:55.046  1385  2175 I ActivityManager: Killing 6444:com.skms.android.agent:remote/1000 (adj 999): empty #36
+06-14 16:31:55.046  1385  2175 I ActivityManager: Killing 6424:com.samsung.android.privateaccesstokens/u150a451 (adj 999): empty #37
+06-14 16:31:55.046  1385  2175 I ActivityManager: Killing 6399:com.samsung.android.privateaccesstokens/u0a451 (adj 999): empty #38
+06-14 16:31:55.046  1385  2175 I ActivityManager: Killing 6330:com.google.android.cellbroadcastreceiver/u0a270 (adj 999): empty #39
+06-14 16:31:55.046  1385  2175 I ActivityManager: Killing 2807:com.samsung.android.app.aodservice/u0a62 (adj 999): empty #40
+06-14 16:31:55.047  1385  2175 I ActivityManager: Killing 1630:com.samsung.android.ce/u0a435 (adj 999): empty #41
+06-14 16:31:55.047  1385  2175 I ActivityManager: Killing 32484:com.google.android.apps.turbo/u0a232 (adj 999): empty #42
+06-14 16:31:55.047  1385  2175 I ActivityManager: Killing 6216:com.osp.app.signin/u0a116 (adj 999): empty #43
+06-14 16:31:55.047  1385  2175 I ActivityManager: Killing 5474:com.samsung.android.app.aodservice:provider/u0a62 (adj 999): empty #44
+06-14 16:31:55.048  1385  2175 I ActivityManager: Killing 570:com.google.android.apps.photos/u0a282 (adj 999): empty #45
+06-14 16:31:55.048  1385  3094 D ActivityManager: unpendingScheduleServiceRestart: u=10282, drop=true
+06-14 16:31:55.049  1385  3092 D FreecessController: UFZ : com.google.android.apps.photos(10282) [570] reason: Signal
+06-14 16:31:55.049  1385  3124 W LocationManagerService: onFreezeStateChanged, uid[10282]=false
+06-14 16:31:55.050  1385  3124 I PowerManagerService: [PWL] SetWakeLockEnableDisable uid = 10282 , disable= false
+06-14 16:31:55.050  1385  3124 I PowerManagerService: [PWL] can not change uid =  10282
+06-14 16:31:55.059  1096  1171 I VSyncReactor: Current= 60, Period= 60, hwcPeriod= 60
+06-14 16:31:55.085  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-86, periodicAdvInt=0x0
+06-14 16:31:55.086  8105  8105 I SamsungCalendar$CalendarApplication: onTrimMemory level : 40
+06-14 16:31:55.089  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:55.128  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:0B:31, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-58, periodicAdvInt=0x0
+06-14 16:31:55.159  1385  2083 D InputMethodManagerService: onClientRemoved
+06-14 16:31:55.163  1385  1488 W ActivityManager: setHasOverlayUi called on unknown pid: 2805
+06-14 16:31:55.163   960   960 I Zygote  : Process 2805 exited due to signal 9 (Killed)
+06-14 16:31:55.174  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:55.201   960   960 I Zygote  : Process 6424 exited due to signal 9 (Killed)
+06-14 16:31:55.202  1385  2083 W ActivityManager: Scheduling restart of crashed service com.skms.android.agent/.SKMSAgentService in 1000ms for connection
+06-14 16:31:55.202   960   960 I Zygote  : Process 6444 exited due to signal 9 (Killed)
+06-14 16:31:55.203   960   960 I Zygote  : Process 24589 exited due to signal 9 (Killed)
+06-14 16:31:55.203 31978 31978 I DigitalKeyCCC: [SkmsAgentManager] SKMSAgentService is disconnected
+06-14 16:31:55.203 31978 31978 I DigitalKeyCCC: [SkmsAgentManager] isSkmsBind updated (old: false, new: false)
+06-14 16:31:55.205  1385  1486 D DisplayManagerService: Drop pending events for gone uid 15010451
+06-14 16:31:55.217   960   960 I Zygote  : Process 7294 exited due to signal 9 (Killed)
+06-14 16:31:55.217  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1000/pid_7294
+06-14 16:31:55.217  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1000/pid_24589
+06-14 16:31:55.217  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1000/pid_2805
+06-14 16:31:55.218  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1000/pid_6444
+06-14 16:31:55.218  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_15010451/pid_6424
+06-14 16:31:55.227   960   960 I Zygote  : Process 32484 exited due to signal 9 (Killed)
+06-14 16:31:55.232  1385  1486 D DisplayManagerService: Drop pending events for gone uid 10232
+06-14 16:31:55.234  1385  1486 D DisplayManagerService: Drop pending events for gone uid 10270
+06-14 16:31:55.236   960   960 I Zygote  : Process 6330 exited due to signal 9 (Killed)
+06-14 16:31:55.271  1385  1825 D ConnectivityService: releasing NetworkRequest [ REQUEST id=6373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ] (release request)
+06-14 16:31:55.271  1385  1825 D ConnectivityService:  Removing from current network [106 WIFI], leaving 173 requests.
+06-14 16:31:55.275   960   960 I Zygote  : Process 570 exited due to signal 9 (Killed)
+06-14 16:31:55.276   960   960 I Zygote  : Process 6216 exited due to signal 9 (Killed)
+06-14 16:31:55.279  1385  1486 D DisplayManagerService: Drop pending events for gone uid 10116
+06-14 16:31:55.279  1385  1486 D DisplayManagerService: Drop pending events for gone uid 10282
+06-14 16:31:55.296   960   960 I Zygote  : Process 1630 exited due to signal 9 (Killed)
+06-14 16:31:55.299   960   960 I Zygote  : Process 2807 exited due to signal 9 (Killed)
+06-14 16:31:55.299   960   960 I Zygote  : Process 6399 exited due to signal 9 (Killed)
+06-14 16:31:55.300   960   960 I Zygote  : Process 5474 exited due to signal 9 (Killed)
+06-14 16:31:55.300  1385  4407 E Mocca_MoccaSystemService: (1.0.21.0)BinderDeadEvent received
+06-14 16:31:55.300  1385  4405 E Mocca_MoccaSystemService: (1.0.21.0)BinderDeadEvent received
+06-14 16:31:55.300  1385  4407 I Mocca_ContextProviderImpl: (1.0.21.0)unregisterContextAvailabilityListener - all-context-types
+06-14 16:31:55.302  1385  2303 I Mocca_ContextProviderImpl: (1.0.21.0)handleUnregisterContextListener-null,null
+06-14 16:31:55.302  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10451/pid_6399
+06-14 16:31:55.302  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10270/pid_6330
+06-14 16:31:55.303  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10062/pid_2807
+06-14 16:31:55.303  1385  2303 I Mocca_BaseContextSourceApp: (1.0.21.0)removeContextListener: null
+06-14 16:31:55.303  1385  2303 I Mocca_BaseContextSourceApp: (1.0.21.0)removeContextListener: null
+06-14 16:31:55.303  1385  2303 I Mocca_BaseContextSourceApp: (1.0.21.0)removeContextListener: null
+06-14 16:31:55.303  1385  2303 I Mocca_BaseContextSourceApp: (1.0.21.0)removeContextListener: null
+06-14 16:31:55.303  1385  2303 I Mocca_BaseContextSourceApp: (1.0.21.0)removeContextListener: null
+06-14 16:31:55.303  1385  1406 W ActivityManager: Scheduling restart of crashed service com.samsung.android.app.aodservice/androidx.room.MultiInstanceInvalidationService in 10897ms for connection
+06-14 16:31:55.304  1385  1486 D DisplayManagerService: Drop pending events for gone uid 10451
+06-14 16:31:55.306  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10435/pid_1630
+06-14 16:31:55.306  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10232/pid_32484
+06-14 16:31:55.306  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10116/pid_6216
+06-14 16:31:55.306  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10062/pid_5474
+06-14 16:31:55.307  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10282/pid_570
+06-14 16:31:55.859   677   677 D io_stats: !@   8,0 r 7838912 166624008 w 1476582 20427788 d 423329 97617004 f 0 0 iot 3048992 0 th 0 0 0 pt 0 inp 0 0 76141.768
+06-14 16:31:55.860   677   677 D io_stats: !@ Read_top(KB): system_server(1385) 316 martsuggestions(4323) 128 c.android.sdhms(4455) 16
+06-14 16:31:55.860   677   677 D io_stats: !@ Write_top(KB): appmanager:auth(7962) 24 soft.appmanager(5931) 16
+06-14 16:31:56.203  1385  1502 D CompatChangeReporter: Compat change id reported: 151861875; UID 1000; state: ENABLED
+06-14 16:31:56.234   960   960 D Zygote  : Forked child process 8558
+06-14 16:31:56.235  1385  1503 I ActivityManager: Start proc 8558:com.skms.android.agent:remote/1000 for service {com.skms.android.agent/com.skms.android.agent.SKMSAgentService}
+06-14 16:31:56.247  8558  8558 I id.agent:remote: Using CollectorTypeCC GC.
+06-14 16:31:56.250  8558  8558 E id.agent:remote: Not starting debugger since process cannot load the jdwp agent.
+06-14 16:31:56.252  8558  8558 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+06-14 16:31:56.254  8558  8558 D ActivityThread: setConscryptValidator
+06-14 16:31:56.254  8558  8558 D ActivityThread: setConscryptValidator - put
+06-14 16:31:56.279  8558  8558 D nativeloader: Configuring clns-shared-7 for other apk /system/framework/com.android.nfc_extras.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/system/priv-app/SKMSAgent/lib/arm64:/system/priv-app/SKMSAgent/SKMSAgent.apk!/lib/arm64-v8a:/system/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.skms.android.agent:/system/priv-app/SKMSAgent:/system/lib64
+06-14 16:31:56.279  8558  8558 D nativeloader: Extending system_exposed_libraries: libhumantracking.arcsoft.so:libPortraitDistortionCorrection.arcsoft.so:libPortraitDistortionCorrectionCali.arcsoft.so:libface_landmark.arcsoft.so:libFacialStickerEngine.arcsoft.so:libfrtracking_engine.arcsoft.so:libFaceRecognition.arcsoft.so:libveengine.arcsoft.so:lib_pet_detection.arcsoft.so:libhigh_res.arcsoft.so:libimage_enhancement.arcsoft.so:liblow_light_hdr.arcsoft.so:libhigh_dynamic_range.arcsoft.so:libsuperresolution.arcsoft.so:libobjectcapture_jni.arcsoft.so:libobjectcapture.arcsoft.so:libFacialAttributeDetection.arcsoft.so:libaudiomirroring_jni.audiomirroring.samsung.so:libBeauty_v4.camera.samsung.so:libexifa.camera.samsung.so:libjpega.camera.samsung.so:libOpenCv.camera.samsung.so:libC2paDps.camera.samsung.so:libVideoClassifier.camera.samsung.so:libImageScreener.camera.samsung.so:libMyFilter.camera.samsung.so:libtflite2.myfilters.camera.samsung.so:libHIDTSnapJNI.camera.samsung.so:libSmartScan.camera.samsung.so:libRectify.camera.samsung.so:libDocRectifyWrapper.cam
+06-14 16:31:56.281  8558  8558 D nativeloader: Configuring clns-shared-8 for other apk /system/priv-app/SKMSAgent/SKMSAgent.apk. target_sdk_version=35, uses_libraries=, library_path=/system/priv-app/SKMSAgent/lib/arm64:/system/priv-app/SKMSAgent/SKMSAgent.apk!/lib/arm64-v8a:/system/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.skms.android.agent:/system/priv-app/SKMSAgent:/system/lib64
+06-14 16:31:56.282  8558  8558 D CompatChangeReporter: Compat change id reported: 202956589; UID 1000; state: ENABLED
+06-14 16:31:56.286  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 16:31:56.296  8558  8558 V GraphicsEnvironment: Currently set values for:
+06-14 16:31:56.296  8558  8558 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-14 16:31:56.296  8558  8558 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-14 16:31:56.296  8558  8558 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+06-14 16:31:56.303  8558  8558 D nativeloader: Load /system/priv-app/SKMSAgent/lib/arm64/libsem_jni.so using ns clns-shared-8 from class loader (caller=/system/priv-app/SKMSAgent/SKMSAgent.apk): ok
+06-14 16:31:56.303  8558  8558 I SKMSAgent: sem_jni load success
+06-14 16:31:56.303  8558  8558 I SKMSAgent: application onCreate
+06-14 16:31:56.312  8558  8558 I SKMSAgent: onCreate: SKMS
+06-14 16:31:56.312  8558  8558 I SKMSAgent: onBind: SKMS 0
+06-14 16:31:56.313  8558  8558 I SKMSAgent: tsmManager null / create instance
+06-14 16:31:56.315  8558  8558 I SKMSAgent: LCCM : 2
+06-14 16:31:56.316  8558  8558 I SKMSAgent: CV : 5.3true
+06-14 16:31:56.317  8558  8558 I SEC_ESE_ServiceManager: com.skms.android.agent connects to SemService.
+06-14 16:31:56.317  8558  8558 I SKMSAgent: ***** Entering onCardEmul
+06-14 16:31:56.317  8558  8558 I SKMSAgent: SwitchOn is processing...
+06-14 16:31:56.317  8558  8558 I SKMSAgent: Initializing NFC interface
+06-14 16:31:56.318  8558  8558 I SEC_ESE_ServiceManager: com.skms.android.agent connects to SemService.
+06-14 16:31:56.318  8558  8558 I SKMSAgent: Start SLOG
+06-14 16:31:56.318  8558  8558 I SEC_ESE_ServiceManager: com.skms.android.agent connects to SemService.
+06-14 16:31:56.318  8558  8558 I SEC_ESE_ServiceManager: START SLOG is called.
+06-14 16:31:56.318  1385  4402 I SEC_ESE_Service: Start_SLOG
+06-14 16:31:56.319  1385  4402 I SEC_ESE_ServiceAccessControl: Requested package name = [com.skms.android.agent]
+06-14 16:31:56.320  1385  4402 I SEC_ESE : JNI, Get PKSecurity start
+06-14 16:31:56.320  1385  4402 I SEC_ESE : JNI, Check PKSecurity end
+06-14 16:31:56.320  1385  4402 I SEC_ESE : JNI, Get PKSKMS start
+06-14 16:31:56.320  1385  4402 I SEC_ESE : JNI, Check PKSKMS end
+06-14 16:31:56.322 31978 31978 I DigitalKeyCCC: [SkmsAgentManager] SKMSAgentService is connected
+06-14 16:31:56.322 31978 31978 I DigitalKeyCCC: [SkmsAgentManager] isSkmsBind updated (old: false, new: true)
+06-14 16:31:56.323  1385  4402 I ActivityManager: Killing 7206:com.samsung.android.sm.devicesecurity/5012 (adj 995): empty #33
+06-14 16:31:56.435  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_5012/pid_7206
+06-14 16:31:56.435   960   960 I Zygote  : Process 7206 exited due to signal 9 (Killed)
+06-14 16:31:56.439  1385  1486 D DisplayManagerService: Drop pending events for gone uid 5012
+06-14 16:31:56.460  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-84, periodicAdvInt=0x0
+06-14 16:31:56.468  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:56.492  2264  2346 I bluetooth: system/gd/hci/le_scanning_reassembler.cc:58 ProcessAdvertisingReport: Ignoring scan response received without advertising event
+06-14 16:31:56.493  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 9- eventType=0x13, addressType=0, address=XX:XX:XX:XX:04:6B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-88, periodicAdvInt=0x0
+06-14 16:31:56.502  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:56.540  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:17:35, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:56.560  3090  3090 I ContentFeedManager: initSyncRunnable called
+06-14 16:31:56.560  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 16:31:56.560  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 16:31:56.560  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 16:31:56.561  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 16:31:56.561  3090  3090 I ContentFeedManager: initSyncManagersAndSyncIfRequired: deviceid null
+06-14 16:31:56.561  3090  3090 I ContentFeedManager: initSyncRunnable initialized
+06-14 16:31:56.572  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 1- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-86, periodicAdvInt=0x0
+06-14 16:31:56.573  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-86, periodicAdvInt=0x0
+06-14 16:31:56.574  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 16:31:56.582  9239  6506 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:31:56.583  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:56.618  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:71:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-67, periodicAdvInt=0x0
+06-14 16:31:56.648  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:56.810  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 16482, isSameBssidAndFreq true
+06-14 16:31:56.902 24327  8091 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:7) and reply a KEEP_ALIVE frame with ack from endpoint IVAG on channel ENCRYPTED_WIFI_LAN.
+06-14 16:31:56.902 24327  8090 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:7) and sleep 5000 for endpoint IVAG.
+06-14 16:31:56.904 24327  8249 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 16:31:56.904 24327  8249 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x59 0x4d 0x4b 0x57 0x11 0x32 0x0e 0x35 0x22 0xd5 0x39 0xb4 0xec 0xa6 0x24 0x02 0xcb 0xdc 0x46 0x18 0x4d 0x45 ], deviceToken=[ 0x9c 0x22 ], rxAdvertisement=null } : 4 times.
+06-14 16:31:56.904 24327  8249 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x39 0x53 0x43 0x4c 0x11 0x32 0x67 0x6e 0xed 0xaa 0x7e 0x7d 0xf5 0x86 0x39 0xf3 0xb6 0x57 0x27 0x3c 0x6f 0x8d ], deviceToken=[ 0xc3 0x16 ], rxAdvertisement=[ 0xa0 0x17 0x1c 0x21 0x82 0x6a 0xaf 0xff 0xef 0xb9 0xf0 0x10 0xb3 0x02 0x5b 0x63 0x20 0x95 0x43 0x6e 0x4b 0xe4 0xeb 0x38 0x7f 0x05 0x7c 0xe4 0xbc 0xaf 0xc2 0xff 0x7b 0x6f 0x84 0x15 0x05 0x7f 0x1f 0x00 0x84 0x15 0x06 0x61 0x1f 0x00 0x84 0x15 0x04 0x7f 0xff 0x1f 0x84 0x15 0x07 0x61 0x1f 0x00 0x83 0x15 0x01 0x09 0xa8 ] } : 9 times.
+06-14 16:31:56.904 24327  8249 I NearbyMediums: Total 13 fast advertisements from 2 unique advertisers.
+06-14 16:31:56.905 24327  8249 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 16:31:56.906 24327  7861 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x39 0x31 0x52 0x34 0x11 0x32 0x1d 0x0c 0x50 0x27 0x66 0xdd 0xea 0xe0 0xc0 0xa7 0x1c 0x8a 0x09 0xa1 0xd2 0xb3 ], deviceToken=[ 0xc2 0x12 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@636c7c2 size=2 contents="\302\022">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+06-14 16:31:56.906 24327  7861 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x39 0x31 0x52 0x34 0x11 0x32 0x1d 0x0c 0x50 0x27 0x66 0xdd 0xea 0xe0 0xc0 0xa7 0x1c 0x8a 0x09 0xa1 0xd2 0xb3 ], deviceToken=[ 0xc2 0x12 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@636c7c2 size=2 contents="\302\022">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 91R4 and EndpointInfo [ 0x32 0x1d 0x0c 0x50 0x27 0x66 0xdd 0xea 0xe0 0xc0 0xa7 0x1c 0x8a 0x09 0xa1 0xd2 0xb3 ]).
+06-14 16:31:56.907 24327  7861 I NearbyConnections: ClientProxy(237100707) reporting onEndpointLost(91R4)
+06-14 16:31:56.908 24327  7861 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=91R4)
+06-14 16:31:56.938 24327  8091 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:7) with ACK from endpoint IVAG on channel ENCRYPTED_WIFI_LAN.
+06-14 16:31:57.239  1385  3124 I NSLocationMonitor: getGPSUsingApps() called
+06-14 16:31:57.241  3123  3140 I NSLocationManager_FLP: getGPSUsingApps, No change
+06-14 16:31:57.261  1385  3124 D FreecessController: com.google.android.adservices.api(state: Initial -> Frozen, Reason: Bg-refreeze)
+06-14 16:31:57.261  1385  3124 D FreecessController: com.google.android.adservices.api is not MARs target, skip to freeze
+06-14 16:31:57.640  2070  2070 I wpa_supplicant: Heartbeat 7349
+06-14 16:31:57.860   677   677 D io_stats: !@   8,0 r 7838923 166624076 w 1476588 20427848 d 423329 97617004 f 0 0 iot 3049020 0 th 0 0 0 pt 0 inp 0 0 76143.769
+06-14 16:31:57.930  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:44:C8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:57.949  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:E4:00, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 16:31:57.959  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:9B:21, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:57.969  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 16:31:57.970  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:D3:0C, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 16:31:57.991  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:71:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-59, periodicAdvInt=0x0
+06-14 16:31:58.018  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:69:A8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:31:58.033  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 12- eventType=0x1, addressType=1, address=XX:XX:XX:XX:17:35, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:31:58.041  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 16:31:58.358  4455  5301 I SDHMS:x : SIOP:: AP:367 BAT:347 USB:349 CHG:367 PA:366 CP:364 WIFI:364 CF:356 BLK:0 SUBBAT:0 SKIN:350 SKINF:345 SKINB:347 LRP:347 LRP2:350 LRF:345 LRB:347 LRF2:350 LRB2:348 AP2:350 CHG2:349 MEM2:350 WIFI2:349 RCV2:346 SPK2:340 FCAM:349 UPSPK:349 DNSPK:348 AVGCUR:-468 POWER:-1887
+06-14 16:31:58.358  1385  3124 D FreecessController: com.microsoft.teams(10613) is important[18]
+06-14 16:31:58.698  1385  1828 V serviceDiscovery: [MdnsAdvertiser.wlan0] VERBOSE Parsed packet with transactionId(1): 1 questions, 0 answers, 0 authority, 0 additional from /192.168.1.59:5353

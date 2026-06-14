@@ -1,0 +1,122 @@
+--------- beginning of main
+06-14 14:54:41.790 D/txpwrJni( 4273): sendNetworkInfo start
+06-14 14:54:41.790 D/txpwrJni( 4273): sendNetworkInfo RatType 0
+06-14 14:54:41.791 D/InsDataManager( 2668): onOutageCountUpdate() - Outage Data: 0, LQ : Y. Outage Triggered: false
+06-14 14:54:41.791 D/InsDataManager( 2668): Trying to save initial normal data.
+06-14 14:54:41.791 D/SensorCollector( 2668): syncMappedBuffers: 0, 0, 1
+06-14 14:54:41.791 D/InsDataManager( 2668): trimBuffers start.
+06-14 14:54:41.791 D/SemWifiApNsd:Client( 2668): lpInterface:wlan0
+06-14 14:54:41.791 D/WifiPickerTracker( 4017): updateWifiEntries capabilities
+06-14 14:54:41.793 D/SemWifiSwitchForIndividualAppsService( 2668): stopTCPMonitoring : already stopped
+06-14 14:54:41.793 I/WifiConnectivityMonitor.NCC( 2668): sNetworkCallback(oCC) FULL : 232(valid: true/captive: false)
+06-14 14:54:41.793 D/InsDataManager( 2668): trimBuffers - pathBuffer size: 98
+06-14 14:54:41.793 D/InsDataManager( 2668): trimBuffers - nsmBuffer size: 26
+06-14 14:54:41.793 D/InsDataManager( 2668): Too short for collecting additional normal data
+06-14 14:54:41.794 D/SemInsManager( 2668): {"bssid": "94c098bf5180","rssi": -64.0,"latency": 0.0953501623269065,"outage_count": 0,"lq_callback_triggered": true,"outage_log": "Link stat: 1040 / 8 / 1.00 (6) / 351 / -64.0 || 100.0 : 351.00 / 0.5 : 1.00 / 0.55 : 0.01 / G (G) || 94c098bf5180: 0.095 / 83.901 / N || N N / 0 0 / Y 2.0 / Y X 0 / 975228699 0 || Invalid""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 14:54:41.795 I/WifiConnectivityMonitor.NCC( 2668): [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=95172Kbps LinkDnBandwidth>=115415Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.60, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -64, Link speed: 351Mbps, Tx Link speed: 351Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 520Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -64 AdminUids: [10293] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:54:41.796 D/WifiConnectivityMonitor( 2668): HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:54:41.796 D/SemWifiApTrafficPriority( 2668): onCapabilitiesChanged Wifi:wlan0,mGapiValue:115.415Uplink: 95.172
+06-14 14:54:41.796 I/WifiConnectivityMonitor( 2668): determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:54:41.796 D/OpenNetworkQos[4.00]( 2668): updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:54:41.796 D/OpenNetworkQos[4.00]( 2668): getOpenNetworkQosNoInternetStatus: false
+06-14 14:54:41.796 D/OpenNetworkQos[4.00]( 2668): getOpenNetworkQosScores: 26 26 26 
+--------- beginning of system
+06-14 14:54:41.796 D/KNOX_MDM_SettingsProvider( 2668): isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:54:41.796 I/WifiProfileShare( 2668): network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:54:41.796 V/WifiProfileShare.Caster( 2668): update wips network, size: 0
+06-14 14:54:41.796 D/WifiProfileShare( 2668): nearby scanning settings run
+06-14 14:54:41.796 D/WifiProfileShare( 2668): network score provider settings enabled
+06-14 14:54:41.796 D/OpenNetworkQos[4.00]( 2668): getOpenNetworkQosScores: 26 26 26 
+06-14 14:54:41.796 D/OpenNetworkQos[4.00]( 2668): getOpenNetworkQosNoInternetStatus: false
+06-14 14:54:41.796 I/WifiProfileShare.Caster( 2668): current network type: 0, score: [26, 26, 26]
+06-14 14:54:41.796 V/WifiProfileShare.Cache( 2668): update network score 78:d2:94:**:**:31
+06-14 14:54:41.797 D/WifiProfileShare.ScanMatcher( 2668): getMcfDataList size:5
+06-14 14:54:41.797 I/WifiProfileShare.Caster( 2668): qos data was updated , before:type:QOS, pBssid:12:3d:49, qosData:7c after:type:QOS, pBssid:12:3d:49, qosData:7c
+06-14 14:54:41.798 I/[MCFSDK_android_1.3.7026]_4_McfCasterImpl( 2668): isNetworkEnabled - type : 1 ret : true
+06-14 14:54:41.798 D/WifiProfileShare.McfCast( 2668): -ME--- mIsNetworkEnabled :true
+06-14 14:54:41.798 D/WifiProfileShare.McfCast( 2668): updateQoSData ignored, same contents
+06-14 14:54:41.798 D/WifiProfileShare.MCF( 2668): success update QosData !
+06-14 14:54:41.798 D/SGM:GameManager( 2668): identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:106)
+06-14 14:54:41.798 I/[MCFSDK_android_1.3.7026]_4_McfCasterImpl( 2668): isNetworkEnabled - type : 1 ret : true
+06-14 14:54:41.798 D/WifiProfileShare.McfCast( 2668): -ME--- mIsNetworkEnabled :true
+06-14 14:54:41.798 D/WifiProfileShare.McfCast( 2668): -ME--- updatePasswordDate pwdData size:5
+06-14 14:54:41.798 D/SGM:SemGameManager( 2668): isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 14:54:41.798 D/SemApeService( 2668): Deducted link capacity (M: R=364 T=245) RSSI=-64
+06-14 14:54:41.798 D/SemApeService( 2668): Deducted link capacity (M: R=364 T=245) on (wlan0) GoogleAPI(M: R=115 T=95) RSSI=-64 isDefault=false isMlo=false
+06-14 14:54:41.799 D/ConnectivityManager(26032): StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 14:54:41.800 D/WifiPickerTracker( 4017): update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:54:41.800 D/WifiPickerTracker( 4017): handleNetworkCapabilitiesChanged
+06-14 14:54:41.800 I/NullBinder(26032): NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:54:41.800 D/ConnectivityService( 2668): Rematched networks [computed 0ms] [applied 1ms] [issued 0]
+06-14 14:54:41.800 D/ConnectivityService( 2668): NetworkReassignment : no changes
+06-14 14:54:41.801 I/WifiPickerTracker( 4017): DefaultNetworkCallback : onCapabilitiesChanged
+06-14 14:54:41.801 W/.gms.persistent(26032): Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:54:41.801 D/ConnectivityManager(26032): StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 14:54:41.801 I/NearbyMediums(26032): Wifi changed new SSID: "ORBI57-home"
+06-14 14:54:41.801 I/NearbyMediums(26032): WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:54:41.802 D/WifiInteractor( 4017): get wifiIconGroup ePDGConnected : false
+06-14 14:54:41.802 D/WifiInteractor( 4017): get wifiIconGroup ePDGConnected : false
+06-14 14:54:41.802 D/Tile.WifiTile( 4017): handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:54:41.803 I/HoneySpace.StatusIconTracker( 4512): invokeEvent() called with: event = Wifi(visible=true, resId=2131236017, activityId=2131236043)
+06-14 14:54:41.806 I/NSLocationMonitor( 2668): getGPSUsingApps() called
+06-14 14:54:41.806 I/NSLocationManager_FLP( 4963): getGPSUsingApps, No change
+06-14 14:54:41.811 I/VSyncReactor( 1789): Current= 60, Period= 60, Distance= 0
+06-14 14:54:41.815 D/ActivityManager( 2668): FCA:FCA recordedFileRss = 130688, and changeinRss = 80980
+06-14 14:54:41.816 D/FreecessController( 2668): FZ : com.ss.android.ugc.tiktok.lite(10062) [31269] reason: Bg [cached:X
+06-14 14:54:41.816 D/FreecessHandler( 2668): freeze com.ss.android.ugc.tiktok.lite(10062) result : 0
+06-14 14:54:41.816 W/LocationManagerService( 2668): onFreezeStateChanged, uid[10062]=true
+06-14 14:54:41.816 I/PowerManagerService( 2668): [PWL] SetWakeLockEnableDisable uid = 10062 , disable= true
+06-14 14:54:41.816 I/PowerManagerService( 2668): [PWL] can not change uid =  10062
+06-14 14:54:41.828 I/VSyncReactor( 1789): Current= 60, Period= 60, Distance= 60
+06-14 14:54:41.829 D/vendor.qti.bluetooth@1.1-wake_lock( 1668): Release wakelock is released 
+06-14 14:54:41.831 D/DisplayModeController( 1789): setDesiredMode 4630946315032985731 {mode={fps=120.00 Hz, modePtr={id=0, vsyncRate=120.00 Hz, peakRefreshRate=120.00 Hz}}, emitEvent=true, force=false}
+06-14 14:54:41.831 I/LayerHistory( 1789): StatusBar$_4017#101 voted NoVote (0.00 Hz)
+06-14 14:54:41.831 I/SurfaceFlinger( 1789): No layers with votes - choose 120.00 Hz
+06-14 14:54:41.831 I/HWComposer( 1789): [4630946315032985731] ActiveConfigToHWC, ID : 0
+06-14 14:54:41.832 I/SDM     ( 1709): HWDeviceDRM::SetDisplaySwitchMode: [DispConfigs] check hs_mode 1
+06-14 14:54:41.832 W/SDM     ( 1709): HWDeviceDRM::GetSupportedBitClkRate: Requested rate not supported: 1362080000
+06-14 14:54:41.832 I/SDM     ( 1709): HWDeviceDRM::SetDisplaySwitchMode: [DispConfigs] Set mode index:0 1440x3120x120xcmdHS, hs_mode(1), found_mode(1)
+06-14 14:54:41.832 I/SDM     ( 1709): HWDeviceDRM::UpdateMixerAttributes: Mixer WxH 1440x3120-1 for Peripheral
+06-14 14:54:41.832 I/SDM     ( 1709): HWCDisplay::SubmitDisplayConfig: Active configuration changed from config 2 to 0
+06-14 14:54:41.832 I/DisplayDeviceRepository( 2668): Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=60.000004, presentationDeadlineNanos=17666666, appVsyncOffsetNanos=16666666, frameRateOverrides=[]
+06-14 14:54:41.834 D/SurfaceComposerClient( 2668): setCornerRadius ## b13b74e com.babcross.app/com.babcross.app.MainActivity#69167 cornerRadius=0.000000
+06-14 14:54:41.844 I/VSyncReactor( 1789): Current= 60, Period= 120, hwcPeriod= 120
+06-14 14:54:41.852 I/SurfaceFlinger( 1789): finalizeDisplayModeChange 4630946315032985731
+06-14 14:54:41.853 D/LocalDisplayAdapter( 2668): updateActiveModeLocked for d=4630946315032985731, mActiveModeId=1, mActiveSfDisplayMode=DisplayMode{id=0, width=1440, height=3120, xDpi=508.0, yDpi=504.764, peakRefreshRate=120.00001, vsyncRate=120.00001, appVsyncOffsetNanos=8333333, presentationDeadlineNanos=9333333, supportedHdrTypes=[4, 2, 3], group=1440}
+06-14 14:54:41.854 I/DisplayDeviceRepository( 2668): Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=120.00001, presentationDeadlineNanos=9333333, appVsyncOffsetNanos=8333333, frameRateOverrides=[]
+06-14 14:54:41.855 D/WindowManager( 2668): DeferredDisplayUpdater: partially applying DisplayInfo(1440 x 3120) immediately
+06-14 14:54:41.855 D/LiftUpHandler( 2668): [LTW] Stopped already.
+06-14 14:54:41.856 D/SGM:GameManager( 2668): onDisplayChanged. displyId: 0, state: 2
+06-14 14:54:41.856 D/SGM:GameManager( 2668): dpi: 560, longPixel: 3120, shortPixel: 1440
+06-14 14:54:41.856 D/AudioFlinger( 1781): setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 14:54:41.856 D/AODManagerService( 2668): requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 14:54:41.856 D/SurfaceComposerClient( 2668): setCornerRadius ## b13b74e com.babcross.app/com.babcross.app.MainActivity#69167 cornerRadius=0.000000
+06-14 14:54:41.857 I/HBD     ( 9995): DeX h DeX mode state change in non-main thread 
+06-14 14:54:41.857 I/HBD     ( 9995): DeX h DeX mode state change: 3 
+06-14 14:54:41.857 D/AHAL: AudioDevice( 1663): SetParameters: 1865: enter
+06-14 14:54:41.857 D/AHAL: AudioVoice( 1663): VoiceSetParameters: 200: Enter
+06-14 14:54:41.857 D/AHAL: AudioVoice( 1663): VoiceSetParameters: 479: Exit ret: 0
+06-14 14:54:41.858 D/AHAL: hfp( 1663): hfp_set_parameters: 444: enter
+06-14 14:54:41.858 D/AHAL: AudioDevice( 1663): SetParameters: 1945:  - screen = on
+06-14 14:54:41.858 I/PAL: ResourceManager( 1663): setParameter: 10683: Screen State:1
+06-14 14:54:41.858 D/AHAL: AudioDevice( 1663): SetParameters: 2798: exit: screen_state=on
+06-14 14:54:41.858 I/SPenContext( 9995): virtual void SPen::Context::SetDisplayRefreshRate(float) framerate=120
+06-14 14:54:41.858 I/LatencyConfiguration( 9995): void SPen::LatencyConfiguration::UpdateRefreshRate(float) RefreshRate=120.000008
+06-14 14:54:41.858 I/LatencyConfiguration( 9995): void SPen::LatencyConfiguration::UpdateRefreshRate(float) RefreshRateCallback 0xb400006e09f17490
+06-14 14:54:41.858 I/PredictorBase( 9995): virtual void SPen::PredictorBase::SetRefreshRate(float) Refresh rate: 120.000
+06-14 14:54:41.858 I/spe_log ( 9995): virtual void SPen::FbrDrawPad::SetRefreshRate(float) = 120.000
+06-14 14:54:41.858 I/spe_log ( 9995): virtual void SPen::FbrDrawPad::SetRefreshRate(float) mFrameDurationNano=8333333, mDisplayRefreshDurationNano: 8333333
+06-14 14:54:41.858 I/spe_log ( 9995): virtual void SPen::LowLatencyStrokeView::SetRefreshRate(float) refresh rate=120.000
+06-14 14:54:41.858 I/HoneySpace.Memory-Monitor( 4512): current state = 2, didTrim = false
+06-14 14:54:41.859 D/DisplayLifecycle( 4017): updateDisplay id = 0
+06-14 14:54:41.859 D/StackScroller( 4017): onDisplayChanged for predraw skip to 2
+06-14 14:54:41.861 D/WifiDisplayAdapter( 2668): isFitToActiveDisplayLocked : false
+06-14 14:54:41.861 D/AS.DesktopModeHelper( 2668): onDisplayChanged: #Id=0
+06-14 14:54:41.861 I/VSyncReactor( 1789): Current= 120, Period= 120, Distance= 20
+06-14 14:54:41.861 D/SGM:FgCheckThread( 2668): onLooperPrepared(), msg: MSG_LCD_ON
+06-14 14:54:41.861 I/HoneySpace.RefreshRateSource( 4512): singleFrameMs 8
+06-14 14:54:41.869 I/VSyncReactor( 1789): Current= 120, Period= 120, Distance= 120
+06-14 14:54:41.890 I/HBD     ( 9995): g onCapabilityChanged  setNetworkState currentNetworkState : wifi 
+06-14 14:54:41.890 I/HBD     ( 9995): g LogTag.TAG_LMDOWNLOAD network status is changed.
+06-14 14:54:41.905 I/sensors-hal( 1677): handle_sns_client_event:375, [0][2320406] accel_sample [ 0.086,  9.275,  3.340] 1460937269661978
+06-14 14:54:42.086 W/MediaProvider( 8522): isAppCloneUserPair for user 0: false

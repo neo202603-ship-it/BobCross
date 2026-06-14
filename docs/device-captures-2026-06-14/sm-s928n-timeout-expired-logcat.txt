@@ -1,0 +1,413 @@
+--------- beginning of main
+06-14 15:14:12.350  1677 29119 I sensors-hal: get_flicker_als_data:183, [SSC_LIGHT] flicker lux: 3 (11597, 3959, dw: 37)
+06-14 15:14:12.351  1677 29119 I sensors-hal: handle_sns_std_sensor_event:409, [SSC_LIGHT] P: 30(30),c:189,b:76,m:13,cl:36,l:30,s:30,l0:9920,l1:224,s0:4500,s1:0,acl:1,opr:0.86,f(r):93,u(bl):100,if:0,wi:2,si:0,po:144(N:0)
+06-14 15:14:12.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417652
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:12.383  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:12.383  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:12.384  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:12.585  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2858606] accel_sample [ 0.086,  9.279,  3.350] 1462107916307480
+--------- beginning of system
+06-14 15:14:12.800  2668  2903 E Watchdog: !@Sync: 32518 heap(MB): 183 / 215 FD: 1526 [2026-06-14 15:14:12.799]
+06-14 15:14:12.838  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:12.838  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:12.838  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 15:14:12.839  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:12.850  4240  5549 I ScanController: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 15:14:12.851  4240  5549 I ScanController: onScanResult to scannerId: 8- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 15:14:12.853  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 15:14:12.853 15709 16066 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 15:14:12.878  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DE:80, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 15:14:12.907  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:F9:DB, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 15:14:12.941  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x0, addressType=1, address=XX:XX:XX:XX:68:03, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 15:14:12.979  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:12.979  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:13.009  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:13.009  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:13.010  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:13.012  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-43, periodicAdvInt=0x0
+06-14 15:14:13.014  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DE:80, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 15:14:13.047  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-64, periodicAdvInt=0x0
+06-14 15:14:13.085  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:13.085  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:13.236  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 15:14:13.261  1158  1158 D io_stats: !@   8,0 r 34074864 675677148 w 25470238 666869640 d 2789821 1730144856 f 1032217 3809080 iot 15050408 0 th 0 0 0 pt 0 inp 0 0 976400.176
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [                 contacts = {contacts=282, raw_contacts=359, data=1170, account={secphone(1)=280, google(2)=0, sim(3)=0, sim2(4)=0, agg(5)=0, samsung(6)=2, mobileservice(7)=0, google(13)=0, google(14)=0, google(15)=0, google(16)=0, google(17)=0, google(18)=0, google(19)=0, duo(48)=77, telegram(50)=0}, trash=0, trash_acc={}, trash_sync=0, database=contacts2.db} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [               aggregated = {[1,48]=76, [1]=204, [6,48]=1, [6]=1} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [                  request = {} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [                    calls = {types={[100]=1, [200]=217, [300]=283, [500]=3, [1000]=1996}, database=calllog.db} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [                  profile = {contacts=0, raw_contacts=0, data=0, account={secphone(1)=0, google(2)=0, sim(3)=0, sim2(4)=0, agg(5)=0, samsung(6)=0, mobileservice(7)=0, google(13)=0, google(14)=0, google(15)=0, google(16)=0, google(17)=0, google(18)=0, google(19)=0, duo(48)=0, telegram(50)=0}, trash=0, trash_acc={}, trash_sync=0, database=profile.db} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [               sa_profile = {contacts=1, raw_contacts=1, data=5, account={secphone(1)=1, google(2)=0, sim(3)=0, sim2(4)=0, agg(5)=0, samsung(6)=0, mobileservice(7)=0, google(13)=0, google(14)=0, google(15)=0, google(16)=0, google(17)=0, google(18)=0, google(19)=0, duo(48)=0, telegram(50)=0}, trash=0, trash_acc={}, trash_sync=0, database=profile_sa.db} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: [                      etc = {binders=0, country_iso=KR, version=15.6.28, db_version=2000, db_size=1, db_wal_size=2, csc=KOO/KOR, sec_enabled=false, is_roaming=false} ]
+06-14 15:14:13.334 14019 14044 V CpEventLog(u0): [P] cp_state: ------------------------------------------------------------------------------
+06-14 15:14:13.354  2668  3641 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+06-14 15:14:13.356  2668  3641 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+06-14 15:14:13.356  2668  3641 D InetDiagMessage: Destroyed live tcp sockets for uids={10119} in 11ms
+06-14 15:14:13.359  2668  3641 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+06-14 15:14:13.361  2668  3641 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+06-14 15:14:13.361  2668  3641 D InetDiagMessage: Destroyed live tcp sockets for uids={20119} in 4ms
+06-14 15:14:13.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417653
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:13.383  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:13.383  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:13.383  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:13.517  2668  3641 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [232 WIFI]
+06-14 15:14:13.518  2668  6164 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 232019, isSameBssidAndFreq true
+06-14 15:14:13.520  2668  3684 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 15:14:13.521  2668  3684 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 15:14:13.522  2668  3684 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 232(valid: true/captive: false)
+06-14 15:14:13.523  2668  3684 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=122927Kbps LinkDnBandwidth>=97167Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.60, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -63, Link speed: 234Mbps, Tx Link speed: 234Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 390Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -63 AdminUids: [10293] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 15:14:13.524  2668  3760 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 15:14:13.524  2668  3752 D SemApeService: Deducted link capacity (M: R=273 T=163) RSSI=-63
+06-14 15:14:13.524  2668  3752 D SemApeService: Deducted link capacity (M: R=273 T=163) on (wlan0) GoogleAPI(M: R=97 T=122) RSSI=-63 isDefault=false isMlo=false
+06-14 15:14:13.524  2668  3760 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 15:14:13.524  4017  4253 I WifiPickerTracker: NetworkCallback : onCapabilitiesChanged
+06-14 15:14:13.524  2668  3760 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 15:14:13.525  2668  3760 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:14:13.525  2668  3760 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 26 26 26 
+06-14 15:14:13.525  4017  4253 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 15:14:13.525  2668  3684 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:97.167Uplink: 122.927
+06-14 15:14:13.525  2668  3732 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : Y. Outage Triggered: false
+06-14 15:14:13.525  2668  3732 D InsDataManager: Trying to save initial normal data.
+06-14 15:14:13.526  9995 10558 I HBD     : g onCapabilitiesChanged network : 232 current network state : wifi 
+06-14 15:14:13.526  4017  4253 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 15:14:13.527  4017  4253 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 15:14:13.527  4017  4253 I WifiPickerTracker: DefaultNetworkCallback : onCapabilitiesChanged
+06-14 15:14:13.528  4273  4959 D txpwrJni: sendNetworkInfo start
+06-14 15:14:13.528  4273  4959 D txpwrJni: sendNetworkInfo RatType 0
+06-14 15:14:13.533  2668  3732 D SensorCollector: syncMappedBuffers: 0, 0, 1
+06-14 15:14:13.533  2668  3732 D InsDataManager: trimBuffers start.
+06-14 15:14:13.533  2668  3732 D InsDataManager: trimBuffers - pathBuffer size: 98
+06-14 15:14:13.534  2668  3732 D InsDataManager: trimBuffers - nsmBuffer size: 26
+06-14 15:14:13.534  2668  3732 D InsDataManager: Too short for collecting additional normal data
+06-14 15:14:13.534  2668  3732 D SemInsManager: {"bssid": "94c098bf5180","rssi": -63.0,"latency": 0.0,"outage_count": 0,"lq_callback_triggered": true,"outage_log": "Unreliable statistics: -63.0 / 5 / 176 / 2 / 0 || 94c098bf5180: 0.000 / 0.000 / @ || N N / 0 0 / Y 2.0 / Y X 0 / 976400436 0 || Invalid""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 15:14:13.535  4017  4151 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:14:13.535  4017  4151 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:14:13.535 26032 21430 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 15:14:13.536  2668  3760 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 15:14:13.536  4512  4705 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236018, activityId=2131236043)
+06-14 15:14:13.536  4512  4705 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236018, activityId=2131236043)
+06-14 15:14:13.536  2668  3760 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 15:14:13.536  2668  5020 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 15:14:13.537  2668  5020 D WifiProfileShare: nearby scanning settings run
+06-14 15:14:13.537  2668  5020 D WifiProfileShare: network score provider settings enabled
+06-14 15:14:13.537  2668  5020 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 26 26 26 
+06-14 15:14:13.537  2668  5020 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:14:13.537  2668  5020 I WifiProfileShare.Caster: current network type: 0, score: [26, 26, 26]
+06-14 15:14:13.537  2668  5020 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:31
+06-14 15:14:13.537  2668  5020 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 15:14:13.538  2668  5020 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:3d:49, qosData:7c after:type:QOS, pBssid:12:3d:49, qosData:7c
+06-14 15:14:13.538  2668  3749 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:106)
+06-14 15:14:13.538  2668  3749 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 15:14:13.538  2668  3749 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:2167 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager.iwh_predict_action:8 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager.-$$Nest$miwh_predict_action:1 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager$IntelligentConnectionManagerHandler.handleMessage:762 android.os.Handler.dispatchMessage:110 
+06-14 15:14:13.539  2668  5020 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:14:13.539  2668  5020 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:14:13.539  2668  5020 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 15:14:13.539  2668  5020 D WifiProfileShare.MCF: success update QosData !
+06-14 15:14:13.539  2668  3641 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 15:14:13.539  2668  3641 D ConnectivityService: NetworkReassignment : no changes
+06-14 15:14:13.539 26032 26470 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 15:14:13.539 26032 26470 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 15:14:13.539  2668  5020 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:14:13.539  2668  5020 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:14:13.539  2668  5020 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 15:14:13.540  2668  3707 D BackgroundInstallControlService: Package event received: 0
+06-14 15:14:13.540 26032 21430 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 15:14:13.541 26032 21430 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 15:14:13.541 26032 21430 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 15:14:13.556  1609  1609 D Zygote  : Forked child process 21449
+06-14 15:14:13.556  2668  2916 I ActivityManager: Start proc 21449:com.samsung.android.wifi.intelligence:iwhInfService/1000 for service {com.samsung.android.wifi.intelligence/com.samsung.android.wifi.intelligence.iwh.IwhInfService}
+06-14 15:14:13.557  4017  4145 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 15:14:13.557  2668  2916 I ActivityManager: ProcessObserver broadcast disabled
+06-14 15:14:13.579 21449 21449 I e:iwhInfService: Using CollectorTypeCMC GC.
+06-14 15:14:13.613  2668  3707 D BackgroundInstallControlService: Package event received: 0
+06-14 15:14:13.619 21449 21458 I org.tensorflow.lite.h: Loaded native library: tensorflowlite_jni
+06-14 15:14:13.622 21449 21458 I org.tensorflow.lite.h: Didn't load native library: tensorflowlite_jni_gms_client
+06-14 15:14:13.624 21449 21458 I tflite  : Initialized TensorFlow Lite runtime.
+06-14 15:14:13.629  9995  9995 I HBD     : g onCapabilityChanged  setNetworkState currentNetworkState : wifi 
+06-14 15:14:13.630  9995  9995 I HBD     : g LogTag.TAG_LMDOWNLOAD network status is changed.
+06-14 15:14:13.668 21449 21458 I tflite  : Created TensorFlow Lite delegate for select TF ops.
+06-14 15:14:13.670 21449 21458 I tflite  : TfLiteFlexDelegate delegate: 0 nodes delegated out of 20 nodes with 0 partitions.
+06-14 15:14:13.670 21449 21458 I tflite  : Replacing 12 node(s) with delegate (TfLiteFlexDelegate) node, yielding 3 partitions.
+06-14 15:14:13.681 21449 21458 I tflite  : Replacing 2 node(s) with delegate (TfLiteFlexDelegate) node, yielding 2 partitions.
+06-14 15:14:13.681 21449 21458 I tflite  : Replacing 6 node(s) with delegate (TfLiteFlexDelegate) node, yielding 7 partitions.
+06-14 15:14:13.681 21449 21458 I tflite  : Replacing 2 node(s) with delegate (TfLiteFlexDelegate) node, yielding 5 partitions.
+06-14 15:14:13.683 21449 21458 W libc    : Access denied finding property "ro.mediatek.platform"
+06-14 15:14:13.685 21449 21458 I tflite  : Created TensorFlow Lite XNNPACK delegate for CPU.
+06-14 15:14:13.689 21449 21458 I IwhInfService: IWH model: SSs1nwPqdF / 0 /  T  | 107 / 8 / 0
+06-14 15:14:13.691 21449 21458 I IwhInfService: Inferenced state & reuslt : [0.448, 0.125] | false
+06-14 15:14:13.696  2668  3749 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.stopService:2080 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager$IntelligentConnectionManagerHandler.handleMessage:247 android.os.Handler.dispatchMessage:110 android.os.Looper.loopOnce:273 android.os.Looper.loop:363 
+06-14 15:14:13.698  2668  3749 I Process : Sending signal. PID: 21449 SIG: 9
+06-14 15:14:13.698  2668  3749 I SemWifiIntelligentConnectionManager: HQ: SSs1nwPqdF / 98:bf / 5180 / -63 / 234 / 448 | 86 / 1093 / 490 / NR / F / F / F / 1 / 63 | 0 / 0 (-75.0) ---> S / S / 0
+06-14 15:14:13.738  2668  3498 I ActivityManager: Process com.samsung.android.wifi.intelligence:iwhInfService (pid 21449) has died: cch+5 CEM (245,2941)
+06-14 15:14:13.739  2668  2917 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1000/pid_21449
+06-14 15:14:13.739  1609  1609 I Zygote  : Process 21449 exited due to signal 9 (Killed)
+06-14 15:14:13.944  1677 29153 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1462109391858470 ns; value = [30, 30, 204, 222, 24, 76, 36, 14, 9920, 0]
+06-14 15:14:14.039 26032 21430 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 15:14:14.086 26032 11363 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:282) and sleep 5000 for endpoint 21MK.
+06-14 15:14:14.228 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:282) with ACK from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.
+06-14 15:14:14.292  2668  2913 I ActivityManager: Changes in 10151 5 to 15, 144 to 0
+06-14 15:14:14.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417654
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:14.384  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:14.385  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:14.385  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:14.459  2668  3729 I SemWifiServiceDetector: Service det. suspended: T / T / 25600
+06-14 15:14:14.506  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2859526] accel_sample [ 0.086,  9.289,  3.336] 1462109917403782
+06-14 15:14:14.536 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:282) and reply a KEEP_ALIVE frame with ack from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.
+06-14 15:14:14.622  3853  3997 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+06-14 15:14:14.781  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:14.782  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:14.782  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 15:14:14.782  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:14.793  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x10, addressType=1, address=XX:XX:XX:XX:BB:0A, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-88, periodicAdvInt=0x0
+06-14 15:14:14.800  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:2A:78, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-57, periodicAdvInt=0x0
+06-14 15:14:14.810  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:F9:DB, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 15:14:14.849  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:14.849  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:14.855  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:14.855  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:14.855  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:14.859  4240  5549 I ScanController: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:14:14.859  4240  5549 I ScanController: onScanResult to scannerId: 8- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:14:14.861 15709 16066 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 15:14:14.869 15709  6901 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 15:14:14.896  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:14.897  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:14.912  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:14.912  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:14.912  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:14.915  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DE:80, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 15:14:14.952  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:F9:DB, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 15:14:14.953  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-73, periodicAdvInt=0x0
+06-14 15:14:14.968  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-64, periodicAdvInt=0x0
+06-14 15:14:14.980  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-47, periodicAdvInt=0x0
+06-14 15:14:14.986  4240  5549 I ScanController: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-73, periodicAdvInt=0x0
+06-14 15:14:14.986  4240  5549 I ScanController: onScanResult to scannerId: 8- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-73, periodicAdvInt=0x0
+06-14 15:14:14.990 15709 16066 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 15:14:15.024  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:15.024  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:15.174  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 15:14:15.262  1158  1158 D io_stats: !@   8,0 r 34074864 675677148 w 25470247 666869680 d 2789821 1730144856 f 1032217 3809081 iot 15050428 0 th 0 0 0 pt 0 inp 0 0 976402.177
+06-14 15:14:15.262  1158  1158 D io_stats: !@ Write_top(KB): kworker/u16:3(19140) 800 com.kakao.talk(6223) 20 gestions:moneta(25070) 8
+06-14 15:14:15.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417655
+06-14 15:14:15.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:15.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:15.383  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:15.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:15.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:15.384  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:15.384  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:15.384  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:15.861  2668  4961 I NSLocationMonitor: getGPSUsingApps() called
+06-14 15:14:15.866  4963  4998 I NSLocationManager_FLP: getGPSUsingApps, No change
+06-14 15:14:15.876  2668  4961 D FreecessHandler: freeze com.sec.android.app.shealth(10346) result : 39
+06-14 15:14:15.929  2668  3498 W ParceledListSlice: Element #627 is 22308 bytes.
+06-14 15:14:15.957  2668  3785 D NetdEventListenerService: DNS Requested by 232, 10751(com.shinhan.smartcaremgr), SUCCESS, 0ms
+06-14 15:14:16.206  8722  8722 I SDHMS:LOAD: type: LoadsFreqs, value: 30:0:19:681215:902400:672000:687359:3148800:499200:231:231:231
+06-14 15:14:16.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417656
+06-14 15:14:16.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:16.384  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:16.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:16.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:16.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:16.384  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:16.384  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:16.384  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:16.504  1677 29153 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1462111951857636 ns; value = [30, 30, 204, 222, 24, 76, 36, 14, 9952, 0]
+06-14 15:14:16.544  2668  3641 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [232 WIFI]
+06-14 15:14:16.547  2668  3732 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : Y. Outage Triggered: false
+06-14 15:14:16.547  2668  3732 D InsDataManager: Trying to save initial normal data.
+06-14 15:14:16.547  2668  3732 D SensorCollector: syncMappedBuffers: 0, 0, 1
+06-14 15:14:16.547  2668  3732 D InsDataManager: trimBuffers start.
+06-14 15:14:16.547  2668  3732 D InsDataManager: trimBuffers - pathBuffer size: 98
+06-14 15:14:16.548  2668  3732 D InsDataManager: trimBuffers - nsmBuffer size: 26
+06-14 15:14:16.548  2668  3732 D InsDataManager: Too short for collecting additional normal data
+06-14 15:14:16.548  2668  3732 D SemInsManager: {"bssid": "94c098bf5180","rssi": -64.0,"latency": 0.0,"outage_count": 0,"lq_callback_triggered": true,"outage_log": "Unreliable statistics: -64.0 / 8 / 456 / 3 / 1 || 94c098bf5180: 0.000 / 0.000 / @ || N N / 0 0 / Y 2.0 / Y X 0 / 976403460 0 || Invalid""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 15:14:16.549  2668  3684 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 15:14:16.549  2668  3684 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 15:14:16.549  2668  3684 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 232(valid: true/captive: false)
+06-14 15:14:16.549  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2860446] accel_sample [ 0.100,  9.289,  3.336] 1462111918500084
+06-14 15:14:16.549  2668  6164 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 232020, isSameBssidAndFreq true
+06-14 15:14:16.549  2668  3684 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=95172Kbps LinkDnBandwidth>=115415Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.60, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -64, Link speed: 234Mbps, Tx Link speed: 234Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 390Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5180MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -64 AdminUids: [10293] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 15:14:16.550  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:16.550  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:16.550  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 15:14:16.550  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:16.550  2668  3752 D SemApeService: Deducted link capacity (M: R=273 T=163) RSSI=-64
+06-14 15:14:16.550  2668  3752 D SemApeService: Deducted link capacity (M: R=273 T=163) on (wlan0) GoogleAPI(M: R=115 T=95) RSSI=-64 isDefault=false isMlo=false
+06-14 15:14:16.551  4017  4253 I WifiPickerTracker: NetworkCallback : onCapabilitiesChanged
+06-14 15:14:16.551  4017  4253 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 15:14:16.551  2668  3749 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:106)
+06-14 15:14:16.552  2668  3749 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 15:14:16.552  2668  3684 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:115.415Uplink: 95.172
+06-14 15:14:16.552  2668  3760 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 15:14:16.553  4017  4253 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 15:14:16.553  2668  3760 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 15:14:16.553  4017  4253 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 15:14:16.553  4017  4253 I WifiPickerTracker: DefaultNetworkCallback : onCapabilitiesChanged
+06-14 15:14:16.556  4017  4151 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:14:16.556  4017  4151 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:14:16.556  9995 10558 I HBD     : g onCapabilitiesChanged network : 232 current network state : wifi 
+06-14 15:14:16.557  4512  4705 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236017, activityId=2131236043)
+06-14 15:14:16.557  4512  4705 I HoneySpace.StatusIconTracker: invokeEvent() called with: event = Wifi(visible=true, resId=2131236017, activityId=2131236043)
+06-14 15:14:16.557  4273  4959 D txpwrJni: sendNetworkInfo start
+06-14 15:14:16.557  4273  4959 D txpwrJni: sendNetworkInfo RatType 0
+06-14 15:14:16.564  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 15:14:16.564  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DE:80, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-49, periodicAdvInt=0x0
+06-14 15:14:16.564  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-43, periodicAdvInt=0x0
+06-14 15:14:16.563  2668  3760 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 15:14:16.565  2668  3760 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:14:16.565  2668  3760 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 26 26 26 
+06-14 15:14:16.565  2668  3760 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 15:14:16.565  2668  3760 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 15:14:16.565  2668  5020 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 15:14:16.566  2668  5020 D WifiProfileShare: nearby scanning settings run
+06-14 15:14:16.566  2668  5020 D WifiProfileShare: network score provider settings enabled
+06-14 15:14:16.566  2668  5020 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 26 26 26 
+06-14 15:14:16.566  2668  5020 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:14:16.566  2668  5020 I WifiProfileShare.Caster: current network type: 0, score: [26, 26, 26]
+06-14 15:14:16.566  2668  5020 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:31
+06-14 15:14:16.559 26032 26424 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 15:14:16.566  2668  5020 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 15:14:16.566 26032 26424 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 15:14:16.566  2668  5020 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:3d:49, qosData:7c after:type:QOS, pBssid:12:3d:49, qosData:7c
+06-14 15:14:16.566 26032 21430 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4740)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4908)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5325)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5295)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 15:14:16.567  2668  5020 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:14:16.567  2668  5020 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:14:16.567  2668  5020 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 15:14:16.567  2668  5020 D WifiProfileShare.MCF: success update QosData !
+06-14 15:14:16.567  2668  5020 I [MCFSDK_android_1.3.7026]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:14:16.567  2668  5020 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:14:16.567  2668  5020 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 15:14:16.568  2668  3641 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 15:14:16.568  2668  3641 D ConnectivityService: NetworkReassignment : no changes
+06-14 15:14:16.569 26032 21430 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5575)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1564)]
+06-14 15:14:16.569 26032 21430 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 15:14:16.569  4017  4145 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 15:14:16.569 26032 21430 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 15:14:16.602  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:16.602  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:16.615  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:16.615  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:16.615  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:16.622  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-68, periodicAdvInt=0x0
+06-14 15:14:16.658  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:16.658  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:16.662  9995  9995 I HBD     : g onCapabilityChanged  setNetworkState currentNetworkState : wifi 
+06-14 15:14:16.663  9995  9995 I HBD     : g LogTag.TAG_LMDOWNLOAD network status is changed.
+06-14 15:14:16.665  1677  8250 I sensors-hal: handle_sns_std_sensor_event:131, [SSC_LIGHT] A: 30(30),c:189,b:76,m:13,cl:36,l:30,s:30,l0:9952,l1:224,s0:4500,s1:0,acl:1,opr:0.86,f(r):93,u(bl):100,if:0,wi:2,si:0,po:144(N:0)
+06-14 15:14:16.670  1677 29119 I sensors-hal: get_flicker_als_data:183, [SSC_LIGHT] flicker lux: 3 (11653, 3978, dw: 37)
+06-14 15:14:16.670  1677 29119 I sensors-hal: handle_sns_std_sensor_event:409, [SSC_LIGHT] P: 30(30),c:189,b:76,m:13,cl:36,l:30,s:30,l0:9952,l1:224,s0:4500,s1:0,acl:1,opr:0.86,f(r):93,u(bl):100,if:0,wi:2,si:0,po:144(N:0)
+06-14 15:14:16.684  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:16.684  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:16.684  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:16.687  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-42, periodicAdvInt=0x0
+06-14 15:14:16.697  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:2A:78, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-66, periodicAdvInt=0x0
+06-14 15:14:16.722  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:F9:DB, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-49, periodicAdvInt=0x0
+06-14 15:14:16.760  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:16.760  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:16.910  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 15:14:17.069 26032 21430 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 15:14:17.178  3853  3997 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+06-14 15:14:17.268  5157  5157 I adbd    : New TLS connection [fd=40]
+06-14 15:14:17.270  5157 21489 I adbd    : host-40: connection terminated: read failed
+06-14 15:14:17.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417657
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:17.384  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:17.385  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:17.385  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:17.465  2668  3729 I SemWifiServiceDetector: Service det. resumed: T / T / 25600
+06-14 15:14:17.627 26032 21430 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 15:14:17.627 26032 21430 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x55 0x30 0x4b 0x37 0x11 0x32 0x94 0xd2 0x3b 0xc4 0x24 0xda 0x4d 0x17 0x88 0x4e 0xe1 0x8e 0x9f 0x83 0x58 0xf3 ], deviceToken=[ 0x5f 0x2f ], rxAdvertisement=null } : 5 times.
+06-14 15:14:17.627 26032 21430 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x49 0x58 0x34 0x41 0x11 0x32 0x84 0xc3 0x72 0xb4 0xe7 0x81 0xc0 0x95 0x55 0xbe 0xdf 0x7e 0x8a 0x5e 0x3a 0x9f ], deviceToken=[ 0x37 0x36 ], rxAdvertisement=null } : 1 times.
+06-14 15:14:17.627 26032 21430 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x44 0x41 0x54 0x4d 0x11 0x32 0x70 0x09 0x7c 0x10 0x2d 0x98 0x17 0x36 0xc6 0x9c 0xa8 0x2e 0x40 0x98 0xe6 0xee ], deviceToken=[ 0x65 0xff ], rxAdvertisement=null } : 4 times.
+06-14 15:14:17.627 26032 21430 I NearbyMediums: Total 10 fast advertisements from 3 unique advertisers.
+06-14 15:14:17.627 26032 21430 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 15:14:18.041  1677  8250 I sensors-hal: handle_sns_client_event:190, auto_rotation_debug_2 mode,255, type,1,0 acc,0.081,9.279,3.355, ar,0, ver,14, pedo,1,e,1,i,3
+06-14 15:14:18.334  9479 21493 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+06-14 15:14:18.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417658
+06-14 15:14:18.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:18.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:18.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:18.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:18.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:18.384  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:18.384  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:18.384  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:18.389  2668 10464 I AfterimageCompensationService: AfcThread mLuminance : 105 , AfpcPeriodCount : 264 , rotation : 0 , AOD : false
+06-14 15:14:18.392  2668 10464 I SurfaceComposerClient: captureDisplay:Display-4630946315032985731
+06-14 15:14:18.395  1789  2016 I SurfaceFlinger: Capture layer list: 	 com.babcross.app/com.babcross.app.MainActivity$_984#69168(seamlessTransition:0)
+06-14 15:14:18.395  1789  2016 I SurfaceFlinger: Capture layer list: 	 $_10099#171(seamlessTransition:0)
+06-14 15:14:18.395  1789  2016 I SurfaceFlinger: Capture layer list: 	 StatusBar$_4017#101(seamlessTransition:0)
+06-14 15:14:18.395  1789  2016 I SurfaceFlinger: Capture layer list: 	 com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_4512#68709(seamlessTransition:0)
+06-14 15:14:18.395  1789  2016 I SurfaceFlinger: Capture layer list: 	 NavigationBar0$_4017#41095(seamlessTransition:0)
+06-14 15:14:18.395  1789  2016 I CompositionEngine: [setDisplaySize] size=(1440, 3120)
+06-14 15:14:18.396  1789  2016 E HwcComposer: getLuts failed Status(-129, EX_TRANSACTION_FAILED): 'UNKNOWN_TRANSACTION: '
+06-14 15:14:18.396  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer ScreenCaptureFillLayer at index 0
+06-14 15:14:18.396  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_984#69168 at index 1
+06-14 15:14:18.397  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer $_10099#171 at index 2
+06-14 15:14:18.397  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer StatusBar$_4017#101 at index 3
+06-14 15:14:18.397  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_4512#68709 at index 4
+06-14 15:14:18.397  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer NavigationBar0$_4017#41095 at index 5
+06-14 15:14:18.401  2668 10464 D system_server: mAFPC_Read - w = 1440, h = 3120, s = 32, f = 4, s_size = 18370560, luminance = 105, count = 264, captureOrientation = 0
+06-14 15:14:18.536  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:18.537  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:18.537  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 15:14:18.537  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:18.548  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x10, addressType=1, address=XX:XX:XX:XX:54:F5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 15:14:18.557  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 15:14:18.558  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x10, addressType=1, address=XX:XX:XX:XX:BB:0A, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 15:14:18.585  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2861366] accel_sample [ 0.091,  9.289,  3.355] 1462113919596543
+06-14 15:14:18.589  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:18.589  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:18.592  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:18.593  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:18.593  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:18.599  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 15:14:18.601  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DE:80, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 15:14:18.632  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:2A:78, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+06-14 15:14:18.655  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 15:14:18.689  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 15:14:18.727  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:18.727  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:18.784  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 15:14:18.784  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 15:14:18.784  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 15:14:18.789  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:76:C6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-47, periodicAdvInt=0x0
+06-14 15:14:18.827  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 15:14:18.827  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 15:14:18.977  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 15:14:19.064  1677 29153 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1462114511858261 ns; value = [30, 30, 204, 222, 24, 76, 36, 14, 9952, 0]
+06-14 15:14:19.092 26032 11363 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:283) and sleep 5000 for endpoint 21MK.
+06-14 15:14:19.264  1158  1158 D io_stats: !@   8,0 r 34074865 675677156 w 25470260 666870668 d 2789821 1730144856 f 1032219 3809083 iot 15050452 0 th 0 0 0 pt 0 inp 0 0 976406.179
+06-14 15:14:19.264  1158  1158 D io_stats: !@ Read_top(KB): droid.bluetooth(4240) 8
+06-14 15:14:19.264  1158  1158 D io_stats: !@ Write_top(KB): kworker/u16:1(7059) 964 soft.appmanager(25397) 16
+06-14 15:14:19.379  8722  9295 I SDHMS:x : SIOP:: AP:367 BAT:350 USB:347 CHG:360 PA:370 WIFI:364 CF:357 BLK:0 SUBBAT:0 LRPTHM:354 SKIN:353 SKINF:338 SKINB:353 LRP2:353 LRF2:338 LRB2:353 AP2:350 CHG2:351 WIFI2:350 RCV2:330 SPK2:322 FCAM:346 UPSPK:356 DNSPK:346 VAP02:367 VWIFI:362 AMB2:313 AVGCUR:3 AVGSYS:229 POWER:13
+06-14 15:14:19.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781417659
+06-14 15:14:19.384  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 15:14:19.384  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 350 
+06-14 15:14:19.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690294
+06-14 15:14:19.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690285
+06-14 15:14:19.384  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 15:14:19.385  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690293
+06-14 15:14:19.385  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 15:14:19.385  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 15:14:19.454 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:283) with ACK from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.
+06-14 15:14:19.504 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:283) and reply a KEEP_ALIVE frame with ack from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.

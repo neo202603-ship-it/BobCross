@@ -1,0 +1,407 @@
+--------- beginning of main
+06-14 15:07:05.734  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:05.741  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 15:07:05.775  1385  1825 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 15:07:05.776  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 15093, isSameBssidAndFreq true
+06-14 15:07:05.784  1385  1864 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 15:07:05.785  1385  1864 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 15:07:05.785  1385  1864 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 15:07:05.786  1385  1864 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=33578Kbps LinkDnBandwidth>=39997Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -62, Link speed: 144Mbps, Tx Link speed: 144Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -62 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 15:07:05.786  1385  1934 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 15:07:05.787  1385  1934 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 15:07:05.787  1385  1934 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 15:07:05.787  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:07:05.787  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+--------- beginning of system
+06-14 15:07:05.787  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 15:07:05.787  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 15:07:05.787  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 15:07:05.787  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 15:07:05.787  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:39.997Uplink: 33.578
+06-14 15:07:05.787  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 15:07:05.787  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 15:07:05.787  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 15:07:05.787  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 15:07:05.787  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 15:07:05.788  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 15:07:05.788  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 15:07:05.791 20071 20130 I ControllerEventHandler: [#CMH#] Capabilities of network has been changed:  106
+06-14 15:07:05.791 20071 20130 I ControllerEventHandler: [#CMH#] Setting POIConnectedValue to true 
+06-14 15:07:05.793  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 15:07:05.793 24327 10774 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 15:07:05.793  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:07:05.793  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:07:05.793  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 15:07:05.793  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 15:07:05.794  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 15:07:05.794  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 15:07:05.794  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 15:07:05.794  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 15:07:05.794  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 15:07:05.795  1385  1825 D ConnectivityService: Rematched networks [computed 1ms] [applied 0ms] [issued 1]
+06-14 15:07:05.795  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 15:07:05.795  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:07:05.795  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 15:07:05.795 24327 10774 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 15:07:05.796  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 15:07:05.798 24327 24356 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 15:07:05.798 24327 24356 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 15:07:05.798 24327 10774 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 15:07:05.799 24327 10774 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 15:07:05.825  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:05.836  1096  1096 I LayerHistory: StatusBar$_2024#94 Max (can't resolve refresh rate)
+06-14 15:07:05.836  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:05.836  1096  1096 I SurfaceFlinger: Weight ignores StatusBar$_2024#94 (type=Max, weight=0.03, seamlessness=Default) 0.00 Hz's 120.00 Hz
+06-14 15:07:05.836  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 15:07:05.837  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 15:07:05.838   986  1170 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:05.838   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:05.838   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:05.839   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:05.839   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:05.839   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:05.844   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 15:07:05.844   986  1053 I display : setActiveConfig(config=0)
+06-14 15:07:05.844   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:05.844   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:05.845  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:05.859  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 15:07:06.072  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:40:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 15:07:06.077  1096  1096 I LayerHistory: StatusBar$_2024#94 Max (can't resolve refresh rate)
+06-14 15:07:06.077  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 is small dirty
+06-14 15:07:06.077  1096  1096 I SurfaceFlinger: Weight ignores StatusBar$_2024#94 (type=Max, weight=0.03, seamlessness=Default) 0.00 Hz's 120.00 Hz
+06-14 15:07:06.077  1096  1096 I SurfaceFlinger: scored - choose 60.00 Hz
+06-14 15:07:06.078  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 15:07:06.078   986  1170 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:06.078   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:06.078   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:06.079   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:06.079   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:06.079   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:06.081  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:73, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 15:07:06.083   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 15:07:06.083   986  1053 I display : setActiveConfig(config=2)
+06-14 15:07:06.083   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:06.083   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:06.083  1385  1488 D LocalDisplayAdapter: updateActiveModeLocked for d=4633128672291735937, mActiveModeId=3, mActiveSfDisplayMode=DisplayMode{id=2, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=60.000004, vsyncRate=60.000004, appVsyncOffsetNanos=0, presentationDeadlineNanos=17666666, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 15:07:06.084  1385  1488 I DisplayDeviceRepository: Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=60.000004, presentationDeadlineNanos=17666666, appVsyncOffsetNanos=0
+06-14 15:07:06.084  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:06.086  1385  1574 D BrightnessThermalClamper: Thermal status observer already started
+06-14 15:07:06.088  1385  1385 D SGM:GameManager: onDisplayChanged. displyId: 0, state: 2
+06-14 15:07:06.088  1385  1385 D MotionRecognitionService: [DisplayListener] getRefreshRate 60.000004
+06-14 15:07:06.088  1385  1780 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_LCD_ON
+06-14 15:07:06.088  1385  1385 D AODManagerService: requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 15:07:06.089  1385  1799 D MotionRecognitionService: Inject RefreshRate: 60
+06-14 15:07:06.089  1385  3231 D LiftUpHandler: [LTW] Stopped already.
+06-14 15:07:06.089  1385  1799 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+06-14 15:07:06.089  1385  1799 D SensorService: setSContextDataLocked 100048c1
+06-14 15:07:06.090  1086 25075 D AudioFlinger: setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 15:07:06.090  1002  1002 D Sensors : c1 48 00 10 3c 00 00 00  
+06-14 15:07:06.090  1002  1002 E Sensors : inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 15:07:06.090   973  1009 D audio_hw_primary: device-adev_set_parameters: enter
+06-14 15:07:06.091   973  1009 I audio_hw_primary: device-adev_set_parameters: Screen State = on)
+06-14 15:07:06.091   973  1009 I audio_hw_proxy2: proxy-proxy_set_parameters: set Screen-state 1
+06-14 15:07:06.091   973  1009 D audio_hw_primary: device-adev_set_parameters: param (screen_state=on)
+06-14 15:07:06.091   973  1009 I audio_hw_primary_odm: odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 15:07:06.091   973  1009 V audio_hw_primary: device-adev_set_parameters: exit (screen_state=on)
+06-14 15:07:06.091  2024  2073 I VRI[ShellDropTarget]@6480554: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.092   973  1009 I Audio_a2dpsink_hw: adev_set_parameters: kevpairs=[screen_state=on]
+06-14 15:07:06.093  2542  2618 I HoneySpace.RefreshRateSource: singleFrameMs 16
+06-14 15:07:06.093  2542  2542 I VRI[RecentsTransitionOverlay]@725b4cf: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.093  2542  2542 I VRI[CocktailBarService]@956d8b0: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.093  2542  2542 I VRI[RecentsActivity]@2460c6b: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.093  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 15:07:06.094  2024  2024 D DisplayLifecycle: updateDisplay id = 0
+06-14 15:07:06.096  2024  2164 D StackScroller: onDisplayChanged for predraw skip to 2
+06-14 15:07:06.096  2024  2024 I VRI[LockscreenShortcutBlur]@43e4b39: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.096  2024  2024 I VRI[NavigationBar0]@18aa930: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.096  2024  2024 I VRI[NotificationShade]@ab1f331: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.096  2024  2024 I VRI[StatusBar]@f6672fa: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.096  2024  2024 I VRI[Bouncer]@ddcc755: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.096  2024  2024 I VRI[KeyguardBiometricToastView]@41035dc: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.097  1002  1002 D Sensors : SContext Data Injection return 8
+06-14 15:07:06.097  4363  4363 I VRI[InputMethod]@a7ae199: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.097  1385  4410 D WifiDisplayAdapter: isFitToActiveDisplayLocked : false
+06-14 15:07:06.097  1385  1488 D RefreshRateModeManager: updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 15:07:06.098  8465  8465 I VRI[HintService]@db150f5: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.103  1273  1273 I VRI[MainActivity]@6b0ac1e: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:06.103  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:93:9D, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-67, periodicAdvInt=0x0
+06-14 15:07:06.190  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:06.208  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:40:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:06.295 24327 11126 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 15:07:06.527   677   677 D io_stats: !@ Write_top(KB): kworker/u16:5(4713) 12
+06-14 15:07:06.858 24327 11126 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(PGYO, -6264069357248414798), with result: DETAIL_SUCCESS
+06-14 15:07:06.975 24327  5929 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 15:07:06.976 24327 11126 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(PGYO, -6264069357248414798, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 15:07:06.976 24327 11126 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 15:07:06.976 24327 10774 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6264069357248414798, remaining number of payloadIds = 0.
+06-14 15:07:07.556  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 15:07:07.561  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:40:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:07.602  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:07:07.651  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:B2:F2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:07.681  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 2- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:07:07.681  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:07:07.684  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 15:07:07.688  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:07.693  9239  5381 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 15:07:07.696  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:40:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:07.702 24327 10774 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 15:07:07.702 24327 10774 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x57 0x4f 0x4c 0x11 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ], deviceToken=[ 0x54 0xd8 ], rxAdvertisement=null } : 1 times.
+06-14 15:07:07.702 24327 10774 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x36 0x49 0x35 0x4d 0x11 0x32 0xa4 0x10 0x7e 0x27 0x18 0x1b 0xa9 0xf6 0xe3 0x40 0x50 0x66 0x53 0x2a 0xa5 0xd1 ], deviceToken=[ 0xc3 0x16 ], rxAdvertisement=null } : 18 times.
+06-14 15:07:07.702 24327 10774 I NearbyMediums: Total 19 fast advertisements from 2 unique advertisers.
+06-14 15:07:07.703 24327 10774 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 15:07:07.717  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:73, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 15:07:07.727  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 2- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:07:07.727  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 15:07:07.730  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 15:07:08.151  1096  1171 I VSyncReactor: Current= 60, Period= 60, hwcPeriod= 60
+06-14 15:07:08.169  1096  1096 I SurfaceFlinger: SFWD update time=71442563717053
+06-14 15:07:08.173  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:08.173  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 15:07:08.174  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 15:07:08.175   986  1170 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:08.175   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:08.175   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:08.176   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:08.176   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:08.176   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:08.184   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 15:07:08.184   986  1053 I display : setActiveConfig(config=0)
+06-14 15:07:08.184   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:08.184   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:08.184  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:08.192  4455  5301 I SDHMS:x : SIOP:: AP:354 BAT:350 USB:350 CHG:356 PA:354 CP:352 WIFI:355 CF:351 BLK:0 SUBBAT:0 SKIN:347 SKINF:341 SKINB:342 LRP:342 LRP2:347 LRF:341 LRB:342 LRF2:347 LRB2:345 AP2:347 CHG2:346 MEM2:347 WIFI2:346 RCV2:344 SPK2:342 FCAM:350 UPSPK:356 DNSPK:350 AVGCUR:-250 POWER:-1044
+06-14 15:07:08.193  1385  1488 D LocalDisplayAdapter: updateActiveModeLocked for d=4633128672291735937, mActiveModeId=1, mActiveSfDisplayMode=DisplayMode{id=0, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=120.00001, vsyncRate=120.00001, appVsyncOffsetNanos=0, presentationDeadlineNanos=9333333, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 15:07:08.194  1385  1488 I DisplayDeviceRepository: Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=120.00001, presentationDeadlineNanos=9333333, appVsyncOffsetNanos=0
+06-14 15:07:08.197  1385  1574 D BrightnessThermalClamper: Thermal status observer already started
+06-14 15:07:08.198  1385  1385 D SGM:GameManager: onDisplayChanged. displyId: 0, state: 2
+06-14 15:07:08.199  1086 25075 D AudioFlinger: setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 15:07:08.199  1385  1385 D MotionRecognitionService: [DisplayListener] getRefreshRate 120.00001
+06-14 15:07:08.199  1385  3231 D LiftUpHandler: [LTW] Stopped already.
+06-14 15:07:08.199  1385  1385 D AODManagerService: requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 15:07:08.199   973  1009 D audio_hw_primary: device-adev_set_parameters: enter
+06-14 15:07:08.199   973  1009 I audio_hw_primary: device-adev_set_parameters: Screen State = on)
+06-14 15:07:08.199  1385  1780 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_LCD_ON
+06-14 15:07:08.199  1385  1799 D MotionRecognitionService: Inject RefreshRate: 120
+06-14 15:07:08.200  1385  1799 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+06-14 15:07:08.200  1385  1799 D SensorService: setSContextDataLocked 100048c1
+06-14 15:07:08.200   973  1009 I audio_hw_proxy2: proxy-proxy_set_parameters: set Screen-state 1
+06-14 15:07:08.200   973  1009 D audio_hw_primary: device-adev_set_parameters: param (screen_state=on)
+06-14 15:07:08.200   973  1009 I audio_hw_primary_odm: odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 15:07:08.201  1002  1002 D Sensors : c1 48 00 10 78 00 00 00  
+06-14 15:07:08.201  1002  1002 E Sensors : inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 15:07:08.201   973  1009 V audio_hw_primary: device-adev_set_parameters: exit (screen_state=on)
+06-14 15:07:08.201  2542  2542 I VRI[RecentsTransitionOverlay]@725b4cf: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.202  2542  2542 I VRI[CocktailBarService]@956d8b0: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.202   973  1009 I Audio_a2dpsink_hw: adev_set_parameters: kevpairs=[screen_state=on]
+06-14 15:07:08.202  2542  2542 I VRI[RecentsActivity]@2460c6b: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.202  2542  2618 I HoneySpace.RefreshRateSource: singleFrameMs 8
+06-14 15:07:08.204  2024  2073 I VRI[ShellDropTarget]@6480554: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.204  2024  2024 D DisplayLifecycle: updateDisplay id = 0
+06-14 15:07:08.205  8465  8465 I VRI[HintService]@db150f5: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.205  1002  1002 D Sensors : SContext Data Injection return 8
+06-14 15:07:08.205  1385  4405 D WifiDisplayAdapter: isFitToActiveDisplayLocked : false
+06-14 15:07:08.206  2024  2024 I VRI[LockscreenShortcutBlur]@43e4b39: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.206  2024  2024 I VRI[NavigationBar0]@18aa930: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.206  2024  2024 I VRI[NotificationShade]@ab1f331: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.206  2024  2024 I VRI[StatusBar]@f6672fa: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.206  2024  2024 I VRI[Bouncer]@ddcc755: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.206  2024  2024 I VRI[KeyguardBiometricToastView]@41035dc: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.207  2024  2164 D StackScroller: onDisplayChanged for predraw skip to 2
+06-14 15:07:08.207  4363  4363 I VRI[InputMethod]@a7ae199: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.207  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 15:07:08.207  1385  1488 D RefreshRateModeManager: updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 15:07:08.208  1273  1273 I VRI[MainActivity]@6b0ac1e: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 15:07:08.263 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:197) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 15:07:08.376 24327  6153 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:197) and sleep 5000 for endpoint PGYO.
+06-14 15:07:08.461 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:197) with ACK from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 15:07:08.825  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:08.825  1096  1096 I SurfaceFlinger: Idle - choose 60.00 Hz
+06-14 15:07:08.827  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 15:07:08.828   986  1170 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:08.828   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:08.828   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:08.829   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:08.829   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:08.829   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:08.830  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:08.834   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 15:07:08.834   986  1053 I display : setActiveConfig(config=2)
+06-14 15:07:08.834   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:08.834   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:08.835  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:08.843  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 15:07:08.847  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 15094, isSameBssidAndFreq true
+06-14 15:07:08.967  4455  4455 I SDHMS:LOAD: type: LoadsFreqs, value: 0:6:0:533000:533000:533000:814060:2600000:533000:44:130:0
+06-14 15:07:09.024  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:B2:F2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 15:07:09.047  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 15:07:09.087  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:73, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-59, periodicAdvInt=0x0
+06-14 15:07:09.096  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 15:07:09.130  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:5F:6B, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 15:07:09.152  1096  1171 I VSyncReactor: Current= 60, Period= 60, hwcPeriod= 60
+06-14 15:07:09.159  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:B2:F2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 15:07:09.168  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:09.181  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:09.182  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 15:07:09.184  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 15:07:09.185   986  1170 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:09.185   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:09.185   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:09.186   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:09.186   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:09.186   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:09.186  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:09.187  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 15:07:09.202   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 15:07:09.202   986  1053 I display : setActiveConfig(config=0)
+06-14 15:07:09.202   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:09.202   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:09.203  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:09.219  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 15:07:09.519  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 15:07:09.780  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:09.780  1096  1096 I SurfaceFlinger: Idle - choose 60.00 Hz
+06-14 15:07:09.783  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 15:07:09.783   986  1170 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 15:07:09.783   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:09.783   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:09.783   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:09.784   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:09.784   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:09.784   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:09.784   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:09.784   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:09.784   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:09.784   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:09.784   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:09.784   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:09.785   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 15:07:09.785   986  1053 I display : setActiveConfig(config=2)
+06-14 15:07:09.785   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:09.785   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:09.786  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:09.795  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 15:07:10.177  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:10.189  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:10.190  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 15:07:10.192  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 15:07:10.193   986  1170 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 15:07:10.193   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:10.193   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:10.193   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:10.193   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:10.194   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:10.194   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:10.194   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:10.194   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:10.194   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:10.194   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:10.194   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:10.194   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:10.195  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:10.211   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 15:07:10.211   986  1053 I display : setActiveConfig(config=0)
+06-14 15:07:10.211   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:10.211   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:10.211  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:10.228  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 15:07:10.387  1385  1909 I SemWifiServiceDetector: Service det. resumed: T / T / 25535
+06-14 15:07:10.481  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:5F:6B, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 15:07:10.503  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:93:9D, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-66, periodicAdvInt=0x0
+06-14 15:07:10.512  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:B2:F2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 15:07:10.529   677   677 D io_stats: !@   8,0 r 7385820 154952496 w 1394586 19659148 d 400839 96962624 f 0 0 iot 2871072 0 th 0 0 0 pt 0 inp 0 0 71444.923
+06-14 15:07:10.529   677   677 D io_stats: !@ Write_top(KB): kworker/u16:1(9345) 24
+06-14 15:07:10.563  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:82:A0, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 15:07:10.599  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:40:F7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 15:07:10.613  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:5F:6B, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 15:07:10.658  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-85, periodicAdvInt=0x0
+06-14 15:07:10.700  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 15:07:10.792  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:10.792  1096  1096 I SurfaceFlinger: Idle - choose 60.00 Hz
+06-14 15:07:10.794  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 15:07:10.794   986  1170 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 15:07:10.794   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:10.794   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:10.795   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:10.795   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:10.795   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:10.795   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:10.795   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:10.796  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:10.803   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 15:07:10.803   986  1053 I display : setActiveConfig(config=2)
+06-14 15:07:10.803   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:10.803   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:10.804  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 15:07:10.811  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 15:07:11.188  1096  1171 I VSyncReactor: Current= 60, Period= 60, hwcPeriod= 60
+06-14 15:07:11.215  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 15:07:11.215  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 15:07:11.217  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 15:07:11.217   986  1170 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 0
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 1
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 2
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 3
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 4
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 5
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 6
+06-14 15:07:11.218   986  1170 I display : Set Affinity CPU ID : 7
+06-14 15:07:11.218   986  1170 I display : Set affinity HWC : 986
+06-14 15:07:11.218   986  1170 I display : CPU set : Cluster(0), min_clock(0)
+06-14 15:07:11.218   986  1170 I display : CPU set : Cluster(1), min_clock(0)
+06-14 15:07:11.219   986  1170 I display : CPU set : Cluster(2), min_clock(0)
+06-14 15:07:11.219   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 15:07:11.219   986  1053 I display : setActiveConfig(config=0)
+06-14 15:07:11.219   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 15:07:11.219   986  1053 I display : Current VRR MODE is 3
+06-14 15:07:11.219  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 15:07:11.236  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 15:07:11.374  2070  2070 I wpa_supplicant: Heartbeat 6888
+06-14 15:07:11.476  3090  3090 I ContentFeedManager: initSyncRunnable called
+06-14 15:07:11.477  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 15:07:11.477  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 15:07:11.477  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 15:07:11.477  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 15:07:11.477  3090  3090 I ContentFeedManager: initSyncManagersAndSyncIfRequired: deviceid null
+06-14 15:07:11.477  3090  3090 I ContentFeedManager: initSyncRunnable initialized

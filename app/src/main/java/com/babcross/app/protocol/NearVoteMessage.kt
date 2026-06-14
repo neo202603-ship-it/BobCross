@@ -10,6 +10,7 @@ enum class NearVoteMessageType {
     VOTE,
     RECEIPT,
     RESULT_BLOCK,
+    CONNECTION_SYNC,
     GOSSIP,
     PING
 }

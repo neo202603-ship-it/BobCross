@@ -1,0 +1,405 @@
+--------- beginning of main
+06-14 14:59:38.432  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:38.432  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+--------- beginning of system
+06-14 14:59:38.432  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:59:38.433  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:59:38.433  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 14:59:38.433  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 14:59:38.434  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 14:59:38.434  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:38.434  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:38.434  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 14:59:38.435  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 14:59:38.435  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 14:59:38.435  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:39.997Uplink: 33.578
+06-14 14:59:38.437  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 14:59:38.437  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:59:38.439  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:38.439  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:38.439  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 14:59:38.439  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 14:59:38.439  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:38.439  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:38.439  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 14:59:38.440  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:59:38.440  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 14:59:38.445  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:38.445  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:38.446 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:38.447 24327 24505 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:59:38.447 24327 24505 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:59:38.449  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 0ms] [issued 1]
+06-14 14:59:38.449  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 14:59:38.450 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):85)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:38.451 24327  8859 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 14:59:38.451 24327  8859 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:59:38.451  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:59:38.506  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:38.542  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:38.590  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:38.627  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:38.948 24327  8859 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:59:39.998  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:40.001  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:40.025  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:B7:7A, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 14:59:40.027 24327  8743 I NearbyConnections: Found BleAdvertisement [ 0x23 0x4c 0x57 0x4f 0x4c 0x11 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ] (with EndpointId LWOL and EndpointInfo [ 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ])
+06-14 14:59:40.028 24327  8743 I NearbyConnections: Unable to record discovered endpoint due to null currentDiscoveryPhase
+06-14 14:59:40.028 24327  8743 I NearbyConnections: ClientProxy(237100707 0p:com.google.android.gms.nearby.sharing) reporting onEndpointFound(LWOL)
+06-14 14:59:40.029 24327  8743 I NearbyConnections: ClientProxy(237100707) reporting onEndpointDistanceChanged(LWOL, UNKNOWN)
+06-14 14:59:40.030 24327  8743 I NearbySharing: NearbySharing Internal event EndpointDiscovered(endpointId=LWOL)
+06-14 14:59:40.043 24327  8881 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Discovered(endpointId=LWOL, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=준기의 Z Fold7, displayName=Jk Kim, modelName=Galaxy Z Fold7, imageUri=content://com.google.android.gms.fileprovider/nearby_share_images/-90865493.jpg, isSelfShare=true, isKnown=true, bluetoothMacAddress=[92, -36, 73, -20, -76, -30], vendorId=1, matchesLocalQrCode=false, devicePairingBindingIds=[]))
+06-14 14:59:40.043 24327  8881 I NearbySharing: [NS_DEBUG] Dedupped: same endpoint ID LWOL
+06-14 14:59:40.043 24327  8881 I NearbySharing: [NS_DEBUG] previous receiver info ReceiverInfo(endpointIds=[DiscoveryEndpoint(id=LWOL, origin=NEARBY_CONNECTIONS)], metadata=DeviceMetadata(version=1, deviceType=1, deviceName=준기의 Z Fold7, displayName=Jk Kim, modelName=Galaxy Z Fold7, imageUri=content://com.google.android.gms.fileprovider/nearby_share_images/-90865493.jpg, isSelfShare=true, isKnown=true, bluetoothMacAddress=[92, -36, 73, -20, -76, -30], vendorId=1, matchesLocalQrCode=false, devicePairingBindingIds=[]), state=Tomb(delayedStateChangeJob=jzdl{Active}@fe4778d))
+06-14 14:59:40.043 24327  8881 I NearbySharing: NearbySharing Internal event ReceiverEndpointMapping(endpointId=LWOL, receiverId=8)
+06-14 14:59:40.043 24327  8743 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportDiscovered(id=8, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=준기의 Z Fold7, displayName=Jk Kim, modelName=Galaxy Z Fold7, imageUri=content://com.google.android.gms.fileprovider/nearby_share_images/-90865493.jpg, isSelfShare=true, isKnown=true, bluetoothMacAddress=[92, -36, 73, -20, -76, -30], vendorId=1, matchesLocalQrCode=false, devicePairingBindingIds=[])).
+06-14 14:59:40.044 24327  8743 I NearbySharing: NearbySharing Internal event ReceiverDiscovered(receiverId=8, deviceName=준기의 Z Fold7, isKnown=true, isSelfShare=true, deviceType=1, hasMatchingQrCode=false, isExternal=false, providerName=null, providerId=null, cloudReceiverSessionId=null, cloudSharingId=null)
+06-14 14:59:40.047 24327  8859 I NearbySharing: SendProvider: SendManager event Discovered(receiverId=8, receiverMetadata=DeviceMetadata(version=1, deviceType=1, deviceName=준기의 Z Fold7, displayName=Jk Kim, modelName=Galaxy Z Fold7, imageUri=content://com.google.android.gms.fileprovider/nearby_share_images/-90865493.jpg, isSelfShare=true, isKnown=true, bluetoothMacAddress=[92, -36, 73, -20, -76, -30], vendorId=1, matchesLocalQrCode=false, devicePairingBindingIds=[]))
+06-14 14:59:40.047 24327  8859 I NearbySharing: SendProvider: SendManager event DistanceChanged(receiverId=8, distance=1, rangingData=null)
+06-14 14:59:40.047 24327  8743 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDiscovered()
+06-14 14:59:40.047 24327  8743 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDistanceChanged() with distance: 1, rangingData: null
+06-14 14:59:40.056  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:40.070 24327 24327 I NearbySharing: ShortcutInfoManager added shortcut 준기의 Z Fold7
+06-14 14:59:40.074  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:40.135  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:40.168  1385  1885 I SemExecuteManagerService: onShortcutChanged: com.google.android.gms0
+06-14 14:59:40.169  1385  1885 I SemExecuteManagerService: onShortcutChanged: size=1
+06-14 14:59:40.169  1385  1885 I SemExecuteManagerService: onShortcutChanged: send callback com.samsung.android.app.taskedge10145
+06-14 14:59:40.171  1385  1885 D ActivityManager: Received BROADCAST intent 0xae4e57f Key{broadcastIntent pkg=com.samsung.android.app.taskedge intent=act=com.samsung.android.app.taskedge.action.SHORTCUT_INFO_CHANGED cmp=com.samsung.android.app.taskedge/.shortcut.ShortcutInfoReceiver flags=0x4000000 u=0} requestCode=0 sent=0 from uid 1000
+06-14 14:59:40.176 23845 23845 I TaskEdge.Shortcut: onReceive: com.samsung.android.app.taskedge.action.SHORTCUT_INFO_CHANGED
+06-14 14:59:40.185 23845 23845 I SEP_UNION_SemUnionManager: getUnionService(execute) 
+06-14 14:59:40.189  2542  2542 I HoneySpace.PackageOperationTracker: onShortcutsChanged com.google.android.gms - 2 UserHandle{0}
+06-14 14:59:40.190  2542 20691 I HoneySpace.ShortcutDataSourceImpl: shortcut updated. ShortcutInfo {id=***, flags=0xa481 [DynIc-uStrRetsLiv], packageName=com.google.android.gms, activity=ComponentInfo{com.google.android.gms/com.google.android.gms.nearby.sharing.main.MainActivity}, shortLabel=***, resId=0[null], longLabel=***, resId=0[null], disabledMessage=***, resId=0[null], disabledReason=[Not disabled], categories={com.google.android.gms.nearby.sharing.main.SHARE_TARGET}, persons=null, icon=null, rank=1, timestamp=1781416780068, intents=null, extras=PersistableBundle[mParcelledData.dataSize=1252]}
+06-14 14:59:40.190  2542 20691 I HoneySpace.ShortcutDataSourceImpl: shortcut updated. ShortcutInfo {id=***, flags=0xa481 [DynIc-uStrRetsLiv], packageName=com.google.android.gms, activity=ComponentInfo{com.google.android.gms/com.google.android.gms.nearby.sharing.main.MainActivity}, shortLabel=***, resId=0[null], longLabel=***, resId=0[null], disabledMessage=***, resId=0[null], disabledReason=[Not disabled], categories={com.google.android.gms.nearby.sharing.main.SHARE_TARGET}, persons=null, icon=null, rank=0, timestamp=1781416317920, intents=null, extras=PersistableBundle[mParcelledData.dataSize=1284]}
+06-14 14:59:40.191  2542  2542 I HoneySpace.HoneySpaceManagerContainer: packageUpdateEvent - com.honeyspace.sdk.source.entity.PackageOperation$ShortcutChanged@f24b816
+06-14 14:59:40.195  1385  2564 I SemExecuteManagerService: getShortcuts: com.samsung.android.app.taskedge
+06-14 14:59:40.195  1385  2564 D ShortcutService: findAll() returned empty results because com.google.android.calendar isn't installed yet
+06-14 14:59:40.196 23845 23845 I TaskEdge.ShortcutCallbackTask: getShortcutList : 1 shortcutList size() : [ShortcutInfo {id=***, flags=0x48a [PinIc-fStrRets], packageName=com.android.chrome, activity=ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}, shortLabel=***, resId=0[null], longLabel=***, resId=0[null], disabledMessage=***, resId=0[null], disabledReason=[Not disabled], categories=null, persons=null, icon=null, rank=0, timestamp=1697552955757, intents=null, extras=null}]
+06-14 14:59:40.196 23845 23845 I TaskEdge.ShortcutCallbackTask: id=261e830d-b40b-478f-b0a4-3eeac6b60c2e label=mtspackage=com.android.chrome
+06-14 14:59:40.199 23845 23845 I TaskEdge.ShortcutCallbackTask: updateShortcut: list db items: [ExecutableItem : pos=0, package=com.samsung.android.messaging, component=com.android.mms.ui.ComposeMessage, executableId=executable://com.samsung.android.messaging/3063483042, ExecutableItem : pos=1, package=com.sec.android.app.sbrowser, component=com.sec.android.app.sbrowser.sites.SitesActivity, executableId=executable://com.sec.android.app.sbrowser/1593457418, ExecutableItem : pos=2, package=com.sec.android.app.camera, component=com.sec.android.app.camera.Camera, executableId=executable://com.sec.android.app.camera/1141080296, ExecutableItem : pos=3, package=com.samsung.android.calendar, component=com.android.calendar.event.EditEventActivity, executableId=executable://com.samsung.android.calendar/1687857898]
+06-14 14:59:40.200  1385  2564 I CocktailPolicyManager: findMatchedPolicy: find policy = 1
+06-14 14:59:40.201  2542  2542 I HoneySpace.EdgePanel.CocktailHostRepositoryImpl: onUpdateCocktail ComponentInfo{com.samsung.android.app.taskedge/com.samsung.android.app.taskedge.edgepanel.TaskEdgePanelProvider} false
+06-14 14:59:40.202  2542  2542 I HoneySpace.EdgePanel.EdgeContainerViewModel: cocktailHostRepository.edgePanelOperation w7.n@9bd4597
+06-14 14:59:40.202  2542  2542 I HoneySpace.EdgePanel.EdgeUiDelegator: updateCocktail is received 3
+06-14 14:59:40.202  2542  2542 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: updatePanelItem update 3
+06-14 14:59:40.203  2542  2542 I HoneySpace.EdgePanel.Container: updateCocktail type:2 id:3
+06-14 14:59:40.204  2542  2542 I HoneySpace.EdgePanel.EdgePanelView: composeView: 3
+06-14 14:59:40.204  2542  2542 I TaskEdge.Panel: onReceiveContentInfo action=task_shortcut_info_update
+06-14 14:59:40.204  2542  2542 I EdgePanel.AbstractLoadablePanelContainer: composeView { D=false, LP=R7.A@be2c71d, @=94883218, CI=ComponentInfo{com.samsung.android.app.taskedge/com.samsung.android.app.taskedge.edgepanel.TaskEdgePanelProvider}, L1 LP H=getHeight(), V H=0
+06-14 14:59:40.208  2542  8294 I TaskEdge.Panel: updateShortcutInfoItem: 
+06-14 14:59:40.210  1385  2564 I ActivityManager: Changes in 10145 15 to 5, 0 to 16
+06-14 14:59:40.218  2542  8294 I TaskEdge.Panel: updateShortcutInfoItem: Item size : 4
+06-14 14:59:40.218  2542  2542 I TaskEdge.Panel: setTaskEdgeItem: 
+06-14 14:59:40.306   677   677 D io_stats: !@   8,0 r 7383027 154831596 w 1391832 19557196 d 400062 96943120 f 0 0 iot 2867708 0 th 0 0 0 pt 0 inp 0 0 70994.700
+06-14 14:59:40.418  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 14:59:40.580  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 14:59:40.646  1385  1740 D ActivityManager: freezing 25941 com.samsung.android.rubin.app
+06-14 14:59:40.650  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+06-14 14:59:40.651  1385  1825 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+06-14 14:59:40.651  1385  1825 D InetDiagMessage: Destroyed live tcp sockets for uids={5010} in 2ms
+06-14 14:59:41.074  3090  3090 I ContentFeedManager: initSyncRunnable called
+06-14 14:59:41.074  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:59:41.074  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 14:59:41.074  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:59:41.074  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 14:59:41.074  3090  3090 I ContentFeedManager: initSyncManagersAndSyncIfRequired: deviceid null
+06-14 14:59:41.074  3090  3090 I ContentFeedManager: initSyncRunnable initialized
+06-14 14:59:41.328  2070  2070 I wpa_supplicant: Heartbeat 6843
+06-14 14:59:41.488  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-90, periodicAdvInt=0x0
+06-14 14:59:41.494  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:41.512  1385  1825 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:59:41.512  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 14949, isSameBssidAndFreq true
+06-14 14:59:41.514  1385  1864 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 14:59:41.514  1385  1864 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 14:59:41.514  1385  1864 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:59:41.514  1385  1864 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=51412Kbps LinkDnBandwidth>=33107Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -65, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 117Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -65 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:59:41.514  1385  1934 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:59:41.516  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 14:59:41.516  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:41.517  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:33.107Uplink: 51.412
+06-14 14:59:41.518  1385  1934 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:59:41.518  1385  1934 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:59:41.518  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:41.518  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:41.518  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:59:41.518  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:59:41.518  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 14:59:41.518  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 14:59:41.518  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 14:59:41.518  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:41.518  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:41.518  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 14:59:41.519  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 14:59:41.519  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 14:59:41.519  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:59:41.520  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:41.520  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:41.520  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 14:59:41.520  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 14:59:41.524  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:41.524  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:41.524  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 14:59:41.525  1385  1910 I SemWifiLinkQualityMonitor: Link stat: 1545 / 573 / 2.00 (4) / 86 / -65.0 || 100.0 : 86.00 / B (B) || 94c098be5745: 0.529 / 15.112 /  / N || N N / 0 / Y 2.0 / Y 0 / 70995906 0
+06-14 14:59:41.527  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:59:41.527  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 14:59:41.528 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:41.528 24327 24505 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:59:41.528  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:41.528 24327 24505 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:59:41.528  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:41.529  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:59:41.530  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 1ms] [issued 0]
+06-14 14:59:41.530  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 14:59:41.531 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:41.531 24327  8859 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 14:59:41.531 24327  8859 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:59:41.553  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:41.632  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:5F:25, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-70, periodicAdvInt=0x0
+06-14 14:59:42.029 24327  8859 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:59:42.307   677   677 D io_stats: !@ Write_top(KB): kworker/u16:0(5934) 100 system_server(1385) 24
+06-14 14:59:42.948  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:42.958  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:42.960 24327  6153 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:108) and sleep 5000 for endpoint PGYO.
+06-14 14:59:42.992  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:42.997  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:5F:25, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-72, periodicAdvInt=0x0
+06-14 14:59:43.025  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:43.084  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-16, periodicAdvInt=0x0
+06-14 14:59:43.094 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:108) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:43.168 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:108) with ACK from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:44.161  4455  4455 I SDHMS:LOAD: type: LoadsFreqs, value: 0:78:74:541060:936000:533000:1537120:2600000:832000:168:403:130
+06-14 14:59:44.206  1385  1836 W DeviceStorageMonitorService: updateBroadcasts(/data) oldLevel:0, newLevel:0, seq:1
+06-14 14:59:44.208  1385  1836 D DeviceStorageMonitorService: Available File Node Number is [12414499]
+06-14 14:59:44.209  1385  1836 W DeviceStorageMonitorService: updateBroadcasts_filenode(/data) fn_oldLevel:0, fn_newLevel:0, seq:1
+06-14 14:59:44.307   677   677 D io_stats: !@   8,0 r 7383027 154831596 w 1391834 19557204 d 400062 96943120 f 0 0 iot 2867712 0 th 0 0 0 pt 0 inp 0 0 70998.702
+06-14 14:59:44.382  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:5F:25, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-75, periodicAdvInt=0x0
+06-14 14:59:44.384  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-78, periodicAdvInt=0x0
+06-14 14:59:44.399  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:44.447  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:44.491  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-78, periodicAdvInt=0x0
+06-14 14:59:44.497  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:63:43, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-60, periodicAdvInt=0x0
+06-14 14:59:44.532  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:44.574  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 14:59:44.606  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 14950, isSameBssidAndFreq true
+06-14 14:59:44.606  1385  1825 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:59:44.609  1385  1910 I SemWifiLinkQualityMonitor: Link stat: 1215 / 291 / 1.64 (59) / 115 / -61.0 || 100.0 : 115.00 / 0.5 : 0.61 / 0.55 : 0.24 / B (G) || 94c098be5745: 0.423 / 18.906 /  / N || N N / 0 / Y 2.0 / Y 0 / 70999001 0
+06-14 14:59:44.617  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 14:59:44.619  1385  1864 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 14:59:44.620  1385  1864 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 14:59:44.620  1385  1864 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:59:44.621  1385  1864 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=33578Kbps LinkDnBandwidth>=39997Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -61, Link speed: 115Mbps, Tx Link speed: 115Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -61 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:59:44.621  1385  1934 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:59:44.622  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:59:44.622  1385  1934 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:59:44.622  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 14:59:44.622  1385  1934 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:59:44.622  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:44.622  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:44.622  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:39.997Uplink: 33.578
+06-14 14:59:44.622  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:59:44.622  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:59:44.623  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 14:59:44.623  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 14:59:44.623  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 14:59:44.623  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:44.623  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:44.623  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 14:59:44.623  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:44.623  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:44.623  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 14:59:44.624  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 14:59:44.624  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:59:44.625  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:44.625  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:44.625  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 14:59:44.625  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 14:59:44.628 24327  8743 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:44.630  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:44.630  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:44.630  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 14:59:44.632  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 1ms] [issued 0]
+06-14 14:59:44.632  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 14:59:44.632 24327  8743 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:44.633 24327  8743 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 14:59:44.633 24327  8743 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:59:44.634  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:59:44.637 24327 24529 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:59:44.637 24327 24529 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:59:45.135 24327  8743 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:59:45.428  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 14:59:45.582  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 14:59:45.659  1385  1909 I SemWifiServiceDetector: Service det. suspended: T / T / 25535
+06-14 14:59:45.846  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:45.885  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:45.933  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:45.940  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:46.078  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:46.243  1385  1499 I ActivityManager: Changes in 10145 5 to 15, 16 to 0
+06-14 14:59:46.309   677   677 D io_stats: !@ Write_top(KB): kworker/u16:5(4713) 8
+06-14 14:59:46.478  1096  1096 I SurfaceFlinger: SFWD update time=71000872414062
+06-14 14:59:47.366  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:47.448  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:47.577 24327  8743 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 14:59:47.577 24327  8743 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x35 0x59 0x47 0x59 0x11 0x32 0xc3 0x96 0x5f 0x69 0x78 0x38 0xf0 0x75 0x06 0x2a 0xbd 0xb1 0xe3 0x73 0x67 0x2a ], deviceToken=[ 0xc3 0x16 ], rxAdvertisement=[ 0xa0 0x17 0x8c 0xa4 0x00 0x30 0xee 0xf0 0x71 0x9c 0x89 0x2c 0xca 0x89 0x48 0x63 0x30 0xf3 0x82 0xba 0x8d 0x27 0xf5 0xf0 0x12 0x48 0x6e 0xf6 0x48 0x2c 0x8e 0xdb 0x1d 0x17 0x84 0x15 0x05 0x7f 0x1f 0x00 0x84 0x15 0x06 0x61 0x1f 0x00 0x84 0x15 0x04 0x7f 0xff 0x1f 0x84 0x15 0x07 0x61 0x1f 0x00 0x83 0x15 0x01 0x14 0x3c ] } : 12 times.
+06-14 14:59:47.577 24327  8743 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x57 0x4f 0x4c 0x11 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ], deviceToken=[ 0x8e 0xd6 ], rxAdvertisement=null } : 1 times.
+06-14 14:59:47.577 24327  8743 I NearbyMediums: Total 13 fast advertisements from 2 unique advertisers.
+06-14 14:59:47.578 24327  8743 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 14:59:47.733  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 14951, isSameBssidAndFreq true
+06-14 14:59:47.734  1385  1825 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:59:47.737  1385  1864 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 14:59:47.737  1385  1864 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 14:59:47.737  1385  1864 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:59:47.737  1385  1864 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=51412Kbps LinkDnBandwidth>=33107Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -68, Link speed: 115Mbps, Tx Link speed: 115Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -68 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:59:47.739  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 14:59:47.739  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:33.107Uplink: 51.412
+06-14 14:59:47.739  1385  1934 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:59:47.739  1385  1934 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:59:47.739  1385  1934 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:59:47.739  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:47.740  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:47.740  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:59:47.740  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:59:47.740  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 14:59:47.740  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 14:59:47.740  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 14:59:47.740  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:47.740  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:47.740  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 14:59:47.740  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 14:59:47.741  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 14:59:47.741  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:59:47.743  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:59:47.743  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 14:59:47.744  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:47.744  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:47.744  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 14:59:47.744  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 14:59:47.745 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:47.746  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:47.746  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:47.747  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:47.747  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:47.747  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 14:59:47.749  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 1ms] [issued 0]
+06-14 14:59:47.749  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 14:59:47.749 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:47.750 24327  8859 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 14:59:47.750 24327  8859 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:59:47.753 24327 24354 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:59:47.753 24327 24354 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:59:47.756  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:59:47.962 24327  6153 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:109) and sleep 5000 for endpoint PGYO.
+06-14 14:59:47.977 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:109) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:47.988 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:109) with ACK from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:48.250 24327  8859 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:59:48.788  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-35, periodicAdvInt=0x0
+06-14 14:59:48.812  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 14:59:48.852  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:48.880  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-43, periodicAdvInt=0x0
+06-14 14:59:48.890  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 2- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:59:48.891  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:59:48.892  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 14:59:48.900  9239 22208 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 14:59:48.924  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:48.958  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-43, periodicAdvInt=0x0
+06-14 14:59:48.988  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:50.246  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:50.287  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:50.314  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-81, periodicAdvInt=0x0
+06-14 14:59:50.383  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:50.389  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:B7:7A, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-68, periodicAdvInt=0x0
+06-14 14:59:50.413  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 2- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:59:50.414  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:59:50.415  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 14:59:50.419  9239 31004 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 14:59:50.430  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 14:59:50.430  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:50.582  1075  1236 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 14:59:50.779  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 14952, isSameBssidAndFreq true
+06-14 14:59:51.082  3090  3090 I ContentFeedManager: initSyncRunnable called
+06-14 14:59:51.082  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:59:51.082  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 14:59:51.082  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:59:51.082  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 14:59:51.082  3090  3090 I ContentFeedManager: initSyncManagersAndSyncIfRequired: deviceid null
+06-14 14:59:51.082  3090  3090 I ContentFeedManager: initSyncRunnable initialized
+06-14 14:59:51.333  2070  2070 I wpa_supplicant: Heartbeat 6844
+06-14 14:59:51.792  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 14:59:51.818  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:5F:25, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-74, periodicAdvInt=0x0
+06-14 14:59:51.889  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:52.259  3181  3181 I adbd    : New TLS connection [fd=30]
+06-14 14:59:52.259  3181  8888 I adbd    : host-30: read thread spawning
+06-14 14:59:52.259  3181  8889 I adbd    : host-30: write thread spawning
+06-14 14:59:52.259  3181  8888 I adbd    : host-30: read failed: Success
+06-14 14:59:52.259  3181  8888 I adbd    : host-30: connection terminated: read failed
+06-14 14:59:52.259  3181  3181 I adbd    : host-30: already offline
+06-14 14:59:52.259  3181  3181 I adbd    : destroying transport host-30
+06-14 14:59:52.259  3181  3181 I adbd    : BlockingConnectionAdapter(host-30): stopping
+06-14 14:59:52.260  3181  3181 I adbd    : BlockingConnectionAdapter(host-30): stopped
+06-14 14:59:52.261  3181  3181 I adbd    : BlockingConnectionAdapter(host-30): destructing
+06-14 14:59:52.261  3181  3181 I adbd    : BlockingConnectionAdapter(host-30): already stopped
+06-14 14:59:52.836 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:110) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:52.966 24327  6153 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:110) and sleep 5000 for endpoint PGYO.
+06-14 14:59:53.007 24327  5929 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:110) with ACK from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:53.193  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-42, periodicAdvInt=0x0
+06-14 14:59:53.195  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:5F:25, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-69, periodicAdvInt=0x0
+06-14 14:59:53.228  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:53.285  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:53.310  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:59:53.313  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:63:43, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-61, periodicAdvInt=0x0
+06-14 14:59:53.339  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-42, periodicAdvInt=0x0
+06-14 14:59:53.869  1385  1825 D ConnectivityService: notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:59:53.869  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 14953, isSameBssidAndFreq true
+06-14 14:59:53.870  1385  1910 I SemWifiLinkQualityMonitor: Link stat: 825 / 207 / 2.45 (27) / 115 / -62.0 || 100.0 : 115.00 / 0.5 : 0.41 / B (B) || 94c098be5745: 0.427 / 18.714 /  / N || N N / 0 / Y 2.0 / Y 0 / 71008263 0
+06-14 14:59:53.876  2024  2311 D WifiPickerTracker: updateWifiEntries capabilities
+06-14 14:59:53.885  2024  2311 D WifiPickerTracker: update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:59:53.885  2024  2311 D WifiPickerTracker: handleNetworkCapabilitiesChanged
+06-14 14:59:53.886 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:53.887  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:53.887  1385  1864 D SemWifiApNsd:Client: lpInterface:wlan0
+06-14 14:59:53.887  2024  2024 D WifiInteractor: get wifiIconGroup ePDGConnected : false
+06-14 14:59:53.887  1385  1864 D SemWifiSwitchForIndividualAppsService: stopTCPMonitoring : already stopped
+06-14 14:59:53.888  1385  1864 I WifiConnectivityMonitor.NCC: sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:59:53.888  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 1ms] [issued 0]
+06-14 14:59:53.888  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 14:59:53.888  1385  1864 I WifiConnectivityMonitor.NCC: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=33578Kbps LinkDnBandwidth>=39997Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -62, Link speed: 115Mbps, Tx Link speed: 115Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -62 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:59:53.888  1385  1934 D WifiConnectivityMonitor: HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:59:53.888 24327 24356 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:59:53.888 24327 24356 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:59:53.888  1385  1934 I WifiConnectivityMonitor: determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:59:53.889  1385  1934 D OpenNetworkQos[4.00]: updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:59:53.889  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:53.889  1385  1934 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:53.889  1385  1864 D SemWifiApTrafficPriority: onCapabilitiesChanged Wifi:wlan0,mGapiValue:39.997Uplink: 33.578
+06-14 14:59:53.889  1385  1934 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:59:53.889  1385  1934 I WifiProfileShare: network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:59:53.889  1385  3150 V WifiProfileShare.Caster: update wips network, size: 0
+06-14 14:59:53.889  1385  3150 D WifiProfileShare: nearby scanning settings run
+06-14 14:59:53.889  1385  3150 D WifiProfileShare: network score provider settings enabled
+06-14 14:59:53.889  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosScores: 0 30 26 
+06-14 14:59:53.889  1385  3150 D OpenNetworkQos[4.00]: getOpenNetworkQosNoInternetStatus: false
+06-14 14:59:53.889  1385  3150 I WifiProfileShare.Caster: current network type: 0, score: [0, 30, 26]
+06-14 14:59:53.890  1385  3150 V WifiProfileShare.Cache: update network score 78:d2:94:**:**:be
+06-14 14:59:53.890  1385  3150 D WifiProfileShare.ScanMatcher: getMcfDataList size:5
+06-14 14:59:53.890  1385  3150 I WifiProfileShare.Caster: qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:59:53.890 24327  8859 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:59:53.890  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:53.890  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:53.890  1385  3150 D WifiProfileShare.McfCast: updateQoSData ignored, same contents
+06-14 14:59:53.890  1385  3150 D WifiProfileShare.MCF: success update QosData !
+06-14 14:59:53.891  1385  3150 I [MCFSDK_android_1.2.27006]_4_McfCasterImpl: isNetworkEnabled - type : 1 ret : true
+06-14 14:59:53.891  1385  3150 D WifiProfileShare.McfCast: -ME--- mIsNetworkEnabled :true
+06-14 14:59:53.891  1385  3150 D WifiProfileShare.McfCast: -ME--- updatePasswordDate pwdData size:5
+06-14 14:59:53.891 24327  8859 I NearbyMediums: Wifi changed new SSID: "ORBI57-home"
+06-14 14:59:53.891 24327  8859 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:59:53.891  2024  2164 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+06-14 14:59:54.260  4455  4455 I SDHMS:LOAD: type: LoadsFreqs, value: 0:77:70:533000:533000:533000:1399839:2392000:624000:157:312:130
+06-14 14:59:54.311   677   677 D io_stats: !@   8,0 r 7383027 154831596 w 1391834 19557204 d 400062 96943120 f 0 0 iot 2867712 0 th 0 0 0 pt 0 inp 0 0 71008.705
+06-14 14:59:54.389 24327  8859 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:59:54.646  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:59:54.675  1385  1909 I SemWifiServiceDetector: Service det. resumed: T / T / 25535
+06-14 14:59:54.686  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 14:59:54.692  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:63:43, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 14:59:54.701  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:AB:F8, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:59:54.722  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:39:DE, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-35, periodicAdvInt=0x0
+06-14 14:59:54.761  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9D:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:59:54.776  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 5- eventType=0x0, addressType=1, address=XX:XX:XX:XX:77:C5, primaryPhy=1, secondaryPhy=1, advertisingSid=0x2, txPower=127, rssi=-35, periodicAdvInt=0x0

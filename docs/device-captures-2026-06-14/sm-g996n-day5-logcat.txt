@@ -1,0 +1,502 @@
+--------- beginning of main
+06-14 16:12:15.895  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 16:12:15.895  3090  3090 I WearableDeviceFactory: getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 16:12:15.895  3090  3090 I ContentFeedManager: getmDeviceId: device id: null
+06-14 16:12:15.895  3090  3090 I ContentFeedManager: initSyncManagersAndSyncIfRequired: deviceid null
+06-14 16:12:15.895  3090  3090 I ContentFeedManager: initSyncRunnable initialized
+06-14 16:12:15.972   695   695 W keymaster_tee: [WRN]begin req PARAMS: A32 B2 P64 
+--------- beginning of system
+06-14 16:12:15.977   694  5526 I keystore2: system/security/keystore2/src/security_level.rs:454 - In create_operation. Success to create IKeystoreOperation. 5023, None
+06-14 16:12:15.994  1385  2295 D SLocation: WifiBssidMonitor - requestRefresh
+06-14 16:12:15.995  1385  2295 W SLocation: WifiBssidMonitor - connected wifi : (7e:d2:94:**:**:bc/872)
+06-14 16:12:16.128  2121  2153 I [ND]CellMeasurementWorker: pool-4-thread-1 | Start Work
+06-14 16:12:16.308  2006  2085 D Am      : Broadcasting: Intent { act=com.samsung.android.intent.action.CELL_INFO_RES_V2 cmp=com.samsung.android.networkdiagnostic/.receiver.NetworkDiagnosticReceiver (has extras) }
+06-14 16:12:16.320  2121  2121 I [ND]NetworkDiagnosticReceiver: main | onReceive: com.samsung.android.intent.action.CELL_INFO_RES_V2
+06-14 16:12:16.321  2121  2121 I [ND]NetworkDiagnosticReceiver: main | onReceive: Bundle[mParcelledData.dataSize=760]
+06-14 16:12:16.321  2121  2121 I [ND]JobScheduleUtilityImpl: main | schedule
+06-14 16:12:16.321  2121  2121 I [ND]JobScheduleUtilityImpl: main | INTENT_FROM_CP_CELL_INFO_RES_V2
+06-14 16:12:16.321  2121  2121 I [ND]JobScheduleUtilityImpl: main | CELL_INFO
+06-14 16:12:16.323  2006  2319 D Am      : Broadcast completed: result=0
+06-14 16:12:16.385  2121  2157 I [ND]CellMeasurementWorker: RxCachedThreadScheduler-1 | onSuccess
+06-14 16:12:16.386  2121  2157 I [ND]CellMeasurementWorker: RxCachedThreadScheduler-1 | End Work: Success {mOutputData=Data {}}
+06-14 16:12:16.388  2121  2145 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=192ce35c-88e6-4dc5-905f-5a1e8d6521e2, tags={ com.samsung.android.networkdiagnostic.core.background.collect.CellMeasurementWorker,Measurements } ]
+06-14 16:12:16.399  1385  1848 D CompatChangeReporter: Compat change id reported: 311208629; UID 5023; state: ENABLED
+06-14 16:12:16.651  1385  3124 D FreecessController: com.babcross.app(10488) is important[12]
+06-14 16:12:16.669  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 1- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-84, periodicAdvInt=0x0
+06-14 16:12:16.670  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 7- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-84, periodicAdvInt=0x0
+06-14 16:12:16.673  9239  9590 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 16:12:16.679  9239 31004 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 16:12:16.688   987   987 I android.hardware.health@2.1-service-samsung: updateLrpSysfs: write: 341
+06-14 16:12:16.707  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:A1:A7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 16:12:16.732  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 4- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:CC:65, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-66, periodicAdvInt=0x0
+06-14 16:12:16.776  1385  1828 V serviceDiscovery: [MdnsAdvertiser.wlan0] VERBOSE Parsed packet with transactionId(2): 1 questions, 0 answers, 0 authority, 0 additional from /192.168.1.60:5353
+06-14 16:12:16.817  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1, addressType=1, address=XX:XX:XX:XX:92:A6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-45, periodicAdvInt=0x0
+06-14 16:12:17.069   677   677 D io_stats: !@   8,0 r 7694747 164350632 w 1455113 20225576 d 417610 97458836 f 0 0 iot 3005096 0 th 0 0 0 pt 0 inp 0 0 74972.538
+06-14 16:12:17.069   677   677 D io_stats: !@ Read_top(KB): tworkdiagnostic(2121) 13796 gpsd(1312) 2900 .gms.persistent(24327) 1492
+06-14 16:12:17.069   677   677 D io_stats: !@ Write_top(KB): .gms.persistent(24327) 196 id.diagmonagent(4446) 40 tworkdiagnostic(2121) 36
+06-14 16:12:17.427 24327   719 I NearbyConnections: Stop the KeepAlive runnable for endpoint IVAG because the connection has been cancelled.
+06-14 16:12:17.704  1385  3124 I NSLocationMonitor: getGPSUsingApps() called
+06-14 16:12:17.705  3123 11209 I NSLocationManager_FLP: getGPSUsingApps, No change
+06-14 16:12:17.717  1385  3124 D FreecessController: com.google.android.adservices.api(state: Initial -> Frozen, Reason: Bg-refreeze)
+06-14 16:12:17.718  1385  3124 D FreecessController: com.google.android.adservices.api is not MARs target, skip to freeze
+06-14 16:12:17.980  1385  3376 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 16131, isSameBssidAndFreq true
+06-14 16:12:17.982  1385  1910 I SemWifiLinkQualityMonitor: Link stat: 1963 / 365 / 1.57 (33) / 144 / -61.0 || 100.0 : 144.00 / 0.5 : 0.64 / 0.55 : 0.19 / G (G) || 94c098be5745: 0.376 / 21.251 /  / N || N N / 0 / Y 2.0 / Y 0 / 74973449 0
+06-14 16:12:18.004  1385  1828 V serviceDiscovery: [MdnsAdvertiser.wlan0] VERBOSE Parsed packet with transactionId(3): 1 questions, 0 answers, 0 authority, 0 additional from /[fe80::b020:baff:feea:359a%wlan0]:5353
+06-14 16:12:18.119 24327  1605 I NearbyMediums: [MultiplexSocket] Received a multiplex frame while not enabled, enable multiplex.
+06-14 16:12:18.120 24327  1605 I NearbyMediums: [MultiplexSocket] Enable the Multiplex Socket.
+06-14 16:12:18.124 24327 28036 I NearbyMediums: [MultiplexSocket] Enable the Multiplex Socket.
+06-14 16:12:18.126 24327   719 I NearbyConnections: PcpManager got CONNECTION_RESPONSE OfflineFrame from endpoint IVAG (with status 0, response ACCEPT).
+06-14 16:12:18.126 24327   719 I NearbyConnections: Endpoint IVAG has accepted the connection
+06-14 16:12:18.127 24327   719 I NearbyConnections: Endpoint IVAG has SafeToDisconnectVersion = 4
+06-14 16:12:18.127 24327   719 I NearbyConnections: The connection with endpoint IVAG was accepted by both sides with isInstantConnection false
+06-14 16:12:18.128 24327   719 I NearbyConnections: EndpointChannelManager encrypted channel of type WIFI_LAN to endpoint IVAG
+06-14 16:12:18.129 24327   719 I NearbyConnections: ClientProxy(256776511) reporting onConnectionResult(IVAG, SUCCESS)
+06-14 16:12:18.130 24327   719 I NearbyConnections: ClientProxy(256776511) reporting onBandwidthChanged(IVAG, HIGH)
+06-14 16:12:18.130 24327   719 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [dmhm.T(:com.google.android.gms@262031035@26.20.31 (260400-919905943):444)] [dmdi.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):216)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 16:12:18.131 24327   726 I NearbyConnections: BandwidthUpgradeManager ignoring the upgrade for endpoint IVAG because it is already connected over medium WIFI_LAN.
+06-14 16:12:18.138 24327 24355 I NearbyConnections: Client 256776511 is sending payload -7115197563770530893 of type BYTES to endpoints [IVAG].
+06-14 16:12:18.139 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:18.144 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.144 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7115197563770530893, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.144 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.144 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.145 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7115197563770530893, remaining number of payloadIds = 0.
+06-14 16:12:18.150  1385  1825 D ConnectivityService: Rematched networks [computed 1ms] [applied 2ms] [issued 2]
+06-14 16:12:18.150  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:12:18.154  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:D2:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 16:12:18.168  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 16:12:18.173  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1, addressType=1, address=XX:XX:XX:XX:46:91, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-35, periodicAdvInt=0x0
+06-14 16:12:18.179  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_27915#5533 Max (can't resolve refresh rate)
+06-14 16:12:18.179  1096  1096 I SurfaceFlinger: scored - choose 120.00 Hz
+06-14 16:12:18.181  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 16:12:18.181   986  1172 I display : Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 0
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 1
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 2
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 3
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 4
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 5
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 6
+06-14 16:12:18.182   986  1172 I display : Set Affinity CPU ID : 7
+06-14 16:12:18.182   986  1172 I display : Set affinity HWC : 986
+06-14 16:12:18.183   986  1172 I display : CPU set : Cluster(0), min_clock(0)
+06-14 16:12:18.183   986  1172 I display : CPU set : Cluster(1), min_clock(0)
+06-14 16:12:18.183   986  1172 I display : CPU set : Cluster(2), min_clock(0)
+06-14 16:12:18.185   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 16:12:18.185   986  1053 I display : setActiveConfig(config=0)
+06-14 16:12:18.185   986  1053 I display : next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 16:12:18.185   986  1053 I display : Current VRR MODE is 3
+06-14 16:12:18.185  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 60
+06-14 16:12:18.201  1096  1171 I VSyncReactor: Current= 60, Period= 120, hwcPeriod= 120
+06-14 16:12:18.313  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1, addressType=1, address=XX:XX:XX:XX:92:A6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-23, periodicAdvInt=0x0
+06-14 16:12:18.317 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8429001590788220237), with result: DETAIL_SUCCESS
+06-14 16:12:18.318 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.319 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8429001590788220237, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.319 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.320 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8429001590788220237, remaining number of payloadIds = 0.
+06-14 16:12:18.640 24327 24355 I NearbyConnections: Client 256776511 is sending payload -6078072932118158752 of type BYTES to endpoints [IVAG].
+06-14 16:12:18.643 24327   719 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:18.650 24327   719 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.650 24327   719 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.651 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6078072932118158752, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.651 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.651 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6078072932118158752, remaining number of payloadIds = 0.
+06-14 16:12:18.757 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7437628445433929848), with result: DETAIL_SUCCESS
+06-14 16:12:18.759 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.761 24327   719 I NearbyConnections: retryBandwidthUpgradeWhenConnectedToWifi received frame IsRequest = false, supportedMediums = [WIFI_LAN, WIFI_AWARE, BLE_L2CAP, BLUETOOTH, BLE, NFC].
+06-14 16:12:18.763 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.764 24327   719 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drjk.f(:com.google.android.gms@262031035@26.20.31 (260400-919905943):4)] [dres.z(:com.google.android.gms@262031035@26.20.31 (260400-919905943):5)] [dres.v(:com.google.android.gms@262031035@26.20.31 (260400-919905943):39)] [dmay.bl(:com.google.android.gms@262031035@26.20.31 (260400-919905943):5)] [dmay.bk(:com.google.android.gms@262031035@26.20.31 (260400-919905943):2)] [dmay.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):59)] [dmhm.M(:com.google.android.gms@262031035@26.20.31 (260400-919905943):69)] [dmeg.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):173)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 16:12:18.766 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7437628445433929848, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.769 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.769 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7437628445433929848, remaining number of payloadIds = 0.
+06-14 16:12:18.770 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.773 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.773  1385  1825 D ConnectivityService: Rematched networks [computed 0ms] [applied 2ms] [issued 1]
+06-14 16:12:18.773  1385  1825 D ConnectivityService: NetworkReassignment : no changes
+06-14 16:12:18.775 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.776 24327   719 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drjk.f(:com.google.android.gms@262031035@26.20.31 (260400-919905943):4)] [dres.z(:com.google.android.gms@262031035@26.20.31 (260400-919905943):5)] [dres.v(:com.google.android.gms@262031035@26.20.31 (260400-919905943):39)] [dmay.bl(:com.google.android.gms@262031035@26.20.31 (260400-919905943):5)] [dmay.bk(:com.google.android.gms@262031035@26.20.31 (260400-919905943):2)] [dmay.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):59)] [dmhm.M(:com.google.android.gms@262031035@26.20.31 (260400-919905943):69)] [dmeg.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):173)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 16:12:18.776 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.778 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -6132448616270471345), with result: DETAIL_SUCCESS
+06-14 16:12:18.779 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6132448616270471345, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.779 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.779 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6132448616270471345, remaining number of payloadIds = 0.
+06-14 16:12:18.780 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.780 24327   719 I NearbyConnections: Computed the intersection of supported mediums with endpoint IVAG. Between their supported mediums ([WIFI_LAN, WIFI_AWARE, BLE_L2CAP, BLUETOOTH, BLE, NFC]) and my supported mediums ([WIFI_LAN, WIFI_AWARE, BLE_L2CAP, BLUETOOTH, BLE, NFC]) we decided on the combined subset ([WIFI_LAN, WIFI_AWARE, BLE_L2CAP, BLUETOOTH, BLE, NFC]).
+06-14 16:12:18.780 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7141502925595959334), with result: DETAIL_SUCCESS
+06-14 16:12:18.780 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7141502925595959334, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.780 24327   726 I NearbyConnections: BandwidthUpgradeManager skipped retry upgrade [High quality medium WIFI_LAN]
+06-14 16:12:18.781 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.781 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -6277681141893583342), with result: DETAIL_SUCCESS
+06-14 16:12:18.781 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6277681141893583342, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.782 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7141502925595959334, remaining number of payloadIds = 0.
+06-14 16:12:18.782 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.782 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6277681141893583342, remaining number of payloadIds = 0.
+06-14 16:12:18.783 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -5245907705135658347), with result: DETAIL_SUCCESS
+06-14 16:12:18.784 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5245907705135658347, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.784 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.784 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5245907705135658347, remaining number of payloadIds = 0.
+06-14 16:12:18.784 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.784 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8647681882673981273), with result: DETAIL_SUCCESS
+06-14 16:12:18.785 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8647681882673981273, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.785 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.785 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8647681882673981273, remaining number of payloadIds = 0.
+06-14 16:12:18.785 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -5505482857150917592), with result: DETAIL_SUCCESS
+06-14 16:12:18.786 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5505482857150917592, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.786 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.786 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5505482857150917592, remaining number of payloadIds = 0.
+06-14 16:12:18.786 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8640793368516928350), with result: DETAIL_SUCCESS
+06-14 16:12:18.787 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8640793368516928350, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.787 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.787 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8640793368516928350, remaining number of payloadIds = 0.
+06-14 16:12:18.787 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.787 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7211329923018701160), with result: DETAIL_SUCCESS
+06-14 16:12:18.788 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7211329923018701160, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.788 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.788 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8183041930139783185), with result: DETAIL_SUCCESS
+06-14 16:12:18.789 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7211329923018701160, remaining number of payloadIds = 0.
+06-14 16:12:18.789 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.789 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8183041930139783185, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.789 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8183041930139783185, remaining number of payloadIds = 0.
+06-14 16:12:18.789 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.790 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8733866856265226340), with result: DETAIL_SUCCESS
+06-14 16:12:18.791 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.791 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8733866856265226340, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.791 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.791 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8733866856265226340, remaining number of payloadIds = 0.
+06-14 16:12:18.791 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8556624605058678784), with result: DETAIL_SUCCESS
+06-14 16:12:18.792 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.792 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8556624605058678784, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.793 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8556624605058678784, remaining number of payloadIds = 0.
+06-14 16:12:18.793 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.793 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7767239762847763125), with result: DETAIL_SUCCESS
+06-14 16:12:18.794 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:18.794 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7767239762847763125, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:18.794 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:18.794 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7767239762847763125, remaining number of payloadIds = 0.
+06-14 16:12:19.070   677   677 D io_stats: !@   8,0 r 7694747 164350632 w 1455117 20225904 d 417610 97458836 f 0 0 iot 3005108 0 th 0 0 0 pt 0 inp 0 0 74974.539
+06-14 16:12:19.104 24327 24355 I NearbyConnections: Client 256776511 is sending payload -6708093277102311272 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.105 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.105 24327 24355 I NearbyConnections: Client 256776511 is sending payload -5806286334996776708 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.107 24327 24355 I NearbyConnections: Client 256776511 is sending payload -4816683446308574348 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.108 24327 24355 I NearbyConnections: Client 256776511 is sending payload -4831145056293888028 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.109 24327 24355 I NearbyConnections: Client 256776511 is sending payload -4993257443198408640 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.111 24327 24355 I NearbyConnections: Client 256776511 is sending payload -5684629183876594798 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.113 24327 24355 I NearbyConnections: Client 256776511 is sending payload -6647644494233599249 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.113 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.113 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.113 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6708093277102311272, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.114 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.114 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.115 24327 24355 I NearbyConnections: Client 256776511 is sending payload -6886939346429505859 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.115 24327  2185 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6708093277102311272, remaining number of payloadIds = 0.
+06-14 16:12:19.115 24327 24355 I NearbyConnections: Client 256776511 is sending payload -8664956036120331624 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.116 24327 24355 I NearbyConnections: Client 256776511 is sending payload -7179744481890814931 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.117 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.117 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.117 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5806286334996776708, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.117 24327 24355 I NearbyConnections: Client 256776511 is sending payload -5509697543397494480 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.117 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.117 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.117 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5806286334996776708, remaining number of payloadIds = 0.
+06-14 16:12:19.118 24327 24355 I NearbyConnections: Client 256776511 is sending payload -4971342081265622040 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.118 24327 24355 I NearbyConnections: Client 256776511 is sending payload -8922975403864835101 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.119 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.119 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4816683446308574348, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.119 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.119  1096  1096 I LayerHistory: com.babcross.app/com.babcross.app.MainActivity$_27915#5533 is infrequent
+06-14 16:12:19.119 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.119  1096  1096 I SurfaceFlinger: All layers Min - choose 60.00 Hz
+06-14 16:12:19.119 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.119 24327  2185 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4816683446308574348, remaining number of payloadIds = 0.
+06-14 16:12:19.120  1096  1096 I HWComposer: [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 16:12:19.120   986  1172 I display : Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 0
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 1
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 2
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 3
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 4
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 5
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 6
+06-14 16:12:19.120   986  1172 I display : Set Affinity CPU ID : 7
+06-14 16:12:19.120   986  1172 I display : Set affinity HWC : 986
+06-14 16:12:19.120   986  1172 I display : CPU set : Cluster(0), min_clock(0)
+06-14 16:12:19.120   986  1172 I display : CPU set : Cluster(1), min_clock(0)
+06-14 16:12:19.121   986  1172 I display : CPU set : Cluster(2), min_clock(0)
+06-14 16:12:19.121 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.121 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.121 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4831145056293888028, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.121 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.121 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.121 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4831145056293888028, remaining number of payloadIds = 0.
+06-14 16:12:19.122 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.122 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.122 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.123 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4993257443198408640, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.123 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.123 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4993257443198408640, remaining number of payloadIds = 0.
+06-14 16:12:19.124 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.124 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.124 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5684629183876594798, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.124 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.124 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.125 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5684629183876594798, remaining number of payloadIds = 0.
+06-14 16:12:19.125 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.125 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.125 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.125 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6647644494233599249, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.125 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.125 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6647644494233599249, remaining number of payloadIds = 0.
+06-14 16:12:19.126 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.126 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.126 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6886939346429505859, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.126 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.126   986  1053 I display : doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 16:12:19.126   986  1053 I display : setActiveConfig(config=2)
+06-14 16:12:19.126   986  1053 I display : next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 16:12:19.126   986  1053 I display : Current VRR MODE is 3
+06-14 16:12:19.126 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.126  1385  1488 D LocalDisplayAdapter: updateActiveModeLocked for d=4633128672291735937, mActiveModeId=3, mActiveSfDisplayMode=DisplayMode{id=2, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=60.000004, vsyncRate=60.000004, appVsyncOffsetNanos=0, presentationDeadlineNanos=17666666, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 16:12:19.126  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 16:12:19.127  1385  1488 I DisplayDeviceRepository: Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=60.000004, presentationDeadlineNanos=17666666, appVsyncOffsetNanos=0
+06-14 16:12:19.127 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6886939346429505859, remaining number of payloadIds = 0.
+06-14 16:12:19.128 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.128 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.128 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8664956036120331624, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.128 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.128 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.128  1385  1574 D BrightnessThermalClamper: Thermal status observer already started
+06-14 16:12:19.128 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8664956036120331624, remaining number of payloadIds = 0.
+06-14 16:12:19.129  1385  3231 D LiftUpHandler: [LTW] Stopped already.
+06-14 16:12:19.129  1086 15625 D AudioFlinger: setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 16:12:19.129   973  1009 D audio_hw_primary: device-adev_set_parameters: enter
+06-14 16:12:19.129   973  1009 I audio_hw_primary: device-adev_set_parameters: Screen State = on)
+06-14 16:12:19.129   973  1009 I audio_hw_proxy2: proxy-proxy_set_parameters: set Screen-state 1
+06-14 16:12:19.129   973  1009 D audio_hw_primary: device-adev_set_parameters: param (screen_state=on)
+06-14 16:12:19.129   973  1009 I audio_hw_primary_odm: odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 16:12:19.129   973  1009 V audio_hw_primary: device-adev_set_parameters: exit (screen_state=on)
+06-14 16:12:19.130   973   973 I Audio_a2dpsink_hw: adev_set_parameters: kevpairs=[screen_state=on]
+06-14 16:12:19.130  1385  1385 D SGM:GameManager: onDisplayChanged. displyId: 0, state: 2
+06-14 16:12:19.130  2542  2542 I VRI[RecentsTransitionOverlay]@725b4cf: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.130  2542  2542 I VRI[CocktailBarService]@956d8b0: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.130  2542  2542 I VRI[RecentsActivity]@2460c6b: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.130  1385  1780 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_LCD_ON
+06-14 16:12:19.130  4363  4363 I VRI[InputMethod]@a7ae199: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.130  1385  1385 D MotionRecognitionService: [DisplayListener] getRefreshRate 60.000004
+06-14 16:12:19.130  1385  1799 D MotionRecognitionService: Inject RefreshRate: 60
+06-14 16:12:19.130  1385  1799 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+06-14 16:12:19.130  1385  1799 D SensorService: setSContextDataLocked 100048c1
+06-14 16:12:19.130  1385  1385 D AODManagerService: requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 16:12:19.131  2024  2073 I VRI[ShellDropTarget]@6480554: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.131  1002  1002 D Sensors : c1 48 00 10 3c 00 00 00  
+06-14 16:12:19.131  1002  1002 E Sensors : inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 16:12:19.131  2024  2164 D StackScroller: onDisplayChanged for predraw skip to 2
+06-14 16:12:19.131  2024  2024 D DisplayLifecycle: updateDisplay id = 0
+06-14 16:12:19.132  2542  4547 I HoneySpace.RefreshRateSource: singleFrameMs 16
+06-14 16:12:19.132 27915 27915 I VRI[MainActivity]@aa1583: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[LockscreenShortcutBlur]@43e4b39: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[NavigationBar0]@18aa930: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[NotificationShade]@ab1f331: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[StatusBar]@f6672fa: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[Bouncer]@ddcc755: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  2024  2024 I VRI[KeyguardBiometricToastView]@ff84607: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.132  1385  4404 D WifiDisplayAdapter: isFitToActiveDisplayLocked : false
+06-14 16:12:19.132  8465  8465 I VRI[HintService]@db150f5: onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 16:12:19.133  1002  1002 D Sensors : SContext Data Injection return 8
+06-14 16:12:19.133  1385  1488 D RefreshRateModeManager: updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 16:12:19.133 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.133 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.133 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.134 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7179744481890814931, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.134 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.134 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7179744481890814931, remaining number of payloadIds = 0.
+06-14 16:12:19.134   986  1053 I display : config 8333333, desired 16666666
+06-14 16:12:19.134  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 120
+06-14 16:12:19.135 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.135 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.135 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.135 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5509697543397494480, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.135 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.136 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5509697543397494480, remaining number of payloadIds = 0.
+06-14 16:12:19.136 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.136 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.136 24327  1621 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.136 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4971342081265622040, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.136 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.136 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4971342081265622040, remaining number of payloadIds = 0.
+06-14 16:12:19.137 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.137 24327  1621 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.137 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8922975403864835101, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.137 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.137 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8922975403864835101, remaining number of payloadIds = 0.
+06-14 16:12:19.143  1096  1171 I VSyncReactor: Current= 120, Period= 60, hwcPeriod= 60
+06-14 16:12:19.235 24154 24154 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.semanticlocationhistory.zeroparty.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+06-14 16:12:19.238  1385  4404 I ActivityManager: Changes in 10213 3 to 10, 56 to 0
+06-14 16:12:19.245  1385  4400 I ActivityManager: Killing 30507:com.samsung.android.biometrics.app.setting/1000 (adj 975): empty #33
+06-14 16:12:19.273 24327 24355 I NearbyConnections: Client 256776511 is sending payload -8769181327754143469 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.275 24327 24482 I NearbyConnections: Client 256776511 is sending payload -5693002672867915803 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.276 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.277 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8533792625988456881 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.279 24327 24482 I NearbyConnections: Client 256776511 is sending payload -6498374805225163494 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.281 24327 24482 I NearbyConnections: Client 256776511 is sending payload -5003869879862589995 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.281 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.282 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.282 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.282 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8769181327754143469, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.282 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.282 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8769181327754143469, remaining number of payloadIds = 0.
+06-14 16:12:19.283 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8642470879912394955 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.285 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.285 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5693002672867915803, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.285 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.285 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.285 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.285 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8295162813622600166 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.285 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5693002672867915803, remaining number of payloadIds = 0.
+06-14 16:12:19.287 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.287 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.287 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8533792625988456881, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.287 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.287 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.287 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8533792625988456881, remaining number of payloadIds = 0.
+06-14 16:12:19.287 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8057678524139516031 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.288 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.288 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.288 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.288 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6498374805225163494, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.288 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.289 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6498374805225163494, remaining number of payloadIds = 0.
+06-14 16:12:19.289 24327 24482 I NearbyConnections: Client 256776511 is sending payload -6503030948701203224 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.290 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.290 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.291 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5003869879862589995, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.291 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.291 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.291 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5003869879862589995, remaining number of payloadIds = 0.
+06-14 16:12:19.292 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8565495574709418918 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.293 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.293 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.293 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8642470879912394955, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.293 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.293 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.293 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8642470879912394955, remaining number of payloadIds = 0.
+06-14 16:12:19.294 24327 24482 I NearbyConnections: Client 256776511 is sending payload -4977384884597195306 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.295 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.295 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.295 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8295162813622600166, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.295 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.295 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.295 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8295162813622600166, remaining number of payloadIds = 0.
+06-14 16:12:19.296 24327 24482 I NearbyConnections: Client 256776511 is sending payload -6513975727215104329 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.296 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.296 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.297 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.297 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8057678524139516031, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.297 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.297 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -6863981007618584675), with result: DETAIL_SUCCESS
+06-14 16:12:19.297 24327   719 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8057678524139516031, remaining number of payloadIds = 0.
+06-14 16:12:19.298 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.298 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6863981007618584675, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.298 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6863981007618584675, remaining number of payloadIds = 0.
+06-14 16:12:19.299 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.299 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.299 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.300 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6503030948701203224, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.300 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.300 24327 24482 I NearbyConnections: Client 256776511 is sending payload -8920107338781043288 of type BYTES to endpoints [IVAG].
+06-14 16:12:19.300 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6503030948701203224, remaining number of payloadIds = 0.
+06-14 16:12:19.300 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.301 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.301 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.301 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8565495574709418918, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.301 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.301 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.301 24327  1621 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8565495574709418918, remaining number of payloadIds = 0.
+06-14 16:12:19.302 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.302 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.302 24327   719 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4977384884597195306, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.302 24327   719 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.302 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.302 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4977384884597195306, remaining number of payloadIds = 0.
+06-14 16:12:19.303 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.304 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.304 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8089924710130565917), with result: DETAIL_SUCCESS
+06-14 16:12:19.304 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8089924710130565917, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.305 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.305 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -5292462900254450235), with result: DETAIL_SUCCESS
+06-14 16:12:19.305 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5292462900254450235, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.305 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.305 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8089924710130565917, remaining number of payloadIds = 0.
+06-14 16:12:19.305 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5292462900254450235, remaining number of payloadIds = 0.
+06-14 16:12:19.306 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.306 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.306 24327   726 I NearbyMediums: Create a BlockingPayloadChunkQueue with size 10.
+06-14 16:12:19.306 24327  1621 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6513975727215104329, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.306 24327  1621 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.306 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6513975727215104329, remaining number of payloadIds = 0.
+06-14 16:12:19.307 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.307 24327   726 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.307 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8920107338781043288, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.307 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.307 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8920107338781043288, remaining number of payloadIds = 0.
+06-14 16:12:19.311 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -4867140043994185806), with result: DETAIL_SUCCESS
+06-14 16:12:19.312 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.312 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4867140043994185806, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.312 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.312 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4867140043994185806, remaining number of payloadIds = 0.
+06-14 16:12:19.313 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.313 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.314 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.314 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.315 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.315 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.315 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.316 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7475106414336072324), with result: DETAIL_SUCCESS
+06-14 16:12:19.316 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7475106414336072324, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.316 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.316 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7475106414336072324, remaining number of payloadIds = 0.
+06-14 16:12:19.316 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8502977899815242525), with result: DETAIL_SUCCESS
+06-14 16:12:19.316 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8502977899815242525, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.316 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.316 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8502977899815242525, remaining number of payloadIds = 0.
+06-14 16:12:19.316 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -6778355266257766757), with result: DETAIL_SUCCESS
+06-14 16:12:19.317 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6778355266257766757, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.317 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.317 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6778355266257766757, remaining number of payloadIds = 0.
+06-14 16:12:19.317 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -4801769745289933724), with result: DETAIL_SUCCESS
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -4801769745289933724, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.318 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -8724286562098361606), with result: DETAIL_SUCCESS
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -8724286562098361606, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.318 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -6616474195197913233), with result: DETAIL_SUCCESS
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -6616474195197913233, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.318 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -7094417604786013564), with result: DETAIL_SUCCESS
+06-14 16:12:19.318 24327   726 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -7094417604786013564, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.319 24327   726 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.319 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -4801769745289933724, remaining number of payloadIds = 0.
+06-14 16:12:19.319 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -8724286562098361606, remaining number of payloadIds = 0.
+06-14 16:12:19.319 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -6616474195197913233, remaining number of payloadIds = 0.
+06-14 16:12:19.319 24327  2187 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -7094417604786013564, remaining number of payloadIds = 0.
+06-14 16:12:19.325  1385  4404 D InputMethodManagerService: onClientRemoved
+06-14 16:12:19.325  1385  1506 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1000/pid_30507
+06-14 16:12:19.325   960   960 I Zygote  : Process 30507 exited due to signal 9 (Killed)
+06-14 16:12:19.331  1385  1488 W ActivityManager: setHasOverlayUi called on unknown pid: 30507
+06-14 16:12:19.355  1385  1399 I system_server: Background young concurrent copying GC freed 29MB AllocSpace bytes, 291(5932KB) LOS objects, 18% free, 155MB/191MB, paused 1.560ms,257us total 111.364ms
+06-14 16:12:19.360 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadReceived(IVAG, -5456991981553905670), with result: DETAIL_SUCCESS
+06-14 16:12:19.361 24327 28036 I Nearby  : (REDACTED) Successfully shutdown executor %s.
+06-14 16:12:19.361 24327  2187 I NearbyConnections: ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(IVAG, -5456991981553905670, SUCCESS, 100%) processed(payloadListener:non-null isClientAlive:true)
+06-14 16:12:19.361 24327   726 I NearbyConnections: [AutoResumeManager] clearPendingPayloadInfo for payloadId = -5456991981553905670, remaining number of payloadIds = 0.
+06-14 16:12:19.361 24327  2187 I NearbyConnections: [AutoResume] numSuccessfulAutoResume = 0, numFailedAutoResume = 0.
+06-14 16:12:19.546  1385  3124 D FreecessController: com.microsoft.launcher(10346) is important[11]
+06-14 16:12:19.603  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:D2:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:12:19.604  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:A1:A7, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:12:19.664 24327   715 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:35) and reply a KEEP_ALIVE frame with ack from endpoint V39F on channel ENCRYPTED_WIFI_LAN.
+06-14 16:12:19.665  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x10, addressType=1, address=XX:XX:XX:XX:D2:DC, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-77, periodicAdvInt=0x0
+06-14 16:12:19.680  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1, addressType=1, address=XX:XX:XX:XX:92:A6, primaryPhy=1, secondaryPhy=1, advertisingSid=0x1, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 16:12:19.713  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:D2:17, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-39, periodicAdvInt=0x0
+06-14 16:12:19.716  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1, addressType=1, address=XX:XX:XX:XX:46:91, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 16:12:19.729  2264  2647 I BtGatt.ScanHelper: onScanResult to scannerId: 10- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:6A:0B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-55, periodicAdvInt=0x0
+06-14 16:12:19.745 24327   716 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:35) and sleep 5000 for endpoint V39F.
+06-14 16:12:19.814 24327   715 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:35) with ACK from endpoint V39F on channel ENCRYPTED_WIFI_LAN.
+06-14 16:12:20.258 24327 24327 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }

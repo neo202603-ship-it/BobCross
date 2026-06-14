@@ -78,6 +78,14 @@ class NearVoteStore(context: Context) {
         prefs.edit().putBoolean(KEY_ONBOARDING_DONE, true).apply()
     }
 
+    fun hasCompletedDemo(): Boolean {
+        return prefs.getBoolean(KEY_DEMO_DONE, false)
+    }
+
+    fun saveDemoCompleted() {
+        prefs.edit().putBoolean(KEY_DEMO_DONE, true).apply()
+    }
+
     fun saveSessionState(stateJson: String) {
         prefs.edit().putString(KEY_SESSION_STATE, stateJson).apply()
     }
@@ -229,6 +237,7 @@ class NearVoteStore(context: Context) {
         private const val KEY_DEFAULT_REVEAL_SELECTIONS = "default_reveal_selections"
         private const val KEY_RECENT_FOOD_CATEGORY = "recent_food_category"
         private const val KEY_ONBOARDING_DONE = "onboarding_done"
+        private const val KEY_DEMO_DONE = "demo_done"
         private const val KEY_SESSION_STATE = "session_state"
         private const val KEY_RECEIPTS = "receipts"
         private const val KEY_RESULTS = "results"

@@ -1,17 +1,19 @@
 # Google Play 내부 테스트 등록 메모
 
 작성일: 2026-05-31
-최종 점검일: 2026-06-11
+최종 점검일: 2026-06-14
 
 ## 릴리스 후보
 
 - Package name: `com.babcross.app`
-- Release candidate: `0.1.105`
-- Version code: `106`
+- Local release candidate: `0.1.185`
+- Local version code: `186`
+- Play internal latest: `0.1.185` / version code `186` (2026-06-14 16:43 KST 내부 테스트 배포 완료)
 - Min SDK: `26`
 - Target SDK: `35`
 - Release AAB: `app/build/outputs/bundle/release/app-release.aab`
 - Debug APK: `app/build/outputs/apk/debug/BabCross.apk`
+- Local release AAB SHA-256: `323f2e4123d7ea5bbbe93747b26efe12f4a8c98844041fbc481cec7e576e8582`
 
 ## 업로드 키
 
@@ -33,7 +35,7 @@
 
 확인 완료:
 
-- 개인정보처리방침 URL은 2026-06-05에 `HTTP 200` 공개 접근을 확인했다.
+- 개인정보처리방침 URL은 2026-06-12에 `HTTP 200` 공개 접근을 확인했다.
 - 앱 내부 개인정보처리방침, Play Data safety 답변, 권한 설명은 모두 `개발자 서버 수집 없음`과 `사용자 주도 근거리 기기 간 전달`을 분리해 같은 표현으로 설명한다.
 - 내 기기에서 삭제해도 이미 상대 기기에 전달된 밥판 데이터는 회수되지 않는다는 문구를 유지한다.
 
@@ -50,7 +52,7 @@
 ```text
 밥크로스는 점심, 회식, 음료수, 후식, 간식처럼 매번 고르기 어려운 선택을 가까운 사람들과 빠르게 정리하는 밥판 앱입니다.
 
-종류를 고르면 그 종류에 맞는 템플릿과 룰렛 후보로 바로 밥판을 만들 수 있고, Nearby Connections로 주변 Android 기기에 초대를 보냅니다. 밥판장은 4자리 코드를 구두로 알려줄 수 있고, 참여자는 코드를 맞게 입력하면 바로 메뉴 선택으로 이동합니다. 결과는 득표 요약 또는 밥친구별 선택 공개 방식으로 확인할 수 있습니다.
+종류를 고르면 그 종류에 맞는 템플릿과 룰렛 후보로 바로 밥판을 만들 수 있고, Nearby Connections로 주변 Android 기기에 초대를 보냅니다. 밥판장은 4자리 코드를 구두로 알려주거나 QR을 보여줄 수 있고, 참여자는 코드 입력 또는 QR 스캔으로 밥판 연결을 시작합니다. 결과는 득표 요약 또는 밥친구별 선택 공개 방식으로 확인할 수 있습니다.
 
 밥크로스는 자체 서버, 광고 SDK, 분석 SDK를 사용하지 않습니다. 위치 기록을 저장하지 않고, 사용자가 밥판을 열거나 참여할 때 밥닉/아바타/후보/선택 결과는 밥판 기능을 위해 가까운 참여자 기기끼리만 전달됩니다. 설정에서 지난 결정, 영수증/해시, 사용자 템플릿, 프로필/기본값을 삭제할 수 있습니다.
 ```
@@ -87,20 +89,20 @@ Play Console 심사 설명 초안:
 ## 릴리스 노트 초안
 
 ```text
-- 야외 테스트 상황에 맞춰 4자리 밥판 초대 코드를 추가했습니다.
-- 초대받은 사용자는 코드를 맞게 입력하면 별도 참여 버튼 없이 바로 메뉴 선택으로 이동합니다.
-- 초대 코드 입력을 4칸 슬롯으로 표시하고, 키보드에 가려지지 않도록 화면 위치를 보정했습니다.
-- 코드가 틀리면 입력칸이 흔들리고 진동한 뒤 자동으로 비워져 바로 다시 입력할 수 있습니다.
-- 메뉴 후보 룰렛의 감속, 선택 위치, 결과 표시를 더 정교하게 다듬었습니다.
-- 결정 카드의 등급, 별점, 표시 크기를 정리하고 시스템 글꼴 크기 설정에 덜 흔들리도록 개선했습니다.
-- Nearby 메시지 검증, 재전송 방어, 로컬 데이터 관리와 개인정보 설명을 보강했습니다.
+- QR로 공개/비공개 밥판에 빠르게 참여하고, 연결 대기 화면에서 진행 상태를 확인할 수 있습니다.
+- QR은 밥판 찾기 힌트만 담고 실제 후보와 참여 정보는 Nearby로 받은 뒤에만 열립니다.
+- 우하단 연결 배지는 각 기기의 직접 연결 수로 정리하고, 밥판장 화면에는 밥판 참여 현황 카드를 별도로 추가했습니다.
+- 결정 카드 복사/공유 이미지는 화면 카드와 같은 렌더링을 쓰도록 개선하고, 기기 큰 글씨/굵은 글씨 설정 영향을 줄였습니다.
+- 코드 입력 시 타이핑하듯 짧은 진동 피드백을 제공합니다.
+- 튜토리얼 설명풍선을 더 어둡고 읽기 쉽게 조정하고, 종료 말풍선이 기기 하단 버튼에 가려지지 않도록 보정했습니다.
+- 결과 순위, 동률 추천, 무득표 상태, 공유 문구 계산을 단위 테스트 가능한 순수 로직으로 분리했습니다.
 ```
 
 ## 스크린샷 시나리오
 
 1. 홈: 메뉴 못 정할 때 밥판 열기
 2. 밥판 열기: 종류별 템플릿과 룰렛으로 후보 만들기
-3. 초대/참여: 4자리 밥판 코드 입력 후 바로 고르기
+3. 초대/참여: 4자리 밥판 코드 또는 QR로 참여 후 바로 고르기
 4. 결과 카드: 오늘의 식사/요리/음료수 결정
 5. 신뢰 안내: 서버 저장 없음, 주변 기기 공유 범위, 로컬 데이터 관리
 
@@ -129,19 +131,39 @@ Play Console 심사 설명 초안:
 - `:app:compileDebugKotlin` 통과
 - `:app:assembleDebug` 통과
 - `:app:bundleRelease` 통과
-- AAB `versionName=0.1.105`, `versionCode=106` 확인
-- AAB 서명 확인
-- release 빌드 `debuggable=false` 확인
-- release 빌드 R8 minify/resource shrink 적용 확인
+- AAB `versionName=0.1.185`, `versionCode=186` 확인
+- AAB 서명 확인: release upload key SHA-1 `69:6F:8D:03:FC:B1:AE:D7:C0:55:C0:F2:D5:54:C5:F5:3E:8D:DD:F9`
+- release 빌드 `debuggable=false` 확인: release manifest에 `android:debuggable` 속성 없음
+- release 빌드 R8 minify/resource shrink 적용 확인: `app/build/outputs/mapping/release/` 및 `usage.txt`, `resources.txt` 생성
 - 개인정보처리방침 URL 공개 접근 확인
 - Play Console 앱 콘텐츠, 콘텐츠 등급, 타겟 연령층, Data safety 입력
 
+## Play Console 배포 결과
+
+- 2026-06-13 20:14 KST에 내부 테스트 트랙으로 `0.1.156` 배포 완료
+- Play Console 상태: `내부 테스터에게 제공됨`
+- 업로드된 App Bundle: `157 (0.1.156)`
+- 당시 내부 테스트 최신 버전: `157 (0.1.156)`
+- 2026-06-13 21:27 KST에 내부 테스트 트랙으로 `0.1.167` 배포 완료
+- Play Console 상태: `내부 테스터에게 제공됨`
+- 업로드된 App Bundle: `168 (0.1.167)`
+- 당시 내부 테스트 최신 버전: `168 (0.1.167)`
+- 2026-06-14 16:00 KST에 내부 테스트 트랙으로 `0.1.184` 배포 완료
+- Play Console 상태: `내부 테스터에게 제공됨`
+- 업로드된 App Bundle: `185 (0.1.184)`
+- 당시 내부 테스트 최신 버전: `185 (0.1.184)`
+- 2026-06-14 16:43 KST에 내부 테스트 트랙으로 `0.1.185` 배포 완료
+- Play Console 상태: `내부 테스터에게 제공됨`
+- 업로드된 App Bundle: `186 (0.1.185)`
+- 현재 내부 테스트 최신 버전: `186 (0.1.185)`
+- Play Console 검토 화면 기준 지원 기기 감소: 전화 `0`, 태블릿 `0`, TV `0`, 차량 `0`, Chromebook `0`, Android XR `0`
+
 ## 단말 테스트 체크리스트
 
-- Samsung Galaxy S24 Ultra (`SM_S928N`) 설치 및 기본 실행 확인: `versionName=0.1.105`, `versionCode=106`
-- Samsung Galaxy S21 (`SM_G996N`) 설치 및 기본 실행 확인: `versionName=0.1.105`, `versionCode=106`
-- Samsung Galaxy Z Fold7 (`SM_F966N`) 설치 및 기본 실행 확인: `versionName=0.1.105`, `versionCode=106`
-- 두 기기 이상에서 밥판 생성, 4자리 코드 참여, 코드 오류/재입력, 투표, 조기 종료, 시간 만료, 결과 공유 확인
+- Samsung Galaxy S24 Ultra (`SM_S928N`) 설치 버전 확인: `versionName=0.1.185`, `versionCode=186`
+- Samsung Galaxy S21 (`SM_G996N`) 설치 버전 확인: `versionName=0.1.185`, `versionCode=186`
+- Samsung Galaxy Z Fold7 (`SM_F966N`) 설치 버전 확인: `versionName=0.1.185`, `versionCode=186`
+- 두 기기 이상에서 밥판 생성, 참여, 투표, 결과 확인 플로우 이상 없음 확인
 - 권한 전체 허용
 - 위치 권한 거부
 - Bluetooth 꺼짐
@@ -155,6 +177,7 @@ Play Console 심사 설명 초안:
 ## 보관 산출물
 
 - Release AAB: `app/build/outputs/bundle/release/app-release.aab`
+- Release AAB SHA-256: `323f2e4123d7ea5bbbe93747b26efe12f4a8c98844041fbc481cec7e576e8582`
 - Debug APK: `app/build/outputs/apk/debug/BabCross.apk`
 - Google Play 앱 아이콘: `store-assets/google-play/icon-512.png`
 - Google Play 그래픽 이미지: `store-assets/google-play/feature-graphic-1024x500.png`

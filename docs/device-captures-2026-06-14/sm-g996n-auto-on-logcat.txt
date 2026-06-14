@@ -1,0 +1,402 @@
+--------- beginning of main
+06-14 14:50:59.245 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9C:04, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-79, periodicAdvInt=0x0
+06-14 14:50:59.248 I/[+0900]oneconnect[1.8.45.24_01][CORE]( 9239): DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 14:50:59.254 I/[+0900]oneconnect[1.8.45.24_01][CORE]( 9239): Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 14:50:59.255 D/Tile.SoundModeTile( 2024): handleUpdateState: profile 1, muteAllSound false
+06-14 14:50:59.298 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1, addressType=1, address=XX:XX:XX:XX:CA:0F, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-14, periodicAdvInt=0x0
+06-14 14:50:59.367 D/SBluetoothTile( 2024):  handleUpdateState enabled = true connected = false connecting = false changedState =false bluetoothState = 12 enabledChanging = false state = QSTile$BooleanState[spec=Bluetooth,icon=ResourceIcon[resId=0x7f080e68],nextIcon=null,iconSupplier=null,label=블루투스,secondaryLabel=,contentDescription=블루투스,stateDescription=null,dualLabelContentDescription=null,expandedAccessibilityClassName=null,disabledByPolicy=false,dualTarget=true,isTransient=false,state=2,sideViewCustomDrawable=null,tileClassName=null,value=true,forceExpandIcon=false]
+06-14 14:50:59.419 D/Tile.MobileDataTile( 2024): getDefaultDataPhoneId -1
+06-14 14:50:59.425 I/LocationAccessPolicy( 2006): com.android.systemui is aware of fine but the app-ops permission is specifically denied.
+06-14 14:50:59.425 I/LocationAccessPolicy( 2006): checkLocationPermission - callingUid: 10062, callingPid: 2024, resultForFine: DENIED_SOFT
+06-14 14:50:59.427 I/LocationAccessPolicy( 2006): com.android.systemui is aware of coarse but the app-ops permission is specifically denied.
+06-14 14:50:59.427 I/LocationAccessPolicy( 2006): checkLocationPermission - callingUid: 10062, callingPid: 2024, resultForCoarse: DENIED_SOFT
+06-14 14:50:59.431 D/Tile.MobileDataTile( 2024): handleUpdateState : state false
+06-14 14:50:59.436 D/Tile.DndTile( 2024): handleUpdateState zen 0  state = QSTile$BooleanState[spec=Dnd,icon=ResourceIcon[resId=0x7f080e6d],nextIcon=null,iconSupplier=null,label=방해 금지,secondaryLabel=null,contentDescription=null,stateDescription=null,dualLabelContentDescription=null,expandedAccessibilityClassName=null,disabledByPolicy=false,dualTarget=true,isTransient=false,state=1,sideViewCustomDrawable=null,tileClassName=null,value=false,forceExpandIcon=false]
+06-14 14:50:59.507 D/SyncManager( 1385): userId - 0 auto - true
+06-14 14:50:59.511 D/Tile.SyncTile( 2024): hasUserRestriction: false
+06-14 14:50:59.518 D/Tile.SecDeviceControlsTile( 2024): handleUpdateState appName = SmartThings
+06-14 14:50:59.543 I/HotspotTile( 2024): handleUpdateState
+06-14 14:50:59.546 I/SemWifiServiceDetector( 1385): Service det. resumed: T / T / 25535
+06-14 14:50:59.578 D/DeviceState( 2024): isESIM() :0 : false
+06-14 14:50:59.579 D/Tile.AirplaneModeTile( 2024):  handleUpdateState mIsWiFiOnlyDevice false isNoSimState true isPowerOffServiceState true mSetting.getValue() 0 isSatelliteModeOn false isChinaDevice false
+06-14 14:50:59.579 D/Tile.AirplaneModeTile( 2024):  handleUpdateState:  value = false, state = 1
+--------- beginning of system
+06-14 14:50:59.891 D/io_stats(  677): !@   8,0 r 7369469 154557268 w 1386454 19495124 d 398327 96906612 f 0 0 iot 2859812 0 th 0 0 0 pt 0 inp 0 0 70474.285
+06-14 14:50:59.933 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) doesDataKeepChanging: postpone count: 0 - source count: very first = 1926, previous = 1926, current = 1926
+06-14 14:50:59.933 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) [GALLERY-0] entering in collectChanges():  
+06-14 14:50:59.985 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) fetchInternal values : maxSyncId: 2147493444 indexCount: 1926 sourceCount: 1926
+06-14 14:50:59.988 D/ConnectivityService( 1385): notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:50:59.990 D/SemWifiUsabilityStatsMonitor( 1385): onWifiUsabilityStats - seqNum 14781, isSameBssidAndFreq true
+06-14 14:50:59.993 D/SemWifiApNsd:Client( 1385): lpInterface:wlan0
+06-14 14:50:59.993 D/SemWifiSwitchForIndividualAppsService( 1385): stopTCPMonitoring : already stopped
+06-14 14:50:59.993 I/WifiConnectivityMonitor.NCC( 1385): sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:50:59.993 I/SemWifiLinkQualityMonitor( 1385): Link stat: 1926 / 257 / 3.25 (91) / 86 / -64.0 || 100.0 : 86.00 / B (B) || 94c098be5745: 0.861 / 9.295 /  / N || N N / 0 / Y 2.0 / Y 0 / 70474385 0
+06-14 14:50:59.994 I/WifiConnectivityMonitor.NCC( 1385): [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=51412Kbps LinkDnBandwidth>=33107Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -64, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 117Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -64 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:50:59.994 D/WifiConnectivityMonitor( 1385): HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:50:59.997 I/WifiConnectivityMonitor( 1385): determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:50:59.997 D/OpenNetworkQos[4.00]( 1385): updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:50:59.997 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosNoInternetStatus: false
+06-14 14:50:59.997 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosScores: 0 30 26 
+06-14 14:50:59.997 D/KNOX_MDM_SettingsProvider( 1385): isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:50:59.998 I/WifiProfileShare( 1385): network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:50:59.998 V/WifiProfileShare.Caster( 1385): update wips network, size: 0
+06-14 14:50:59.998 D/WifiProfileShare( 1385): nearby scanning settings run
+06-14 14:50:59.998 D/WifiProfileShare( 1385): network score provider settings enabled
+06-14 14:50:59.998 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosScores: 0 30 26 
+06-14 14:50:59.998 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosNoInternetStatus: false
+06-14 14:50:59.998 I/WifiProfileShare.Caster( 1385): current network type: 0, score: [0, 30, 26]
+06-14 14:50:59.999 V/WifiProfileShare.Cache( 1385): update network score 78:d2:94:**:**:be
+06-14 14:50:59.999 D/WifiProfileShare.ScanMatcher( 1385): getMcfDataList size:5
+06-14 14:50:59.999 I/WifiProfileShare.Caster( 1385): qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:51:00.001 D/WifiPickerTracker( 2024): updateWifiEntries capabilities
+06-14 14:51:00.002 I/[MCFSDK_android_1.2.27006]_4_McfCasterImpl( 1385): isNetworkEnabled - type : 1 ret : true
+06-14 14:51:00.004 I/EyeComfortSolutionService( 1385): action  :  android.intent.action.TIME_TICK
+06-14 14:51:00.005 D/WifiProfileShare.McfCast( 1385): -ME--- mIsNetworkEnabled :true
+06-14 14:51:00.005 D/WifiProfileShare.McfCast( 1385): updateQoSData ignored, same contents
+06-14 14:51:00.005 D/WifiProfileShare.MCF( 1385): success update QosData !
+06-14 14:51:00.005 I/[MCFSDK_android_1.2.27006]_4_McfCasterImpl( 1385): isNetworkEnabled - type : 1 ret : true
+06-14 14:51:00.005 D/WifiProfileShare.McfCast( 1385): -ME--- mIsNetworkEnabled :true
+06-14 14:51:00.005 D/WifiProfileShare.McfCast( 1385): -ME--- updatePasswordDate pwdData size:5
+06-14 14:51:00.006 I/DateTimeView( 2024): updateAll - getTimeFormat
+06-14 14:51:00.006 D/SemWifiApTrafficPriority( 1385): onCapabilitiesChanged Wifi:wlan0,mGapiValue:33.107Uplink: 51.412
+06-14 14:51:00.007 D/FaceWidgetPagesController( 2024): onTimeChanged()
+06-14 14:51:00.007 D/QSClockBellTower( 2024): onReceive(android.intent.action.TIME_TICK) mTimeZoneString:Asia/Seoul
+06-14 14:51:00.010 I/ControllerEventHandler(20071): [#CMH#] Capabilities of network has been changed:  106
+06-14 14:51:00.010 I/ControllerEventHandler(20071): [#CMH#] Setting POIConnectedValue to true 
+06-14 14:51:00.010 D/ConnectivityManager(24327): StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:51:00.014 D/ConnectivityService( 1385): Rematched networks [computed 0ms] [applied 1ms] [issued 1]
+06-14 14:51:00.014 D/ConnectivityService( 1385): NetworkReassignment : no changes
+06-14 14:51:00.015 D/WifiPickerTracker( 2024): update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:51:00.015 D/WifiPickerTracker( 2024): handleNetworkCapabilitiesChanged
+06-14 14:51:00.015 I/NullBinder(24327): NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:51:00.015 W/.gms.persistent(24327): Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:51:00.016 D/QSClockBellTower( 2024): He is ready to ring the bell. (((QSClockBellSound - TimeText:2:51, TimeContentDescription:오후 2:51, DateText:6월 14일 일요일, ShortDateText:6월 14일 (일), Demo:false)))
+06-14 14:51:00.016 D/QSClock ( 2024): StatusBar clock=2:51 notifyTimeChanged(QSClockBellSound - TimeText:2:51, TimeContentDescription:오후 2:51, DateText:6월 14일 일요일, ShortDateText:6월 14일 (일), Demo:false) clockVisibleByPolicy=true, clockVisibleByUser=true, visible=true, parent=android.widget.LinearLayout{3079064 V.E...... ......ID 0,0-86,57 #7f0a061e app:id/left_clock_container} caller=com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment.animateShow:47 com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment.updateStatusBarVisibilitiesInner:207 com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment$$ExternalSyntheticLambda2.run:35 android.os.Handler.handleCallback:959 android.os.Handler.dispatchMessage:100  
+06-14 14:51:00.016 D/QSClockBellTower( 2024): Everyone heard the bell. run(currentTime:1781416260015, getTime():Sun Jun 14 14:51:00 GMT+09:00 2026, getTimeZone():libcore.util.ZoneInfo[mDstSavings=0,mUseDst=false,mDelegate=[id="Asia/Seoul",mRawOffset=32400000,mEarliestRawOffset=30472000,transitions=29]])
+06-14 14:51:00.017 D/ConnectivityManager(24327): StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:51:00.017 I/NearbyMediums(24327): Wifi changed new SSID: "ORBI57-home"
+06-14 14:51:00.017 I/NearbyMediums(24327): WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:51:00.028 D/LocalDisplayAdapter( 1385): updateActiveModeLocked for d=4633128672291735937, mActiveModeId=3, mActiveSfDisplayMode=DisplayMode{id=2, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=60.000004, vsyncRate=60.000004, appVsyncOffsetNanos=0, presentationDeadlineNanos=17666666, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 14:51:00.029 I/DisplayDeviceRepository( 1385): Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=60.000004, presentationDeadlineNanos=17666666, appVsyncOffsetNanos=0
+06-14 14:51:00.031 D/BrightnessThermalClamper( 1385): Thermal status observer already started
+06-14 14:51:00.033 D/LiftUpHandler( 1385): [LTW] Stopped already.
+06-14 14:51:00.034 D/SGM:GameManager( 1385): onDisplayChanged. displyId: 0, state: 2
+06-14 14:51:00.034 D/AudioFlinger( 1086): setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 14:51:00.034 D/MotionRecognitionService( 1385): [DisplayListener] getRefreshRate 60.000004
+06-14 14:51:00.034 D/audio_hw_primary(  973): device-adev_set_parameters: enter
+06-14 14:51:00.034 D/AODManagerService( 1385): requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 14:51:00.034 I/audio_hw_primary(  973): device-adev_set_parameters: Screen State = on)
+06-14 14:51:00.035 D/SGM:FgCheckThread( 1385): onLooperPrepared(), msg: MSG_LCD_ON
+06-14 14:51:00.035 D/MotionRecognitionService( 1385): Inject RefreshRate: 60
+06-14 14:51:00.035 D/SensorService( 1385): setSContextDataLocked ints length 3 , byte length 8
+06-14 14:51:00.036 D/SensorService( 1385): setSContextDataLocked 100048c1
+06-14 14:51:00.036 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.037 I/audio_hw_proxy2(  973): proxy-proxy_set_parameters: set Screen-state 1
+06-14 14:51:00.037 D/audio_hw_primary(  973): device-adev_set_parameters: param (screen_state=on)
+06-14 14:51:00.037 I/audio_hw_primary_odm(  973): odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 14:51:00.037 V/audio_hw_primary(  973): device-adev_set_parameters: exit (screen_state=on)
+06-14 14:51:00.037 I/Audio_a2dpsink_hw(  973): adev_set_parameters: kevpairs=[screen_state=on]
+06-14 14:51:00.037 D/Sensors ( 1002): c1 48 00 10 3c 00 00 00  
+06-14 14:51:00.038 E/Sensors ( 1002): inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 14:51:00.038 I/VSyncReactor( 1096): Current= 60, Period= 60, hwcPeriod= 60
+06-14 14:51:00.039 I/VRI[InputMethod]@a7ae199( 4363): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.039 D/Sensors ( 1002): SContext Data Injection return 8
+06-14 14:51:00.040 I/VRI[SettingsHomepageActivity]@db11fc(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.040 I/VRI[SubSettings]@296ac8d(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.040 I/VRI[SubSettings]@da76e1c(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.041 I/VRI[ShellDropTarget]@6480554( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.042 I/VRI[RecentsTransitionOverlay]@725b4cf( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.042 I/VRI[CocktailBarService]@956d8b0( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.042 I/VRI[RecentsActivity]@2460c6b( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.042 I/HoneySpace.RefreshRateSource( 2542): singleFrameMs 16
+06-14 14:51:00.042 D/StackScroller( 2024): onDisplayChanged for predraw skip to 2
+06-14 14:51:00.042 D/DisplayLifecycle( 2024): updateDisplay id = 0
+06-14 14:51:00.043 D/RefreshRateModeManager( 1385): updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 14:51:00.043 I/VRI[LockscreenShortcutBlur]@43e4b39( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 I/VRI[NavigationBar0]@18aa930( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 I/VRI[NotificationShade]@ab1f331( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 I/VRI[StatusBar]@f6672fa( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 I/VRI[Bouncer]@ddcc755( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 I/VRI[KeyguardBiometricToastView]@41035dc( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.044 D/WifiDisplayAdapter( 1385): isFitToActiveDisplayLocked : false
+06-14 14:51:00.045 I/VRI[HintService]@db150f5( 8465): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:00.053 I/SCS@AiSearch user 0(14348): (IndexManager) [GALLERY-0] entering in addIndex():  
+06-14 14:51:00.055 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) fetch: fetching took  92 ms
+06-14 14:51:00.055 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) fetchChanges: applied 0 items
+06-14 14:51:00.055 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) Collect finished. Result: true
+06-14 14:51:00.055 I/SCS@AiSearch user 0(14348): (BaseCollector::GALLERY) enqueue ObserverWorker name: com.google.android.providers.media, policy: APPEND_OR_REPLACE
+06-14 14:51:00.056 I/WM-WorkerWrapper(14348): Worker result SUCCESS for Work [ id=659c92cb-402f-4c53-b9e1-d7d9ac2a9914, tags={ com.google.android.providers.media, com.samsung.android.scs.ai.search.data.collector.base.ObserverWorker } ]
+06-14 14:51:00.070 D/PackageManager( 1385): setEnabledSetting : userId = 0 packageName = com.samsung.android.scs cmp = androidx.work.impl.background.systemalarm.RescheduleReceiver newState = 1 callingPackage = com.samsung.android.scs
+06-14 14:51:00.071 D/ApplicationPolicy( 1385): getApplicationStateEnabled : pkg = com.samsung.android.scs userId : 0
+06-14 14:51:00.071 D/ApplicationPolicy( 1385): getApplicationComponentState : pkg = com.samsung.android.scs userId : 0
+06-14 14:51:00.316 I/EDEN    ( 1075): [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 14:51:00.508 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 14:51:00.512 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1, addressType=1, address=XX:XX:XX:XX:CA:0F, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:51:00.517 I/NearbySharing(24327): Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:51:00.525 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:6A:3F, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:51:00.554 I/ContentFeedManager( 3090): initSyncRunnable called
+06-14 14:51:00.554 I/WearableDeviceFactory( 3090): getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:51:00.554 I/ContentFeedManager( 3090): getmDeviceId: device id: null
+06-14 14:51:00.554 I/WearableDeviceFactory( 3090): getConnectedDeviceIdByType()::deviceType = Gear, size = 0
+06-14 14:51:00.554 I/ContentFeedManager( 3090): getmDeviceId: device id: null
+06-14 14:51:00.554 I/ContentFeedManager( 3090): initSyncManagersAndSyncIfRequired: deviceid null
+06-14 14:51:00.555 I/ContentFeedManager( 3090): initSyncRunnable initialized
+06-14 14:51:00.558 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:20:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-65, periodicAdvInt=0x0
+06-14 14:51:00.640 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DC:00, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 14:51:00.649 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1, addressType=1, address=XX:XX:XX:XX:CA:0F, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:51:00.682 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x10, addressType=1, address=XX:XX:XX:XX:9C:04, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-74, periodicAdvInt=0x0
+06-14 14:51:00.941 D/SGM:GameManager( 1385): identifyForegroundApp. com.babcross.app, mCurrentUserId: 0, callerUserId: 0
+06-14 14:51:00.942 I/PolicyManager(20071): [#CMH#] Is foreground game app: false
+06-14 14:51:00.960 I/ControllerEventHandler(20071): [#CMH#]  Check for starting Standalone FaceService for just shot ! 
+06-14 14:51:00.960 I/ControllerEventHandler(20071): [#CMH#] requestToRegisterInstantWorker: mIsPolicyIgnore :  false
+06-14 14:51:00.960 I/ControllerUtils(20071): [#CMH#] getFaceServiceUnProcessedMediaCount :E .. 
+06-14 14:51:00.964 I/ControllerEventHandler(20071): [#CMH#] pendingCount<=0, ignore processing ,with isPolicyIgnore : false
+06-14 14:51:01.091 I/AfterimageCompensationService( 1385): AfcThread mLuminance : 118 , AfpcPeriodCount : 1521 , rotation : 0 , AOD : false
+06-14 14:51:01.101 D/RenderEngine( 1096): [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer  at index 0
+06-14 14:51:01.101 D/RenderEngine( 1096): [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_1273#4900 at index 1
+06-14 14:51:01.102 D/RenderEngine( 1096): [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer StatusBar$_2024#94 at index 2
+06-14 14:51:01.102 D/RenderEngine( 1096): [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_2542#4904 at index 3
+06-14 14:51:01.103 D/RenderEngine( 1096): [SEC_SF_EFFECTS] drawLayersInternal,1313, Rendering layer NavigationBar0$_2024#90 at index 4
+06-14 14:51:01.119 D/system_server( 1385): mAFPC_Read - w = 1080, h = 2400, s = 8, f = 4, s_size = 10444800, luminance = 118, count = 1521, captureOrientation = 0
+06-14 14:51:01.264 I/wpa_supplicant( 2070): Heartbeat 6791
+06-14 14:51:01.892 D/io_stats(  677): !@   8,0 r 7369469 154557268 w 1386505 19496192 d 398327 96906612 f 0 0 iot 2859844 0 th 0 0 0 pt 0 inp 0 0 70476.287
+06-14 14:51:01.893 D/io_stats(  677): !@ Read_top(KB): rs.media.module(4316) 60 com.samsung.cmh(20071) 44
+06-14 14:51:01.893 D/io_stats(  677): !@ Write_top(KB): kworker/u16:19(4727) 1052 system_server(1385) 328 com.samsung.cmh(20071) 208
+06-14 14:51:01.966 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DC:00, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-55, periodicAdvInt=0x0
+06-14 14:51:01.972 E/SQLiteLog( 1444): (10) POSIX Error : 11 SQLite Error : 3850
+06-14 14:51:01.972 E/SQLiteLog( 1444): (10) LOCK : Getting pending lock for (1) failed due to (11). The current owner is (1535).
+06-14 14:51:01.974 E/SQLiteLog( 1444): (10) POSIX Error : 11 SQLite Error : 3850
+06-14 14:51:01.974 E/SQLiteLog( 1444): (10) LOCK : Getting pending lock for (1) failed due to (11). The current owner is (1535).
+06-14 14:51:02.053 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:6A:3F, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:51:02.058 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DB:F0, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:51:02.102 D/DelayedNotifier( 7003): notify for scanItem.
+06-14 14:51:02.106 D/SyncManager( 1385): userId - 0 auto - true
+06-14 14:51:02.107 I/BaseThreadPoolExecutor(20071): [#CMH#] Task com.samsung.cmh.core.task.MediaContentSyncTask@86ff825 is submitted
+06-14 14:51:02.137 I/MediaContentSyncTask(20071): [#CMH#] No of Row (SEC MP :  1926, Max Id : 2147493444) (CMH : 1926, Max Id : 2147493444) - Time :5
+06-14 14:51:02.171 I/MediaContentSyncTask(20071): [#CMH#] MP time stamp :  1781416257069, CMH time stamp : 1781416257069
+06-14 14:51:02.171 I/MediaContentSyncTask(20071): [#CMH#] Update ITEM :  0
+06-14 14:51:02.176 I/BaseThreadPoolExecutor(20071): [#CMH#] afterExecute FutureTask
+06-14 14:51:02.176 I/ControllerEventHandler(20071): [#CMH#] Alive Privacy Ignored Policy Called:  false
+06-14 14:51:02.195 I/BaseThreadPoolExecutor(20071): [#CMH#] Task w1.e@d0133d9 is submitted
+06-14 14:51:02.195 I/POITask (20071): [#CMH#] POITask started 
+06-14 14:51:02.195 I/POITask (20071): [#CMH#] mSalesCode : LUC mCountryCode : KOREA 
+06-14 14:51:02.196 I/POITask (20071): [#CMH#] Online statue:  true, Setting location extraction flag: false isChinaModel() false
+06-14 14:51:02.196 I/BaseThreadPoolExecutor(20071): [#CMH#] afterExecute FutureTask
+06-14 14:51:02.365 I/NearbyConnections(24327): EndpointManager send a KEEP_ALIVE frame (seqNum:4) and sleep 5000 for endpoint PGYO.
+06-14 14:51:02.434 I/NearbyConnections(24327): EndpointManager received a KEEP_ALIVE frame (seqNum:4) and reply a KEEP_ALIVE frame with ack from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:51:02.551 I/SemWifiServiceDetector( 1385): Service det. suspended: T / T / 25535
+06-14 14:51:02.568 I/NearbyConnections(24327): EndpointManager received a KEEP_ALIVE frame (seqNum:4) with ACK from endpoint PGYO on channel ENCRYPTED_WIFI_LAN.
+06-14 14:51:02.683 D/UsbStatsMonitor( 1385): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 26822070763546
+06-14 14:51:03.035 E/Watchdog( 1385): !@Sync: 2348 heap(MB): 190 / 191 FD: 1321 [2026-06-14 14:51:03.035]
+06-14 14:51:03.053 D/SemWifiUsabilityStatsMonitor( 1385): onWifiUsabilityStats - seqNum 14782, isSameBssidAndFreq true
+06-14 14:51:03.053 D/ConnectivityService( 1385): notifyType CALLBACK_CAP_CHANGED for [106 WIFI]
+06-14 14:51:03.061 D/WifiPickerTracker( 2024): updateWifiEntries capabilities
+06-14 14:51:03.066 D/SemWifiApNsd:Client( 1385): lpInterface:wlan0
+06-14 14:51:03.066 D/SemWifiSwitchForIndividualAppsService( 1385): stopTCPMonitoring : already stopped
+06-14 14:51:03.067 I/WifiConnectivityMonitor.NCC( 1385): sNetworkCallback(oCC) FULL : 106(valid: true/captive: false)
+06-14 14:51:03.069 D/ConnectivityManager(24327): StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4671)] [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4838)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5220)] [android.net.ConnectivityManager.registerNetworkCallback(ConnectivityManager.java:5190)] [drfg.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):34)] [ljy.a(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):19)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:51:03.071 I/ControllerEventHandler(20071): [#CMH#] Capabilities of network has been changed:  106
+06-14 14:51:03.071 I/ControllerEventHandler(20071): [#CMH#] Setting POIConnectedValue to true 
+06-14 14:51:03.072 I/WifiConnectivityMonitor.NCC( 1385): [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=51412Kbps LinkDnBandwidth>=33107Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:**:**:00, MAC: 02:00:00:**:**:00, IP: /192.***.*.50, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -64, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 104Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2472MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -64 AdminUids: [1000] SSID: "ORBI57-home" UnderlyingNetworks: Null]
+06-14 14:51:03.072 D/WifiConnectivityMonitor( 1385): HANDLE_ON_CAPABILITIES_CHANGED
+06-14 14:51:03.072 I/WifiConnectivityMonitor( 1385): determineMode : MODE_NON_SWITCHABLE_BY_POOR_NETWORK_DETECTION_DISABLED
+06-14 14:51:03.072 D/OpenNetworkQos[4.00]( 1385): updateBssidNoInternet: mBssidNoInternet = false
+06-14 14:51:03.072 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosNoInternetStatus: false
+06-14 14:51:03.072 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosScores: 0 30 26 
+06-14 14:51:03.072 D/KNOX_MDM_SettingsProvider( 1385): isChangeAllowed() : name = wifi_wcm_qos_sharing_score_summary
+06-14 14:51:03.072 I/WifiProfileShare( 1385): network QoS data was changed (internet), updateQoSData networkType: true, qosData: false
+06-14 14:51:03.073 D/WifiPickerTracker( 2024): update AutoHotspot Entries() : bleAccessPoints -> 0
+06-14 14:51:03.073 D/SemWifiApTrafficPriority( 1385): onCapabilitiesChanged Wifi:wlan0,mGapiValue:33.107Uplink: 51.412
+06-14 14:51:03.073 D/WifiPickerTracker( 2024): handleNetworkCapabilitiesChanged
+06-14 14:51:03.073 V/WifiProfileShare.Caster( 1385): update wips network, size: 0
+06-14 14:51:03.073 D/WifiProfileShare( 1385): nearby scanning settings run
+06-14 14:51:03.073 D/WifiProfileShare( 1385): network score provider settings enabled
+06-14 14:51:03.073 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosScores: 0 30 26 
+06-14 14:51:03.073 D/OpenNetworkQos[4.00]( 1385): getOpenNetworkQosNoInternetStatus: false
+06-14 14:51:03.073 I/WifiProfileShare.Caster( 1385): current network type: 0, score: [0, 30, 26]
+06-14 14:51:03.074 V/WifiProfileShare.Cache( 1385): update network score 78:d2:94:**:**:be
+06-14 14:51:03.074 D/WifiProfileShare.ScanMatcher( 1385): getMcfDataList size:5
+06-14 14:51:03.074 I/WifiProfileShare.Caster( 1385): qos data was updated , before:type:QOS, pBssid:12:0c:c6, qosData:18 after:type:QOS, pBssid:12:0c:c6, qosData:18
+06-14 14:51:03.074 D/ConnectivityManager(24327): StackLog: [android.net.ConnectivityManager.unregisterNetworkCallback(ConnectivityManager.java:5470)] [drfs.j(:com.google.android.gms@262031035@26.20.31 (260400-919905943):43)] [drfs.O(:com.google.android.gms@262031035@26.20.31 (260400-919905943):20)] [drfs.K(:com.google.android.gms@262031035@26.20.31 (260400-919905943):7)] [drfs.I(:com.google.android.gms@262031035@26.20.31 (260400-919905943):23)] [drfk.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):9)] [bkqh.c(:com.google.android.gms@262031035@26.20.31 (260400-919905943):50)] [bkqh.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):66)] [java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)] [java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)] [bkvz.run(:com.google.android.gms@262031035@26.20.31 (260400-919905943):8)] [java.lang.Thread.run(Thread.java:1012)]
+06-14 14:51:03.074 D/ConnectivityService( 1385): Rematched networks [computed 1ms] [applied 0ms] [issued 1]
+06-14 14:51:03.074 D/ConnectivityService( 1385): NetworkReassignment : no changes
+06-14 14:51:03.075 I/[MCFSDK_android_1.2.27006]_4_McfCasterImpl( 1385): isNetworkEnabled - type : 1 ret : true
+06-14 14:51:03.075 D/WifiProfileShare.McfCast( 1385): -ME--- mIsNetworkEnabled :true
+06-14 14:51:03.075 D/WifiProfileShare.McfCast( 1385): updateQoSData ignored, same contents
+06-14 14:51:03.075 D/WifiProfileShare.MCF( 1385): success update QosData !
+06-14 14:51:03.075 I/NearbyMediums(24327): Wifi changed new SSID: "ORBI57-home"
+06-14 14:51:03.075 I/NearbyMediums(24327): WifiLanConnectivityInfo is not changed, skip notify.
+06-14 14:51:03.077 I/NullBinder(24327): NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+06-14 14:51:03.077 W/.gms.persistent(24327): Large reply transaction of 1056768 bytes, interface descriptor , code 1
+06-14 14:51:03.078 I/[MCFSDK_android_1.2.27006]_4_McfCasterImpl( 1385): isNetworkEnabled - type : 1 ret : true
+06-14 14:51:03.078 D/WifiProfileShare.McfCast( 1385): -ME--- mIsNetworkEnabled :true
+06-14 14:51:03.078 D/WifiProfileShare.McfCast( 1385): -ME--- updatePasswordDate pwdData size:5
+06-14 14:51:03.432 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:6A:3F, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 14:51:03.462 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 2- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 14:51:03.463 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 9- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-80, periodicAdvInt=0x0
+06-14 14:51:03.468 I/[+0900]oneconnect[1.8.45.24_01][CORE]( 9239): DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 14:51:03.516 I/android.hardware.health@2.1-service-samsung(  987): updateLrpSysfs: write: 336
+06-14 14:51:03.519 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1, addressType=1, address=XX:XX:XX:XX:CA:0F, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-36, periodicAdvInt=0x0
+06-14 14:51:03.542 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DB:F0, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 14:51:03.565 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:6A:3F, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-40, periodicAdvInt=0x0
+06-14 14:51:03.571 I/NearbySharing(24327): Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+06-14 14:51:03.834 I/ActivityManager( 1385): Changes in 5004 5 to 15, 16 to 0
+06-14 14:51:03.894 D/io_stats(  677): !@   8,0 r 7369470 154557272 w 1386523 19496248 d 398327 96906612 f 0 0 iot 2859880 0 th 0 0 0 pt 0 inp 0 0 70478.288
+06-14 14:51:03.909 I/ActivityManager( 1385): Changes in 10076 5 to 15, 16 to 0
+06-14 14:51:04.000 I/ActivityManager( 1385): Changes in 10145 5 to 15, 16 to 0
+06-14 14:51:04.914 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DB:F0, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-38, periodicAdvInt=0x0
+06-14 14:51:04.952 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:20:4B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-64, periodicAdvInt=0x0
+06-14 14:51:04.988 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 6- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:DC:00, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 14:51:05.008 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 11- eventType=0x13, addressType=0, address=XX:XX:XX:XX:04:6B, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-90, periodicAdvInt=0x0
+06-14 14:51:05.008 I/bluetooth( 2264): system/gd/hci/le_scanning_reassembler.cc:58 ProcessAdvertisingReport: Ignoring scan response received without advertising event
+06-14 14:51:05.017 I/BtGatt.ScanHelper( 2264): onScanResult to scannerId: 5- eventType=0x1, addressType=1, address=XX:XX:XX:XX:CA:0F, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-37, periodicAdvInt=0x0
+06-14 14:51:05.320 I/EDEN    ( 1075): [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(1020)...
+06-14 14:51:05.566 I/SemWifiServiceDetector( 1385): Service det. resumed: T / T / 25535
+06-14 14:51:05.848 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.samsung.android.sm.policy
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.samsung.android.sm.policy
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.samsung.android.app.simplesharing
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 14:51:05.851 E/JobScheduler.Background( 1385): Couldn't determine stopped state for unknown package: com.facebook.appmanager
+06-14 14:51:05.878 I/VSyncReactor( 1096): Current= 60, Period= 60, hwcPeriod= 60
+06-14 14:51:05.895 D/io_stats(  677): !@ Read_top(KB): system_server(1385) 4
+06-14 14:51:05.896 D/io_stats(  677): !@ Write_top(KB): appmanager:auth(1444) 16 soft.appmanager(1535) 16 com.samsung.cmh(20071) 8
+06-14 14:51:05.898 I/LayerHistory( 1096): com.babcross.app/com.babcross.app.MainActivity$_1273#4900 Max (can't resolve refresh rate)
+06-14 14:51:05.899 I/SurfaceFlinger( 1096): scored - choose 120.00 Hz
+06-14 14:51:05.901 I/HWComposer( 1096): [4633128672291735937] ActiveConfigToHWC, ID : 0
+06-14 14:51:05.902 I/display (  986): Set Affinity config for fps(120) : 0, cpuIDs : 255
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 0
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 1
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 2
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 3
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 4
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 5
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 6
+06-14 14:51:05.902 I/display (  986): Set Affinity CPU ID : 7
+06-14 14:51:05.902 I/display (  986): Set affinity HWC : 986
+06-14 14:51:05.903 I/display (  986): CPU set : Cluster(0), min_clock(0)
+06-14 14:51:05.903 I/display (  986): CPU set : Cluster(1), min_clock(0)
+06-14 14:51:05.903 I/display (  986): CPU set : Cluster(2), min_clock(0)
+06-14 14:51:05.910 I/display (  986): doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 0
+06-14 14:51:05.910 I/display (  986): setActiveConfig(config=0)
+06-14 14:51:05.910 I/display (  986): next config(0): width=1080 height=2400 period=8333333 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 14:51:05.910 I/display (  986): Current VRR MODE is 3
+06-14 14:51:05.911 I/VSyncReactor( 1096): Current= 60, Period= 120, hwcPeriod= 60
+06-14 14:51:05.919 D/LocalDisplayAdapter( 1385): updateActiveModeLocked for d=4633128672291735937, mActiveModeId=1, mActiveSfDisplayMode=DisplayMode{id=0, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=120.00001, vsyncRate=120.00001, appVsyncOffsetNanos=0, presentationDeadlineNanos=9333333, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 14:51:05.921 I/DisplayDeviceRepository( 1385): Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=120.00001, presentationDeadlineNanos=9333333, appVsyncOffsetNanos=0
+06-14 14:51:05.923 D/BrightnessThermalClamper( 1385): Thermal status observer already started
+06-14 14:51:05.924 D/SGM:GameManager( 1385): onDisplayChanged. displyId: 0, state: 2
+06-14 14:51:05.925 D/LiftUpHandler( 1385): [LTW] Stopped already.
+06-14 14:51:05.925 D/MotionRecognitionService( 1385): [DisplayListener] getRefreshRate 120.00001
+06-14 14:51:05.925 D/AODManagerService( 1385): requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 14:51:05.925 D/MotionRecognitionService( 1385): Inject RefreshRate: 120
+06-14 14:51:05.926 D/SGM:FgCheckThread( 1385): onLooperPrepared(), msg: MSG_LCD_ON
+06-14 14:51:05.926 D/AudioFlinger( 1086): setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 14:51:05.927 I/VSyncReactor( 1096): Current= 60, Period= 120, hwcPeriod= 120
+06-14 14:51:05.928 D/SensorService( 1385): setSContextDataLocked ints length 3 , byte length 8
+06-14 14:51:05.928 D/SensorService( 1385): setSContextDataLocked 100048c1
+06-14 14:51:05.928 D/audio_hw_primary(  973): device-adev_set_parameters: enter
+06-14 14:51:05.928 D/Sensors ( 1002): c1 48 00 10 78 00 00 00  
+06-14 14:51:05.928 E/Sensors ( 1002): inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 14:51:05.928 I/audio_hw_primary(  973): device-adev_set_parameters: Screen State = on)
+06-14 14:51:05.929 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.929 I/VRI[RecentsTransitionOverlay]@725b4cf( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.929 I/VRI[CocktailBarService]@956d8b0( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.929 I/VRI[RecentsActivity]@2460c6b( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.929 I/audio_hw_proxy2(  973): proxy-proxy_set_parameters: set Screen-state 1
+06-14 14:51:05.929 D/audio_hw_primary(  973): device-adev_set_parameters: param (screen_state=on)
+06-14 14:51:05.930 I/audio_hw_primary_odm(  973): odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 14:51:05.930 V/audio_hw_primary(  973): device-adev_set_parameters: exit (screen_state=on)
+06-14 14:51:05.930 D/DisplayLifecycle( 2024): updateDisplay id = 0
+06-14 14:51:05.930 I/HoneySpace.RefreshRateSource( 2542): singleFrameMs 8
+06-14 14:51:05.931 I/VRI[ShellDropTarget]@6480554( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.931 I/VRI[InputMethod]@a7ae199( 4363): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.931 D/StackScroller( 2024): onDisplayChanged for predraw skip to 2
+06-14 14:51:05.932 I/Audio_a2dpsink_hw(  973): adev_set_parameters: kevpairs=[screen_state=on]
+06-14 14:51:05.933 D/WifiDisplayAdapter( 1385): isFitToActiveDisplayLocked : false
+06-14 14:51:05.932 I/VRI[SettingsHomepageActivity]@db11fc(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.933 I/VRI[SubSettings]@296ac8d(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.933 I/VRI[SubSettings]@da76e1c(29165): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[HintService]@db150f5( 8465): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[LockscreenShortcutBlur]@43e4b39( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[NavigationBar0]@18aa930( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[NotificationShade]@ab1f331( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[StatusBar]@f6672fa( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[Bouncer]@ddcc755( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.934 I/VRI[KeyguardBiometricToastView]@41035dc( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.936 D/Sensors ( 1002): SContext Data Injection return 8
+06-14 14:51:05.938 D/RefreshRateModeManager( 1385): updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 14:51:05.944 I/SurfaceFlinger( 1096): SFWD update time=70480338100434
+06-14 14:51:05.963 I/LayerHistory( 1096): com.babcross.app/com.babcross.app.MainActivity$_1273#4900 is small dirty
+06-14 14:51:05.963 I/SurfaceFlinger( 1096): scored - choose 60.00 Hz
+06-14 14:51:05.964 I/HWComposer( 1096): [4633128672291735937] ActiveConfigToHWC, ID : 2
+06-14 14:51:05.964 I/display (  986): Set Affinity config for fps(60) : 2, cpuIDs : 255
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 0
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 1
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 2
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 3
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 4
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 5
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 6
+06-14 14:51:05.964 I/display (  986): Set Affinity CPU ID : 7
+06-14 14:51:05.964 I/display (  986): Set affinity HWC : 986
+06-14 14:51:05.964 I/display (  986): CPU set : Cluster(0), min_clock(0)
+06-14 14:51:05.964 I/display (  986): CPU set : Cluster(1), min_clock(0)
+06-14 14:51:05.964 I/display (  986): CPU set : Cluster(2), min_clock(0)
+06-14 14:51:05.967 D/ActivityManager( 1385): freezing 29165 com.android.settings
+06-14 14:51:05.967 D/LocalDisplayAdapter( 1385): updateActiveModeLocked for d=4633128672291735937, mActiveModeId=3, mActiveSfDisplayMode=DisplayMode{id=2, width=1080, height=2400, xDpi=391.885, yDpi=393.29, peakRefreshRate=60.000004, vsyncRate=60.000004, appVsyncOffsetNanos=0, presentationDeadlineNanos=17666666, supportedHdrTypes=[2, 3, 4], group=0}
+06-14 14:51:05.968 I/DisplayDeviceRepository( 1385): Display device changed render timings: "기본으로 제공되는 화면", renderFrameRate=60.000004, presentationDeadlineNanos=17666666, appVsyncOffsetNanos=0
+06-14 14:51:05.969 I/display (  986): doDisplayConfigPostProcess needSetActiveConfig is true - mDesiredConfig: 2
+06-14 14:51:05.969 I/display (  986): setActiveConfig(config=2)
+06-14 14:51:05.969 I/display (  986): next config(2): width=1080 height=2400 period=16666666 Xdpi=391885 Ydpi=393290 groupId=0
+06-14 14:51:05.969 I/display (  986): Current VRR MODE is 3
+06-14 14:51:05.969 I/VSyncReactor( 1096): Current= 120, Period= 60, hwcPeriod= 120
+06-14 14:51:05.970 D/ActivityManager( 1385): freezing 24589 com.samsung.android.globalpostprocmgr
+06-14 14:51:05.971 D/BrightnessThermalClamper( 1385): Thermal status observer already started
+06-14 14:51:05.973 D/ActivityManager( 1385): freezing 4561 com.samsung.android.biometrics.app.setting
+06-14 14:51:05.973 D/SGM:GameManager( 1385): onDisplayChanged. displyId: 0, state: 2
+06-14 14:51:05.973 D/MotionRecognitionService( 1385): [DisplayListener] getRefreshRate 60.000004
+06-14 14:51:05.974 D/SGM:FgCheckThread( 1385): onLooperPrepared(), msg: MSG_LCD_ON
+06-14 14:51:05.974 D/LiftUpHandler( 1385): [LTW] Stopped already.
+06-14 14:51:05.974 D/AudioFlinger( 1086): setParameters: filtered dev setParameters keyvalue screen_state=on
+06-14 14:51:05.974 D/audio_hw_primary(  973): device-adev_set_parameters: enter
+06-14 14:51:05.975 I/audio_hw_primary(  973): device-adev_set_parameters: Screen State = on)
+06-14 14:51:05.975 I/audio_hw_proxy2(  973): proxy-proxy_set_parameters: set Screen-state 1
+06-14 14:51:05.975 D/audio_hw_primary(  973): device-adev_set_parameters: param (screen_state=on)
+06-14 14:51:05.975 I/audio_hw_primary_odm(  973): odm_adev_set_parameters: enter with key(screen_state=on)
+06-14 14:51:05.975 V/audio_hw_primary(  973): device-adev_set_parameters: exit (screen_state=on)
+06-14 14:51:05.976 D/ActivityManager( 1385): freezing 26519 com.samsung.android.fmm
+06-14 14:51:05.977 I/VRI[ShellDropTarget]@6480554( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.977 D/StackScroller( 2024): onDisplayChanged for predraw skip to 2
+06-14 14:51:05.977 I/Audio_a2dpsink_hw(  973): adev_set_parameters: kevpairs=[screen_state=on]
+06-14 14:51:05.978 D/WifiDisplayAdapter( 1385): isFitToActiveDisplayLocked : false
+06-14 14:51:05.978 I/VSyncReactor( 1096): Current= 120, Period= 60, hwcPeriod= 60
+06-14 14:51:05.979 I/VRI[InputMethod]@a7ae199( 4363): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.979 D/DisplayLifecycle( 2024): updateDisplay id = 0
+06-14 14:51:05.980 D/ActivityManager( 1385): freezing 28682 com.sec.android.CcInfo
+06-14 14:51:05.981 D/AODManagerService( 1385): requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+06-14 14:51:05.981 D/ActivityManager( 1385): freezing 2116 com.samsung.android.dqagent
+06-14 14:51:05.981 D/MotionRecognitionService( 1385): Inject RefreshRate: 60
+06-14 14:51:05.981 D/SensorService( 1385): setSContextDataLocked ints length 3 , byte length 8
+06-14 14:51:05.981 D/SensorService( 1385): setSContextDataLocked 100048c1
+06-14 14:51:05.982 D/Sensors ( 1002): c1 48 00 10 3c 00 00 00  
+06-14 14:51:05.982 E/Sensors ( 1002): inject_scontext_data: New ssp_data_injection_fd(44)
+06-14 14:51:05.982 I/VRI[MainActivity]@6b0ac1e( 1273): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.984 D/ActivityManager( 1385): freezing 2828 com.skms.android.agent:remote
+06-14 14:51:05.985 I/VRI[RecentsTransitionOverlay]@725b4cf( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.985 I/VRI[CocktailBarService]@956d8b0( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.985 I/VRI[LockscreenShortcutBlur]@43e4b39( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.986 I/HoneySpace.RefreshRateSource( 2542): singleFrameMs 16
+06-14 14:51:05.986 D/Sensors ( 1002): SContext Data Injection return 8
+06-14 14:51:05.986 I/VRI[RecentsActivity]@2460c6b( 2542): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[NavigationBar0]@18aa930( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[NotificationShade]@ab1f331( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[StatusBar]@f6672fa( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[Bouncer]@ddcc755( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[KeyguardBiometricToastView]@41035dc( 2024): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.987 I/VRI[HintService]@db150f5( 8465): onDisplayChanged oldDisplayState=2 newDisplayState=2
+06-14 14:51:05.988 D/RefreshRateModeManager( 1385): updateDefaultDisplayToken: android.os.BinderProxy@20ffa45, isChanged: false
+06-14 14:51:06.024 W/MediaProvider( 4316): isAppCloneUserPair failed. Users: 0 and 0
+06-14 14:51:06.024 W/MediaProvider( 4316): isAppCloneUserPair for user 0: false

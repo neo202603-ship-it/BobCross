@@ -1,0 +1,29 @@
+QRTest peer state summary
+Captured: 2026-06-14
+Device: SM_G996N
+Target poll: poll-7ab5ca9c-8e53-4438-998c-6a6b50a76d0f
+
+Deep link:
+babcross://join?v=1&poll=poll-7ab5ca9c-8e53-4438-998c-6a6b50a76d0f&code=&host=167eaffd13b208d7&exp=1781418258559&nonce=09d6390009
+
+ADB am start result:
+Status: ok
+
+SharedPreferences session_state after deeplink and retry:
+- activePolls[target]: null
+- incomingPolls[target]: present
+- incoming question: QRTest
+- incoming proposerName: 가벼운풍선
+- incoming options: 마카롱, 쿠키, 타르트
+- acceptedPollIds contains target: false
+- declinedPollIds contains target: false
+- pendingJoinHint: null
+
+Filtered logcat evidence:
+- NearbyConnections ClientProxy(com.babcross.app) reporting onPayloadReceived(...), result DETAIL_SUCCESS
+- NearbyConnections ClientProxy(com.babcross.app) reporting onPayloadTransferUpdate(..., SUCCESS, 100%)
+- No FATAL EXCEPTION, AndroidRuntime crash, or ANR was found in the checked filtered range.
+
+Observed UI:
+- Peer opened the QR connection screen from the deeplink.
+- After retry, the screen still showed "밥판을 연결 중 입니다.." and did not advance to "메뉴 선택" within the observed window.

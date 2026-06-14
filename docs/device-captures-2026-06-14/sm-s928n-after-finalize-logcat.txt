@@ -1,0 +1,404 @@
+--------- beginning of main
+06-14 14:59:42.995  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 14:59:43.145  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 14:59:43.181  2668  4961 I NSLocationMonitor: getGPSUsingApps() called
+06-14 14:59:43.188  4963  4998 I NSLocationManager_FLP: getGPSUsingApps, No change
+--------- beginning of system
+06-14 14:59:43.200  2668  4961 D FreecessHandler: freeze com.sec.android.app.shealth(10346) result : 39
+06-14 14:59:43.339 26032 11363 I NearbyConnections: EndpointManager send a KEEP_ALIVE frame (seqNum:108) and sleep 5000 for endpoint 21MK.
+06-14 14:59:43.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781416783
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 348 
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690279
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690255
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 14:59:43.385  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690263
+06-14 14:59:43.386  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 14:59:43.386  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 14:59:43.544  1677 29153 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1461238991852489 ns; value = [20, 20, 106, 118, 18, 76, 5, 10, 3712, 0]
+06-14 14:59:43.726 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:108) and reply a KEEP_ALIVE frame with ack from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:43.740 26032 11359 I NearbyConnections: EndpointManager received a KEEP_ALIVE frame (seqNum:108) with ACK from endpoint 21MK on channel ENCRYPTED_WIFI_LAN.
+06-14 14:59:43.800  2668  6164 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 231731, isSameBssidAndFreq true
+06-14 14:59:43.802  2668  3731 I SemWifiLinkQualityMonitor: Link stat: 499 / 2 / 1.05 (59) / 234 / -69.0 || 100.0 : 234.00 / 0.5 : 0.95 / 0.55 : 0.00 / G (G) || 94c098bf5180: 0.106 / 75.133 / N || N N / 0 0 / Y 2.0 / Y X 0 / 975530716 0 || Invalid
+06-14 14:59:43.804  2668  3732 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : Y. Outage Triggered: false
+06-14 14:59:43.804  2668  3732 D InsDataManager: Trying to save initial normal data.
+06-14 14:59:43.804  2668  3732 D SensorCollector: syncMappedBuffers: 0, 0, 1
+06-14 14:59:43.804  2668  3732 D InsDataManager: trimBuffers start.
+06-14 14:59:43.804  2668  3732 D InsDataManager: trimBuffers - pathBuffer size: 98
+06-14 14:59:43.805  2668  3732 D InsDataManager: trimBuffers - nsmBuffer size: 26
+06-14 14:59:43.805  2668  3732 D InsDataManager: Too short for collecting additional normal data
+06-14 14:59:43.807  2668  3749 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:106)
+06-14 14:59:43.807  2668  3749 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 14:59:43.807  2668  3732 D SemInsManager: {"bssid": "94c098bf5180","rssi": -69.0,"latency": 0.10647777261861768,"outage_count": 0,"lq_callback_triggered": true,"outage_log": "Link stat: 499 / 2 / 1.05 (59) / 234 / -69.0 || 100.0 : 234.00 / 0.5 : 0.95 / 0.55 : 0.00 / G (G) || 94c098bf5180: 0.106 / 75.133 / N || N N / 0 0 / Y 2.0 / Y X 0 / 975530716 0 || Invalid""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 14:59:43.807  2668  3749 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:2167 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager.iwh_predict_action:8 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager.-$$Nest$miwh_predict_action:1 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager$IntelligentConnectionManagerHandler.handleMessage:762 android.os.Handler.dispatchMessage:110 
+06-14 14:59:43.810  2668  3707 D BackgroundInstallControlService: Package event received: 0
+06-14 14:59:43.832  1609  1609 D Zygote  : Forked child process 15346
+06-14 14:59:43.832  2668  2916 I ActivityManager: Start proc 15346:com.samsung.android.wifi.intelligence:iwhInfService/1000 for service {com.samsung.android.wifi.intelligence/com.samsung.android.wifi.intelligence.iwh.IwhInfService}
+06-14 14:59:43.832  2668  2916 I ActivityManager: ProcessObserver broadcast disabled
+06-14 14:59:43.856 15346 15346 I e:iwhInfService: Using CollectorTypeCMC GC.
+06-14 14:59:43.889  2668  3707 D BackgroundInstallControlService: Package event received: 0
+06-14 14:59:43.890 15346 15354 I org.tensorflow.lite.h: Loaded native library: tensorflowlite_jni
+06-14 14:59:43.891 15346 15354 I org.tensorflow.lite.h: Didn't load native library: tensorflowlite_jni_gms_client
+06-14 14:59:43.892 15346 15354 I tflite  : Initialized TensorFlow Lite runtime.
+06-14 14:59:43.930 15346 15354 I tflite  : Created TensorFlow Lite delegate for select TF ops.
+06-14 14:59:43.932 15346 15354 I tflite  : TfLiteFlexDelegate delegate: 0 nodes delegated out of 20 nodes with 0 partitions.
+06-14 14:59:43.932 15346 15354 I tflite  : Replacing 12 node(s) with delegate (TfLiteFlexDelegate) node, yielding 3 partitions.
+06-14 14:59:43.944 15346 15354 I tflite  : Replacing 2 node(s) with delegate (TfLiteFlexDelegate) node, yielding 2 partitions.
+06-14 14:59:43.944 15346 15354 I tflite  : Replacing 6 node(s) with delegate (TfLiteFlexDelegate) node, yielding 7 partitions.
+06-14 14:59:43.944 15346 15354 I tflite  : Replacing 2 node(s) with delegate (TfLiteFlexDelegate) node, yielding 5 partitions.
+06-14 14:59:43.946 15346 15354 W libc    : Access denied finding property "ro.mediatek.platform"
+06-14 14:59:43.949 15346 15354 I tflite  : Created TensorFlow Lite XNNPACK delegate for CPU.
+06-14 14:59:43.954 15346 15354 I IwhInfService: IWH model: SSs1nwPqdF / 0 /  T  | 107 / 8 / 0
+06-14 14:59:43.955 15346 15354 I IwhInfService: Inferenced state & reuslt : [0.251, 0.125] | false
+06-14 14:59:43.961  2668  3749 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.stopService:2080 com.samsung.android.server.wifi.SemWifiIntelligentConnectionManager$IntelligentConnectionManagerHandler.handleMessage:247 android.os.Handler.dispatchMessage:110 android.os.Looper.loopOnce:273 android.os.Looper.loop:363 
+06-14 14:59:43.962  2668  3749 I Process : Sending signal. PID: 15346 SIG: 9
+06-14 14:59:43.964  2668  3749 I SemWifiIntelligentConnectionManager: HQ: SSs1nwPqdF / 98:bf / 5180 / -69 / 234 / 251 | 86 / 1091 / 490 / NR / F / F / F / 196 / 63 | 0 / 0 (-75.0) ---> S / S / 0
+06-14 14:59:43.974  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] wait_event:Wait done with Cmd 33
+06-14 14:59:43.974  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] do_listen_events: Rcvd valid Netlink Cmd 0 Err 0
+06-14 14:59:44.001  2668  3498 I ActivityManager: Process com.samsung.android.wifi.intelligence:iwhInfService (pid 15346) has died: cch+5 CEM (296,3102)
+06-14 14:59:44.001  2668  2917 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1000/pid_15346
+06-14 14:59:44.002  1609  1609 I Zygote  : Process 15346 exited due to signal 9 (Killed)
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:337 pause_registered_clients: pause_registered_clients
+06-14 14:59:44.011  4240  4673 I bluetooth: system/gd/hci/le_advertising_manager.cc:1484 OnPause: address_manager_registered=true
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1567 OnPause: le_impl :: Pass AckPause
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1287 disarm_connectability: disarm_connectability
+06-14 14:59:44.011  4240  4673 I bluetooth: system/gd/hci/acl_manager/le_impl.h:1291 disarm_connectability: Disarming LE connection state machine with create connection cancel
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:413 set_connectability_state: ConnectabilityState::ARMED --> ConnectabilityState::DISARMING
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:1811 OnPause: OnPause
+06-14 14:59:44.011  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:768 stop_scan: stop_scan
+06-14 14:59:44.012  1668  1668 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 14:59:44.013  1668  1668 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 14:59:44.013  1668  1668 I vendor.qti.bluetooth@1.1-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+06-14 14:59:44.018  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+06-14 14:59:44.018  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+06-14 14:59:44.018  1668  1668 D vendor.qti.bluetooth@1.1-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+06-14 14:59:44.019  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.019  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:374 ack_pause: Wait all clients paused, return
+06-14 14:59:44.019  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.019  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:374 ack_pause: Wait all clients paused, return
+06-14 14:59:44.020  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:44.020  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:44.025  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2459326] accel_sample [ 0.096,  9.294,  3.350] 1461239429508062
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1591 on_create_connection_cancel_complete: on_create_connection_cancel_complete
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:456 on_le_connection_complete: on_le_connection_complete()
+06-14 14:59:44.037  4240  4673 W BluetoothMetrics: system/gd/os/android/metrics.cc:488 LogMetricBluetoothEvent: Failed BluetoothEvent Upload - Address is Empty
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:413 set_connectability_state: ConnectabilityState::DISARMING --> ConnectabilityState::DISARMED
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:427 on_le_connection_canceled_on_pause: Set connectability to DISARMED
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:413 set_connectability_state: ConnectabilityState::DISARMED --> ConnectabilityState::DISARMED
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 I bluetooth: system/gd/hci/le_address_manager.cc:581 GetNextPrivateAddressIntervalRange: client=LeAddressManager, nonwake=7m28s, wake=13m51s
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:370 ack_pause: Client already in paused state
+06-14 14:59:44.037  4240  4673 I bluetooth: system/gd/hci/le_address_manager.cc:397 resume_registered_clients: Resuming registered clients
+06-14 14:59:44.037  4240  4673 I bluetooth: system/gd/hci/le_advertising_manager.cc:1532 OnResume: address_manager_registered=true
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1062 arm_connectability: arm_connectability
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:413 set_connectability_state: ConnectabilityState::DISARMED --> ConnectabilityState::ARMING
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1583 OnResume: le_impl :: AckResume
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:1825 OnResume: OnResume
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:1828 OnResume: scan_on_resume_
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:1834 OnResume: configure_scan_on_resume
+06-14 14:59:44.037  4240  4673 I bluetooth: system/gd/hci/le_scanning_manager.cc:765 stop_scan: Scanning already stopped, return!
+06-14 14:59:44.037  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:732 start_scan: start_scan
+06-14 14:59:44.042  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:C4:D5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-45, periodicAdvInt=0x0
+06-14 14:59:44.044  4240  4673 I bluetooth: system/gd/hci/le_address_manager.cc:816 OnCommandComplete: Received command complete with op_code LE_SET_RANDOM_ADDRESS(0x2005)
+06-14 14:59:44.045  4240  4673 I bluetooth: system/gd/hci/le_address_manager.cc:836 OnCommandComplete: update random address : xx:xx:xx:xx:3b:aa
+06-14 14:59:44.045  4240  4673 I bluetooth: system/gd/hci/le_address_manager.cc:397 resume_registered_clients: Resuming registered clients
+06-14 14:59:44.045  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:400 resume_registered_clients: client is not paused ClientState::RESUMED(0x3)
+06-14 14:59:44.045  4240  4673 I bluetooth: system/gd/hci/le_advertising_manager.cc:1532 OnResume: address_manager_registered=true
+06-14 14:59:44.045  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:400 resume_registered_clients: client is not paused ClientState::RESUMED(0x3)
+06-14 14:59:44.045  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:1583 OnResume: le_impl :: AckResume
+06-14 14:59:44.045  4240  4673 W bluetooth: system/gd/hci/le_address_manager.cc:400 resume_registered_clients: client is not paused ClientState::RESUMED(0x3)
+06-14 14:59:44.045  4240  4673 W bluetooth: system/gd/hci/le_scanning_manager.cc:1825 OnResume: OnResume
+06-14 14:59:44.049  4240  4673 W bluetooth: system/gd/hci/acl_manager/le_impl.h:413 set_connectability_state: ConnectabilityState::ARMING --> ConnectabilityState::ARMED
+06-14 14:59:44.049  4240  4673 I bluetooth: system/gd/hci/acl_manager/le_impl.h:1036 update_connectability_state_after_armed: Le connection state machine armed state:ConnectabilityState::ARMED status:SUCCESS(0x00)
+06-14 14:59:44.094  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:44.106  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:44.106  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:44.110  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-65, periodicAdvInt=0x0
+06-14 14:59:44.133  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:90:05, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-45, periodicAdvInt=0x0
+06-14 14:59:44.137  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:85:A4, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-44, periodicAdvInt=0x0
+06-14 14:59:44.179  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:C4:D5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-47, periodicAdvInt=0x0
+06-14 14:59:44.190  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:2F:D1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-60, periodicAdvInt=0x0
+06-14 14:59:44.227  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:44.243  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:44.244  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:44.270  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:85:A4, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-44, periodicAdvInt=0x0
+06-14 14:59:44.307  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:44.317  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] wait_event:Wait done with Cmd 34
+06-14 14:59:44.317  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] do_listen_events: Rcvd valid Netlink Cmd 34 Err 0
+06-14 14:59:44.318  2668  3498 D WifiNl80211Manager: Scan result ready event
+06-14 14:59:44.320  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan]  -- associated
+06-14 14:59:44.324  2668  3498 D WifiNative: Scan result ready event
+06-14 14:59:44.324  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.324  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 78:d2:94:**:**:bf FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID ORBI57-home, RSSI(dBM): -63, 11mcRanging: No, Country Code =    
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 1c:ec:72:**:**:d9 FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID KT_GiGA_5G_22D5, RSSI(dBM): -77, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 7e:d2:94:**:**:bf FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID ORBI57-home-Guest, RSSI(dBM): -62, 11mcRanging: No, Country Code =    
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 08:5d:dd:**:**:2e FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID KT_GiGA_5G_972B, RSSI(dBM): -75, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.325  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 22:ec:72:**:**:d9 FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID , RSSI(dBM): -79, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.326  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.326  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 00:23:aa:**:**:4a FREQ: 2442, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID SK_WiFiGIGA644B, RSSI(dBM): -51, 11mcRanging: No, Country Code =    
+06-14 14:59:44.327  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.327  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 42:23:aa:**:**:4a FREQ: 2442, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID SK_WiFiGIGA644B_2.4G, RSSI(dBM): -51, 11mcRanging: No, Country Code =    
+06-14 14:59:44.327  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.327  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 00:23:aa:**:**:49 FREQ: 5240, cFreq1[40:80:160] = [5230:5210:0] cFreq2 = 0 SSID SK_WiFiGIGA644B_5G, RSSI(dBM): -56, 11mcRanging: No, Country Code =    
+06-14 14:59:44.327  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.328  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 86:d2:94:**:**:bc FREQ: 2472, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID ORBI57-home-Guest, RSSI(dBM): -50, 11mcRanging: No, Country Code =    
+06-14 14:59:44.328  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.328  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 7e:d2:94:**:**:bc FREQ: 2472, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID ORBI57-home, RSSI(dBM): -51, 11mcRanging: No, Country Code =    
+06-14 14:59:44.328  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.329  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 7e:d2:94:**:**:31 FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID ORBI57-home-Guest, RSSI(dBM): -90, 11mcRanging: No, Country Code =    
+06-14 14:59:44.329  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.330  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] adjust_age:AP AGE upper limit reached. Dont store
+06-14 14:59:44.330  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 78:d2:94:**:**:31 FREQ: 5180, cFreq1[40:80:160] = [5190:5210:0] cFreq2 = 0 SSID ORBI57-home, RSSI(dBM): -90, 11mcRanging: No, Country Code =    
+06-14 14:59:44.330  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.330  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 90:9f:33:**:**:5c FREQ: 5745, cFreq1[40:80:160] = [5755:5775:0] cFreq2 = 0 SSID iptime5G, RSSI(dBM): -72, 11mcRanging: No, Country Code = US 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 86:d2:94:**:**:2e FREQ: 2472, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID ORBI57-home-Guest, RSSI(dBM): -67, 11mcRanging: No, Country Code =    
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 86:25:19:**:**:b2 FREQ: 2412, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID DIRECT-XZM268x_M289x Series, RSSI(dBM): -77, 11mcRanging: No, Country Code =    
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 12:23:aa:**:**:4a FREQ: 2442, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID _______, RSSI(dBM): -50, 11mcRanging: No, Country Code =    
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 38:f4:5e:**:**:c6 FREQ: 5240, cFreq1[40:80:160] = [5230:5210:0] cFreq2 = 0 SSID SK_ACC4_5G, RSSI(dBM): -69, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 42:23:aa:**:**:49 FREQ: 5240, cFreq1[40:80:160] = [5230:5210:0] cFreq2 = 0 SSID SK_WiFiGIGA644B, RSSI(dBM): -56, 11mcRanging: No, Country Code =    
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 22:f4:5e:**:**:c6 FREQ: 5240, cFreq1[40:80:160] = [5230:5210:0] cFreq2 = 0 SSID , RSSI(dBM): -69, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 82:d2:94:**:**:bc FREQ: 2472, cFreq1[40:80:160] = [0:0:0] cFreq2 = 0 SSID , RSSI(dBM): -61, 11mcRanging: No, Country Code =    
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] BSS 04:09:a5:**:**:fa FREQ: 5745, cFreq1[40:80:160] = [5755:5775:0] cFreq2 = 0 SSID SK_WiFiGIGA13F8_5G, RSSI(dBM): -87, 11mcRanging: No, Country Code = KR 
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWIDiagLog] Log: lowiMeasResult->request: invalid null argument
+06-14 14:59:44.331  2369  3813 I LOWI-9.0.1.74: [LOWI-Scan] lowi_close_record:Scan done in 1461200630ms, 21 APs in scan results
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] WipsScanUsingNL: passive scan cached 0, took 63365 ms, err 0
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] lowi_proc_req_passive_scan_with_live_meas - No WLAN Frames to be parsed
+06-14 14:59:44.331  2369  3813 D LOWI-9.0.1.74: [LOWIScanResultReceiver] Send scan meas to listener
+06-14 14:59:44.332  2369  3813 D LOWI-9.0.1.74: [LOWIScanResultReceiver] Enter passive listening mode
+06-14 14:59:44.332  2369  3813 D LOWI-9.0.1.74: [LOWIWifiDriverInterface] getMeasurements - Passive listening mode
+06-14 14:59:44.332  2369  2451 D LOWI-9.0.1.74: [LOWIEventReceiver] handleEvent:FROM:NA, TO:NA, REQ:NA, IREQ:NA, REQ_ID:0, RESP:NA, INFO:NA
+06-14 14:59:44.332  2369  2451 D LOWI-9.0.1.74: [LOWIBackgroundScanMgr] isRspForBgScanMgr: evt(LOWI_NO_EVT) - not handled
+06-14 14:59:44.332  2668  3626 D WificondScannerImpl: Filtering out 5 scan results.
+06-14 14:59:44.332  2369  2451 D LOWI-9.0.1.74: [LOWIScheduler] manageMsg: NULL results or NULL request in results
+06-14 14:59:44.332  2369  2451 D LOWI-9.0.1.74: [LOWIController] Measurements received
+06-14 14:59:44.332  2369  2451 D LOWI-9.0.1.74: [LOWICacheManager] putInCache:Num of Meas to add: 21
+06-14 14:59:44.332  2668  3626 I WifiScanner: onFullResults
+06-14 14:59:44.332  2369  3813 D LOWI-9.0.1.74: [LOWI-Scan] WipsScanUsingNL:wait -1 sec for netlink message
+06-14 14:59:44.332  2668  3626 I WifiScanner: onFullResults
+06-14 14:59:44.332  2668  3626 I WifiScanner: onFullResults
+06-14 14:59:44.332  2668  3626 I WifiScanner: onFullResults
+06-14 14:59:44.333  2369  2451 D LOWI-9.0.1.74: [LOWIController] processMeasurementResults: No current Request. Cache measurements
+06-14 14:59:44.333  2369  2451 D LOWI-9.0.1.74: [LOWIController] sendAsyncScanResponse: Request FreeWifiScanObserver_200 is from a different client.
+06-14 14:59:44.333  2369  2451 D LOWI-9.0.1.74: [LOWIController] generateResponse: Type (ASYNC_DISCOVERY_SCAN_RESULTS) ScanStatus (1) request FreeWifiScanObserver_200
+06-14 14:59:44.333  2369  2451 D LOWI-9.0.1.74: [LOWIEventDispatcher] sendResponse - originator = FreeWifiScanObserver
+06-14 14:59:44.333  2369  2451 D LOWI-9.0.1.74: [LOWIUtils] injectScanMeasurements - num of APs = 21
+06-14 14:59:44.334  2369  2451 I LOWI-9.0.1.74: [LOWIUtils] responseToOutPostcard - TO: FreeWifiScanObserver, FROM:   LOWI-SERVER, RESP:  LOWI_ASYNC_DISCOVERY_SCAN_RESULTS
+06-14 14:59:44.334 26032  9559 I WifiScanner: onFullResults
+06-14 14:59:44.334  2369  2451 D LOWI-9.0.1.74: [LOWIControllerExtn] sendLOWILpDiscoveryScanResponse: Not a discovery scan response
+06-14 14:59:44.334 26032 26062 I WifiScanner: onFullResults
+06-14 14:59:44.335  2668  3715 V SemWifiScanPool: updateScanResult, partial scan:16 configKeys: 33 pool_bssid:44 pool_configKeys:35
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - handleWifiScan - wifi scanned enter
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - ignore direction of location due to wifi, id = 2, reason = 500
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - handleWifiScan - wifi scanned enter
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - ignore direction of location due to wifi, id = 7, reason = 500
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - handleWifiScan - wifi scanned enter
+06-14 14:59:44.335  2668  4212 D SLocation: ReceiverPair - ignore direction of location due to wifi, id = 17, reason = 500
+06-14 14:59:44.340  1672  1733 I LocSvc_api_v02: ---> locClientSendReq line 2462 QMI_LOC_INJECT_WIFI_AP_DATA_REQ_V02
+06-14 14:59:44.342  1672  3167 I LocSvc_ApiV02: <--- globalRespCb line 355 QMI_LOC_INJECT_WIFI_AP_DATA_REQ_V02
+06-14 14:59:44.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781416784
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 348 
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690279
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690255
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 14:59:44.383  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690263
+06-14 14:59:44.384  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 14:59:44.384  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 14:59:45.053  1668  5517 I vendor.qti.bluetooth@1.1-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+06-14 14:59:45.054  1668  5517 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 14:59:45.204  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 14:59:45.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781416785
+06-14 14:59:45.384  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 14:59:45.384  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 348 
+06-14 14:59:45.384  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690279
+06-14 14:59:45.384  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690255
+06-14 14:59:45.385  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 14:59:45.385  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690263
+06-14 14:59:45.385  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 14:59:45.385  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 14:59:45.785  2668  3498 W ParceledListSlice: Element #627 is 22308 bytes.
+06-14 14:59:45.817  2668  3785 D NetdEventListenerService: DNS Requested by 232, 10751(com.shinhan.smartcaremgr), SUCCESS, 0ms
+06-14 14:59:45.834  2668  3749 D SilentRoamingManager: Limited PNO SSIDs as 16
+06-14 14:59:45.834  2668  3749 D SilentRoamingManager: updatePnoNetworkList SSIDs { "SK_WiFiGIGA644B", "준기의 Z Fold7", "U+Net54D5_5G", "ShopDS_5G", "SO070VOIP820E", "bodyperfor4", "KU_Hospital", "RAVI706", "crystal dent", "olleh_WiFi_2E38", "KBHC_GUEST", "kq_net", "LetsRun-Free", "102-203", "KT_GiGA_5G_4049", "SK_WiFiGIGA644B_5G"  }
+06-14 14:59:45.840  3827  3827 I wpa_sslib: cmd: GETNCHOMODE
+06-14 14:59:45.841  3827  3827 I wpa_sslib: Response: GETNCHOMODE 0
+06-14 14:59:45.841  2668  3749 I SemWifiIntelligentConnectionManager: SF: 98:bc / 2472 / -51 / 98 / -1(80) | 98:bf / 5180 / -63 / 448 / -1(15) | 64:4a / 2442 / -51 / 98 / 4114 / -1(80) (E) | 64:49 / 5240 / -56 / 733 / 0 / -1(15) (D) false , false , true | 64:49 / 5240 / -56 / 733 / 4302 / -1(15) (E) | 4 / P
+06-14 14:59:45.849  2668  3749 I SemWifiIntelligentConnectionManager: Conn. choice state: "ORBI57-home"WPA_PSK / -65 / -51
+06-14 14:59:45.850  2668  3749 I SemWifiIntelligentConnectionManager: HD: 98:bf / 5180 / -69 / 251 / 448 / 448 / 4259 | 95% | 5% | S | IWHcondFalse / T / TPass / CFail / SelectionTimeGap :768624 s  | T / F | F / 0 / 0 / F / F / F / T
+06-14 14:59:45.949  1677 29119 I sensors-hal: get_flicker_als_data:183, [SSC_LIGHT] flicker lux: 2 (7650, 2830, dw: 37)
+06-14 14:59:45.949  1677 29119 I sensors-hal: handle_sns_std_sensor_event:409, [SSC_LIGHT] P: 20(20),c:27,b:76,m:13,cl:5,l:19,s:20,l0:3808,l1:160,s0:3000,s1:0,acl:1,opr:0.46,f(r):93,u(bl):100,if:0,wi:2,si:0,po:144(N:0)
+06-14 14:59:45.997  2668  3729 I SemWifiServiceDetector: Service det. suspended: T / T / 25600
+06-14 14:59:46.030  8722  8722 I SDHMS:LOAD: type: LoadsFreqs, value: 91:0:54:796415:902400:672000:984960:1824000:499200:231:231:231
+06-14 14:59:46.065  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2460246] accel_sample [ 0.100,  9.289,  3.331] 1461241430605197
+06-14 14:59:46.104  1677 29153 I sensors-hal: handle_sns_std_sensor_event:90, light_cct: ts = 1461241551855874 ns; value = [20, 20, 106, 118, 18, 76, 4, 10, 3712, 0]
+06-14 14:59:46.158  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:46.159  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 14:59:46.159  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 14:59:46.159  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:46.172  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-69, periodicAdvInt=0x0
+06-14 14:59:46.174  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:90:05, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-47, periodicAdvInt=0x0
+06-14 14:59:46.187  2668 10464 I AfterimageCompensationService: AfcThread mLuminance : 105 , AfpcPeriodCount : 235 , rotation : 0 , AOD : false
+06-14 14:59:46.190  2668 10464 I SurfaceComposerClient: captureDisplay:Display-4630946315032985731
+06-14 14:59:46.192  1789  2523 I SurfaceFlinger: Capture layer list: 	 com.babcross.app/com.babcross.app.MainActivity$_984#69168(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 Dim Layer for - Task=534#69240(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 com.babcross.app/com.babcross.app.MainActivity$_984#69238(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 $_10099#171(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 StatusBar$_4017#101(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_4512#68709(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I SurfaceFlinger: Capture layer list: 	 NavigationBar0$_4017#41095(seamlessTransition:0)
+06-14 14:59:46.193  1789  2523 I CompositionEngine: [setDisplaySize] size=(1440, 3120)
+06-14 14:59:46.194  1789  2523 E HwcComposer: getLuts failed Status(-129, EX_TRANSACTION_FAILED): 'UNKNOWN_TRANSACTION: '
+06-14 14:59:46.194  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer ScreenCaptureFillLayer at index 0
+06-14 14:59:46.195  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_984#69168 at index 1
+06-14 14:59:46.195  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer Dim Layer for - Task=534#69240 at index 2
+06-14 14:59:46.195  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer com.babcross.app/com.babcross.app.MainActivity$_984#69238 at index 3
+06-14 14:59:46.196  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer $_10099#171 at index 4
+06-14 14:59:46.196  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer StatusBar$_4017#101 at index 5
+06-14 14:59:46.196  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_4512#68709 at index 6
+06-14 14:59:46.196  1789  2043 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1483, Rendering layer NavigationBar0$_4017#41095 at index 7
+06-14 14:59:46.197  1789  1789 D TransactionCallbackInvoker: addCallbackHandle:com.babcross.app/com.babcross.app.MainActivity$_984#69168 is not released yet
+06-14 14:59:46.203  2668 10464 D system_server: mAFPC_Read - w = 1440, h = 3120, s = 32, f = 4, s_size = 18370560, luminance = 105, count = 235, captureOrientation = 0
+06-14 14:59:46.212  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:C4:D5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-47, periodicAdvInt=0x0
+06-14 14:59:46.236  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:85:A4, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-43, periodicAdvInt=0x0
+06-14 14:59:46.246  4240  5549 I ScanController: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-69, periodicAdvInt=0x0
+06-14 14:59:46.246  4240  5549 I ScanController: onScanResult to scannerId: 8- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-69, periodicAdvInt=0x0
+06-14 14:59:46.247 15709 16066 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:UNKNOWN|discoverType:_BLE|services:None|connected:false[Type]6[Index]1[MNID]0AJK[SETUPID]101[TvStatusString]EXTENSION[TvStatus]32[TvService]118[TvMirrorChannel]0[TvRegisteredDB]null[TvYear]2025[TvOcfInfo]15[TvAcmStatus]0[ExTvStatus]34[ExtendedStatus]12[ModuloSn]135
+06-14 14:59:46.248 18068 30266 I [+0900]oneconnect[1.8.45.24_01][BEACON_MANAGER_CONTROL_SERVICE]: TvOcfParser.onReceive - TV Popup Onboarding is skipped - ($)
+06-14 14:59:46.251 15709 31674 I [+0900]oneconnect[1.8.45.24_01][CORE]: Remoteless@RemotelessAutoConnectionManager.autoConnectOnPacket - AutoConnection policy not fulfilled. index: 0, result: false
+06-14 14:59:46.286  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-68, periodicAdvInt=0x0
+06-14 14:59:46.301  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:90:05, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 14:59:46.319  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:B4:E2, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-63, periodicAdvInt=0x0
+06-14 14:59:46.350  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:C4:D5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-46, periodicAdvInt=0x0
+06-14 14:59:46.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781416786
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 348 
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690279
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690255
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 14:59:46.383  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690263
+06-14 14:59:46.383  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 14:59:46.383  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 14:59:46.388  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:46.389  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 14:59:46.539  1668  4697 D vendor.qti.bluetooth@1.1-wake_lock: Release wakelock is released 
+06-14 14:59:46.725 26032 15154 I NearbyMediums: Found Fast Ble Advertisements :
+06-14 14:59:46.725 26032 15154 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x30 0x51 0x4a 0x48 0x11 0x32 0x06 0xf3 0xfc 0xc6 0x2a 0x06 0x20 0xa8 0x70 0xa8 0xa8 0x89 0x2d 0x1c 0xa7 0x93 ], deviceToken=[ 0x4f 0x85 ], rxAdvertisement=null } : 7 times.
+06-14 14:59:46.725 26032 15154 I NearbyMediums: Total 7 fast advertisements from 1 unique advertisers.
+06-14 14:59:46.725 26032 15154 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+06-14 14:59:46.728 26032 15384 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x57 0x4f 0x4c 0x11 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ], deviceToken=[ 0x8e 0xd6 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@7d129ae size=2 contents="\216\326">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+06-14 14:59:46.729 26032 15384 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4c 0x57 0x4f 0x4c 0x11 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ], deviceToken=[ 0x8e 0xd6 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@7d129ae size=2 contents="\216\326">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId LWOL and EndpointInfo [ 0x32 0xe7 0xa7 0x62 0x7d 0xf8 0xd4 0x01 0x28 0x9e 0xb9 0x3c 0xe6 0x9f 0x10 0x95 0x10 ]).
+06-14 14:59:46.730 26032 15384 I NearbyConnections: Unable to record lost endpoint due to null currentDiscoveryPhase
+06-14 14:59:46.730 26032 15384 I NearbyConnections: ClientProxy(85737872) reporting onEndpointLost(LWOL)
+06-14 14:59:46.732 26032 15386 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=LWOL)
+06-14 14:59:46.733 26032 15384 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Lost(endpointId=LWOL)
+06-14 14:59:46.824  2668  6164 D SemWifiUsabilityStatsMonitor: onWifiUsabilityStats - seqNum 231732, isSameBssidAndFreq true
+06-14 14:59:46.825  2668  3732 D InsDataManager: onOutageCountUpdate() - Outage Data: 0, LQ : Y. Outage Triggered: false
+06-14 14:59:46.825  2668  3732 D InsDataManager: Trying to save initial normal data.
+06-14 14:59:46.826  2668  3732 D SensorCollector: syncMappedBuffers: 0, 0, 1
+06-14 14:59:46.826  2668  3732 D InsDataManager: trimBuffers start.
+06-14 14:59:46.826  2668  3732 D InsDataManager: trimBuffers - pathBuffer size: 98
+06-14 14:59:46.826  2668  3732 D InsDataManager: trimBuffers - nsmBuffer size: 26
+06-14 14:59:46.827  2668  3732 D InsDataManager: Too short for collecting additional normal data
+06-14 14:59:46.827  2668  3732 D SemInsManager: {"bssid": "94c098bf5180","rssi": -68.0,"latency": 0.0,"outage_count": 0,"lq_callback_triggered": true,"outage_log": "Unreliable statistics: -68.0 / 2 / 660 / 109 / 1 || 94c098bf5180: 0.000 / 0.000 / @ || N N / 0 0 / Y 2.0 / Y X 0 / 975533739 0 || Invalid""Magnetic Sensor Events size": "0""Pressure Sensor Events size": "0"}
+06-14 14:59:46.833  2668  3749 D SGM:GameManager: identifyGamePackage. com.babcross.app, mCurrentUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:106)
+06-14 14:59:46.833  2668  3749 D SGM:SemGameManager: isGamePackage(), pkgName=com.babcross.app, ret=false
+06-14 14:59:46.893  1789  1789 I SurfaceFlinger: SFWD update time=975533808777702
+06-14 14:59:46.990  8722  9295 I SDHMS:x : SIOP:: AP:381 BAT:348 USB:345 CHG:380 PA:381 WIFI:369 CF:357 BLK:0 SUBBAT:0 LRPTHM:353 SKIN:356 SKINF:340 SKINB:356 LRP2:356 LRF2:340 LRB2:356 AP2:354 CHG2:354 WIFI2:354 RCV2:329 SPK2:318 FCAM:344 UPSPK:353 DNSPK:343 VAP02:379 VWIFI:360 AMB2:316 AVGCUR:1 AVGSYS:397 POWER:4
+06-14 14:59:47.234 26032 15384 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportLost(id=7).
+06-14 14:59:47.236 26032 15384 I NearbySharing: NearbySharing Internal event ReceiverLost(receiverId=7)
+06-14 14:59:47.237 26032 15387 I NearbySharing: SendProvider: SendManager event Lost(receiverId=7)
+06-14 14:59:47.238 26032 15384 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetLost()
+06-14 14:59:47.244 26032 26032 I NearbySharing: ShortcutInfoManager removed shortcut 준기의 Z Fold7
+06-14 14:59:47.343  2668  3706 I SemExecuteManagerService: onShortcutChanged: com.google.android.gms0
+06-14 14:59:47.343  2668  3706 I SemExecuteManagerService: onShortcutChanged: size=1
+06-14 14:59:47.343  2668  3706 I SemExecuteManagerService: onShortcutChanged: send callback com.samsung.android.app.taskedge10151
+06-14 14:59:47.344  2668  3706 D ActivityManager: Received BROADCAST intent 0xa5e7dd5 Key{broadcastIntent pkg=com.samsung.android.app.taskedge intent=act=com.samsung.android.app.taskedge.action.SHORTCUT_INFO_CHANGED xflg=0x4 cmp=com.samsung.android.app.taskedge/.shortcut.ShortcutInfoReceiver flags=0x4000000 u=0} requestCode=0 sent=0 from uid 1000
+06-14 14:59:47.348  4512  4512 I HoneySpace.PackageOperationTracker: onShortcutsChanged com.google.android.gms - 1 UserHandle{0}
+06-14 14:59:47.352 13890 13890 I TaskEdge.Shortcut: onReceive: com.samsung.android.app.taskedge.action.SHORTCUT_INFO_CHANGED
+06-14 14:59:47.353  2668  2915 I ActivityManager: Changes in 10151 15 to 11, 0 to 128
+06-14 14:59:47.357  2668  3498 I ActivityManager: Changes in 10151 11 to 15, 128 to 0
+06-14 14:59:47.358 13890 13890 I SEP_UNION_SemUnionManager: getUnionService(execute) 
+06-14 14:59:47.364  2668  3498 I SemExecuteManagerService: getShortcuts: com.samsung.android.app.taskedge
+06-14 14:59:47.365  4512   628 I HoneySpace.ShortcutDataSourceImpl: shortcut updated. ShortcutInfo {id=***, flags=0xa481 [DynIc-uStrRetsLiv], packageName=com.google.android.gms, activity=ComponentInfo{com.google.android.gms/com.google.android.gms.nearby.sharing.main.MainActivity}, shortLabel=***, resId=0[null], longLabel=***, resId=0[null], disabledMessage=***, resId=0[null], disabledReason=[Not disabled], categories={com.google.android.gms.nearby.sharing.main.SHARE_TARGET}, persons=null, icon=null, rank=0, timestamp=1781416627194, intents=null, extras=PersistableBundle[mParcelledData.dataSize=1244]}
+06-14 14:59:47.365  4512  4512 I HoneySpace.HoneySpaceManagerContainer: packageUpdateEvent - com.honeyspace.sdk.source.entity.PackageOperation$ShortcutChanged@227c3e9
+06-14 14:59:47.365  2668  3498 D ShortcutService: 매장결제 ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.366  2668  3498 D ShortcutService: 261e830d-b40b-478f-b0a4-3eeac6b60c2e ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.366  2668  3498 D ShortcutService: findAll() returned empty results because com.google.android.calendar isn't installed yet
+06-14 14:59:47.366  4512   628 I HoneySpace.HistoryViewModel@2752612@OneUI: handlePackageEvent
+06-14 14:59:47.366  4512   628 I HoneySpace.HistoryViewModel@2752612@OneUI: skip for alone
+06-14 14:59:47.366  2668  3498 D ShortcutService: pinned_| 보도자료(목록) |_1694951883798 ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.367  2668  3498 D ShortcutService: pinned_보도자료_1694951741459 ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.367  2668  3498 D ShortcutService: pinned_보도자료 - 위원회 소_1694951661496 ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.367  2668  3498 D ShortcutService: pinned_보도·참고자료 | 기획_1694951813759 ignored because it isn't pinned by com.sec.android.app.launcher
+06-14 14:59:47.367  2668  3498 D ShortcutService: findAll() returned empty results because com.google.android.play.games isn't installed yet
+06-14 14:59:47.367 13890 13890 I TaskEdge.ShortcutCallbackTask: getShortcutList : 1 shortcutList size() : [ShortcutInfo {id=***, flags=0x48a [PinIc-fStrRets], packageName=com.samsung.android.oneconnect, activity=ComponentInfo{com.samsung.android.oneconnect/com.samsung.android.oneconnect.ui.SCMainActivity}, shortLabel=***, resId=0[null], longLabel=***, resId=0[null], disabledMessage=***, resId=0[null], disabledReason=[Not disabled], categories=null, persons=null, icon=null, rank=0, timestamp=1708081633590, intents=null, extras=null}]
+06-14 14:59:47.368 13890 13890 I TaskEdge.ShortcutCallbackTask: id=60e4ba61-5a14-4139-ad2b-2962f950be05 label=Findpackage=com.samsung.android.oneconnect
+06-14 14:59:47.371 13890 13890 I TaskEdge.ShortcutCallbackTask: updateShortcut: list db items: [ExecutableItem : pos=0, package=com.samsung.android.messaging, component=com.android.mms.ui.ComposeMessage, executableId=executable://com.samsung.android.messaging/3063483042, ExecutableItem : pos=1, package=com.sec.android.app.sbrowser, component=com.sec.android.app.sbrowser.sites.SitesActivity, executableId=executable://com.sec.android.app.sbrowser/1593457418, ExecutableItem : pos=2, package=com.sec.android.app.camera, component=com.sec.android.app.camera.Camera, executableId=executable://com.sec.android.app.camera/1141080296, ExecutableItem : pos=3, package=com.samsung.android.calendar, component=com.android.calendar.event.EditEventActivity, executableId=executable://com.samsung.android.calendar/1687857898, AdvancedItem : pos=4, function=1, AdvancedItem : pos=5, function=2]
+06-14 14:59:47.372  2668  3498 I CocktailPolicyManager: findMatchedPolicy: find policy = 1
+06-14 14:59:47.373  4512  4512 I HoneySpace.EdgePanel.CocktailHostRepositoryImpl: onUpdateCocktail ComponentInfo{com.samsung.android.app.taskedge/com.samsung.android.app.taskedge.edgepanel.TaskEdgePanelProvider} false
+06-14 14:59:47.373  4512  4512 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: cocktailHostRepository.edgePanelOperation V8.n@7d5986e
+06-14 14:59:47.373  4512  4512 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: updateCocktail is received 2
+06-14 14:59:47.373  4512  4512 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: updatePanelItem update 2
+06-14 14:59:47.374  4512  4512 I HoneySpace.EdgePanel.Container: updateCocktail type:2 id:2
+06-14 14:59:47.375  4512  4512 I HoneySpace.EdgePanel.EdgePanelView@254269840: composeView: 2
+06-14 14:59:47.375  4512  4512 I TaskEdge.Panel: onReceiveContentInfo action=task_shortcut_info_update
+06-14 14:59:47.375  4512  4512 I EdgePanel.AbstractLoadablePanelContainer: composeView { D=false, LP=o9.B@3eb3d08, @=66165921, CI=ComponentInfo{com.samsung.android.app.taskedge/com.samsung.android.app.taskedge.edgepanel.TaskEdgePanelProvider}, L1 LP H=getHeight(), V H=0
+06-14 14:59:47.380  1785  1822 E HeatmapThread: ECT Thread time in milliseconds: 1781416787
+06-14 14:59:47.380  4512 19860 I TaskEdge.Panel: updateShortcutInfoItem: 
+06-14 14:59:47.383  2668  3498 I ActivityManager: Changes in 10151 15 to 5, 0 to 144
+06-14 14:59:47.384  2668  3707 D BackgroundInstallControlService: Package event received: 0
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ batteryplugType : 1
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ batteryLevel : 100  batteryTemperature : 348 
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ Heatmap currtime: 29690279
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ Heatmap prevtime: 29690255
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ Heatmap plugstarttime: 29690212
+06-14 14:59:47.386  1785  1822 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29690263
+06-14 14:59:47.387  1785  1822 E HeatmapThread: !@ CAM New BSOH: 100
+06-14 14:59:47.387  1785  1822 E HeatmapThread: !@ CAM is Working
+06-14 14:59:47.395  4512 19860 I TaskEdge.Panel: updateShortcutInfoItem: Item size : 6
+06-14 14:59:47.395  4512  4512 I TaskEdge.Panel: setTaskEdgeItem: 
+06-14 14:59:47.507  2668  2876 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = enabled_notification_listeners
+06-14 14:59:47.507  2668  2876 D KNOX_MDM_SettingsProvider: isChangeAllowed() : name = enabled_notification_listeners
+06-14 14:59:47.986  1677 29143 I sensors-hal: handle_sns_client_event:375, [0][2461166] accel_sample [ 0.077,  9.308,  3.336] 1461243431703895
+06-14 14:59:47.987  1677  8250 I sensors-hal: handle_sns_client_event:190, auto_rotation_debug_2 mode,255, type,1,0 acc,0.091,9.284,3.350, ar,0, ver,14, pedo,1,e,1,i,3
+06-14 14:59:48.003  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:48.003  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 14:59:48.003  1668  5510 D vendor.qti.bluetooth@1.1-wake_lock: Acquire wakelock is acquired 
+06-14 14:59:48.003  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:48.014  4240  5549 I ScanController: onScanResult to scannerId: 6- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-68, periodicAdvInt=0x0
+06-14 14:59:48.014  4240  5549 I ScanController: onScanResult to scannerId: 8- eventType=0x1b, addressType=0, address=XX:XX:XX:XX:01:95, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-68, periodicAdvInt=0x0
+06-14 14:59:48.015  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:C4:D5, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-42, periodicAdvInt=0x0
+06-14 14:59:48.016 18255 18318 I BCMGR[11.2.04.4]: BeaconMainController] onReceive - [1 : ST packet!][2 : bad rssi][3 : ST packet!][4 : ST packet!][5 : ST packet!][6 : ST packet!][7 : ST packet!][8 : bad rssi][9 : bad rssi][10 : ST packet!]
+06-14 14:59:48.018 15709 16066 I [+0900]oneconnect[1.8.45.24_01][CORE]: DataConvert.parseBleVd - deviceBle : |name:($)-6(8)|deviceType:TV|discoverType:_BLE|services:_TvSoundToMobile|connected:false[TvStatusString]POWER_ON[TvStatus]1[TvService]118[TvMirrorChannel]1[TvRegisteredDB][-98, 100, 53, -14, 115, -55][TvYear]2016[TvOcfInfo]0[TvAcmStatus]0[ExTvStatus]0[ExtendedStatus]-1[ModuloSn]-1
+06-14 14:59:48.021  4240  5549 I ScanController: onScanResult to scannerId: 5- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:2F:D1, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-56, periodicAdvInt=0x0
+06-14 14:59:48.059  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:48.059  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 14:59:48.059  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:48.059  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 14:59:48.059  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:48.062  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1b, addressType=1, address=XX:XX:XX:XX:90:05, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-41, periodicAdvInt=0x0
+06-14 14:59:48.073  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:85:A4, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 14:59:48.112  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:48.112  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+06-14 14:59:48.204  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+06-14 14:59:48.204  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+06-14 14:59:48.204  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+06-14 14:59:48.211  4240  5549 I ScanController: onScanResult to scannerId: 9- eventType=0x1, addressType=1, address=XX:XX:XX:XX:85:A4, primaryPhy=1, secondaryPhy=1, advertisingSid=0x0, txPower=127, rssi=-48, periodicAdvInt=0x0
+06-14 14:59:48.249  1668  5510 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+06-14 14:59:48.249  1668  5510 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF

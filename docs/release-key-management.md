@@ -1,6 +1,6 @@
 # 밥크로스 릴리스 키 관리
 
-최종 정리일: 2026-06-06
+최종 정리일: 2026-06-13
 
 ## 목적
 
@@ -45,6 +45,16 @@ JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradle
 ```
 
 `keystore.properties`와 `.jks` 파일은 `git status --short`에 나타나지 않아야 한다.
+
+2026-06-13 기준 확인:
+
+- 릴리스 후보: `0.1.167`, `versionCode=168`
+- Release AAB: `app/build/outputs/bundle/release/app-release.aab`
+- release upload key SHA-1: `69:6F:8D:03:FC:B1:AE:D7:C0:55:C0:F2:D5:54:C5:F5:3E:8D:DD:F9`
+- release upload key SHA-256: `97:96:DA:80:D7:E8:E2:B4:D3:9B:27:A7:BF:2F:BD:0F:4B:05:58:E1:15:DC:D1:BB:DE:DE:B2:36:82:06:78:F7`
+- `:app:bundleRelease` 성공
+- AAB SHA-256: `a10b0b14e87c498c379140b699b64aecacd4e1cfd7c6fe7c5ff3c550cb191275`
+- release manifest 기준 `versionName=0.1.167`, `versionCode=168`, `android:debuggable` 속성 없음
 
 ## 주의
 
